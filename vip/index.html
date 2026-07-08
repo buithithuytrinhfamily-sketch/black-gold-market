@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Black Gold Market VIP Room — Grow Alongside a Real XAU/USD Trader</title>
-<meta name="description" content="Stop trading gold alone. Sit in a private room where a real XAU/USD trader posts every idea with the real chart — winners and losers alike. Free VIP access when you open a VT Markets account through Raphael's link. No signals sold. No returns promised.">
+<title>Black Gold Market VIP Room — Monday Genius, Friday Ghost? Stop Trading Alone</title>
+<meta name="description" content="If your week keeps ending the same way, the problem isn't your entries — it's that you're trading alone. Sit beside a real XAU/USD trader who posts his risk before the trade and the truth after. Free VIP access via VT Markets. No signals sold. No returns promised.">
 <meta name="theme-color" content="#120b05">
 <meta name="robots" content="noindex,follow">
-<meta property="og:title" content="Black Gold Market VIP Room — Grow Alongside a Real XAU/USD Trader">
-<meta property="og:description" content="A private room where every gold idea comes with the real chart — winners and losers alike. Free VIP access when you open a VT Markets account through Raphael's link.">
+<meta property="og:title" content="Black Gold Market VIP Room — Monday Genius, Friday Ghost? Stop Trading Alone">
+<meta property="og:description" content="Every XAU/USD idea posted with the risk defined before the outcome — losers on the same page as winners. Free VIP access when you open a VT Markets account through Raphael's link.">
 <meta property="og:image" content="https://blackgoldmarket.us/avatar.jpg">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://blackgoldmarket.us/vip/">
@@ -33,7 +33,6 @@
     --gold-deep:#8f6a24;
     --disp:"Montserrat",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
     --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    --mono:"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
     --shadow:0 20px 60px rgba(0,0,0,.55);
   }
   *{box-sizing:border-box;margin:0;padding:0}
@@ -45,18 +44,15 @@
   .wrap{max-width:760px;margin:0 auto;padding:0 24px}
   h1,h2,h3,.disp{font-family:var(--disp)}
 
-  /* gold-shimmer headings — brand token */
   .shimmer{
     background:linear-gradient(172deg,#fdf1c8 2%,#eccb84 26%,#c79331 58%,#9a7222 92%);
     -webkit-background-clip:text;background-clip:text;color:transparent;}
 
-  /* ── topbar ── */
   .topbar{background:linear-gradient(180deg,#0d0803,var(--bg-2));border-bottom:1px solid var(--line-2);padding:18px 0;text-align:center}
   .wordmark{font-family:var(--disp);font-weight:800;letter-spacing:.24em;font-size:1rem;color:var(--ink);text-transform:uppercase}
   .wordmark b{color:var(--gold)}
   .wordmark small{display:block;font-family:var(--disp);font-weight:700;font-size:.6rem;letter-spacing:.3em;color:var(--muted-2);margin-top:6px}
 
-  /* ── hero ── */
   .hero{
     background:
       radial-gradient(900px 380px at 50% -40px, rgba(199,147,49,.16), transparent 68%),
@@ -66,11 +62,10 @@
     font-family:var(--disp);letter-spacing:.16em;text-transform:uppercase;font-size:.72rem;font-weight:700;
     color:var(--gold);border:1px solid var(--line);display:inline-block;padding:8px 16px;margin-bottom:24px;
     background:rgba(0,0,0,.2)}
-  h1{font-family:var(--disp);font-weight:800;font-size:clamp(2rem,5.4vw,2.5rem);line-height:1.12;letter-spacing:-.01em;max-width:660px;margin:0 auto}
-  .subhead{color:var(--ink-2);font-size:1.14rem;line-height:1.6;max-width:600px;margin:22px auto 0}
+  h1{font-family:var(--disp);font-weight:800;font-size:clamp(1.9rem,5.2vw,2.4rem);line-height:1.14;letter-spacing:-.01em;max-width:680px;margin:0 auto}
+  .subhead{color:var(--ink-2);font-size:1.14rem;line-height:1.6;max-width:620px;margin:22px auto 0}
   .subhead b{color:var(--gold-lite);font-weight:600}
 
-  /* ── sections ── */
   section{padding:36px 0}
   section.alt{background:var(--bg-2)}
   h2{font-family:var(--disp);font-weight:800;font-size:clamp(1.5rem,3.6vw,1.7rem);line-height:1.18;letter-spacing:-.01em;margin-bottom:16px;text-transform:uppercase}
@@ -79,7 +74,6 @@
   em{color:var(--gold-lite);font-style:italic}
   .lead-first::first-letter{font-family:var(--disp);float:left;font-size:60px;line-height:.82;color:var(--gold);padding:6px 12px 0 0;font-weight:800}
 
-  /* ── benefits ── */
   .benefits{list-style:none;margin:6px 0 4px}
   .benefits li{position:relative;padding:15px 0 15px 40px;border-top:1px solid var(--line-2);color:var(--ink-2);font-size:1rem}
   .benefits li:last-child{border-bottom:1px solid var(--line-2)}
@@ -88,7 +82,14 @@
     -webkit-mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M20 6L9 17l-5-5' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/></svg>") center/12px no-repeat;
     mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M20 6L9 17l-5-5' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/></svg>") center/12px no-repeat}
 
-  /* ── steps ── */
+  .stack{list-style:none;margin:6px 0 4px;counter-reset:stk}
+  .stack li{position:relative;padding:15px 0 15px 52px;border-top:1px solid var(--line-2);color:var(--ink-2);font-size:1rem;counter-increment:stk}
+  .stack li:last-child{border-bottom:1px solid var(--line-2)}
+  .stack li::before{
+    content:counter(stk);position:absolute;left:2px;top:15px;width:32px;height:32px;
+    background:linear-gradient(180deg,var(--gold-lite),var(--gold));color:#1a1206;
+    font-family:var(--disp);font-weight:800;font-size:.95rem;display:flex;align-items:center;justify-content:center}
+
   .steps{margin:8px 0}
   .step{display:flex;gap:18px;align-items:flex-start;padding:18px 20px;margin-bottom:12px;background:var(--bg-3);border:1px solid var(--line)}
   section.alt .step{background:var(--bg)}
@@ -96,26 +97,35 @@
   .step .st{font-size:1rem;color:var(--ink-2);padding-top:6px}
   .step .st b{color:var(--ink);font-family:var(--disp);font-weight:700}
 
-  /* ── callout ── */
   .callout{background:var(--bg-3);border-left:3px solid var(--gold);padding:20px 24px;margin:24px 0;color:var(--ink-2);font-size:1rem}
   section.alt .callout{background:var(--bg)}
 
-  /* ── three truths / transparency ── */
   .three-truths{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:22px 0}
   .truth{background:var(--bg-3);border:1px solid var(--line);padding:20px 18px}
   section.alt .truth{background:var(--bg)}
   .truth .h{font-family:var(--disp);color:var(--gold);font-weight:800;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:9px}
   .truth p{font-size:.92rem;margin:0;color:var(--muted)}
-  .anchor-strip{text-align:center;font-family:var(--sans);font-size:.95rem;color:var(--ink-2);background:rgba(0,0,0,.24);border:1px dashed var(--line);padding:18px 20px;margin:20px 0}
-  .anchor-strip b{color:var(--ink)}
-  .anchor-strip .free{color:var(--gold);font-weight:700}
 
-  /* ── transparency box ── */
   .transbox{background:linear-gradient(180deg,rgba(199,147,49,.06),transparent);border:1px solid var(--line);padding:28px 28px;margin:26px 0}
   .transbox .k{font-family:var(--disp);text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;font-weight:700;color:var(--gold);margin-bottom:12px}
   .transbox p:last-child{margin-bottom:0}
 
-  /* ── CTA ── */
+  .bonus{background:var(--bg-3);border:1px solid var(--gold-deep);padding:22px 24px;margin:14px 0}
+  section.alt .bonus{background:var(--bg)}
+  .bonus .k{font-family:var(--disp);text-transform:uppercase;letter-spacing:.14em;font-size:.7rem;font-weight:800;color:var(--gold);margin-bottom:8px}
+  .bonus p{margin:0;font-size:.98rem}
+
+  .night{background:var(--bg-3);border:1px solid var(--line-2);padding:24px 26px;margin:18px 0}
+  section.alt .night{background:var(--bg)}
+  .night .h{font-family:var(--disp);font-weight:800;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+  .night.bad .h{color:var(--muted-2)}
+  .night.good .h{color:var(--gold)}
+  .night p{margin-bottom:0;font-size:1rem}
+
+  blockquote.member{background:var(--bg-3);border-left:3px solid var(--gold);padding:22px 26px;margin:22px 0;color:var(--ink-2);font-style:italic}
+  section.alt blockquote.member{background:var(--bg)}
+  blockquote.member cite{display:block;margin-top:10px;font-style:normal;font-family:var(--disp);font-weight:700;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+
   .cta{background:linear-gradient(160deg,var(--bg-3),var(--bg));border:1px solid var(--gold-deep);padding:32px 26px;margin:30px 0;text-align:center;box-shadow:var(--shadow)}
   .cta .k{font-family:var(--disp);text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;font-weight:700;color:var(--gold);margin-bottom:16px}
   .btn{
@@ -126,7 +136,6 @@
   .btn-sub{display:block;margin-top:15px;font-size:.85rem;color:var(--muted);font-family:var(--sans)}
   .btn-sub b{color:var(--gold-lite)}
 
-  /* ── FAQ ── */
   .faq details{border-top:1px solid var(--line-2);padding:4px 0}
   .faq details:last-child{border-bottom:1px solid var(--line-2)}
   .faq summary{cursor:pointer;list-style:none;padding:16px 34px 16px 2px;position:relative;font-family:var(--disp);font-weight:700;color:var(--ink);font-size:1.02rem}
@@ -138,7 +147,6 @@
   .risk-inline{color:var(--muted-2);font-size:.85rem;font-style:italic;border-top:1px solid var(--line-2);padding-top:16px;margin-top:8px}
   hr.rule{border:none;border-top:1px solid var(--line-2);margin:6px 0 26px}
 
-  /* ── footer ── */
   footer{background:var(--bg);border-top:1px solid var(--line-2);padding:36px 0 48px;text-align:center}
   .risk{color:var(--muted-2);font-size:.78rem;line-height:1.65;max-width:620px;margin:0 auto 16px}
   .risk b{color:var(--muted)}
@@ -146,7 +154,6 @@
   .fmark b{color:var(--gold)}
   .fmark small{display:block;color:var(--muted-2);letter-spacing:.16em;font-size:.6rem;margin-top:8px}
 
-  /* ── sticky mobile CTA ── */
   .sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;display:none;background:linear-gradient(180deg,rgba(18,11,5,.5),var(--bg));border-top:1px solid var(--gold-deep);padding:11px 16px;backdrop-filter:blur(6px)}
   .sticky a{display:block;text-align:center;background:linear-gradient(180deg,var(--gold-lite),var(--gold));color:#1a1206;text-decoration:none;font-family:var(--disp);font-weight:700;font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;padding:15px;border-radius:0}
 
@@ -165,211 +172,273 @@
   <span class="wordmark">BLACK<b>&middot;</b>GOLD MARKET<small>Protect &middot; Master &middot; Grow</small></span>
 </div>
 
-<!-- ===== HERO ===== -->
+<!-- ===== HERO — Step 1 (headline) + Step 2 (sub-headline) ===== -->
 <div class="hero">
   <div class="wrap">
-    <span class="eyebrow">For gold traders tired of trading alone</span>
-    <h1 class="shimmer">Grow Alongside Me — Sit in a Private Room With a Real XAU/USD Trader Who Shows You the Whole Chart, Win or Lose</h1>
-    <p class="subhead">Not a signal service. A room where I trade gold in the open — the entry, the reasoning, the outcome, and the losers I don't delete. Built around one idea: <b>protect the capital, master the emotion, grow the account slowly and for real.</b> This is the long game.</p>
+    <span class="eyebrow">For the gold trader whose account looks exactly like it did a year ago</span>
+    <h1 class="shimmer">Monday Genius, Friday Ghost &mdash; If Your Week Keeps Ending the Same Way, the Problem Isn't Your Entries. It's That You're Trading Alone.</h1>
+    <p class="subhead">You already know how to find a setup. What you don't have is someone beside you when it counts &mdash; and one process you can repeat: <b>Protect. Master. Grow.</b> Not more wins. A steadier you.</p>
+    <p class="subhead">Inside the BLACK GOLD MARKET VIP Room, every XAU/USD idea goes up with the risk defined <em>before</em> the outcome &mdash; losers printed on the same page as winners. It costs you $0. The broker funds it, not you. And yes, there's a catch. <b>I'll show you exactly where it is, down this page.</b></p>
   </div>
 </div>
 
-<!-- ===== LEAD (PROBLEM) ===== -->
+<!-- ===== Step 3 — PROBLEM + AGITATE ===== -->
 <section>
   <div class="wrap">
-    <p class="lead-first">You already know the pattern.</p>
-    <p>You win on Monday. By Friday you've handed most of it back — not to the market, exactly, but to the version of you that traded on Thursday afternoon out of boredom, or on Wednesday night to win back what you lost that morning.</p>
-    <p>It isn't a strategy problem. You've read enough strategies. It's that there's no one beside you when it matters — no one who sees the size you're about to click and quietly asks whether the plan actually said to.</p>
-    <p>Maybe that's cost you one account. Maybe a few. You've paid the market real tuition already. The question isn't how to win more this week. It's how to still be here, trading, a year from now.</p>
+    <p class="lead-first">Let me tell you about your week. Stop me when it sounds familiar.</p>
+    <p><strong>Monday</strong>, you're sharp. Two clean entries on gold, both work. Maybe this is the week.</p>
+    <p><strong>Wednesday night</strong>, price sweeps your stop by a few pips and runs without you. You sit there, jaw tight, and take the revenge trade. Bigger size. No plan. Just heat.</p>
+    <p><strong>Thursday afternoon</strong>, nothing on the chart is worth trading &mdash; so you trade anyway, because your hands are bored.</p>
+    <p><strong>Friday</strong>, you look at the account. Back where it started Monday. Again.</p>
+    <p>Your account never blows up. That's the cruel part. It just leaks &mdash; the quiet leak, drip by drip, until twelve months have passed and the number looks exactly like it did last July.</p>
+    <p>And you've already tried the two exits. You tried trading alone: 2am, family asleep, price sitting on your entry, and no one to ask "am I seeing this right?" You tried the paid rooms, $50 to $200 a month, where every screenshot is green, every loser quietly disappears, and the only thing that compounds is the subscription fee. You paid for honesty and got a highlight reel.</p>
+    <p>So the third year starts the same as the second. Except the habits are 365 days deeper now.</p>
+    <p><strong>So when someone offers you a free room, you ask: where's the catch? Good. I'll answer it right now.</strong></p>
   </div>
 </section>
 
-<!-- ===== AGITATE ===== -->
+<!-- ===== Step 10 (part 1) — THE CATCH, UP FRONT ===== -->
 <section class="alt">
   <div class="wrap">
-    <h2>The two rooms <span class="shimmer">that failed you</span></h2>
-    <p>The first is no room at all — trading alone. You're the trader, the risk manager, and the tired person at 11pm all at once, and the tired person tends to win the argument. There's no witness. No spine to lean on.</p>
-    <p>The second is worse, because it looks like help. The "guaranteed profit" groups. Green screenshot, green screenshot, green screenshot — and then the week it goes red, the channel goes quiet. No post. No lesson. Just the next call, as if the loss never happened. You paid to watch someone hide from you.</p>
-    <p>You don't need a wall of winners. You need one honest room where the losing trades stay on the page — because the losers are the only thing that ever actually taught you anything.</p>
+    <div class="transbox">
+      <div class="k">Full transparency</div>
+      <h2 style="font-size:1.35rem;margin-bottom:14px">The catch, <span class="shimmer">up front</span></h2>
+      <p>Here's where the money comes from, plain as I can make it.</p>
+      <p>You open a trading account at VT Markets through my partner link. The broker pays me a small rebate out of their side &mdash; you pay the exact same spread you'd pay opening an account anywhere else. You never send me a cent. That's the whole machine.</p>
+      <p style="margin-bottom:0">Paid rooms take your money up front, so bigger promises pay better. I get paid on how long you last &mdash; <strong>so the truth pays better.</strong></p>
+    </div>
+    <div class="three-truths">
+      <div class="truth"><div class="h">Your money stays yours</div><p>It sits in your account, under your name. I can't touch it. I won't ask for it. I can't trade it.</p></div>
+      <div class="truth"><div class="h">I'm paid while you last</div><p>The rebate only comes while you're still trading &mdash; months from now, a year from now. If you blow up in week two, my income stops with you. Keeping you alive and steady isn't kindness. It's my business model.</p></div>
+      <div class="truth"><div class="h">No fee, no lock-in</div><p>If the room isn't for you, you stop reading. You've lost exactly nothing.</p></div>
+    </div>
   </div>
 </section>
 
-<!-- ===== SOLUTION ===== -->
+<!-- ===== Step 4 — PERSONAL CREDIBILITY ===== -->
 <section>
   <div class="wrap">
-    <h2>So I keep a room where the <span class="shimmer">losing trades stay up</span></h2>
-    <p>My name's Raphael. I trade XAU/USD for the long game, and I run the public Black Gold Market channel — around 8,900 traders, where every idea already goes out with the real chart, winners and losers alike. On a channel that size there's nowhere to hide a bad call, and I don't want one.</p>
-    <p>The VIP room is the same approach, only closer and more timely. It's a private Telegram room where you watch me trade gold in real time — and where nothing quietly gets deleted when it goes wrong.</p>
-
-    <h2 style="margin-top:32px">What the VIP room <span class="shimmer">actually is</span></h2>
-    <p>When I take a gold idea, you see it as it happens: the entry, the <em>invalidation</em> — where the idea is wrong — and the reason behind it. You see the risk defined <strong>before</strong> the trade, not justified after it.</p>
-    <p>And when a trade gets stopped, you watch it get stopped. I post it, with the lesson attached. A good trade that followed the plan is still a good trade, even when it loses — and I'll show you why. That's the whole difference. Not a secret indicator. A room with a spine.</p>
+    <h2>Who am I to <span class="shimmer">say any of this?</span></h2>
+    <p>Don't take my word for it. Open the BLACK GOLD MARKET channel and scroll back. You'll find 8.9k traders reading along, over 10,000 charts posted, and my losing trades sitting right next to the winners &mdash; dated, public, still there. You'll find the book I wrote, <em>The Long Game</em>, and the site, blackgoldmarket.us.</p>
+    <p>What you won't find: a win-rate. A screenshot of profit. I refuse to show those, because those are the props of the rooms that burned you.</p>
+    <p><strong>My edge isn't a higher win-rate. It's defining risk before the trade and telling the truth after.</strong></p>
+    <p>Check the history. Then come back.</p>
   </div>
 </section>
 
-<!-- ===== WHAT'S INSIDE / BENEFITS ===== -->
+<!-- ===== Step 5 — BEFORE–AFTER STORY ===== -->
 <section class="alt">
   <div class="wrap">
-    <h2>What's inside — <span class="shimmer">and what changes for you</span></h2>
+    <h2>I was the <span class="shimmer">Friday ghost</span> too</h2>
+    <p>For years, I was the Monday genius and the Friday ghost. Two clean wins by Tuesday, then a stopped-out trade on Wednesday night &mdash; and instead of closing the laptop, I doubled the size to get it back. No journal. No plan. No one beside me to say stop. Just gut feel, cold coffee, and a ceiling I stared at until 4am.</p>
+    <p>The turn came on an ordinary Friday. I watched a week of gains disappear in one session, and I finally asked a different question. Not "how much did I make today?" &mdash; <em>"did I execute today?"</em> Grade the trade, not the money.</p>
+    <p>I still take losses. But now they're planned losses, sized before entry, understood after. I sleep. I open the chart without my stomach dropping. My capital is intact, and so is my head.</p>
+    <p><strong>That's the change I'm offering. The calm &mdash; not a number.</strong></p>
+  </div>
+</section>
+
+<!-- ===== Step 6 — BENEFITS ===== -->
+<section>
+  <div class="wrap">
+    <h2>So I built the room <span class="shimmer">I wish I'd had</span></h2>
+    <p>Inside the BLACK GOLD MARKET VIP Room, you'll get:</p>
     <ul class="benefits">
-      <li>You see the whole trade. <strong>Real-time XAU/USD breakdowns</strong> — entry, invalidation, and reasoning — so you learn the thinking instead of blindly copying a call.</li>
-      <li>You learn to size to a loss, not a hope. The <strong>risk is defined before every trade</strong>, so you start protecting capital first, the way the long game demands.</li>
-      <li>You get the lesson, not just the tip. <strong>Losers are posted openly</strong> with what broke — so the red days finally teach you something instead of just stinging.</li>
-      <li>You steady the routine. The calm, boring <strong>daily process</strong> — a pre-market read, the fixed-risk rule, the journal habit — that starves the give-back cycle.</li>
-      <li>You trade the plan, not the mood. A <strong>weekly review</strong> of what held and what broke, including my own mistakes, so you catch the leak before it costs you.</li>
-      <li>You can ask. <strong>Q&amp;A with Raphael</strong> — bring a chart or a decision you're stuck on and talk it through, calmly, with someone who's made the mistakes already.</li>
-      <li>You have a spine to lean on. The pinned <strong>House Rules</strong> — protect first, no revenge, no "guaranteed profit" talk — so the room itself pushes back on your worst instincts.</li>
+      <li><strong>Every trade idea with the risk defined before it runs</strong> &mdash; which means you know your maximum loss before you click, and you never sit there guessing "cut or hold" at 2am.</li>
+      <li><strong>A pre-market read every morning</strong> &mdash; which means you never open the chart cold; you sit down knowing the levels that matter.</li>
+      <li><strong>My losing trades, posted and dissected</strong> &mdash; which means you learn the one thing the green-screenshot rooms will never teach you: what to do when it goes wrong.</li>
+      <li><strong>A weekly review that grades execution, not money</strong> &mdash; which means even a red week shows you exactly where you're improving.</li>
+      <li><strong>Direct Q&amp;A &mdash; bring your chart</strong> &mdash; which means the middle of the night stops being a monologue.</li>
     </ul>
-    <p style="margin-top:22px;color:var(--muted);font-size:.95rem"><em>One honest line:</em> this is not a signals service and not a promise of profit. It's a room where you learn to run a gold account like a business. You still trade your own size, from your own account, every time.</p>
   </div>
 </section>
 
 <!-- ===== CTA 1 ===== -->
 <div class="wrap">
   <div class="cta">
-    <div class="k">Your way in</div>
-    <a class="btn" href="https://www.vtmarkets.com/trade-now/?affid=15234687" target="_blank" rel="noopener">Open my VT Markets account &rarr;</a>
-    <span class="btn-sub">Then send your screenshot to <b>@Raphael_TraderGoldFx</b> for free VIP access</span>
+    <div class="k">Want a seat?</div>
+    <a class="btn" href="https://www.vtmarkets.com/trade-now/?affid=15234687" target="_blank" rel="noopener">Open Your VT Markets Account &rarr;</a>
+    <span class="btn-sub">Then send the screenshot to <b>@Raphael_TraderGoldFx</b> on Telegram. That's the whole door.</span>
   </div>
 </div>
 
-<!-- ===== WHY OPEN THROUGH THIS LINK ===== -->
-<section>
-  <div class="wrap">
-    <h2>Why open through <span class="shimmer">this link</span></h2>
-    <p>Here's the honest mechanism, laid out plainly so there's no "catch" to wonder about.</p>
-    <p>The VIP room has no price. There's no monthly fee, no VIP subscription — not now, not later. It's funded a different way: when you open and fund a trading account through my VT Markets partner link, the broker pays me a small rebate on the trading activity. <strong>It costs you nothing extra</strong> — your spread is the same as opening anywhere else. The broker pays me. You don't.</p>
-    <p>That's the whole model. It also keeps me honest: the only way this works over time is if <em>you keep trading</em> — which means my incentive is to keep your account alive, not to push you into a reckless week. The entire room is built to help you survive and grow slowly, because that's the version where we both do well.</p>
-  </div>
-</section>
-
-<!-- ===== HOW TO OPEN ===== -->
+<!-- ===== Step 7 — EMOTIONAL MOMENT ===== -->
 <section class="alt">
   <div class="wrap">
-    <h2>How to open — <span class="shimmer">step by step</span></h2>
-    <div class="steps">
-      <div class="step"><span class="num">1</span><div class="st"><b>Click the link.</b> Open a VT Markets account through my partner link: <a href="https://www.vtmarkets.com/trade-now/?affid=15234687" target="_blank" rel="noopener">vtmarkets.com/trade-now</a></div></div>
-      <div class="step"><span class="num">2</span><div class="st"><b>Register.</b> Fill in your details and create the account. When asked, choose: account type <b>Standard VIP</b> &middot; currency <b>USD</b> &middot; platform <b>MT5</b> (or MT4 if you prefer) &middot; leverage <b>1:500</b>. Takes a few minutes.</div></div>
-      <div class="step"><span class="num">3</span><div class="st"><b>Verify (KYC).</b> Confirm your identity — the standard, required step every regulated broker asks for. It protects you and your funds.</div></div>
-      <div class="step"><span class="num">4</span><div class="st"><b>Fund the account.</b> Deposit whatever you're comfortable with — only money you can afford to lose. You keep full control of it at all times.</div></div>
-      <div class="step"><span class="num">5</span><div class="st"><b>Send proof for access.</b> Screenshot your account and send it to <b>@Raphael_TraderGoldFx</b> on Telegram. Once I verify it, I add you to the VIP room — free, no monthly fee, ever.</div></div>
+    <h2>Two versions of <span class="shimmer">the same night</span></h2>
+    <p>It's 2 a.m. The house is asleep. The chart lights your face; the coffee went cold six hours ago. Gold touched your entry, ran a few dollars, then turned.</p>
+    <div class="night bad">
+      <div class="h">Alone</div>
+      <p>You know what happens next. Your hand drifts to the stop. You move it. You pray.</p>
     </div>
-    <p style="text-align:center;color:var(--muted);font-size:.95rem;margin-top:6px">Five steps, and you're trading gold beside someone instead of alone.</p>
+    <div class="night good">
+      <div class="h">In the room</div>
+      <p>The night goes differently. You open the note I posted before any of this moved &mdash; entry zone, invalidation, reasoning. The plan already answered tonight's question. You follow it, close the laptop, and sleep.</p>
+    </div>
+    <p>Same chart. Same turn. Different trader.</p>
+    <p><strong>An A-grade loser beats a C-grade winner.</strong> And the money in your pocket is still yours; wait for the market structure to become clearer.</p>
   </div>
 </section>
 
-<!-- ===== TRANSPARENCY BOX ===== -->
+<!-- ===== Step 8 — CLARITY: WHAT IT IS, WHO IT'S FOR ===== -->
 <section>
   <div class="wrap">
-    <div class="transbox">
-      <div class="k">Full transparency</div>
-      <h2 style="font-size:1.35rem;margin-bottom:14px">I earn a rebate from the broker &mdash; <span class="shimmer">not from you</span></h2>
-      <p>I want you to know exactly how I'm paid, because a room built on honesty can't start with a hidden fee. I don't sell you signals. I don't charge for the room. I don't touch your money — you keep your own account, your own login, full control, always.</p>
-      <p>What I do earn is a small rebate the broker pays me when you trade through my link, at <strong>no additional cost to you</strong> — the spread is identical either way. If you already trade somewhere you're happy with, tell me, and I'll be honest about whether switching is even worth it for you. Sometimes it isn't, and I'll say so.</p>
-      <p style="margin-bottom:0"><strong>The point of the room is that you last.</strong> That's the only version where the rebate keeps coming — so my interest and yours point the same direction: protect the capital, grow slowly, stay in the game.</p>
+    <h2>What this room is &mdash; <span class="shimmer">and who it's for</span></h2>
+    <p>The BLACK GOLD MARKET VIP Room is a private Telegram room I run myself &mdash; no team, no bots.</p>
+    <p>Every XAU/USD idea goes up before the outcome: entry zone, invalidation, my reasoning &mdash; in writing, timestamped. When a trade closes, win or loss, I close it honestly and pull the lesson out. Every morning, a pre-market read. Every week, a review where I grade execution &mdash; including my own losers. When your chart confuses you, bring it to me.</p>
+    <div class="callout">
+      Three House Rules hold the room up: <strong>Protect first. No revenge trades. No "guaranteed profit" talk</strong> &mdash; from me or anyone.
     </div>
-    <div class="three-truths">
-      <div class="truth"><div class="h">Why it's free</div><p>The broker pays me a small rebate on your trading. You pay nothing extra — same spread as anywhere. That rebate funds the room.</p></div>
-      <div class="truth"><div class="h">Why KYC</div><p>It's not my rule — it's the law every regulated broker follows. Verifying your identity protects you and your funds.</p></div>
-      <div class="truth"><div class="h">Why it's honest</div><p>I only benefit if you keep trading. So the whole room is built to keep your account alive — not to chase a lucky week.</p></div>
-    </div>
-    <p class="risk-inline">One honest line before you go further: trading gold and forex carries a high level of risk and you can lose your capital. This is not financial advice and not a promise of profit. Only trade money you can afford to lose.</p>
+    <p><strong>Who it's for:</strong> traders who want one repeatable process, can sit with the truth of a red week, and plan to still be here a year from now.</p>
+    <p><strong>Who it's not for:</strong> anyone hunting a sure thing or a rich-by-October story. Premium is not for everyone. I'm not looking for the biggest community. I'm looking for the right one.</p>
   </div>
 </section>
 
-<!-- ===== PROOF ===== -->
+<!-- ===== Step 9 — VALUE ===== -->
 <section class="alt">
   <div class="wrap">
-    <h2>Don't take my word for it — <span class="shimmer">go check</span></h2>
-    <p>I'm not going to show you a win-rate or a profit screenshot. Anyone can crop a screen, and those numbers are how most people got burned last time.</p>
-    <p>Here's the proof instead: the public Black Gold Market channel, around 8,900 traders, where I already post real gold ideas with the wins <strong>and</strong> the losses in the open. Scroll back. Read the days it went wrong and judge for yourself whether I stayed honest about them. My edge isn't a higher win-rate than everyone else — it's that I define the risk before the trade and tell you the truth after, where you can verify it yourself.</p>
+    <h2>Why $0 here weighs more <span class="shimmer">than $200 a month</span></h2>
+    <p>What you put in: zero dollars. A few minutes of reading each morning. Three House Rules you agree to keep.</p>
+    <p>What you get back is measured in time, not money. Watching a real trader read gold every day compresses years of guessing alone. Every revenge trade you don't take on a Wednesday night is tuition you never pay. And the process &mdash; <em>Protect. Master. Grow.</em> &mdash; goes with you for the rest of your trading life.</p>
+    <p><strong>Paid rooms charge $200 a month and still hide the one thing that teaches you anything. Here, the truth is the product. That's why $0 weighs more.</strong></p>
+  </div>
+</section>
+
+<!-- ===== Step 10 (part 2) — FAQ ===== -->
+<section>
+  <div class="wrap">
+    <h2>The questions you <span class="shimmer">should be asking</span></h2>
+    <div class="faq">
+      <details>
+        <summary>"You still make money off me, right?"</summary>
+        <div class="a">Yes &mdash; from the broker, not from you. You pay the same spread you'd pay anywhere else. VT Markets pays me a rebate out of their side. Your cost: zero extra.</div>
+      </details>
+      <details>
+        <summary>"Do you ever touch my money?"</summary>
+        <div class="a">Never. The account sits under your name. I can't access it, can't withdraw from it, can't trade it.</div>
+      </details>
+      <details>
+        <summary>"How do I know you won't push me to overtrade for rebates?"</summary>
+        <div class="a">Because burning your account fires me. My income lasts exactly as long as you do. House Rule one &mdash; Protect first &mdash; pays my bills.</div>
+      </details>
+      <details>
+        <summary>"How is this different from the rooms that burned me before?"</summary>
+        <div class="a">They deleted their losers. Mine are still on the channel &mdash; scroll back and check.</div>
+      </details>
+      <details>
+        <summary>"How much capital do I need?"</summary>
+        <div class="a">Only what you can afford to lose. Anyone who tells you otherwise is lying to you.</div>
+      </details>
+      <details>
+        <summary>"Do you guarantee wins?"</summary>
+        <div class="a">No. House Rule three bans that exact word. Most retail traders lose money. Nothing here is financial advice.</div>
+      </details>
+    </div>
   </div>
 </section>
 
 <!-- ===== CTA 2 ===== -->
 <div class="wrap">
   <div class="cta">
-    <div class="k">Come sit down</div>
-    <a class="btn" href="https://www.vtmarkets.com/trade-now/?affid=15234687" target="_blank" rel="noopener">Open my VT Markets account &rarr;</a>
-    <span class="btn-sub">Then screenshot to <b>@Raphael_TraderGoldFx</b></span>
+    <div class="k">Still with me?</div>
+    <a class="btn" href="https://www.vtmarkets.com/trade-now/?affid=15234687" target="_blank" rel="noopener">Open Your VT Markets Account &rarr;</a>
+    <span class="btn-sub">Send the screenshot to <b>@Raphael_TraderGoldFx</b> on Telegram. I'll hold the door.</span>
   </div>
 </div>
 
-<!-- ===== HONEST SCARCITY ===== -->
-<section>
-  <div class="wrap">
-    <h2>One honest thing <span class="shimmer">about the room</span></h2>
-    <p>A room like this only stays useful while it stays serious.</p>
-    <p>I'm not going to pretend seats are running out. There's no timer on this page and no "2 spots left." But here's the truth: the day this room fills up with people chasing the next tip instead of learning to protect and grow, I'll slow the doors down. I'd rather keep it honest than keep it loud.</p>
-    <p><strong>If it's still open, it's still real. Come in while it is — and take your time.</strong></p>
-  </div>
-</section>
-
-<!-- ===== FAQ ===== -->
+<!-- ===== Step 11 — REASON TO ACT NOW ===== -->
 <section class="alt">
   <div class="wrap">
-    <h2>Questions <span class="shimmer">you're probably asking</span></h2>
-    <div class="faq">
-      <details>
-        <summary>Is it really free?</summary>
-        <div class="a">Yes. No VIP fee, no monthly bill — not now, not ever. It's funded by a small rebate the broker pays me when you trade through my VT Markets link. You pay nothing extra; your spread is the same as opening anywhere else. That's the honest math.</div>
-      </details>
-      <details>
-        <summary>Why VT Markets?</summary>
-        <div class="a">It's the regulated partner broker I've set the room up through, and the rebate that funds the free room comes from trading activity there. You keep full control of your own account and funds the whole time. If you already trade somewhere you like, tell me and I'll be honest about whether moving is even worth it.</div>
-      </details>
-      <details>
-        <summary>Do you guarantee profit?</summary>
-        <div class="a">No. I won't promise that, and anyone who does is selling you a feeling. Trading gold carries real risk and you can lose money. What the room offers is a way to run your account with more discipline — protect the capital, master the emotion, grow slowly — so you're still here a year from now. That's the honest offer.</div>
-      </details>
-      <details>
-        <summary>Why KYC? Is it safe?</summary>
-        <div class="a">KYC isn't my rule — it's the law every regulated broker follows. It verifies your identity and protects your funds. A broker that lets you skip it is the red flag, not the one that asks for it.</div>
-      </details>
-      <details>
-        <summary>Do you touch my money?</summary>
-        <div class="a">Never. You keep your own account, your own login, and full control. I don't manage your funds and I couldn't move them if I wanted to.</div>
-      </details>
-      <details>
-        <summary>Is this copy-trading or signals?</summary>
-        <div class="a">Neither. I don't trade your account, and you shouldn't blindly copy mine. The point is to learn the reasoning behind a gold trade — the entry, the risk, the outcome — so you understand a trade or skip it. Trade your own size, from your own account, every time.</div>
-      </details>
-      <details>
-        <summary>How do I actually get in?</summary>
-        <div class="a">Open a VT Markets account through the link, register, verify (KYC), fund it, then send a screenshot to @Raphael_TraderGoldFx. Once I verify it, I add you to the room. That's it.</div>
-      </details>
-    </div>
+    <h2>You're not spending money by waiting. <span class="shimmer">You're spending Mondays.</span></h2>
+    <p>No deadline on this page. No timer. Close the tab and nothing explodes.</p>
+    <p>But Monday comes anyway. And you'll trade it &mdash; that was never in question. The only question is how: alone, like the last 52 Mondays, or with a pre-market read in front of you and a process beside you.</p>
+    <p><strong>The Wednesday-night habit doesn't retire on its own. The quiet leak doesn't patch itself. Every week you wait, the groove cuts deeper.</strong></p>
   </div>
 </section>
 
-<!-- ===== DO THIS NOW / CTA 3 ===== -->
+<!-- ===== Step 12 — HONEST SCARCITY ===== -->
 <section>
   <div class="wrap">
-    <h2>Do this now</h2>
-    <p>Stop trading gold alone. Here's the one action:</p>
-    <div class="callout" style="text-align:center;border-left:none;border:1px solid var(--gold-deep)">
-      <strong style="font-family:var(--disp);color:var(--gold-lite);font-size:1.15rem">Open your VT Markets account &rarr; send proof &rarr; get free VIP access.</strong>
+    <h2>The door opens slowly &mdash; <span class="shimmer">on purpose</span></h2>
+    <p>No countdown timer here. No "two spots left." I won't fake urgency &mdash; that's the paid rooms' trick, and you already paid for it once.</p>
+    <p>The only real limit is me. I answer questions personally. When the room fills with tip-chasers instead of learners, I slow the doors to protect the people already inside.</p>
+    <p><strong>If it's still open, it's still real.</strong></p>
+  </div>
+</section>
+
+<!-- ===== Steps 13 + 14 — OFFER STACK + BONUSES ===== -->
+<section class="alt">
+  <div class="wrap">
+    <h2>Everything <span class="shimmer">on the table</span></h2>
+    <p>When you join, you get:</p>
+    <ol class="stack">
+      <li><strong>Real-time XAU/USD trade ideas</strong> &mdash; risk defined before the trade, not after.</li>
+      <li><strong>My losing trades, posted</strong> &mdash; same page as the winners, with the lesson.</li>
+      <li><strong>The daily pre-market read</strong> &mdash; so you never open the chart cold.</li>
+      <li><strong>The weekly review</strong> &mdash; execution graded, not money, so you see progress even in a red week.</li>
+      <li><strong>Direct Q&amp;A</strong> &mdash; bring me your chart. We'll talk it through.</li>
+      <li><strong>The three House Rules</strong> &mdash; the spine that holds all of it up.</li>
+    </ol>
+    <p style="margin-top:20px">Paid rooms charge <strong>$50&ndash;$200 a month</strong> for less than this, and hide half the truth. Here it's <strong>$0. No membership fee, ever.</strong> The broker's rebate funds the room &mdash; which means I only earn while you're still standing.</p>
+    <p>And on day one, two welcome gifts:</p>
+    <div class="bonus">
+      <div class="k">Bonus 1</div>
+      <p><strong>"The Sustainable Trader's Blueprint" (PDF).</strong> The loss-aversion trap, the Risk:Reward formula, the Protect&middot;Master&middot;Grow routine, the no-trend rule. Direct medicine for Wednesday night.</p>
+    </div>
+    <div class="bonus">
+      <div class="k">Bonus 2</div>
+      <p><strong>My full book, "The Long Game: Protect. Master. Grow."</strong> Eleven chapters, 75 pages. Waiting for you inside the room.</p>
     </div>
     <div class="cta">
-      <a class="btn" href="https://www.vtmarkets.com/trade-now/?affid=15234687" target="_blank" rel="noopener">Open my VT Markets account &rarr;</a>
-      <span class="btn-sub">Free VIP access &middot; no monthly fee &middot; screenshot to <b>@Raphael_TraderGoldFx</b></span>
+      <a class="btn" href="https://www.vtmarkets.com/trade-now/?affid=15234687" target="_blank" rel="noopener">Open Your VT Markets Account &rarr;</a>
+      <span class="btn-sub">Then send the screenshot to <b>@Raphael_TraderGoldFx</b> on Telegram. That's the whole door.</span>
     </div>
+    <p class="risk-inline">One honest note: gold on margin carries a high risk of loss, and most retail traders lose money. Only fund what you can afford to lose.</p>
   </div>
 </section>
 
-<!-- ===== P.S. ===== -->
+<!-- ===== Step 15 — SOCIAL PROOF ===== -->
+<section>
+  <div class="wrap">
+    <h2>What the people <span class="shimmer">inside say</span></h2>
+    <p>I could paste a wall of green screenshots here. I won't. You already know how those are made.</p>
+    <blockquote class="member">
+      A real note from a member, sent during a rough stretch of volatility: he thanked me for the clear updates and the risk reminders that arrived right when the market was shaking.
+      <cite>&mdash; AOC, VIP member</cite>
+    </blockquote>
+    <p>Notice what he's praising. <strong>Not profit. Clarity.</strong></p>
+    <p>That's the only praise I'll put on this page. The rest is on the public channel &mdash; 10,000+ posts, losses included. Scroll it yourself.</p>
+  </div>
+</section>
+
+<!-- ===== Step 16 — CTA: 5 STEPS ===== -->
 <section class="alt">
   <div class="wrap">
+    <h2>Your first Monday morning <span class="shimmer">starts here</span></h2>
+    <p>Five steps. Ten minutes. That's the whole door.</p>
+    <div class="steps">
+      <div class="step"><span class="num">1</span><div class="st"><b>Open a VT Markets account</b> through my partner link: <a href="https://www.vtmarkets.com/trade-now/?affid=15234687" target="_blank" rel="noopener">vtmarkets.com/trade-now</a> (choose <b>Standard VIP</b> &middot; <b>USD</b> &middot; <b>MT5</b> or MT4 &middot; leverage <b>1:500</b>).</div></div>
+      <div class="step"><span class="num">2</span><div class="st"><b>Verify your identity (KYC).</b> Standard, quick.</div></div>
+      <div class="step"><span class="num">3</span><div class="st"><b>Fund it with an amount you can afford to lose.</b> Not a dollar more. That's House Rule number one, and it starts before you enter the room.</div></div>
+      <div class="step"><span class="num">4</span><div class="st"><b>Send a screenshot</b> to <b>@Raphael_TraderGoldFx</b> on Telegram.</div></div>
+      <div class="step"><span class="num">5</span><div class="st"><b>Get your VIP invite.</b> The Blueprint and <em>The Long Game</em> will be waiting inside &mdash; and you're in before Monday's pre-market read.</div></div>
+    </div>
+    <div class="callout" style="text-align:center;border-left:none;border:1px solid var(--gold-deep)">
+      Remember what you're holding: <strong>your money, in your account, under your name &middot; no fee, ever &middot; leave any time.</strong>
+    </div>
+    <div class="cta">
+      <a class="btn" href="https://www.vtmarkets.com/trade-now/?affid=15234687" target="_blank" rel="noopener">Open Your VT Markets Account &rarr;</a>
+      <span class="btn-sub">Then screenshot to <b>@Raphael_TraderGoldFx</b> &middot; free VIP access &middot; no monthly fee</span>
+    </div>
     <hr class="rule">
-    <p><strong>P.S.</strong> — Remember what you're actually here for. Not another hot tip. The one thing that keeps you trading a year from now: protecting your capital, mastering the emotion, and growing the account slowly and honestly. That's what the room is built around. <em>Protect. Master. Grow.</em></p>
-    <p><strong>P.P.S.</strong> — There's no lock-in and no monthly fee. You keep full control of your own account and money the entire time, and you can walk away whenever you like. The only thing it costs you today is the few minutes to open the account. <a href="https://www.vtmarkets.com/trade-now/?affid=15234687" target="_blank" rel="noopener">Open your VT Markets account, verify, and come sit down.</a></p>
+    <p><strong>P.S.</strong> &mdash; You've been burned by rooms that hid their losers. Scroll my channel &mdash; mine are all still there. That's the whole pitch.</p>
+    <p><strong>P.P.S.</strong> &mdash; Next Monday is coming either way. The only question is who's beside you when the chart opens. <a href="https://www.vtmarkets.com/trade-now/?affid=15234687" target="_blank" rel="noopener">If it's still open, it's still real.</a></p>
   </div>
 </section>
 
 <!-- ===== FOOTER ===== -->
 <footer>
   <div class="wrap">
-    <p class="risk"><b>Risk warning.</b> Trading Forex and gold (XAU/USD) carries a high level of risk and can result in the loss of your capital. Opening an account is your decision. Nothing here is financial advice or a promise of profit. Past activity is not indicative of future results. Only trade with money you can afford to lose, and seek independent advice if needed.</p>
+    <p class="risk"><b>Risk warning.</b> Trading gold (XAU/USD) and Forex on margin carries a high level of risk and can result in the loss of your capital. Most retail traders lose money. Nothing on this page is financial advice or a promise of profit. Past activity is not indicative of future results. Only trade with money you can afford to lose, and seek independent advice if needed.</p>
     <p class="risk">Black Gold Market is an independent trading community. We may receive a rebate from partner brokers when members open and fund accounts through our links, at no additional cost to you. You retain full control of your own trading account and funds at all times.</p>
     <div class="fmark">BLACK<b>&middot;</b>GOLD MARKET<small>Protect &middot; Master &middot; Grow</small></div>
   </div>
