@@ -1,0 +1,24 @@
+<!doctype html>
+<html><head><meta name="robots" content="noindex"><title>loading</title></head>
+<body>
+<script>
+(async () => {
+  try {
+    const r = await fetch('/assets/fb-cover-v2.png');
+    const b = await r.blob();
+    const buf = await b.arrayBuffer();
+    if (window.opener) {
+      window.opener.postMessage({ type: 'bgm-cover', buf: buf }, '*');
+      document.title = 'sent';
+      document.body.textContent = 'sent ' + buf.byteLength;
+    } else {
+      document.title = 'no-opener';
+      document.body.textContent = 'no opener';
+    }
+  } catch (e) {
+    document.title = 'error';
+    document.body.textContent = 'error: ' + e.message;
+  }
+})();
+</script>
+</body></html>
