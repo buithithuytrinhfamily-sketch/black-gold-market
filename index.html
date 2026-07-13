@@ -59,6 +59,13 @@
   .btn.solid:hover{background:#1F1003;color:#FFF9F2}
   .btn.ghost{background:#D9C4AA;color:#321C04;border-color:#D9C4AA}
   .btn.ghost:hover{background:#CEBA9E;color:#321C04}
+  .btn.gift{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(135deg,#B8862B,#9A6C15);color:#FFF9F2;border-color:#6E4C0C;
+    box-shadow:0 4px 14px rgba(154,108,21,.35);position:relative;overflow:hidden}
+  .btn.gift:hover{background:linear-gradient(135deg,#C99A3D,#B8862B);color:#FFF9F2;box-shadow:0 6px 18px rgba(154,108,21,.5)}
+  .btn.gift svg{width:15px;height:15px;flex:none}
+  .btn.gift::after{content:"";position:absolute;top:0;left:-75%;width:50%;height:100%;
+    background:linear-gradient(105deg,transparent,rgba(255,255,255,.4),transparent);animation:giftShine 3.4s ease-in-out infinite}
+  @keyframes giftShine{0%{left:-75%}55%{left:130%}100%{left:130%}}
 
   /* ── topbar ── */
   .topbar{position:sticky;top:0;z-index:40;background:rgba(246,228,207,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-2)}
@@ -233,7 +240,7 @@
       <a href="#journal">Journal</a>
       <a href="https://t.me/+h-5A-mdBmhA5ZWQ1">Telegram</a>
     </nav>
-    <a class="btn solid" href="https://t.me/+h-5A-mdBmhA5ZWQ1">Join on Telegram</a>
+    <a class="btn gift" href="/blueprint/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>Free Gift</a>
   </div>
 </header>
 
