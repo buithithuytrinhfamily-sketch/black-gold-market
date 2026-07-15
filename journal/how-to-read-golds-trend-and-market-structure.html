@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NL24SJYSZ8"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NL24SJYSZ8');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Read Gold's Trend and Market Structure Before You Trade — Black Gold Market</title>
+<meta name="description" content="Learn to read gold&#x27;s trend and market structure before you trade: uptrends, ranges, support and resistance, moving averages and higher timeframes.">
+<meta property="og:title" content="How to Read Gold&#x27;s Trend and Market Structure Before You Trade">
+<meta property="og:description" content="Learn to read gold&#x27;s trend and market structure before you trade: uptrends, ranges, support and resistance, moving averages and higher timeframes.">
+<meta property="og:image" content="https://blackgoldmarket.us/avatar.jpg">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://blackgoldmarket.us/journal/how-to-read-golds-trend-and-market-structure.html">
+<meta property="og:url" content="https://blackgoldmarket.us/journal/how-to-read-golds-trend-and-market-structure.html">
+<link rel="icon" type="image/png" href="/favicon.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+  :root{
+    --paper:#F6E4CF;          /* trang giấy — kem ấm */
+    --sand:#EDDBC0;           /* nền panel — cát vàng nhạt */
+    --sand-2:#D9C4AA;
+    --ink:#321C04;            /* nâu espresso — nền tối logo */
+    --ink-2:#46290A;
+    --muted:#6F5433;          /* taupe ấm */
+    --gold:#c79331;           /* đồng/vàng ánh kim — màu chủ đề logo */
+    --gold-lite:#e0b25a;
+    --gold-deep:#8f6a24;
+    --loss:#a4562a;           /* semantic: stop loss / lệnh thua — terracotta */
+    --win:#5c7d4f;            /* semantic: lệnh thắng — olive */
+    --hairline:rgba(143,106,36,.22);
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+  }
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.7;margin:0}
+  a{color:var(--gold-deep);text-decoration:none}
+  a:hover{text-decoration:underline}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+
+  /* ── top bar ──────── */
+  .topbar{position:sticky;top:0;z-index:20;background:rgba(25,17,8,.97);backdrop-filter:blur(8px)}
+  .topbar .wrap{display:flex;align-items:center;gap:28px;height:64px}
+  .wordmark{font-family:var(--sans);font-weight:800;font-size:1.02rem;letter-spacing:.2em;color:#f4ead4}
+  .wordmark b{color:var(--gold-lite)}
+  .wordmark:hover{text-decoration:none}
+  nav.menu{display:flex;gap:22px;margin-left:auto;font-family:var(--sans);font-size:.82rem;letter-spacing:.08em}
+  nav.menu a{color:#c7ac7c;text-transform:uppercase}
+  nav.menu a[aria-current]{color:#f4ead4}
+  .tg-btn{font-family:var(--sans);font-size:.8rem;font-weight:700;letter-spacing:.06em;color:#321C04;background:#FFF9F2;padding:9px 16px;border-radius:3px;white-space:nowrap}
+  .tg-btn:hover{text-decoration:none;background:#EDDBC0}
+
+  /* ── ticker ────────────────────── */
+  .ticker{border-bottom:1px solid var(--hairline);background:var(--sand);font-family:var(--mono);font-size:.72rem;color:var(--muted);overflow-x:auto;white-space:nowrap}
+  .ticker .wrap{display:flex;gap:34px;padding:8px 24px}
+  .ticker span b{color:var(--ink);font-weight:500}
+
+  /* ── hero ───────────── */
+  .hero{padding:76px 0 64px;border-bottom:1px solid var(--hairline);
+    background:
+      radial-gradient(900px 480px at 85% 0%, rgba(199,147,49,.16), transparent 62%),
+      radial-gradient(700px 380px at -5% 100%, rgba(199,147,49,.08), transparent 60%),
+      var(--paper);}
+  .hero .wrap{display:grid;grid-template-columns:1fr 300px;gap:56px;align-items:center}
+  .eyebrow{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 22px}
+  .hero h1{font-size:clamp(2rem,5vw,3.15rem);line-height:1.12;font-weight:600;margin:0;max-width:20ch;text-wrap:balance}
+  .hero h1 .q{color:var(--gold-deep)}
+  .hero p.standfirst{font-size:1.12rem;color:var(--muted);max-width:54ch;margin:26px 0 0}
+  .byline{display:flex;align-items:center;gap:12px;margin-top:32px;font-family:var(--sans);font-size:.82rem;color:var(--muted)}
+  .byline b{color:var(--ink);font-weight:600}
+  .portrait{justify-self:end;text-align:center}
+  .portrait img{width:260px;height:260px;object-fit:cover;border-radius:50%;border:4px solid #fff;
+    box-shadow:0 0 0 1px var(--hairline),0 18px 44px rgba(143,106,36,.28);display:block;margin:0 auto}
+  .portrait .cap{font-family:var(--sans);font-size:.78rem;color:var(--muted);margin-top:14px}
+  .portrait .cap b{color:var(--ink)}
+  @media (max-width:820px){
+    .hero .wrap{grid-template-columns:1fr;gap:40px}
+    .portrait{justify-self:start;text-align:left}
+    .portrait img{margin:0}
+  }
+  .fade{opacity:0;transform:translateY(14px);animation:rise .7s ease forwards}
+  .fade.d1{animation-delay:.12s}.fade.d2{animation-delay:.24s}.fade.d3{animation-delay:.36s}
+  @keyframes rise{to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.fade{animation:none;opacity:1;transform:none}}
+
+  /* ── three pillars band ────────────────── */
+  .rules{border-bottom:1px solid var(--hairline);background:var(--sand)}
+  .rules .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hairline);padding:0}
+  .rule{background:var(--sand);padding:28px 26px}
+  .rule .no{font-family:var(--mono);font-size:.72rem;color:var(--gold-deep);letter-spacing:.14em}
+  .rule h3{font-family:var(--sans);font-size:1rem;font-weight:700;margin:10px 0 8px;letter-spacing:.01em}
+  .rule p{font-size:.92rem;color:var(--muted);margin:0;line-height:1.6}
+  @media (max-width:760px){.rules .wrap{grid-template-columns:1fr}}
+
+  /* ── article ─────────────────────────── */
+  .article{padding:72px 0 40px}
+  .article .body{max-width:65ch;margin:0 auto}
+  .article h2{font-size:1.5rem;font-weight:600;margin:60px 0 18px;padding-bottom:10px;border-bottom:1px solid var(--hairline);text-wrap:balance}
+  .article h2:first-child{margin-top:0}
+  .article p{margin:0 0 1.15em}
+  .article p.big{font-size:1.16rem}
+  .article strong{color:var(--ink);font-weight:700}
+  .key{color:var(--gold-deep);font-style:normal;font-weight:700}
+  .pull{border-left:3px solid var(--gold);padding:6px 0 6px 24px;margin:34px 0;font-size:1.32rem;line-height:1.45;color:var(--ink);font-weight:500;text-wrap:balance;font-family:var(--serif)}
+
+  /* playbook — 4 luật routine */
+  .playbook{border:1px solid var(--hairline);border-radius:4px;overflow:hidden;margin:34px 0;background:#fff}
+  .playbook .head{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#f4ead4;background:var(--ink);padding:12px 20px}
+  .step{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:20px;border-bottom:1px solid var(--sand-2)}
+  .step:last-child{border-bottom:0}
+  .step .n{font-family:var(--mono);font-size:1rem;color:var(--gold-deep);padding-top:2px;font-variant-numeric:tabular-nums}
+  .step h4{font-family:var(--sans);font-size:.98rem;font-weight:700;margin:0 0 5px;color:var(--ink)}
+  .step p{font-size:.94rem;color:var(--muted);margin:0;line-height:1.6}
+  @media (max-width:560px){.step{grid-template-columns:1fr;gap:6px}}
+
+  /* faq */
+  .faq{margin:34px 0}
+  .faq .qa{border-top:1px solid var(--hairline);padding:20px 0}
+  .faq .qa:last-child{border-bottom:1px solid var(--hairline)}
+  .faq h4{font-family:var(--sans);font-size:1.02rem;font-weight:700;margin:0 0 8px;color:var(--ink)}
+  .faq p{margin:0;color:var(--muted)}
+
+  /* author box */
+  .authorbox{display:grid;grid-template-columns:88px 1fr;gap:20px;align-items:start;
+    background:var(--sand);border:1px solid var(--hairline);border-radius:6px;padding:26px;margin:44px 0 10px}
+  .authorbox img{width:88px;height:88px;border-radius:50%;object-fit:cover;border:2px solid #fff;box-shadow:0 0 0 1px var(--hairline)}
+  .authorbox .who{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 8px}
+  .authorbox h4{font-size:1.1rem;margin:0 0 8px}
+  .authorbox p{font-size:.92rem;color:var(--muted);margin:0}
+  @media (max-width:560px){.authorbox{grid-template-columns:1fr}.authorbox img{width:72px;height:72px}}
+
+  .disclaimer{font-family:var(--sans);font-size:.82rem;font-style:italic;color:var(--muted);line-height:1.65;
+    border-top:1px solid var(--hairline);padding-top:22px;margin-top:40px}
+
+  /* ── cta ───────── */
+  .cta{border-top:1px solid var(--hairline);background:
+    radial-gradient(700px 320px at 50% 130%, rgba(199,147,49,.34), transparent 65%), var(--ink);color:#f4ead4}
+  .cta .wrap{padding:72px 24px;text-align:center}
+  .cta .kicker{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-lite);margin:0 0 16px}
+  .cta h2{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:600;margin:0 auto 14px;max-width:26ch;text-wrap:balance}
+  .cta p{color:#cbb488;max-width:48ch;margin:0 auto 30px}
+  .cta .tg-btn{font-size:.9rem;padding:14px 26px;background:#FFF9F2;color:#321C04}
+  .cta .tg-btn:hover{background:#EDDBC0}
+  .cta .sub{display:block;font-family:var(--sans);font-size:.76rem;color:#a58c60;margin-top:16px}
+
+  /* ── more ──────────────────────── */
+  .more{padding:70px 0;background:var(--paper)}
+  .more .label{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 26px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .card{background:#fff;border:1px solid var(--sand-2);border-radius:4px;padding:24px;display:flex;flex-direction:column;gap:10px;transition:border-color .2s,box-shadow .2s;color:var(--ink)}
+  .card:hover{border-color:var(--gold);box-shadow:0 8px 24px rgba(143,106,36,.12);text-decoration:none}
+  .card .tag{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .card h3{font-size:1.1rem;font-weight:600;margin:0;line-height:1.35;text-wrap:balance}
+  .card p{font-size:.9rem;color:var(--muted);margin:0;line-height:1.6;font-family:var(--sans)}
+  .card .read{margin-top:auto;font-family:var(--sans);font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-deep)}
+  @media (max-width:760px){.grid3{grid-template-columns:1fr}}
+
+  /* ── footer ──────────────────────────── */
+  footer{background:var(--ink);color:#cbb488}
+  footer .wrap{padding:44px 24px;display:grid;gap:18px}
+  footer .brand{font-family:var(--sans);font-weight:800;letter-spacing:.2em;font-size:.9rem;color:#f4ead4}
+  footer .brand b{color:var(--gold-lite)}
+  footer p{font-family:var(--sans);font-size:.76rem;line-height:1.7;max-width:88ch;margin:0}
+  footer p strong{color:#f4ead4}
+  footer .fine{color:#8f7654}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="wordmark" href="../">BLACK<b>·</b>GOLD MARKET</a>
+    <nav class="menu" aria-label="Main">
+      <a href="../">Home</a>
+      <a href="./" aria-current="page">Journal</a>
+      <a href="https://t.me/+h-5A-mdBmhA5ZWQ1">Telegram</a>
+    </nav>
+    <a class="tg-btn" href="https://t.me/+h-5A-mdBmhA5ZWQ1">Join on Telegram</a>
+  </div>
+</header>
+
+<div class="ticker" aria-hidden="true">
+  <div class="wrap">
+    <span>MARKET <b>XAU/USD — GOLD</b></span>
+    <span>FOCUS <b>PROTECT · MASTER · GROW</b></span>
+    <span>METHOD <b>PROCESS OVER PROFIT</b></span>
+    <span>JOURNAL <b>READ THE TREND — THEN PROTECT</b></span>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow fade">Market structure · The long game</p>
+      <h1 class="fade d1">How to Read Gold's Trend and Market Structure <span class="q">Before You Trade</span></h1>
+      <p class="standfirst fade d2">Before risk, before entries, one honest question: which way is gold leaning, and how strong is that structure? A calm, plain-language guide to reading the chart.</p>
+      <div class="byline fade d3">
+        <div>By <b>Raphael</b> &nbsp;&middot;&nbsp; XAU/USD &nbsp;&middot;&nbsp; 9 min read</div>
+      </div>
+    </div>
+    <figure class="portrait fade d2" style="margin:0">
+      <img src="../avatar.jpg" alt="Black Gold Market — Raphael, XAU/USD trader">
+      <figcaption class="cap"><b>Black Gold Market</b><br>Protect. Master. Grow.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="rules" aria-label="The three pillars">
+  <div class="wrap">
+    <div class="rule">
+      <div class="no">PILLAR 01</div>
+      <h3>Protect</h3>
+      <p>Capital comes first. Risk is defined before the trade, not during it — so no single loss can wreck a week.</p>
+    </div>
+    <div class="rule">
+      <div class="no">PILLAR 02</div>
+      <h3>Master</h3>
+      <p>Trade the plan, not the mood. Score yourself on execution, not on the result of any one trade.</p>
+    </div>
+    <div class="rule">
+      <div class="no">PILLAR 03</div>
+      <h3>Grow</h3>
+      <p>Slow, compounding, repeatable. A business, not a lottery ticket — still standing a year from now.</p>
+    </div>
+  </div>
+</section>
+
+<article class="article">
+  <div class="wrap"><div class="body">
+<figure style="margin:0 0 34px;text-align:center">
+  <img src="img/gold-price-action-chart.jpg" alt="Reading gold's trend and market structure on a XAU/USD price-action chart" style="max-width:100%;height:auto;border-radius:6px;border:1px solid var(--hairline)">
+  <figcaption style="font-family:var(--sans);font-size:.85rem;color:var(--muted);margin-top:10px">Reading gold&rsquo;s trend and market structure on a XAU/USD chart &mdash; the higher highs and lows tell the story before any indicator.</figcaption>
+</figure>
+<h2>The trader who never named the trend</h2>
+
+<p>I once watched a trader I was mentoring lose a whole afternoon to gold. Not to a crash. To himself.</p>
+
+<p>Every green candle, he bought. Every red candle, he panicked out and flipped short. He was busy for six hours straight, fingers on the trigger, heart rate climbing. By the close he was down, tired, and could not tell me one thing about what the market had actually done that day.</p>
+
+<p>So I asked him a simple question. "Before your first click this morning, was gold trending up, trending down, or going nowhere?" He went quiet. He had never asked it. He had traded a hundred candles without naming the one thing that would have told him whether any of them mattered.</p>
+
+<p>That is what this piece is about. Not entries. Not a signal. Just the honest work of learning to <span class="key">read a gold chart</span> before you risk a single dollar on it.</p>
+
+<h2>Why you name the trend before you do anything else</h2>
+
+<p>Most losing trades I have reviewed, my own included, share one root cause. The trader reacted to a candle without knowing which direction the market was leaning. They were answering a question the chart had not asked yet.</p>
+
+<p>Reading gold's trend first does something quiet but powerful. It turns a wall of noise into a story with a direction. Once you can say out loud, "gold is leaning up and the structure looks orderly," or "gold is drifting down and every bounce keeps failing," you stop treating every wiggle as a call to action. You start trading in the direction the market is already telling you about, instead of fighting it every fifteen minutes.</p>
+
+<p>This is the discipline point, and it is the whole reason I teach structure before anything else. Reading structure keeps you from chasing every candle. It is the difference between having an opinion and having a map.</p>
+
+<div class="pull">The market doesn't reward whoever won the most this week. It rewards the one who's still here a year from now.</div>
+
+<h2>The three states: uptrend, downtrend, and range</h2>
+
+<p>At any moment, gold is doing one of three things, and only three. Learning to sort a chart into one of these buckets is ninety percent of the skill.</p>
+
+<p>An <strong>uptrend</strong> is a market that keeps making higher highs and higher lows. Each push up reaches a little further than the last, and each pullback stops short of the previous dip before turning back up. Picture a staircase climbing to the right. That stair-step of higher highs and higher lows is the signature of buyers being in control.</p>
+
+<p>A <strong>downtrend</strong> is the mirror image: lower highs and lower lows. Every rally runs out of steam sooner than the one before, and every drop cuts deeper. The staircase descends. Sellers are setting the pace.</p>
+
+<p>A <strong>range</strong> is neither. Price bounces sideways between a rough ceiling and a rough floor, making roughly equal highs and equal lows. Nobody is winning. Ranges are where a lot of impatient traders donate money, because they keep expecting a trend that has not started yet.</p>
+
+<p>On a chart like the one above, before any indicator, first ask the only question that matters at this stage: higher highs, or lower highs? Your answer sorts the whole chart into one of these three states, and everything else you do sits on top of that answer.</p>
+
+<h2>Market structure: reading the swing points</h2>
+
+<p>When traders say <span class="key">market structure</span>, they mean the sequence of highs and lows that the price is carving out over time. It is the skeleton underneath the candles. The trend is just the shape that skeleton makes.</p>
+
+<p>To read it, you learn to spot swing points. A swing high is a peak with lower candles on either side. A swing low is a trough with higher candles on either side. Mark a few of the obvious ones and then simply read them left to right, like words in a sentence.</p>
+
+<p>Higher high, higher low, higher high, higher low. That sentence says uptrend. Lower high, lower low, lower high, lower low. That sentence says downtrend. The moment the sentence breaks, when an uptrend suddenly prints a lower low, or a downtrend prints a higher high, the market is telling you the structure may be shifting. It is not a command to trade. It is a change in the weather worth respecting.</p>
+
+<p>You do not need every swing. You need the obvious ones. If you have to squint to decide whether something is a swing high, it probably is not important enough to build a decision on.</p>
+
+<h2>Support and resistance: the floors and ceilings</h2>
+
+<p>Once you can read the swings, <span class="key">support and resistance</span> almost draws itself. Support is a price zone where falling has repeatedly slowed or stopped, a floor buyers have defended before. Resistance is the opposite, a ceiling where rallies have repeatedly stalled.</p>
+
+<p>Two things matter about these zones, and I want to be honest about both.</p>
+
+<p>First, treat them as zones, not razor-thin lines. Gold is volatile. A level that held to the exact dollar last month will not behave that precisely today. Draw a band, not a wire.</p>
+
+<p>Second, they are not walls. They are areas where the odds of a reaction have historically been higher, nothing more. Support does not "hold" because the chart owes you anything. Sometimes price slices straight through, and that break is itself information about who is winning. A level respected tells you one story; a level broken tells you another. Both are the market talking. Your job is to listen, not to argue.</p>
+
+<div class="pull">A level isn't a promise. It's a place where the market has shown its hand before, and might again.</div>
+
+<h2>The moving average as a trend filter, not a trigger</h2>
+
+<p>A moving average, like an <strong>EMA</strong>, is one of the calmest tools on the chart. It plots the average price over a chosen window, and because it smooths out the jitter, it gives you a clean read on direction without the noise.</p>
+
+<p>Here is how I use one, and just as importantly, how I do not.</p>
+
+<p>I use it as a <strong>filter</strong>. When price is riding above a rising moving average, that agrees with an uptrend read. When price sits below a falling one, that agrees with a downtrend. The slope of the line is a second opinion that confirms the story your swing points are already telling. If the structure says up and the moving average says up, the picture is consistent, and consistency is what you want before you do anything.</p>
+
+<p>I do not use it as a <strong>trigger</strong>. A price tag touching a moving average is not a "buy here" or "sell here." Plenty of traders lose money treating a line-cross like a green light. The moving average tells you the climate. It does not tell you when to step outside. Keep it in the role of trend filter, and it will serve you for years.</p>
+
+<h2>Breakouts and retests, explained plainly</h2>
+
+<p>A breakout is simply price pushing through a support or resistance zone that had been holding it back. A range ceiling finally gives way; a downtrend's line of lower highs is suddenly broken. It can mark the start of a new leg, and that is why breakouts get so much attention.</p>
+
+<p>But here is the part beginners skip. Not every break means what it looks like. Price often pokes through a level, sucks in a crowd of excited traders, and then falls straight back inside. That is a false break, and it is one of the most reliable ways to lose money in a hurry.</p>
+
+<p>This is where the idea of a <strong>retest</strong> earns its keep. After a genuine break, price will often come back to the level it just broke, as if checking that the old ceiling now behaves like a new floor. Watching how price behaves on that return, calmly, without a position, tells you far more than lunging at the first candle through the line. Patience here is not timidity. It is you refusing to be the crowd that gets trapped.</p>
+
+<h2>Why the higher timeframe sets the context</h2>
+
+<p>If you take one habit from this whole piece, take this one. Always read the bigger picture before the smaller one.</p>
+
+<p>A five-minute chart can look like a screaming uptrend while the daily chart is quietly grinding down. Both are true. But if you only ever look at the small timeframe, you will keep buying into what is, from a distance, a falling market, and wonder why your winners never last. The higher timeframe sets the context. It tells you which direction has the wind behind it. The lower timeframe is only for seeing detail once you already know which way you are facing.</p>
+
+<p>Think of it like weather and a single afternoon. The season is the higher timeframe. A warm hour in winter is the lower one. The warm hour is real, but you would be a fool to plant your crops on it. Read the season first. Then, and only then, zoom in.</p>
+
+<div class="playbook">
+  <div class="head">A calm routine for reading the trend</div>
+  <div class="step"><div class="n">01</div><div><h4>Start on the higher timeframe</h4><p>Open the bigger picture first, a daily or a four-hour view, and get the context before you ever touch a smaller chart. Ask which direction gold is leaning across weeks, not minutes. This is the frame everything else hangs on.</p></div></div>
+  <div class="step"><div class="n">02</div><div><h4>Name the trend out loud</h4><p>Read the swing points left to right. Higher highs and higher lows means uptrend. Lower highs and lower lows means downtrend. Roughly equal highs and lows means range. Say it plainly before moving on. If you cannot name it, the honest answer is often "range," and that is fine.</p></div></div>
+  <div class="step"><div class="n">03</div><div><h4>Mark the obvious floors and ceilings</h4><p>Draw the few support and resistance zones that are genuinely clear, as bands rather than thin lines. Skip the ones you have to squint at. You are mapping where the market has reacted before, not decorating the chart.</p></div></div>
+  <div class="step"><div class="n">04</div><div><h4>Add a moving average as a filter</h4><p>Drop on one moving average and read its slope only to confirm the trend you already named. Rising and price above it agrees with up; falling and price below it agrees with down. Use it to check your read, never as a trigger to act.</p></div></div>
+</div>
+
+<h2>Where this actually takes you</h2>
+
+<p>None of this promises a good week. I want to be plain about that, because I post my losing trades to the same channel where I post everything else, and I have no interest in selling you a fantasy.</p>
+
+<p>What reading structure gives you is not a win. It is a filter. It quietly removes a whole category of avoidable mistakes, the impulsive click, the trade against an obvious trend, the lunge at a false break. It slows you down at exactly the moments that used to cost you. Over months, that filtering is what separates traders who are still here from traders who burned out in their first busy afternoon.</p>
+
+<p>Protect first. Then master the reading of the chart, patiently, one honest question at a time. The growth, if it comes, is the long, slow reward for the two that came before it. That is the whole game, and it is a game measured in years, not candles.</p>
+
+<h2>Frequently Asked Questions</h2>
+<div class="faq">
+  <div class="qa"><h4>How do I know if gold is in an uptrend or downtrend?</h4><p>Read the swing points in order. If gold is making higher highs and higher lows, buyers are in control and it is an uptrend. If it is making lower highs and lower lows, sellers are in control and it is a downtrend. If the highs and lows are roughly level, it is a range, not a trend. Always confirm this on a higher timeframe before trusting it.</p></div>
+  <div class="qa"><h4>What is market structure in trading?</h4><p>Market structure is the sequence of highs and lows a price carves out over time, the skeleton underneath the candles. Reading it means tracking whether those swing points are stepping up, stepping down, or moving sideways. That sequence is what defines the trend and tells you when it may be shifting.</p></div>
+  <div class="qa"><h4>What does a moving average tell you?</h4><p>A moving average smooths out price to give you a cleaner read on direction. Its slope acts as a trend filter, confirming whether the structure you have read is up, down, or flat. It is best used to agree with your read, not as a signal by itself. A price touching the line is not a reason to trade.</p></div>
+  <div class="qa"><h4>Does higher timeframe matter for reading gold?</h4><p>Yes, more than almost anything. A small timeframe can show a strong move that runs against the bigger picture. The higher timeframe sets the context and tells you which direction has real weight behind it. Read it first, then zoom in for detail, never the other way around.</p></div>
+</div>
+
+<div class="authorbox">
+  <img src="../avatar.jpg" alt="Raphael — Black Gold Market">
+  <div>
+    <p class="who">About the Author</p>
+    <h4>Raphael — founder of Black Gold Market</h4>
+    <p>I run Black Gold Market, a community of around 8,900 traders built on radical transparency. I post real charts, including my losing trades, because pretending otherwise would help no one. I sell no signals and promise no returns. My whole approach is the long game: protect your capital first, master the reading of the chart second, and let any growth be the slow reward for the discipline that came before it.</p>
+  </div>
+</div>
+
+<p class="disclaimer">Risk disclaimer: This article is education only and is not financial advice. Trading gold and CFDs carries a substantial risk of loss, and most retail traders lose money. Any examples of structure, trends, or growth here are illustrations for teaching, not predictions of what any market will do. Past performance does not guarantee future results. Only ever trade capital you can afford to lose.</p>
+  </div></div>
+</article>
+
+<section class="cta">
+  <div class="wrap">
+    <p class="kicker">Start here — it's free</p>
+    <h2>Trade your next setup by its rules, not your impulses.</h2>
+    <p>Follow along on Telegram, where every idea comes with the real chart — entry, reasoning, and outcome, win or loss. No edited screenshots. No hype. Just the long game.</p>
+    <a class="tg-btn" href="https://t.me/+h-5A-mdBmhA5ZWQ1">Join Black Gold Market on Telegram</a>
+    <span class="sub">No guaranteed profit. No pressure to copy anything blindly.</span>
+  </div>
+</section>
+
+<section class="more">
+  <div class="wrap">
+    <p class="label">More from the journal — coming soon</p>
+    <div class="grid3">
+      <a class="card" href="https://t.me/+h-5A-mdBmhA5ZWQ1">
+        <span class="tag">Consistency</span>
+        <h3>How to Build a Daily Gold-Trading Routine You'll Actually Stick To</h3>
+        <p>The pre-market checklist, the risk rule, and the one habit that turns a good week into a good year.</p>
+        <span class="read">Follow on Telegram &rarr;</span>
+      </a>
+      <a class="card" href="https://t.me/+h-5A-mdBmhA5ZWQ1">
+        <span class="tag">Growth</span>
+        <h3>How to Grow a Small Gold Trading Account Without Blowing It Up</h3>
+        <p>Why slow compounding beats the home-run swing — and how to scale size only as the account earns it.</p>
+        <span class="read">Follow on Telegram &rarr;</span>
+      </a>
+      <a class="card" href="https://t.me/+h-5A-mdBmhA5ZWQ1">
+        <span class="tag">Emotions</span>
+        <h3>How to Detach From a Single Trade So One Loss Doesn't Wreck Your Week</h3>
+        <p>One loss is one data point, not a verdict. The quiet skill that separates consistent traders.</p>
+        <span class="read">Follow on Telegram &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand">BLACK<b>·</b>GOLD MARKET</div>
+    <p><strong>Protect. Master. Grow.</strong> Real XAU/USD trading built to last — capital protected first, emotions mastered, accounts grown steadily. Wins and losses shown without a filter.</p>
+    <p class="fine">Risk warning: Trading gold, CFDs and leveraged products carries a substantial risk of loss and is not suitable for everyone. Most retail traders lose money. Nothing on this site is financial advice or a solicitation to trade. Past performance does not guarantee future results. Only trade with capital you can afford to lose.</p>
+    <p class="fine">&copy; 2026 Black Gold Market. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
