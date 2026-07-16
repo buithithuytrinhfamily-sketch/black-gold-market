@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NL24SJYSZ8"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NL24SJYSZ8');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why Trading Is a Marathon, Not a Sprint — Black Gold Market</title>
+<meta name="description" content="Discover why patient, disciplined trading beats chasing quick wins. Raphael explains pacing, compounding, and protecting capital for the long game in gold.">
+<meta property="og:title" content="Why Trading Is a Marathon, Not a Sprint">
+<meta property="og:description" content="Discover why patient, disciplined trading beats chasing quick wins. Raphael explains pacing, compounding, and protecting capital for the long game in gold.">
+<meta property="og:image" content="https://blackgoldmarket.us/avatar.jpg">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://blackgoldmarket.us/journal/why-trading-is-a-marathon-not-a-sprint.html">
+<meta property="og:url" content="https://blackgoldmarket.us/journal/why-trading-is-a-marathon-not-a-sprint.html">
+<link rel="icon" type="image/png" href="/favicon.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+  :root{
+    --paper:#F6E4CF;          /* trang giấy — kem ấm */
+    --sand:#EDDBC0;           /* nền panel — cát vàng nhạt */
+    --sand-2:#D9C4AA;
+    --ink:#321C04;            /* nâu espresso — nền tối logo */
+    --ink-2:#46290A;
+    --muted:#6F5433;          /* taupe ấm */
+    --gold:#c79331;           /* đồng/vàng ánh kim — màu chủ đề logo */
+    --gold-lite:#e0b25a;
+    --gold-deep:#8f6a24;
+    --loss:#a4562a;           /* semantic: stop loss / lệnh thua — terracotta */
+    --win:#5c7d4f;            /* semantic: lệnh thắng — olive */
+    --hairline:rgba(143,106,36,.22);
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+  }
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.7;margin:0}
+  a{color:var(--gold-deep);text-decoration:none}
+  a:hover{text-decoration:underline}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+
+  /* ── top bar ──────── */
+  .topbar{position:sticky;top:0;z-index:20;background:rgba(25,17,8,.97);backdrop-filter:blur(8px)}
+  .topbar .wrap{display:flex;align-items:center;gap:28px;height:64px}
+  .wordmark{font-family:var(--sans);font-weight:800;font-size:1.02rem;letter-spacing:.2em;color:#f4ead4}
+  .wordmark b{color:var(--gold-lite)}
+  .wordmark:hover{text-decoration:none}
+  nav.menu{display:flex;gap:22px;margin-left:auto;font-family:var(--sans);font-size:.82rem;letter-spacing:.08em}
+  nav.menu a{color:#c7ac7c;text-transform:uppercase}
+  nav.menu a[aria-current]{color:#f4ead4}
+  .tg-btn{font-family:var(--sans);font-size:.8rem;font-weight:700;letter-spacing:.06em;color:#321C04;background:#FFF9F2;padding:9px 16px;border-radius:3px;white-space:nowrap}
+  .tg-btn:hover{text-decoration:none;background:#EDDBC0}
+
+  /* ── ticker ────────────────────── */
+  .ticker{border-bottom:1px solid var(--hairline);background:var(--sand);font-family:var(--mono);font-size:.72rem;color:var(--muted);overflow-x:auto;white-space:nowrap}
+  .ticker .wrap{display:flex;gap:34px;padding:8px 24px}
+  .ticker span b{color:var(--ink);font-weight:500}
+
+  /* ── hero ───────────── */
+  .hero{padding:76px 0 64px;border-bottom:1px solid var(--hairline);
+    background:
+      radial-gradient(900px 480px at 85% 0%, rgba(199,147,49,.16), transparent 62%),
+      radial-gradient(700px 380px at -5% 100%, rgba(199,147,49,.08), transparent 60%),
+      var(--paper);}
+  .hero .wrap{display:grid;grid-template-columns:1fr 300px;gap:56px;align-items:center}
+  .eyebrow{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 22px}
+  .hero h1{font-size:clamp(2rem,5vw,3.15rem);line-height:1.12;font-weight:600;margin:0;max-width:20ch;text-wrap:balance}
+  .hero h1 .q{color:var(--gold-deep)}
+  .hero p.standfirst{font-size:1.12rem;color:var(--muted);max-width:54ch;margin:26px 0 0}
+  .byline{display:flex;align-items:center;gap:12px;margin-top:32px;font-family:var(--sans);font-size:.82rem;color:var(--muted)}
+  .byline b{color:var(--ink);font-weight:600}
+  .portrait{justify-self:end;text-align:center}
+  .portrait img{width:260px;height:260px;object-fit:cover;border-radius:50%;border:4px solid #fff;
+    box-shadow:0 0 0 1px var(--hairline),0 18px 44px rgba(143,106,36,.28);display:block;margin:0 auto}
+  .portrait .cap{font-family:var(--sans);font-size:.78rem;color:var(--muted);margin-top:14px}
+  .portrait .cap b{color:var(--ink)}
+  @media (max-width:820px){
+    .hero .wrap{grid-template-columns:1fr;gap:40px}
+    .portrait{justify-self:start;text-align:left}
+    .portrait img{margin:0}
+  }
+  .fade{opacity:0;transform:translateY(14px);animation:rise .7s ease forwards}
+  .fade.d1{animation-delay:.12s}.fade.d2{animation-delay:.24s}.fade.d3{animation-delay:.36s}
+  @keyframes rise{to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.fade{animation:none;opacity:1;transform:none}}
+
+  /* ── three pillars band ────────────────── */
+  .rules{border-bottom:1px solid var(--hairline);background:var(--sand)}
+  .rules .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hairline);padding:0}
+  .rule{background:var(--sand);padding:28px 26px}
+  .rule .no{font-family:var(--mono);font-size:.72rem;color:var(--gold-deep);letter-spacing:.14em}
+  .rule h3{font-family:var(--sans);font-size:1rem;font-weight:700;margin:10px 0 8px;letter-spacing:.01em}
+  .rule p{font-size:.92rem;color:var(--muted);margin:0;line-height:1.6}
+  @media (max-width:760px){.rules .wrap{grid-template-columns:1fr}}
+
+  /* ── article ─────────────────────────── */
+  .article{padding:72px 0 40px}
+  .article .body{max-width:65ch;margin:0 auto}
+  .article h2{font-size:1.5rem;font-weight:600;margin:60px 0 18px;padding-bottom:10px;border-bottom:1px solid var(--hairline);text-wrap:balance}
+  .article h2:first-child{margin-top:0}
+  .article p{margin:0 0 1.15em}
+  .article p.big{font-size:1.16rem}
+  .article strong{color:var(--ink);font-weight:700}
+  .key{color:var(--gold-deep);font-style:normal;font-weight:700}
+  .pull{border-left:3px solid var(--gold);padding:6px 0 6px 24px;margin:34px 0;font-size:1.32rem;line-height:1.45;color:var(--ink);font-weight:500;text-wrap:balance;font-family:var(--serif)}
+
+  /* playbook — 4 luật routine */
+  .playbook{border:1px solid var(--hairline);border-radius:4px;overflow:hidden;margin:34px 0;background:#fff}
+  .playbook .head{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#f4ead4;background:var(--ink);padding:12px 20px}
+  .step{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:20px;border-bottom:1px solid var(--sand-2)}
+  .step:last-child{border-bottom:0}
+  .step .n{font-family:var(--mono);font-size:1rem;color:var(--gold-deep);padding-top:2px;font-variant-numeric:tabular-nums}
+  .step h4{font-family:var(--sans);font-size:.98rem;font-weight:700;margin:0 0 5px;color:var(--ink)}
+  .step p{font-size:.94rem;color:var(--muted);margin:0;line-height:1.6}
+  @media (max-width:560px){.step{grid-template-columns:1fr;gap:6px}}
+
+  /* faq */
+  .faq{margin:34px 0}
+  .faq .qa{border-top:1px solid var(--hairline);padding:20px 0}
+  .faq .qa:last-child{border-bottom:1px solid var(--hairline)}
+  .faq h4{font-family:var(--sans);font-size:1.02rem;font-weight:700;margin:0 0 8px;color:var(--ink)}
+  .faq p{margin:0;color:var(--muted)}
+
+  /* author box */
+  .authorbox{display:grid;grid-template-columns:88px 1fr;gap:20px;align-items:start;
+    background:var(--sand);border:1px solid var(--hairline);border-radius:6px;padding:26px;margin:44px 0 10px}
+  .authorbox img{width:88px;height:88px;border-radius:50%;object-fit:cover;border:2px solid #fff;box-shadow:0 0 0 1px var(--hairline)}
+  .authorbox .who{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 8px}
+  .authorbox h4{font-size:1.1rem;margin:0 0 8px}
+  .authorbox p{font-size:.92rem;color:var(--muted);margin:0}
+  @media (max-width:560px){.authorbox{grid-template-columns:1fr}.authorbox img{width:72px;height:72px}}
+
+  .disclaimer{font-family:var(--sans);font-size:.82rem;font-style:italic;color:var(--muted);line-height:1.65;
+    border-top:1px solid var(--hairline);padding-top:22px;margin-top:40px}
+
+  /* ── cta ───────── */
+  .cta{border-top:1px solid var(--hairline);background:
+    radial-gradient(700px 320px at 50% 130%, rgba(199,147,49,.34), transparent 65%), var(--ink);color:#f4ead4}
+  .cta .wrap{padding:72px 24px;text-align:center}
+  .cta .kicker{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-lite);margin:0 0 16px}
+  .cta h2{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:600;margin:0 auto 14px;max-width:26ch;text-wrap:balance}
+  .cta p{color:#cbb488;max-width:48ch;margin:0 auto 30px}
+  .cta .tg-btn{font-size:.9rem;padding:14px 26px;background:#FFF9F2;color:#321C04}
+  .cta .tg-btn:hover{background:#EDDBC0}
+  .cta .sub{display:block;font-family:var(--sans);font-size:.76rem;color:#a58c60;margin-top:16px}
+
+  /* ── more ──────────────────────── */
+  .more{padding:70px 0;background:var(--paper)}
+  .more .label{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 26px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .card{background:#fff;border:1px solid var(--sand-2);border-radius:4px;padding:24px;display:flex;flex-direction:column;gap:10px;transition:border-color .2s,box-shadow .2s;color:var(--ink)}
+  .card:hover{border-color:var(--gold);box-shadow:0 8px 24px rgba(143,106,36,.12);text-decoration:none}
+  .card .tag{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .card h3{font-size:1.1rem;font-weight:600;margin:0;line-height:1.35;text-wrap:balance}
+  .card p{font-size:.9rem;color:var(--muted);margin:0;line-height:1.6;font-family:var(--sans)}
+  .card .read{margin-top:auto;font-family:var(--sans);font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-deep)}
+  @media (max-width:760px){.grid3{grid-template-columns:1fr}}
+
+  /* ── footer ──────────────────────────── */
+  footer{background:var(--ink);color:#cbb488}
+  footer .wrap{padding:44px 24px;display:grid;gap:18px}
+  footer .brand{font-family:var(--sans);font-weight:800;letter-spacing:.2em;font-size:.9rem;color:#f4ead4}
+  footer .brand b{color:var(--gold-lite)}
+  footer p{font-family:var(--sans);font-size:.76rem;line-height:1.7;max-width:88ch;margin:0}
+  footer p strong{color:#f4ead4}
+  footer .fine{color:#8f7654}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="wordmark" href="../">BLACK<b>·</b>GOLD MARKET</a>
+    <nav class="menu" aria-label="Main">
+      <a href="../">Home</a>
+      <a href="./" aria-current="page">Journal</a>
+      <a href="https://t.me/+h-5A-mdBmhA5ZWQ1">Telegram</a>
+    </nav>
+    <a class="tg-btn" href="https://t.me/+h-5A-mdBmhA5ZWQ1">Join on Telegram</a>
+  </div>
+</header>
+
+<div class="ticker" aria-hidden="true">
+  <div class="wrap">
+    <span>MARKET <b>XAU/USD — GOLD</b></span>
+    <span>FOCUS <b>PROTECT · MASTER · GROW</b></span>
+    <span>METHOD <b>PROCESS OVER PROFIT</b></span>
+    <span>JOURNAL <b>ENTRY — THE LONG GAME</b></span>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow fade">The long game</p>
+      <h1 class="fade d1">Why Trading Is a Marathon, <span class="q">Not a Sprint</span></h1>
+      <p class="standfirst fade d2">The fastest way to end your trading journey is to treat it like a race to the finish line. Here is why the traders who last are the ones who learn to pace themselves.</p>
+      <div class="byline fade d3">
+        <div>By <b>Raphael</b> &nbsp;&middot;&nbsp; XAU/USD &nbsp;&middot;&nbsp; 9 min read</div>
+      </div>
+    </div>
+    <figure class="portrait fade d2" style="margin:0">
+      <img src="../avatar.jpg" alt="Black Gold Market — Raphael, XAU/USD trader">
+      <figcaption class="cap"><b>Black Gold Market</b><br>Protect. Master. Grow.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="rules" aria-label="The three pillars">
+  <div class="wrap">
+    <div class="rule">
+      <div class="no">PILLAR 01</div>
+      <h3>Protect</h3>
+      <p>Capital comes first. Risk is defined before the trade, not during it — so no single loss can wreck a week.</p>
+    </div>
+    <div class="rule">
+      <div class="no">PILLAR 02</div>
+      <h3>Master</h3>
+      <p>Trade the plan, not the mood. Score yourself on execution, not on the result of any one trade.</p>
+    </div>
+    <div class="rule">
+      <div class="no">PILLAR 03</div>
+      <h3>Grow</h3>
+      <p>Slow, compounding, repeatable. A business, not a lottery ticket — still standing a year from now.</p>
+    </div>
+  </div>
+</section>
+
+<article class="article">
+  <div class="wrap"><div class="body">
+<p>I have watched a lot of people arrive at the gold market with the same look in their eyes. It is a mix of hope and hurry. They have seen the charts of XAU/USD swing hundreds of points in a session, they have done the mental math, and they have quietly decided that this is the thing that will change everything for them — quickly. Not next year. Not in five years. Now.</p>
+
+<p>I understand that feeling. I am not going to shame anyone for it. But I want to be honest with you the way I would want a mentor to be honest with me: that hurry is the single most expensive habit you can bring to the screen. The market does not reward urgency. It rewards endurance. And the sooner you stop treating trading like a sprint, the longer you get to stay in the race at all.</p>
+
+<p>My whole philosophy fits on a small card: <strong>Protect. Master. Grow.</strong> In that order. Protection comes first, always, because you cannot master or grow anything if you are no longer here. This article is about that order — and about why the marathon mindset is not a soft, motivational idea but a practical survival strategy.</p>
+
+<div class="pull">Success in this business is not built in a single trade. It is built across thousands of them, most of which you will barely remember.</div>
+
+<h2>The Sprinter's Mindset — And Why It Blows Accounts</h2>
+
+<p>A sprinter has one job: maximum output, right now. Every muscle fires at once. There is no pacing, no reserve, no tomorrow. That is a beautiful thing on a hundred-metre track. It is a catastrophe in a market that will still be open next week, next month, next decade.</p>
+
+<p>The sprinter's mindset in trading looks like this. You want a large result from a small account, so you take an oversized position. You feel the pressure of wanting it fast, so you skip the part where you decide how much you are willing to lose before you enter. One trade goes against you — and because the position was too big, that single loss does real damage. Now you are not just down money; you are emotionally rattled. So you do the most human thing in the world: you try to win it back immediately, with an even bigger, more urgent trade.</p>
+
+<p>This is the loop that ends accounts. Not a lack of intelligence. Not bad luck. A refusal to slow down.</p>
+
+<h3>Speed Feels Like Progress. Usually It Is Just Risk.</h3>
+
+<p>Here is the trap. When you trade fast and take large risks, the account moves a lot. Big green days, big red days. All that movement <em>feels</em> like you are getting somewhere. But volatility in your account balance is not the same as progress in your skill. Often it is the opposite — the wilder the swings, the less control you actually have.</p>
+
+<p>A marathon runner who sprints the first mile does not finish faster. They finish sooner, on the side of the road, unable to continue. In trading, "unable to continue" has a name: a blown account. And the account you blow is the one that never gets the chance to benefit from everything you were about to learn.</p>
+
+<h2>Why Consistency Quietly Beats Intensity</h2>
+
+<p>Let me be clear about what I am <em>not</em> saying. I am not promising you that patience produces some specific result, or that slow trading is a secret path to riches. I do not deal in those promises, and you should be wary of anyone who does. What I am saying is narrower and more honest: the trader who protects capital and stays consistent gets to keep playing, and the one who stays in the game long enough to actually improve is the one with a real chance of a durable outcome.</p>
+
+<p>Think about what compounding truly requires. It is not a magic multiplier. It is <strong>time plus survival.</strong> Compounding of any kind — of money, of skill, of judgment — only works on capital that still exists and on a person who is still trading. The moment you are wiped out, the entire equation resets to zero, and no amount of future brilliance can retroactively save the account you already lost.</p>
+
+<p>So consistency is not a personality trait for the naturally calm. It is a mathematical necessity. Small, controlled risks keep you in a range where no single bad day can end your journey. That is the whole point. You are not trying to have a spectacular week. You are trying to make sure there is always a next week.</p>
+
+<div class="pull">The goal of a young trader is not to win big. It is to not lose in a way you cannot recover from.</div>
+
+<h2>Pacing and Energy: The Human Cost Nobody Talks About</h2>
+
+<p>A marathon is not only a test of the legs. It is a test of attention, of nerves, of the ability to keep making good decisions when you are tired. Trading is the same, and this is the part people ignore because it does not show up on a chart.</p>
+
+<p>When you sprint, you burn out. I have seen traders sit at the screen for ten hours, forcing setups that were not there, because they had decided that today was the day something had to happen. By hour eight, they are not analysing anymore. They are gambling with a tired brain and calling it conviction.</p>
+
+<p>Pacing yourself means treating your focus as a finite resource, because it is. It means:</p>
+
+<ul>
+<li><strong>Trading fewer, cleaner setups</strong> instead of forcing action to feel productive. A day with no trade is a valid, disciplined day.</li>
+<li><strong>Stepping away after a loss</strong> long enough for the emotion to drain out, so your next decision is made by you and not by your frustration.</li>
+<li><strong>Keeping a life outside the charts.</strong> The trader who has nothing else is far more likely to over-trade, because the market becomes the only place they feel anything.</li>
+<li><strong>Protecting your sleep and your calm</strong> the way an athlete protects recovery. Your edge, whatever it is, lives in a rested mind.</li>
+</ul>
+
+<p>None of this is glamorous. That is exactly why it works. The market is very good at exhausting people who refuse to manage their own energy.</p>
+
+<h2>Protecting Capital Is the Non-Negotiable</h2>
+
+<p>If you remember one line from everything I write, make it this: <strong>your first job is not to make money — it is to not lose the ability to make money.</strong></p>
+
+<p>Capital is your entry ticket to the game. It is oxygen. Everything else — your strategy, your patience, your growing skill — is downstream of simply having capital left to work with. This is why risk management is not a chapter in the book of trading. It <em>is</em> the book. The rest is footnotes.</p>
+
+<p>I will not give you specific numbers to enter, or exact levels to place a stop, because that would be pretending to know your account, your risk tolerance, and your life — which I do not. What I will give you is the principle underneath all of it: <strong>you decide what you are willing to lose on a trade before you ever open it, and that amount is small enough that being wrong is survivable, boring, and forgettable.</strong></p>
+
+<p>A loss that follows a plan is not a failure. It is the cost of doing business, paid in a currency you had already set aside. A loss that comes from an oversized, hopeful, unplanned position is something else entirely — it is a wound. The marathon trader takes the first kind all day long and refuses the second kind on principle.</p>
+
+<h2>Process Over Any Single Result</h2>
+
+<p>Here is a mental shift that changes everything, and it takes most people years to accept.</p>
+
+<p>You cannot control the outcome of any single trade. You can do everything right — respect your plan, size correctly, wait for your setup — and still lose. You can also do everything wrong and get lucky. Because of this, judging yourself by individual results is a broken feedback loop. It rewards recklessness when it happens to pay off and punishes discipline when the market simply does not cooperate.</p>
+
+<p>So we judge the process instead. Did I follow my plan? Did I size my risk the way I said I would? Did I stay out when there was nothing to trade? Did I keep my emotions off the keyboard? Those are the questions of a professional, and every one of them is fully within your control.</p>
+
+<div class="pull">Fall in love with the process, and the process is something you can actually get better at. Fall in love with the outcome, and you are just gambling with extra steps.</div>
+
+<p>Over a long enough road, good process is what separates the people who are still here from the people who are not. That is the entire game. Not one heroic trade. A thousand ordinary, disciplined ones, strung together by someone who refused to quit and refused to blow up.</p>
+
+<h2>How to Start Thinking Like a Marathoner</h2>
+
+<p>You do not need to overhaul your life tonight. You need to change your relationship with time and speed. A few starting points:</p>
+
+<ol>
+<li><strong>Define survival before you define success.</strong> Decide how you will protect your capital first. Growth is a conversation you earn the right to have later.</li>
+<li><strong>Measure yourself in months and years, not sessions.</strong> A single day tells you almost nothing. A long track record of disciplined behaviour tells you everything.</li>
+<li><strong>Make your losses small and your decisions boring.</strong> If your trading is exciting, it is probably too big.</li>
+<li><strong>Keep a journal of process, not just profit.</strong> Track whether you followed your rules. That is the number that predicts your future.</li>
+<li><strong>Give yourself permission to be slow.</strong> The rush is the enemy. The runners who finish are the ones who never let the crowd set their pace.</li>
+</ol>
+
+<h2>Frequently Asked Questions</h2>
+
+<p><strong>Does "marathon, not a sprint" just mean trading slowly?</strong> Not exactly. It means trading <em>sustainably</em>. You can be active and still think long-term — the difference is that a marathoner never takes a risk that could end the whole journey. Slowness is a side effect of protecting yourself, not the goal itself.</p>
+
+<p><strong>Isn't patient trading just a way of accepting smaller results?</strong> It is a way of accepting <em>survivable</em> results so that you are still here to keep learning and improving. I make no promises about what those results will be. I only promise that the trader who blows up gets no results at all.</p>
+
+<p><strong>How do I stop myself from revenge trading after a loss?</strong> Step away from the screen and let the emotion pass before your next decision. A planned loss was already budgeted for — it needs no revenge. If you feel an urgent need to win it back, that urgency itself is the signal to stop for the day.</p>
+
+<p><strong>How much should I risk on a trade?</strong> I cannot give you a personal number, because it depends on your account and your circumstances, and that is a decision for you and, if appropriate, a licensed professional. The principle I stand by is this: risk an amount so small that a losing trade is forgettable and never threatens your ability to keep trading.</p>
+
+<p><strong>How long before I "make it" as a trader?</strong> That framing is the sprinter's question, and it is the one that gets people hurt. There is no finish line where you have "made it". There is only the ongoing practice of protecting capital, sharpening your process, and staying in the game. Longevity is the achievement.</p>
+
+<h2>About Raphael</h2>
+
+<p>I am Raphael, and I write for the Black Gold Market community with one aim: to help traders think clearly and survive long enough to grow. My approach is built on three words — <strong>Protect. Master. Grow.</strong> — and I hold to them in that order without exception.</p>
+
+<p>I will never tell you I can double or triple your account in a few days. I do not believe that message helps anyone, and I have watched it quietly ruin people who deserved better guidance. What I offer instead is the unglamorous truth: trading is a discipline, capital protection is the foundation, and the traders who last are the ones who treat this as a marathon. My job is to keep reminding you of that, calmly, for as long as you are willing to listen.</p>
+
+<h2>A Word on Risk</h2>
+
+<p>This article is for educational purposes only. It is not financial, investment, or trading advice, and it is not a recommendation to buy, sell, or hold any instrument, including gold (XAU/USD). Trading leveraged products carries a real and significant risk of loss, and you can lose some or all of your capital. Past behaviour of any market is not a reliable indicator of future results. Nothing here is tailored to your personal circumstances. Before making any trading decision, consider your own situation carefully and consult a licensed, qualified financial professional. Never risk money you cannot afford to lose.</p>
+  </div></div>
+</article>
+
+<section class="cta">
+  <div class="wrap">
+    <p class="kicker">Start here — it's free</p>
+    <h2>Trade your next setup by its rules, not your impulses.</h2>
+    <p>Follow along on Telegram for daily gold analysis and setups — each with the reasoning behind it, so you trade by a plan instead of an impulse. Free to follow, with an optional Kit. No hype, no promises.</p>
+    <a class="tg-btn" href="https://t.me/+h-5A-mdBmhA5ZWQ1">Join Black Gold Market on Telegram</a>
+    <span class="sub">No guaranteed profit. No pressure to copy anything blindly.</span>
+  </div>
+</section>
+
+<section class="more">
+  <div class="wrap">
+    <p class="label">More from the journal — coming soon</p>
+    <div class="grid3">
+      <a class="card" href="https://t.me/+h-5A-mdBmhA5ZWQ1">
+        <span class="tag">Consistency</span>
+        <h3>How to Build a Daily Gold-Trading Routine You'll Actually Stick To</h3>
+        <p>The pre-market checklist, the risk rule, and the one habit that turns a good week into a good year.</p>
+        <span class="read">Follow on Telegram &rarr;</span>
+      </a>
+      <a class="card" href="https://t.me/+h-5A-mdBmhA5ZWQ1">
+        <span class="tag">Growth</span>
+        <h3>How to Grow a Small Gold Trading Account Without Blowing It Up</h3>
+        <p>Why slow compounding beats the home-run swing — and how to scale size only as the account earns it.</p>
+        <span class="read">Follow on Telegram &rarr;</span>
+      </a>
+      <a class="card" href="https://t.me/+h-5A-mdBmhA5ZWQ1">
+        <span class="tag">Emotions</span>
+        <h3>How to Detach From a Single Trade So One Loss Doesn't Wreck Your Week</h3>
+        <p>One loss is one data point, not a verdict. The quiet skill that separates consistent traders.</p>
+        <span class="read">Follow on Telegram &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand">BLACK<b>·</b>GOLD MARKET</div>
+    <p><strong>Protect. Master. Grow.</strong> Daily XAU/USD analysis and trade ideas with the reasoning behind them — free to follow, with an optional Kit. Built on discipline and defined risk, not promises of profit.</p>
+    <p class="fine">Risk warning: Trading gold, CFDs and leveraged products carries a substantial risk of loss and is not suitable for everyone. Most retail traders lose money. Nothing on this site is financial advice or a solicitation to trade. Past performance does not guarantee future results. Only trade with capital you can afford to lose.</p>
+    <p class="fine">&copy; 2026 Black Gold Market. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
