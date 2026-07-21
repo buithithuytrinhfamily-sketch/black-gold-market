@@ -5,55 +5,55 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NL24SJYSZ8');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>The Long Game — Flipbook</title>
+<title>The Long Game, Flipbook</title>
 <link rel="icon" type="image/png" href="/favicon.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <style>
-  html,body{margin:0;height:100%;background:radial-gradient(900px 500px at 70% 0%, #7a4f30, transparent 70%), linear-gradient(160deg,#6d452a,#4e3120);background-attachment:fixed;color:#dec1a1;
-    font-family:Georgia,'Times New Roman',serif;display:flex;flex-direction:column;align-items:center}
-  header{padding:14px 10px 4px;text-align:center}
-  header b{color:#fdf1c8;letter-spacing:2px;font-size:15px}
-  header span{display:block;color:#e8cfa8;font-size:11px;margin-top:3px}
-  #stage{flex:1;display:flex;align-items:center;justify-content:center;width:100%;padding:6px}
-  #book{touch-action:none}
-  .controls{padding:8px 0 16px;display:flex;gap:10px;align-items:center}
-  button{background:#54341f;color:#f2ddbd;border:1px solid #c79331;border-radius:6px;
-    padding:8px 16px;font-family:inherit;font-size:14px;cursor:pointer}
-  button:hover{background:#6d452a;color:#fdf1c8}
-  #pg{color:#f0dfc2;font-size:12px;min-width:70px;text-align:center}
-  .page img{width:100%;height:100%;display:block;box-shadow:0 0 22px rgba(0,0,0,.6)}
+ html,body{margin:0;height:100%;background:radial-gradient(900px 500px at 70% 0%, #7a4f30, transparent 70%), linear-gradient(160deg,#6d452a,#4e3120);background-attachment:fixed;color:#dec1a1;
+ font-family:Georgia,'Times New Roman',serif;display:flex;flex-direction:column;align-items:center}
+ header{padding:14px 10px 4px;text-align:center}
+ header b{color:#fdf1c8;letter-spacing:2px;font-size:15px}
+ header span{display:block;color:#e8cfa8;font-size:11px;margin-top:3px}
+ #stage{flex:1;display:flex;align-items:center;justify-content:center;width:100%;padding:6px}
+ #book{touch-action:none}
+ .controls{padding:8px 0 16px;display:flex;gap:10px;align-items:center}
+ button{background:#54341f;color:#f2ddbd;border:1px solid #c79331;border-radius:6px;
+ padding:8px 16px;font-family:inherit;font-size:14px;cursor:pointer}
+ button:hover{background:#6d452a;color:#fdf1c8}
+ #pg{color:#f0dfc2;font-size:12px;min-width:70px;text-align:center}
+ .page img{width:100%;height:100%;display:block;box-shadow:0 0 22px rgba(0,0,0,.6)}
 </style></head>
 <body>
-  <header><b>THE LONG GAME</b><span>Protect &middot; Master &middot; Grow &mdash; flip with arrows or drag a corner</span></header>
-  <div id="stage"><div id="book"></div></div>
-  <div class="controls">
-    <button id="prev">&lsaquo; Prev</button><span id="pg"></span><button id="next">Next &rsaquo;</button>
-  </div>
-  <script src="page-flip.browser.js"></script>
-  <script>
-    var pages = [];
-    for (var i = 1; i <= 75; i++) pages.push('pages/' + String(i).padStart(3, '0') + '.jpg');
-    var el = document.getElementById('book');
-    function calc(){
-      var maxH = Math.min(window.innerHeight-140, 1306);
-      var h = Math.max(360, Math.min(maxH, 653));
-      var w = Math.round(h/1.4143);
-      return {w:w, h:h};
-    }
-    var d = calc();
-    var flip = new St.PageFlip(el, {
-      width:d.w, height:d.h, size:'fixed',
-      showCover:true, maxShadowOpacity:0.5, mobileScrollSupport:false,
-      drawShadow:true, flippingTime:700, usePortrait:true
-    });
-    flip.loadFromImages(pages);
-    var pg=document.getElementById('pg');
-    function upd(){var c=flip.getCurrentPageIndex()+1;pg.textContent=c+' / '+pages.length;}
-    flip.on('flip', upd); upd();
-    document.getElementById('prev').onclick=function(){flip.flipPrev();};
-    document.getElementById('next').onclick=function(){flip.flipNext();};
-    document.addEventListener('keydown',function(e){
-      if(e.key==='ArrowLeft')flip.flipPrev();
-      if(e.key==='ArrowRight')flip.flipNext();
-    });
-  </script>
+ <header><b>THE LONG GAME</b><span>Protect &middot; Master &middot; Grow, flip with arrows or drag a corner</span></header>
+ <div id="stage"><div id="book"></div></div>
+ <div class="controls">
+ <button id="prev">&lsaquo; Prev</button><span id="pg"></span><button id="next">Next &rsaquo;</button>
+ </div>
+ <script src="page-flip.browser.js"></script>
+ <script>
+ var pages = [];
+ for (var i = 1; i <= 75; i++) pages.push('pages/' + String(i).padStart(3, '0') + '.jpg');
+ var el = document.getElementById('book');
+ function calc(){
+ var maxH = Math.min(window.innerHeight-140, 1306);
+ var h = Math.max(360, Math.min(maxH, 653));
+ var w = Math.round(h/1.4143);
+ return {w:w, h:h};
+ }
+ var d = calc();
+ var flip = new St.PageFlip(el, {
+ width:d.w, height:d.h, size:'fixed',
+ showCover:true, maxShadowOpacity:0.5, mobileScrollSupport:false,
+ drawShadow:true, flippingTime:700, usePortrait:true
+ });
+ flip.loadFromImages(pages);
+ var pg=document.getElementById('pg');
+ function upd(){var c=flip.getCurrentPageIndex()+1;pg.textContent=c+' / '+pages.length;}
+ flip.on('flip', upd); upd();
+ document.getElementById('prev').onclick=function(){flip.flipPrev();};
+ document.getElementById('next').onclick=function(){flip.flipNext();};
+ document.addEventListener('keydown',function(e){
+ if(e.key==='ArrowLeft')flip.flipPrev();
+ if(e.key==='ArrowRight')flip.flipNext();
+ });
+ </script>
 </body></html>
