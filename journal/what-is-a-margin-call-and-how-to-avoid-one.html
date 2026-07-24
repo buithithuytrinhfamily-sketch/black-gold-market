@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NL24SJYSZ8"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NL24SJYSZ8');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What Is a Margin Call, and How Do You Avoid One?, Black Gold Market</title>
+<meta name="description" content="A margin call is your broker warning you the account is running out of room. A calm, capital-first guide to what triggers one on gold, and the habits that keep you far away from it.">
+<meta property="og:title" content="What Is a Margin Call, and How Do You Avoid One?">
+<meta property="og:description" content="A margin call is your broker warning you the account is running out of room. A calm, capital-first guide to what triggers one on gold, and the habits that keep you far away from it.">
+<meta property="og:image" content="https://blackgoldmarket.us/assets/hero/what-is-a-margin-call-and-how-to-avoid-one.png">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://blackgoldmarket.us/journal/what-is-a-margin-call-and-how-to-avoid-one.html">
+<meta property="og:url" content="https://blackgoldmarket.us/journal/what-is-a-margin-call-and-how-to-avoid-one.html">
+<link rel="icon" type="image/png" href="/favicon.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+ :root{
+ --paper:#F6E4CF; /* trang giấy, kem ấm */
+ --sand:#EDDBC0; /* nền panel, cát vàng nhạt */
+ --sand-2:#D9C4AA;
+ --ink:#321C04; /* nâu espresso, nền tối logo */
+ --ink-2:#46290A;
+ --muted:#6F5433; /* taupe ấm */
+ --gold:#c79331; /* đồng/vàng ánh kim, màu chủ đề logo */
+ --gold-lite:#e0b25a;
+ --gold-deep:#8f6a24;
+ --loss:#a4562a; /* semantic: stop loss / lệnh thua, terracotta */
+ --win:#5c7d4f; /* semantic: lệnh thắng, olive */
+ --hairline:rgba(143,106,36,.22);
+ --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+ --mono:"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+ }
+ html{scroll-behavior:smooth}
+ body{background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.7;margin:0}
+ a{color:var(--gold-deep);text-decoration:none}
+ a:hover{text-decoration:underline}
+ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
+ .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+
+ /* ── top bar ──────── */
+ .topbar{position:sticky;top:0;z-index:20;background:rgba(25,17,8,.97);backdrop-filter:blur(8px)}
+ .topbar .wrap{display:flex;align-items:center;gap:28px;height:64px}
+ .wordmark{font-family:var(--sans);font-weight:800;font-size:1.02rem;letter-spacing:.2em;color:#f4ead4}
+ .wordmark b{color:var(--gold-lite)}
+ .wordmark:hover{text-decoration:none}
+ nav.menu{display:flex;gap:22px;margin-left:auto;font-family:var(--sans);font-size:.82rem;letter-spacing:.08em}
+ nav.menu a{color:#c7ac7c;text-transform:uppercase}
+ nav.menu a[aria-current]{color:#f4ead4}
+ .tg-btn{font-family:var(--sans);font-size:.8rem;font-weight:700;letter-spacing:.06em;color:#321C04;background:#FFF9F2;padding:9px 16px;border-radius:3px;white-space:nowrap}
+ .tg-btn:hover{text-decoration:none;background:#EDDBC0}
+
+ /* ── ticker ────────────────────── */
+ .ticker{border-bottom:1px solid var(--hairline);background:var(--sand);font-family:var(--mono);font-size:.72rem;color:var(--muted);overflow-x:auto;white-space:nowrap}
+ .ticker .wrap{display:flex;gap:34px;padding:8px 24px}
+ .ticker span b{color:var(--ink);font-weight:500}
+
+ /* ── hero ───────────── */
+ .hero{padding:76px 0 64px;border-bottom:1px solid var(--hairline);
+ background:
+ radial-gradient(900px 480px at 85% 0%, rgba(199,147,49,.16), transparent 62%),
+ radial-gradient(700px 380px at -5% 100%, rgba(199,147,49,.08), transparent 60%),
+ var(--paper);}
+ .hero .wrap{display:grid;grid-template-columns:1fr 300px;gap:56px;align-items:center}
+ .eyebrow{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 22px}
+ .hero h1{font-size:clamp(2rem,5vw,3.15rem);line-height:1.12;font-weight:600;margin:0;max-width:20ch;text-wrap:balance}
+ .hero h1 .q{color:var(--gold-deep)}
+ .hero p.standfirst{font-size:1.12rem;color:var(--muted);max-width:54ch;margin:26px 0 0}
+ .byline{display:flex;align-items:center;gap:12px;margin-top:32px;font-family:var(--sans);font-size:.82rem;color:var(--muted)}
+ .byline b{color:var(--ink);font-weight:600}
+ .portrait{justify-self:end;text-align:center}
+ .portrait img{width:260px;height:260px;object-fit:cover;border-radius:50%;border:4px solid #fff;
+ box-shadow:0 0 0 1px var(--hairline),0 18px 44px rgba(143,106,36,.28);display:block;margin:0 auto}
+ .portrait .cap{font-family:var(--sans);font-size:.78rem;color:var(--muted);margin-top:14px}
+ .portrait .cap b{color:var(--ink)}
+ @media (max-width:820px){
+ .hero .wrap{grid-template-columns:1fr;gap:40px}
+ .portrait{justify-self:start;text-align:left}
+ .portrait img{margin:0}
+ }
+ .fade{opacity:0;transform:translateY(14px);animation:rise .7s ease forwards}
+ .fade.d1{animation-delay:.12s}.fade.d2{animation-delay:.24s}.fade.d3{animation-delay:.36s}
+ @keyframes rise{to{opacity:1;transform:none}}
+ @media (prefers-reduced-motion:reduce){.fade{animation:none;opacity:1;transform:none}}
+
+ /* ── three pillars band ────────────────── */
+ .rules{border-bottom:1px solid var(--hairline);background:var(--sand)}
+ .rules .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hairline);padding:0}
+ .rule{background:var(--sand);padding:28px 26px}
+ .rule .no{font-family:var(--mono);font-size:.72rem;color:var(--gold-deep);letter-spacing:.14em}
+ .rule h3{font-family:var(--sans);font-size:1rem;font-weight:700;margin:10px 0 8px;letter-spacing:.01em}
+ .rule p{font-size:.92rem;color:var(--muted);margin:0;line-height:1.6}
+ @media (max-width:760px){.rules .wrap{grid-template-columns:1fr}}
+
+ /* ── article ─────────────────────────── */
+ .article{padding:72px 0 40px}
+ .article .body{max-width:65ch;margin:0 auto}
+ .article h2{font-size:1.5rem;font-weight:600;margin:60px 0 18px;padding-bottom:10px;border-bottom:1px solid var(--hairline);text-wrap:balance}
+ .article h2:first-child{margin-top:0}
+ .article p{margin:0 0 1.15em}
+ .article p.big{font-size:1.16rem}
+ .article strong{color:var(--ink);font-weight:700}
+ .key{color:var(--gold-deep);font-style:normal;font-weight:700}
+ .pull{border-left:3px solid var(--gold);padding:6px 0 6px 24px;margin:34px 0;font-size:1.32rem;line-height:1.45;color:var(--ink);font-weight:500;text-wrap:balance;font-family:var(--serif)}
+
+ /* faq */
+ .faq{margin:34px 0}
+ .faq .qa{border-top:1px solid var(--hairline);padding:20px 0}
+ .faq .qa:last-child{border-bottom:1px solid var(--hairline)}
+ .faq h4{font-family:var(--sans);font-size:1.02rem;font-weight:700;margin:0 0 8px;color:var(--ink)}
+ .faq p{margin:0;color:var(--muted)}
+
+ /* mid-article cta */
+ .midcta{background:var(--sand);border:1px solid var(--hairline);border-left:3px solid var(--gold);border-radius:6px;padding:24px 26px;margin:38px 0}
+ .midcta p{margin:0 0 14px;font-size:.98rem;color:var(--ink-2)}
+ .midcta .tg-btn{font-size:.82rem}
+
+ /* author box */
+ .authorbox{display:grid;grid-template-columns:88px 1fr;gap:20px;align-items:start;
+ background:var(--sand);border:1px solid var(--hairline);border-radius:6px;padding:26px;margin:44px 0 10px}
+ .authorbox img{width:88px;height:88px;border-radius:50%;object-fit:cover;border:2px solid #fff;box-shadow:0 0 0 1px var(--hairline)}
+ .authorbox .who{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 8px}
+ .authorbox h4{font-size:1.1rem;margin:0 0 8px}
+ .authorbox p{font-size:.92rem;color:var(--muted);margin:0}
+ @media (max-width:560px){.authorbox{grid-template-columns:1fr}.authorbox img{width:72px;height:72px}}
+
+ .disclaimer{font-family:var(--sans);font-size:.82rem;font-style:italic;color:var(--muted);line-height:1.65;
+ border-top:1px solid var(--hairline);padding-top:22px;margin-top:40px}
+
+ /* ── cta ───────── */
+ .cta{border-top:1px solid var(--hairline);background:
+ radial-gradient(700px 320px at 50% 130%, rgba(199,147,49,.34), transparent 65%), var(--ink);color:#f4ead4}
+ .cta .wrap{padding:72px 24px;text-align:center}
+ .cta .kicker{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-lite);margin:0 0 16px}
+ .cta h2{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:600;margin:0 auto 14px;max-width:26ch;text-wrap:balance}
+ .cta p{color:#cbb488;max-width:48ch;margin:0 auto 30px}
+ .cta .tg-btn{font-size:.9rem;padding:14px 26px;background:#FFF9F2;color:#321C04}
+ .cta .tg-btn:hover{background:#EDDBC0}
+ .cta .sub{display:block;font-family:var(--sans);font-size:.76rem;color:#a58c60;margin-top:16px}
+
+ /* ── more ──────────────────────── */
+ .more{padding:70px 0;background:var(--paper)}
+ .more .label{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 26px}
+ .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+ .card{background:#fff;border:1px solid var(--sand-2);border-radius:4px;padding:24px;display:flex;flex-direction:column;gap:10px;transition:border-color .2s,box-shadow .2s;color:var(--ink)}
+ .card:hover{border-color:var(--gold);box-shadow:0 8px 24px rgba(143,106,36,.12);text-decoration:none}
+ .card .tag{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+ .card h3{font-size:1.1rem;font-weight:600;margin:0;line-height:1.35;text-wrap:balance}
+ .card p{font-size:.9rem;color:var(--muted);margin:0;line-height:1.6;font-family:var(--sans)}
+ .card .read{margin-top:auto;font-family:var(--sans);font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-deep)}
+ @media (max-width:760px){.grid3{grid-template-columns:1fr}}
+
+ /* ── footer ──────────────────────────── */
+ footer{background:var(--ink);color:#cbb488}
+ footer .wrap{padding:44px 24px;display:grid;gap:18px}
+ footer .brand{font-family:var(--sans);font-weight:800;letter-spacing:.2em;font-size:.9rem;color:#f4ead4}
+ footer .brand b{color:var(--gold-lite)}
+ footer p{font-family:var(--sans);font-size:.76rem;line-height:1.7;max-width:88ch;margin:0}
+ footer p strong{color:#f4ead4}
+ footer .fine{color:#8f7654}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+ <div class="wrap">
+ <a class="wordmark" href="../">BLACK<b>·</b>GOLD MARKET</a>
+ <nav class="menu" aria-label="Main">
+ <a href="../">Home</a>
+ <a href="./" aria-current="page">Journal</a>
+ <a href="https://t.me/+h-5A-mdBmhA5ZWQ1">Telegram</a>
+ </nav>
+ <a class="tg-btn" href="https://t.me/+h-5A-mdBmhA5ZWQ1">Join on Telegram</a>
+ </div>
+</header>
+
+<div class="ticker" aria-hidden="true">
+ <div class="wrap">
+ <span>MARKET <b>XAU/USD, GOLD</b></span>
+ <span>FOCUS <b>PROTECT · MASTER · GROW</b></span>
+ <span>METHOD <b>PROCESS OVER PROFIT</b></span>
+ <span>JOURNAL <b>ENTRY, AVOIDING MARGIN CALLS</b></span>
+ </div>
+</div>
+
+<section class="hero">
+ <div class="wrap">
+ <div>
+ <p class="eyebrow fade">Capital protection &middot; Margin &amp; leverage</p>
+ <h1 class="fade d1">What Is a Margin Call, and How Do You <span class="q">Avoid One</span>?</h1>
+ <p class="standfirst fade d2">A margin call is your broker telling you the account is running out of room to breathe. Here is what triggers one on gold, and the quiet habits that keep you nowhere near it.</p>
+ <div class="byline fade d3">
+ <div>By <b>Raphael</b> &nbsp;&middot;&nbsp; XAU/USD &nbsp;&middot;&nbsp; 8 min read</div>
+ </div>
+ </div>
+ <figure class="portrait fade d2" style="margin:0">
+ <img src="../avatar.jpg" alt="Black Gold Market, Raphael, XAU/USD trader">
+ <figcaption class="cap"><b>Black Gold Market</b><br>Protect. Master. Grow.</figcaption>
+ </figure>
+ </div>
+</section>
+
+<section class="rules" aria-label="The three pillars">
+ <div class="wrap">
+ <div class="rule">
+ <div class="no">PILLAR 01</div>
+ <h3>Protect</h3>
+ <p>Capital comes first. Size and leverage are chosen so the account never runs out of room, no matter how a single trade goes.</p>
+ </div>
+ <div class="rule">
+ <div class="no">PILLAR 02</div>
+ <h3>Master</h3>
+ <p>Understand the machinery. A margin call is not bad luck, it is math you can see coming and steer around.</p>
+ </div>
+ <div class="rule">
+ <div class="no">PILLAR 03</div>
+ <h3>Grow</h3>
+ <p>Slow and repeatable. The account that never gets liquidated is the one that is still here to compound.</p>
+ </div>
+ </div>
+</section>
+
+<article class="article">
+ <div class="wrap"><div class="body">
+<p><img src="/assets/hero/what-is-a-margin-call-and-how-to-avoid-one.png" alt="A calm illustration of an account balance shrinking toward a broker's margin requirement, with a margin call level marked" style="width:100%;height:auto;border-radius:10px;margin:0 0 10px"></p>
+
+<p>There is a particular kind of message no trader wants to receive: your broker letting you know that your account no longer has enough to hold your open trades. That is a margin call. For a lot of people it arrives as a nasty surprise, right at the worst possible moment, when the market is already moving against them. But a margin call is not really a surprise at all. It is the visible end of a chain of decisions that started long before, back when the position was opened. This article walks through what a margin call is, the machinery behind it, and the calm habits that keep you far away from ever seeing one.</p>
+
+<p>Let me be clear about the destination first. The point is not to teach you how to survive on the edge of a margin call. It is to help you build an account that never lives near that edge in the first place. Protecting your capital is the whole job, and a margin call is what happens when protection slipped.</p>
+
+<figure>
+<svg viewBox="0 0 820 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="An illustration of how an account slides into a margin call: equity falling as losses grow, crossing the broker's margin requirement level, then hitting the stop-out point. No prices are shown.">
+  <rect x="0" y="0" width="820" height="380" rx="18" fill="#fbf7f1"/>
+  <text x="40" y="50" font-family="Georgia, serif" font-size="23" fill="#2b2622" font-weight="bold">How an account slides into a margin call</text>
+  <text x="40" y="76" font-family="Arial, sans-serif" font-size="13" fill="#7a7168">As losses grow, your usable room shrinks toward the broker's line. Shape only, no prices.</text>
+  <line x1="70" y1="300" x2="770" y2="300" stroke="#2b2622" stroke-width="1.5"/>
+  <line x1="70" y1="100" x2="70" y2="300" stroke="#2b2622" stroke-width="1.5"/>
+  <text x="420" y="332" font-family="Arial, sans-serif" font-size="12.5" fill="#7a7168" text-anchor="middle">Trade running against you (time, direction only)</text>
+  <text x="52" y="200" font-family="Arial, sans-serif" font-size="12.5" fill="#7a7168" text-anchor="middle" transform="rotate(-90 52 200)">Account equity</text>
+  <line x1="70" y1="228" x2="770" y2="228" stroke="#c79331" stroke-width="1.8" stroke-dasharray="7 5"/>
+  <text x="762" y="222" font-family="Arial, sans-serif" font-size="12.5" fill="#8f6a24" text-anchor="end" font-weight="bold">Margin requirement</text>
+  <line x1="70" y1="272" x2="770" y2="272" stroke="#a4562a" stroke-width="1.8" stroke-dasharray="4 4"/>
+  <text x="762" y="290" font-family="Arial, sans-serif" font-size="12.5" fill="#a4562a" text-anchor="end" font-weight="bold">Stop-out level</text>
+  <polyline points="70,140 150,150 230,168 310,190 390,214 470,236 545,256 600,270" fill="none" stroke="#46290A" stroke-width="2.8" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="470" cy="236" r="6" fill="#c79331"/>
+  <text x="470" y="176" font-family="Arial, sans-serif" font-size="12.5" fill="#8f6a24" text-anchor="middle" font-weight="bold">Margin call</text>
+  <line x1="470" y1="188" x2="470" y2="230" stroke="#8f6a24" stroke-width="1.2" stroke-dasharray="3 3"/>
+  <circle cx="600" cy="270" r="6" fill="#a4562a"/>
+  <text x="618" y="258" font-family="Arial, sans-serif" font-size="12.5" fill="#a4562a" text-anchor="start" font-weight="bold">Positions closed</text>
+  <text x="150" y="130" font-family="Arial, sans-serif" font-size="12" fill="#5c7d4f" text-anchor="middle">Plenty of room</text>
+  <text x="770" y="356" font-family="Arial, sans-serif" font-size="10.5" fill="#a99" text-anchor="end">Educational illustration, no prices, no signals</text>
+</svg>
+<figcaption>How an account slides into a margin call: as losses grow, equity falls toward the broker's margin requirement, and if it keeps falling the broker closes your positions at the stop-out level. Keeping your leverage low keeps that whole line far away.</figcaption>
+</figure>
+
+<h2>What a margin call actually is</h2>
+<p>When you trade gold with leverage, you are not paying the full value of the position. You put down a fraction of it, called margin, and your broker effectively lends you the rest so you can control a larger amount. That margin is a good-faith deposit that keeps the trade open.</p>
+<p>Your account has two numbers that matter here. One is your equity, which is your balance adjusted for the profit or loss on your open trades right now. The other is the margin your open positions require. As long as your equity sits comfortably above that requirement, everything is fine. A margin call happens when a losing trade drags your equity down close to the required margin, and the broker warns you that you are running out of cushion. If it falls further, to what is called the stop-out level, the broker automatically closes your positions to stop the account going negative. You do not get a vote. It is done for you, usually at the worst possible price.</p>
+<p>So a margin call is really a warning light. The stop-out is the crash. Both are the same story told at two stages: your open losses have eaten into the buffer your broker needs, and there is no room left.</p>
+
+<h2>The chain reaction behind it</h2>
+<p>Almost every margin call traces back to one root cause: too much size for the account. Leverage is the multiplier. A little leverage means a big move against you costs a manageable amount, and your equity barely dips. A lot of leverage means the same move costs a painful amount, and your equity plunges toward the requirement fast.</p>
+<p>Here is the chain, step by step. You open a position that is large relative to your account. The market moves against you. Because the position is big, each point of movement is a big loss in money terms. Your equity drops quickly. The free margin, the spare room you had, disappears. Your equity approaches the required margin, and the call arrives. If the move continues, the stop-out closes you out. Notice that the trigger was never the market being unusually cruel. The trigger was the size you chose at the very start. This is the same idea behind <a href="https://blackgoldmarket.us/journal/position-sizing-so-one-trade-cannot-hurt-you.html">position sizing so one trade cannot hurt you</a>, seen from the painful end.</p>
+
+<h2>Why gold traders are especially exposed</h2>
+<p>Gold moves. It is a lively market, and during news, session opens, or a sudden <a href="https://blackgoldmarket.us/journal/how-to-trade-gold-safely-during-geopolitical-shocks.html">geopolitical shock</a>, it can travel a long way in a short time. That energy is exactly what draws people to it, but it is also what makes an oversized gold position so dangerous. A move that would be a shrug on a small position becomes a margin call on a big one.</p>
+<p>There is also a psychological trap. After a run of small wins, it is tempting to size up, to feel that you have earned the right to a bigger trade. That is often the exact moment a normal adverse move turns into a call, because the buffer that protected you for months just got a lot thinner. The market did not change. Your exposure did.</p>
+
+<h2>How to stay far away from a margin call</h2>
+<p>The good news is that avoiding margin calls is not about predicting the market better. It is about arranging your account so that a call is almost mathematically impossible under normal conditions. A few habits do nearly all the work.</p>
+<ul>
+<li><strong>Keep real leverage low.</strong> The single biggest lever is size. Trade small enough that a bad day is an annoyance, not an emergency. If a normal adverse move could bring you anywhere near a call, the position is simply too big.</li>
+<li><strong>Define risk before you enter, every time.</strong> Decide the most you are willing to lose on the trade in advance, and size the position to that. When your risk per trade is a small slice of the account, equity cannot fall far enough to trigger a call in the first place.</li>
+<li><strong>Use a protective stop, and honour it.</strong> A predefined exit closes a losing trade long before it can threaten the whole account. The stop is there so the broker never has to do the closing for you.</li>
+<li><strong>Leave a wide cushion of free margin.</strong> Do not run the account at the edge of its capacity. Lots of unused margin is not wasted money, it is the breathing room that lets you sit through normal volatility calmly.</li>
+<li><strong>Avoid stacking correlated positions.</strong> Several gold trades in the same direction are really one big bet. If they all move against you at once, they drain your margin together.</li>
+</ul>
+<p>Do all of that and the margin call stops being a threat you fear and becomes a line on a chart you never get near. If you want the full picture of building an account that can weather anything, it sits inside the broader discipline of <a href="https://blackgoldmarket.us/journal/how-to-protect-your-capital-when-gold-gets-volatile.html">protecting your capital when gold gets volatile</a>. And if a rough stretch has already pulled your account down, the calm way back is covered in <a href="https://blackgoldmarket.us/journal/what-is-drawdown-and-how-to-recover.html">what drawdown is and how to recover</a>.</p>
+<p>None of this is about a specific entry, stop or target. No entry, stop or target discussed should be treated as a signal. It is about the shape of your account, and that is something you control completely.</p>
+
+<h2>Frequently asked questions</h2>
+<p><strong>Is a margin call the same as being stopped out?</strong><br>Not quite. A margin call is the warning that your equity is getting close to the margin your positions require. The stop-out is what happens next if equity keeps falling: the broker closes your trades automatically. The call is the alarm, the stop-out is the outcome.</p>
+<p><strong>Does a margin call mean I owe my broker money?</strong><br>Usually the stop-out is designed to close your positions before the account goes negative, so many retail accounts have protection against owing more than you deposited. But you can still lose most or all of the account. Never rely on the mechanics to save you, keep your size small enough that it never comes up.</p>
+<p><strong>How much leverage is safe for trading gold?</strong><br>There is no single number, because what matters is your real exposure, not the maximum your broker allows. The practical answer is to size each trade so a normal adverse move costs only a small slice of your account. If you have to think hard about whether a move could trigger a call, you are already trading too large.</p>
+<p><strong>Can a stop-loss prevent a margin call?</strong><br>A sensible stop-loss, combined with a reasonable position size, makes a margin call very unlikely, because the trade is closed at a small, planned loss long before it can threaten the account. The stop only works if the position is not oversized to begin with, though. Size first, then stop.</p>
+<p><strong>Why did my broker close my trade at a worse price than I expected?</strong><br>During fast markets, especially around news, prices can gap and liquidity thins out. A stop-out is executed at whatever price is available, which in a violent move can be well past the level you had in mind. It is one more reason to keep exposure small, so you are never depending on a clean exit in chaos.</p>
+
+<h2>About the Author</h2>
+<p>I am Raphael, and at Black Gold Market I care about one thing above the rest: whether you still have an account tomorrow. I would rather help you understand the level, the context, and the risk than hand you a number to copy. A margin call is the clearest proof that discipline is not a personality trait, it is a set of decisions you make before the trade, when you are still calm.</p>
+<p style="color:#6F5433;font-size:.95rem"><em>Risk note: This article is educational and is not financial advice. Trading gold and leveraged products carries a substantial risk of loss, and most retail traders lose money. Nothing here is a recommendation to buy or sell, and no entry, stop or target discussed should be treated as a signal. Only ever risk capital you can afford to lose.</em></p>
+</div></div>
+</article>
+
+<section class="cta">
+ <div class="wrap">
+ <p class="kicker">Start here, it's free</p>
+ <h2>Build an account that never lives on the edge.</h2>
+ <p>Follow along on Telegram for daily gold analysis and setups, each with the reasoning behind it, so you learn to size and protect like the market owes you nothing. Free to follow, with an optional Kit. No hype, no promises.</p>
+ <a class="tg-btn" href="https://t.me/+h-5A-mdBmhA5ZWQ1">Join Black Gold Market on Telegram</a>
+ <span class="sub">No guaranteed profit. No pressure to copy anything blindly.</span>
+ </div>
+</section>
+
+<section class="more">
+ <div class="wrap">
+ <p class="label">More from the journal</p>
+ <div class="grid3">
+ <a class="card" href="position-sizing-so-one-trade-cannot-hurt-you.html">
+ <span class="tag">Risk</span>
+ <h3>Position Sizing So One Trade Cannot Hurt You</h3>
+ <p>The single habit that keeps a margin call impossible: sizing so that being wrong is never a wound.</p>
+ <span class="read">Read &rarr;</span>
+ </a>
+ <a class="card" href="what-is-drawdown-and-how-to-recover.html">
+ <span class="tag">Recovery</span>
+ <h3>What Is Drawdown, and How to Recover</h3>
+ <p>When the account is down, the calm, math-first way to climb back without digging a deeper hole.</p>
+ <span class="read">Read &rarr;</span>
+ </a>
+ <a class="card" href="how-to-protect-your-capital-when-gold-gets-volatile.html">
+ <span class="tag">Capital</span>
+ <h3>How to Protect Your Capital When Gold Gets Volatile</h3>
+ <p>The bigger discipline a margin call is only one part of: keeping your capital safe through anything.</p>
+ <span class="read">Read &rarr;</span>
+ </a>
+ </div>
+ </div>
+</section>
+
+<footer>
+ <div class="wrap">
+ <div class="brand">BLACK<b>·</b>GOLD MARKET</div>
+ <p><strong>Protect. Master. Grow.</strong> Daily XAU/USD analysis and trade ideas with the reasoning behind them, free to follow, with an optional Kit. Built on discipline and defined risk, not promises of profit.</p>
+ <p class="fine">Risk warning: Trading gold, CFDs and leveraged products carries a substantial risk of loss and is not suitable for everyone. Most retail traders lose money. Nothing on this site is financial advice or a solicitation to trade. Past performance does not guarantee future results. Only trade with capital you can afford to lose.</p>
+ <p class="fine">&copy; 2026 Black Gold Market. All rights reserved.</p>
+ </div>
+</footer>
+
+<script defer src="/assets/track.js"></script>
+</body>
+</html>
