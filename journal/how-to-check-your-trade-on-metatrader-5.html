@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NL24SJYSZ8"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NL24SJYSZ8');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Check Your Trade on MetaTrader 5, and What the Profit Column Hides, Black Gold Market</title>
+<meta name="description" content="How to check your trade on MetaTrader 5 takes two minutes. Reading it honestly is harder: commission and swap sit outside the Profit column, and 20 trades prove almost nothing.">
+<meta property="og:title" content="How to Check Your Trade on MetaTrader 5, and What the Profit Column Hides">
+<meta property="og:description" content="How to check your trade on MetaTrader 5 takes two minutes. Reading it honestly is harder: commission and swap sit outside the Profit column, and 20 trades prove almost nothing.">
+<meta property="og:image" content="https://blackgoldmarket.us/assets/hero/how-to-check-your-trade-on-metatrader-5.png">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://blackgoldmarket.us/journal/how-to-check-your-trade-on-metatrader-5.html">
+<meta property="og:url" content="https://blackgoldmarket.us/journal/how-to-check-your-trade-on-metatrader-5.html">
+<link rel="icon" type="image/png" href="/favicon.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+ :root{
+ --paper:#F6E4CF; /* trang giấy, kem ấm */
+ --sand:#EDDBC0; /* nền panel, cát vàng nhạt */
+ --sand-2:#D9C4AA;
+ --ink:#321C04; /* nâu espresso, nền tối logo */
+ --ink-2:#46290A;
+ --muted:#6F5433; /* taupe ấm */
+ --gold:#c79331; /* đồng/vàng ánh kim, màu chủ đề logo */
+ --gold-lite:#e0b25a;
+ --gold-deep:#8f6a24;
+ --loss:#a4562a; /* semantic: stop loss / lệnh thua, terracotta */
+ --win:#5c7d4f; /* semantic: lệnh thắng, olive */
+ --hairline:rgba(143,106,36,.22);
+ --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+ --mono:"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+ }
+ html{scroll-behavior:smooth}
+ body{background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.7;margin:0}
+ a{color:var(--gold-deep);text-decoration:none}
+ a:hover{text-decoration:underline}
+ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
+ .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+
+ /* ── top bar ──────── */
+ .topbar{position:sticky;top:0;z-index:20;background:rgba(25,17,8,.97);backdrop-filter:blur(8px)}
+ .topbar .wrap{display:flex;align-items:center;gap:28px;height:64px}
+ .wordmark{font-family:var(--sans);font-weight:800;font-size:1.02rem;letter-spacing:.2em;color:#f4ead4}
+ .wordmark b{color:var(--gold-lite)}
+ .wordmark:hover{text-decoration:none}
+ nav.menu{display:flex;gap:22px;margin-left:auto;font-family:var(--sans);font-size:.82rem;letter-spacing:.08em}
+ nav.menu a{color:#c7ac7c;text-transform:uppercase}
+ nav.menu a[aria-current]{color:#f4ead4}
+ .tg-btn{font-family:var(--sans);font-size:.8rem;font-weight:700;letter-spacing:.06em;color:#321C04;background:#FFF9F2;padding:9px 16px;border-radius:3px;white-space:nowrap}
+ .tg-btn:hover{text-decoration:none;background:#EDDBC0}
+
+ /* ── ticker ────────────────────── */
+ .ticker{border-bottom:1px solid var(--hairline);background:var(--sand);font-family:var(--mono);font-size:.72rem;color:var(--muted);overflow-x:auto;white-space:nowrap}
+ .ticker .wrap{display:flex;gap:34px;padding:8px 24px}
+ .ticker span b{color:var(--ink);font-weight:500}
+
+ /* ── hero ───────────── */
+ .hero{padding:76px 0 64px;border-bottom:1px solid var(--hairline);
+ background:
+ radial-gradient(900px 480px at 85% 0%, rgba(199,147,49,.16), transparent 62%),
+ radial-gradient(700px 380px at -5% 100%, rgba(199,147,49,.08), transparent 60%),
+ var(--paper);}
+ .hero .wrap{display:grid;grid-template-columns:1fr 300px;gap:56px;align-items:center}
+ .eyebrow{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 22px}
+ .hero h1{font-size:clamp(2rem,5vw,3.15rem);line-height:1.12;font-weight:600;margin:0;max-width:20ch;text-wrap:balance}
+ .hero h1 .q{color:var(--gold-deep)}
+ .hero p.standfirst{font-size:1.12rem;color:var(--muted);max-width:54ch;margin:26px 0 0}
+ .byline{display:flex;align-items:center;gap:12px;margin-top:32px;font-family:var(--sans);font-size:.82rem;color:var(--muted)}
+ .byline b{color:var(--ink);font-weight:600}
+ .portrait{justify-self:end;text-align:center}
+ .portrait img{width:260px;height:260px;object-fit:cover;border-radius:50%;border:4px solid #fff;
+ box-shadow:0 0 0 1px var(--hairline),0 18px 44px rgba(143,106,36,.28);display:block;margin:0 auto}
+ .portrait .cap{font-family:var(--sans);font-size:.78rem;color:var(--muted);margin-top:14px}
+ .portrait .cap b{color:var(--ink)}
+ @media (max-width:820px){
+ .hero .wrap{grid-template-columns:1fr;gap:40px}
+ .portrait{justify-self:start;text-align:left}
+ .portrait img{margin:0}
+ }
+ .fade{opacity:0;transform:translateY(14px);animation:rise .7s ease forwards}
+ .fade.d1{animation-delay:.12s}.fade.d2{animation-delay:.24s}.fade.d3{animation-delay:.36s}
+ @keyframes rise{to{opacity:1;transform:none}}
+ @media (prefers-reduced-motion:reduce){.fade{animation:none;opacity:1;transform:none}}
+
+ /* ── three pillars band ────────────────── */
+ .rules{border-bottom:1px solid var(--hairline);background:var(--sand)}
+ .rules .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hairline);padding:0}
+ .rule{background:var(--sand);padding:28px 26px}
+ .rule .no{font-family:var(--mono);font-size:.72rem;color:var(--gold-deep);letter-spacing:.14em}
+ .rule h3{font-family:var(--sans);font-size:1rem;font-weight:700;margin:10px 0 8px;letter-spacing:.01em}
+ .rule p{font-size:.92rem;color:var(--muted);margin:0;line-height:1.6}
+ @media (max-width:760px){.rules .wrap{grid-template-columns:1fr}}
+
+ /* ── article ─────────────────────────── */
+ .article{padding:72px 0 40px}
+ .article .body{max-width:65ch;margin:0 auto}
+ .article h2{font-size:1.5rem;font-weight:600;margin:60px 0 18px;padding-bottom:10px;border-bottom:1px solid var(--hairline);text-wrap:balance}
+ .article h2:first-child{margin-top:0}
+ .article p{margin:0 0 1.15em}
+ .article p.big{font-size:1.16rem}
+ .article strong{color:var(--ink);font-weight:700}
+ .key{color:var(--gold-deep);font-style:normal;font-weight:700}
+ .pull{border-left:3px solid var(--gold);padding:6px 0 6px 24px;margin:34px 0;font-size:1.32rem;line-height:1.45;color:var(--ink);font-weight:500;text-wrap:balance;font-family:var(--serif)}
+
+ /* faq */
+ .faq{margin:34px 0}
+ .faq .qa{border-top:1px solid var(--hairline);padding:20px 0}
+ .faq .qa:last-child{border-bottom:1px solid var(--hairline)}
+ .faq h4{font-family:var(--sans);font-size:1.02rem;font-weight:700;margin:0 0 8px;color:var(--ink)}
+ .faq p{margin:0;color:var(--muted)}
+
+ /* author box */
+ .authorbox{display:grid;grid-template-columns:88px 1fr;gap:20px;align-items:start;
+ background:var(--sand);border:1px solid var(--hairline);border-radius:6px;padding:26px;margin:44px 0 10px}
+ .authorbox img{width:88px;height:88px;border-radius:50%;object-fit:cover;border:2px solid #fff;box-shadow:0 0 0 1px var(--hairline)}
+ .authorbox .who{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 8px}
+ .authorbox h4{font-size:1.1rem;margin:0 0 8px}
+ .authorbox p{font-size:.92rem;color:var(--muted);margin:0}
+ @media (max-width:560px){.authorbox{grid-template-columns:1fr}.authorbox img{width:72px;height:72px}}
+
+ .disclaimer{font-family:var(--sans);font-size:.82rem;font-style:italic;color:var(--muted);line-height:1.65;
+ border-top:1px solid var(--hairline);padding-top:22px;margin-top:40px}
+
+ /* ── cta ───────── */
+ .cta{border-top:1px solid var(--hairline);background:
+ radial-gradient(700px 320px at 50% 130%, rgba(199,147,49,.34), transparent 65%), var(--ink);color:#f4ead4}
+ .cta .wrap{padding:72px 24px;text-align:center}
+ .cta .kicker{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-lite);margin:0 0 16px}
+ .cta h2{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:600;margin:0 auto 14px;max-width:26ch;text-wrap:balance}
+ .cta p{color:#cbb488;max-width:48ch;margin:0 auto 30px}
+ .cta .tg-btn{font-size:.9rem;padding:14px 26px;background:#FFF9F2;color:#321C04}
+ .cta .tg-btn:hover{background:#EDDBC0}
+ .cta .sub{display:block;font-family:var(--sans);font-size:.76rem;color:#a58c60;margin-top:16px}
+
+ /* ── more ──────────────────────── */
+ .more{padding:70px 0;background:var(--paper)}
+ .more .label{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 26px}
+ .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+ .card{background:#fff;border:1px solid var(--sand-2);border-radius:4px;padding:24px;display:flex;flex-direction:column;gap:10px;transition:border-color .2s,box-shadow .2s;color:var(--ink)}
+ .card:hover{border-color:var(--gold);box-shadow:0 8px 24px rgba(143,106,36,.12);text-decoration:none}
+ .card .tag{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+ .card h3{font-size:1.1rem;font-weight:600;margin:0;line-height:1.35;text-wrap:balance}
+ .card p{font-size:.9rem;color:var(--muted);margin:0;line-height:1.6;font-family:var(--sans)}
+ .card .read{margin-top:auto;font-family:var(--sans);font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-deep)}
+ @media (max-width:760px){.grid3{grid-template-columns:1fr}}
+
+ /* ── footer ──────────────────────────── */
+ footer{background:var(--ink);color:#cbb488}
+ footer .wrap{padding:44px 24px;display:grid;gap:18px}
+ footer .brand{font-family:var(--sans);font-weight:800;letter-spacing:.2em;font-size:.9rem;color:#f4ead4}
+ footer .brand b{color:var(--gold-lite)}
+ footer p{font-family:var(--sans);font-size:.76rem;line-height:1.7;max-width:88ch;margin:0}
+ footer p strong{color:#f4ead4}
+ footer .fine{color:#8f7654}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to Check Your Trade on MetaTrader 5, and What the Profit Column Hides", "description": "How to check your trade on MetaTrader 5 takes two minutes. Reading it honestly is harder: commission and swap sit outside the Profit column, and 20 trades prove almost nothing.", "image": "https://blackgoldmarket.us/assets/hero/how-to-check-your-trade-on-metatrader-5.png", "author": {"@type": "Person", "name": "Raphael", "url": "https://blackgoldmarket.us/about.html"}, "publisher": {"@type": "Organization", "name": "Black Gold Market", "logo": {"@type": "ImageObject", "url": "https://blackgoldmarket.us/avatar.jpg"}}, "datePublished": "2026-08-04T07:00:00+07:00", "dateModified": "2026-08-04T07:00:00+07:00", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://blackgoldmarket.us/journal/how-to-check-your-trade-on-metatrader-5.html"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://blackgoldmarket.us/"}, {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://blackgoldmarket.us/journal/"}, {"@type": "ListItem", "position": 3, "name": "How to Check Your Trade on MetaTrader 5, and What the Profit Column Hides", "item": "https://blackgoldmarket.us/journal/how-to-check-your-trade-on-metatrader-5.html"}]}</script>
+</head>
+<body>
+
+<header class="topbar">
+ <div class="wrap">
+ <a class="wordmark" href="../">BLACK<b>&#183;</b>GOLD MARKET</a>
+ <nav class="menu" aria-label="Main">
+ <a href="../">Home</a>
+ <a href="./" aria-current="page">Journal</a>
+ <a href="https://t.me/+h-5A-mdBmhA5ZWQ1">Telegram</a>
+ </nav>
+ <a class="tg-btn" href="https://t.me/+h-5A-mdBmhA5ZWQ1">Join on Telegram</a>
+ </div>
+</header>
+
+<div class="ticker" aria-hidden="true">
+ <div class="wrap">
+ <span>MARKET <b>XAU/USD, GOLD</b></span>
+ <span>FOCUS <b>PROTECT &middot; MASTER &middot; GROW</b></span>
+ <span>METHOD <b>THE RECORD, NOT THE MEMORY</b></span>
+ <span>JOURNAL <b>ENTRY, READING YOUR RECORD</b></span>
+ </div>
+</div>
+
+<section class="hero">
+ <div class="wrap">
+ <div>
+ <p class="eyebrow fade">Record keeping &middot; The risk-first view</p>
+ <h1 class="fade d1">How to Check Your Trade on <span class="q">MetaTrader 5</span>, and What the Profit Column Hides</h1>
+ <p class="standfirst fade d2">Your platform recorded every decision you made, including the ones you would rather forget. Here is where the record lives, why the Profit column overstates it, and what twenty trades can and cannot tell you.</p>
+ <div class="byline fade d3">
+ <div>By <b>Raphael</b> &nbsp;&middot;&nbsp; XAU/USD &nbsp;&middot;&nbsp; 11 min read</div>
+ </div>
+ </div>
+ <figure class="portrait fade d2" style="margin:0">
+ <img src="../avatar.jpg" alt="Black Gold Market, Raphael, XAU/USD trader">
+ <figcaption class="cap"><b>Black Gold Market</b><br>Protect. Master. Grow.</figcaption>
+ </figure>
+ </div>
+</section>
+
+<section class="rules" aria-label="The three pillars">
+ <div class="wrap">
+ <div class="rule">
+ <div class="no">PILLAR 01</div>
+ <h3>Protect</h3>
+ <p>A level that held three times has proved it used to have buyers. It has not proved that it still does.</p>
+ </div>
+ <div class="rule">
+ <div class="no">PILLAR 02</div>
+ <h3>Master</h3>
+ <p>Support is resting orders, not a line. Every test fills some of them, even as the chart starts to look more convincing.</p>
+ </div>
+ <div class="rule">
+ <div class="no">PILLAR 03</div>
+ <h3>Grow</h3>
+ <p>Expect a zone to be worked, not respected. Place your risk for a level with width, and never let a level set your size.</p>
+ </div>
+ </div>
+</section>
+
+<article class="article">
+ <div class="wrap"><div class="body">
+ <img src="/assets/hero/how-to-check-your-trade-on-metatrader-5.png" alt="How to check your trade on MetaTrader 5, reading the history tab honestly" style="width:100%;height:auto;border-radius:6px;border:1px solid var(--hairline);margin:0 0 8px">
+ <h2>The Only Honest Record You Have</h2>
+ <p class="big">Learning <span class="key">how to check your trade on MetaTrader 5</span> takes about two minutes. Learning to read what is actually in there, without flinching and without quietly editing the story, takes considerably longer, and it is worth more than any setup I could show you.</p>
+ <p>Almost everyone in my channel can tell me how their month went. Very few of them can show me. The version I get is a memory, and memory in this business is not a neutral recording device. It keeps the trade where you were patient and it loses the one where you moved your stop. Your platform does not have that problem. It wrote everything down, including the parts you would prefer to forget, and it is sitting on your machine right now.</p>
+ <p>So let us open it properly. First the mechanics, then the part that matters.</p>
+
+ <h2>How to Check Your Trade on MetaTrader 5, Step by Step</h2>
+ <p>Everything lives in one panel. On the desktop terminal it is the Toolbox at the bottom of the screen, which you can open with Ctrl+T if it is hidden. MetaQuotes describes it as the window that handles <em>"trade positions, news, account history, alerts, internal mailbox, program logs, and expert journals"</em>, and you can see that description on the <a href="https://www.metatrader5.com/en/terminal/help/startworking/interface" rel="noopener nofollow" target="_blank">MetaTrader 5 interface page</a>. Three of those tabs matter for reviewing your own trading.</p>
+
+ <h3>A trade that is still open</h3>
+ <p>The <strong>Trade</strong> tab. Anything currently live shows here, along with your pending orders, your floating result and your account balance and equity. This is the tab most traders stare at all day, and it is the least useful of the three, because a floating number is not a result. It is a rumour about a result.</p>
+
+ <h3>A trade that has already closed</h3>
+ <p>The <strong>History</strong> tab. Right click inside it to pick a period, and be deliberate about this: the default view often shows only the last few days, which is exactly the window most likely to flatter or frighten you depending on the week you have had. Set it to the whole life of the account. You want the full picture, not the recent mood.</p>
+ <p>One thing that confuses people arriving from MetaTrader 4: MT5 records <em>deals</em> rather than closed orders. A single position that you scaled out of in two parts appears as more than one deal. This is not the platform being awkward. It is a more accurate description of what you actually did.</p>
+
+ <h3>The whole account, as a document</h3>
+ <p>Right click in the History tab and you can export a report. Do this once a month and save the file somewhere you will not lose it. Brokers change, platforms get reinstalled, accounts get closed, and the history goes with them. The traders I know who improved fastest all kept their own copy.</p>
+
+ <figure style="margin:34px 0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 500" style="width:100%;height:auto;display:block;background:#fbf7f1;border-radius:6px" role="img" aria-labelledby="bgT bgD">
+<title id="bgT">What the Profit column in MetaTrader 5 leaves out of your real result</title>
+<desc id="bgD">Waterfall chart. A gross profit of 1,200 dollars is reduced by 280 dollars of commission and 320 dollars of swap, leaving a net result of 600 dollars, half of the figure shown in the Profit column. Self computed worked example.</desc>
+<rect width="760" height="500" fill="#fbf7f1" rx="6"/>
+<text x="40" y="48" font-family="Georgia,'Times New Roman',serif" font-size="23" font-weight="700" fill="#2b2118">What the Profit Column Leaves Out</text>
+<text x="40" y="76" font-family="Helvetica,Arial,sans-serif" font-size="13.5" fill="#6f5433">MetaTrader 5 records profit, commission and swap as three separate fields</text>
+<line x1="70" y1="400" x2="710" y2="400" stroke="#2b2118" stroke-width="1.4"/>
+<rect x="105" y="160" width="110" height="240" fill="#c79331" rx="3"/>
+<rect x="265" y="160" width="110" height="56" fill="#a4562a" rx="3"/>
+<rect x="425" y="216" width="110" height="64" fill="#a4562a" rx="3"/>
+<rect x="585" y="280" width="110" height="120" fill="#4d7c4d" rx="3"/>
+<line x1="215" y1="160" x2="265" y2="160" stroke="#6f5433" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="375" y1="216" x2="425" y2="216" stroke="#6f5433" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="535" y1="280" x2="585" y2="280" stroke="#6f5433" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="160" y="150" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="18" font-weight="700" fill="#2b2118">$1,200</text>
+<text x="320" y="150" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="18" font-weight="700" fill="#2b2118">-$280</text>
+<text x="480" y="206" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="18" font-weight="700" fill="#2b2118">-$320</text>
+<text x="640" y="270" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="18" font-weight="700" fill="#2b2118">$600</text>
+<text x="160" y="424" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="700" fill="#2b2118">Profit column</text>
+<text x="320" y="424" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="700" fill="#2b2118">Commission</text>
+<text x="480" y="424" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="700" fill="#2b2118">Swap</text>
+<text x="640" y="424" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="700" fill="#2b2118">What you kept</text>
+<text x="160" y="442" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#6f5433">what you see</text>
+<text x="320" y="442" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#6f5433">separate field</text>
+<text x="480" y="442" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#6f5433">separate field</text>
+<text x="640" y="442" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#6f5433">50% of the top figure</text>
+<text x="40" y="470" font-family="Helvetica,Arial,sans-serif" font-size="11.5" fill="#6f5433">Worked example, self computed. 40 trades, 1.0 lot each, $7 commission per lot round turn, swap -$4 per lot per night, two nights held.</text>
+<text x="40" y="489" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#6f5433" letter-spacing="1">EDUCATIONAL ILLUSTRATION &#183; NO PRICES, NO SIGNALS</text>
+</svg>
+ <figcaption>What the Profit column leaves out: commission and swap are stored separately, so the headline figure is not what you kept.</figcaption>
+ </figure>
+
+ <h2>The Profit Column Is Not Your Result</h2>
+ <p>Here is the first thing worth knowing, and it catches almost everybody.</p>
+ <p>MetaTrader 5 does not store one number for how a trade went. It stores several, side by side. The official MQL5 documentation lists them as separate properties on every deal: <code>DEAL_PROFIT</code> for the profit, <code>DEAL_COMMISSION</code> for the commission, <code>DEAL_SWAP</code> for the <em>"cumulative swap on close"</em>, and <code>DEAL_FEE</code> for a fee <em>"charged immediately after performing a deal"</em>. You can read the full list in the <a href="https://www.mql5.com/en/docs/constants/tradingconstants/dealproperties" rel="noopener nofollow" target="_blank">MQL5 deal properties reference</a>.</p>
+ <p>Four separate fields. The Profit column shows you one of them.</p>
+ <p>Work through an example with me, and note that these are my assumptions rather than any broker's actual rates. Say you close forty trades in a month, one lot each. Your commission is seven dollars per lot per round turn, and you hold most positions across two nights at a swap of minus four dollars per lot per night. The Profit column adds up to a satisfying one thousand two hundred dollars.</p>
+ <ul>
+ <li>Commission: 40 trades, one lot, seven dollars, comes to <strong>280 dollars</strong>.</li>
+ <li>Swap: 40 trades, one lot, four dollars a night, two nights, comes to <strong>320 dollars</strong>.</li>
+ <li>What you actually kept: <strong>600 dollars</strong>.</li>
+ </ul>
+ <p class="pull">Half. The number you were congratulating yourself on was double the number that reached your account.</p>
+ <p>Change my assumptions and the total changes, but the shape does not. Costs are subtracted from a result that has already been calculated, which means the friction is invisible in the column everyone reads. If you have never done this arithmetic on your own history, do it tonight. It is the single most common reason a trader's own sense of their month disagrees with their balance.</p>
+ <p>This matters most for anyone holding positions for days at a time, because swap accrues every night whether the trade is doing anything or not. It is worth understanding alongside <a href="/journal/why-you-take-profit-too-early.html">why you take profit too early</a>, since the two pressures pull in opposite directions and both of them are about cost rather than analysis.</p>
+
+ <h2>What Twenty Trades Can Actually Tell You</h2>
+ <p>Now the harder lesson, and the one I would most like you to take away.</p>
+ <p>You open your history, count twelve wins out of twenty trades, and conclude that you have a sixty percent win rate. It feels like a fact. You have the data in front of you, after all.</p>
+ <p>It is not a fact. It is a very wide range pretending to be a point.</p>
+ <p>Running the standard confidence interval calculation on that record, twelve wins from twenty trades is consistent with a true win rate anywhere from about <strong>38.7 percent to 78.1 percent</strong>. That is a spread of nearly forty percentage points. Your twenty trades cannot distinguish between a method that loses money steadily and one that is genuinely excellent. Both of those live comfortably inside your data.</p>
+ <p>Here is what happens as the sample grows, on the same sixty percent result:</p>
+ <ul>
+ <li>20 trades: the true rate could be anywhere from 38.7 to 78.1 percent.</li>
+ <li>50 trades: 46.2 to 72.4 percent.</li>
+ <li>100 trades: 50.2 to 69.1 percent.</li>
+ <li>400 trades: 55.1 to 64.7 percent.</li>
+ </ul>
+ <p>I calculated these with the Wilson method at ninety-five percent confidence, assuming each trade is independent of the others, which real trading only approximates. Four hundred trades, and the range is still nearly ten points wide. That is the honest cost of learning anything about yourself from your own record.</p>
+ <p>None of this means your history is useless. It means the history answers some questions and not others, and most traders ask it the one question it cannot answer. It cannot reliably tell you your win rate after a month. It can tell you, with complete precision, what you did: how long you held, how big you went, what time you clicked, and whether you followed your own rules. Those are facts, not estimates, and they are available immediately.</p>
+ <p>This is the same reasoning behind <a href="/journal/trading-is-a-game-of-probability.html">treating trading as a game of probability</a>, and it is why <a href="/journal/how-to-be-a-consistent-trader.html">consistency</a> is measured in behaviour long before it shows up in the balance.</p>
+
+ <h2>The Four Columns Worth More Than Profit</h2>
+ <p>When I sit down with my own history, profit is not the first thing I look at. It is the slowest and noisiest number in the file. These four tell me more, and they tell me sooner.</p>
+
+ <h3>Holding time</h3>
+ <p>Sort by duration. If your winners are short and your losers are long, you have found something important about yourself, and it has nothing to do with the market. It means you are taking profits to relieve tension and holding losses to avoid admitting them. This one pattern has drained more accounts than any bad analysis I have seen.</p>
+
+ <h3>Volume</h3>
+ <p>Look at the Volume column across the month, in order. It should be boring. If it climbs after a loss, you have evidence of revenge sizing written in your own hand, and the platform recorded it while you were telling yourself you were being decisive. If it climbs after a win, that is the same problem wearing better clothes. <a href="/journal/position-sizing-so-one-trade-cannot-hurt-you.html">Position sizing so that one trade cannot hurt you</a> is the fix, and it only works if the number stays steady when you are emotional.</p>
+
+ <h3>Time of day</h3>
+ <p>Group your results by the hour you entered. Most traders find that a specific window accounts for a disproportionate share of their damage, usually late in their own evening, usually after a losing session. You cannot fix what you have not noticed, and this is noticeable within about ten minutes of looking.</p>
+
+ <h3>The reason, which the platform cannot store</h3>
+ <p>MetaTrader will not tell you why you took the trade. That column has to come from you, written at the time, before the outcome is known. It is the only field that turns a list of transactions into something you can learn from. Everything else is bookkeeping.</p>
+
+ <h2>Reading Your Own History Without Flinching</h2>
+ <p>There is a reason this is not a popular evening activity.</p>
+ <p>Opening your history after a bad month feels like reading old messages you sent while upset. Everything is preserved, in order, timestamped, and you cannot argue with any of it. Most people avoid the tab entirely for precisely this reason, and then wonder why the same month keeps repeating.</p>
+ <p>What helps is changing what you are looking for. If you open the file to find out whether you are good at this, you will be defending yourself within thirty seconds. If you open it to find out what you actually did, it becomes almost clinical. The trades are not a verdict on you. They are a record of decisions made by a person who was tired, or hopeful, or annoyed about something unrelated, and who will make different decisions once he can see the pattern.</p>
+ <p>The traders who improve are not the ones with the cleanest histories. They are the ones who look. I would put a monthly review of your own record above any indicator, any course and any signal, including mine, and it is free.</p>
+
+ <h2>What This Does Not Mean</h2>
+ <p>Three honest caveats, because I would rather you trust the rest of this.</p>
+ <p>First, none of the above says costs are unfair or that your broker is taking something from you. Commission and swap are the price of access, and they are disclosed. The point is only that they sit outside the column you are reading.</p>
+ <p>Second, the confidence intervals assume trades are independent, and yours are not entirely. If you take three positions on the same idea in the same session, that is closer to one trade than three, which makes your effective sample smaller than the row count suggests.</p>
+ <p>Third, a clean review process does not make a method profitable. It tells you the truth faster. Sometimes the truth it delivers is that this approach is not working, and the value is in receiving that news after twenty trades rather than after two hundred. Reviewing carefully is how you shorten the distance to an honest answer, not how you guarantee a pleasant one. If a bad stretch has already happened, <a href="/journal/what-is-drawdown-and-how-to-recover.html">what drawdown is and how to recover</a> deals with the arithmetic of climbing back.</p>
+
+ <h2>Frequently Asked Questions</h2>
+ <div class="faq">
+ <div class="qa">
+ <h4>Where exactly is trade history in MetaTrader 5?</h4>
+ <p>The Toolbox panel at the bottom of the desktop terminal, under the History tab. Ctrl+T opens the Toolbox if it is closed. Right click inside the tab to set the period, and set it wider than the default, which usually shows only recent days.</p>
+ </div>
+ <div class="qa">
+ <h4>Why does my Profit column not match my balance change?</h4>
+ <p>Because commission, swap and fees are stored as separate fields on each deal rather than being folded into profit. The MQL5 documentation lists them separately. Add all four together to get what actually happened to your account.</p>
+ </div>
+ <div class="qa">
+ <h4>Why does one position show up as several rows?</h4>
+ <p>MetaTrader 5 is deal based rather than order based. Scaling out of a position, or a partial fill, produces more than one deal for what you experienced as a single trade. Group by position before you count.</p>
+ </div>
+ <div class="qa">
+ <h4>How many trades before my win rate means something?</h4>
+ <p>More than you would like. At twenty trades a sixty percent result is consistent with anything from roughly 39 to 78 percent. Even four hundred trades leaves a range about ten points wide. Judge your behaviour early and your win rate late.</p>
+ </div>
+ <div class="qa">
+ <h4>Can I check my trades on the mobile app?</h4>
+ <p>Yes, the mobile and web versions both have a history view, and it is fine for a quick look. For a monthly review use the desktop terminal, because sorting by duration and volume is where the useful patterns appear, and that is awkward on a phone.</p>
+ </div>
+ <div class="qa">
+ <h4>Where did the 38.7 to 78.1 percent range come from?</h4>
+ <p>I calculated it with the Wilson score interval at ninety-five percent confidence for twelve wins out of twenty trades, assuming independent trades. The same method produced the other figures in that section. It is a standard calculation and you can reproduce it in a few lines of code.</p>
+ </div>
+ </div>
+
+ <h2>A Word on Risk, and How to Use This</h2>
+ <p>Everything above is general education about a platform and about reading your own records. It is not a method, it is not advice, and it is not a claim that careful bookkeeping makes anyone profitable. Leveraged trading carries a substantial risk of loss, and most retail accounts lose money. The percentages and dollar figures I used are illustrations calculated from assumptions I stated, not quotes from any broker and not a forecast. <strong>Nothing here is financial advice, and no entry, stop or target discussed should be treated as a signal.</strong></p>
+ <p>Cut to the bone: your platform already knows what you did. You are the only one who has not read it.</p>
+ <p>If you want the risk-first companion to this way of working, I wrote a short guide for exactly that. It is called <strong>the Black Gold Market Blueprint</strong>, a plain walk-through of protecting an account and reading context before the candle. It is free, it reads in one sitting, and there is no countdown on it.</p>
+ <p><a href="/blueprint/"><strong>Grab the Blueprint here</strong></a>, and for the foundation underneath all of it, start with <a href="/journal/how-to-protect-your-capital-when-gold-gets-volatile.html">how to protect your capital when gold gets volatile</a>.</p>
+ <p class="big"><strong>Protect. Master. Grow.</strong></p>
+
+ <div class="authorbox">
+ <img src="../avatar.jpg" alt="Raphael, Black Gold Market">
+ <div>
+ <p class="who">About the Author</p>
+ <h4>Raphael, founder of Black Gold Market</h4>
+ <p>Raphael runs a XAU/USD channel built on one idea: protect your capital, master your emotions, and grow your account sustainably. He doesn't ask you to take his word for it. In front of roughly 8,900 traders, he posts daily gold analysis and macro context, the level, the context, and the risk behind each idea, so members learn to read the market instead of blindly copying a call. His focus is the backdrop most channels skip: session liquidity, real rates, the dollar, central-bank demand, and the forces that actually move gold. <a href="https://blackgoldmarket.us/about.html">More about how the channel works</a>. It is free to follow, with an optional Kit; he doesn't promise returns and plays the long game over the lucky week.</p>
+ </div>
+ </div>
+
+ <p class="disclaimer">Risk disclaimer: This article is for educational purposes only and is not financial, legal or security advice. Trading gold, CFDs and other leveraged instruments carries a substantial risk of loss, and most retail traders lose money. Platform behaviour, commission and swap rates differ between brokers and between account types, so check your own contract specifications rather than relying on the illustrative figures used here. Statistical intervals describe uncertainty in a sample and do not predict future results. Past performance does not guarantee future results. Only trade with capital you can afford to lose.</p>
+
+ </div></div>
+</article>
+
+<section class="cta">
+ <div class="wrap">
+ <p class="kicker">Start here, it's free</p>
+ <h2>Your platform already knows what you did.</h2>
+ <p>Follow along on Telegram for daily gold analysis and the macro context behind it, session liquidity, real rates, the dollar, central-bank demand, and the forces that move gold, so you understand the backdrop instead of guessing. Free to follow, with an optional Kit. No hype, no promises, and nobody will ever ask you for a fee to release your own money.</p>
+ <a class="tg-btn" href="https://t.me/+h-5A-mdBmhA5ZWQ1">Join Black Gold Market on Telegram</a>
+ <span class="sub">No guaranteed profit. No pressure to copy anything blindly.</span>
+ </div>
+</section>
+
+<section class="more">
+ <div class="wrap">
+ <p class="label">More from the journal</p>
+
+
+   <div class="grid3">
+<a class="card" href="/journal/how-to-be-a-consistent-trader.html">
+<span class="tag">Mindset</span>
+<h3>How to Be a Consistent Trader</h3>
+<span class="read">Read the article &rarr;</span>
+</a>
+<a class="card" href="/journal/position-sizing-so-one-trade-cannot-hurt-you.html">
+<span class="tag">Risk</span>
+<h3>Position Sizing So One Trade Cannot Hurt You</h3>
+<span class="read">Read the article &rarr;</span>
+</a>
+<a class="card" href="/journal/what-is-drawdown-and-how-to-recover.html">
+<span class="tag">Risk</span>
+<h3>What Is Drawdown, and How Do You Recover From It?</h3>
+<span class="read">Read the article &rarr;</span>
+</a>
+</div>
+
+ </div>
+</section>
+
+<footer>
+ <div class="wrap">
+ <div class="brand">BLACK<b>&#183;</b>GOLD MARKET</div>
+ <p><strong>Protect. Master. Grow.</strong> Daily XAU/USD analysis and trade ideas with the reasoning behind them, free to follow, with an optional Kit. Built on discipline and defined risk, not promises of profit.</p>
+ <p class="fine">Risk warning: Trading gold, CFDs and leveraged products carries a substantial risk of loss and is not suitable for everyone. Most retail traders lose money. Nothing on this site is financial advice or a solicitation to trade. Past performance does not guarantee future results. Only trade with capital you can afford to lose.</p>
+ <p class="fine">&copy; 2026 Black Gold Market. All rights reserved.</p>
+ </div>
+</footer>
+
+<script defer src="/assets/track.js"></script>
+</body>
+</html>
