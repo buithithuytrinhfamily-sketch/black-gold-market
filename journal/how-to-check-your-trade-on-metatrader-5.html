@@ -155,6 +155,22 @@
  footer p{font-family:var(--sans);font-size:.76rem;line-height:1.7;max-width:88ch;margin:0}
  footer p strong{color:#f4ead4}
  footer .fine{color:#8f7654}
+
+ /* Ô xin email trong khối CTA cuối bài, thêm 07/08/2026 theo yêu cầu chị Trinh. */
+ .cta .optin{max-width:520px;margin:0 auto 24px}
+ .cta .optin h3{font-family:var(--sans);font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-lite);margin:0 0 12px}
+ .cta .optin .row{display:flex;gap:10px;flex-wrap:wrap}
+ .cta .optin input[type=email]{flex:1 1 240px;min-width:0;box-sizing:border-box;padding:13px 14px;font:inherit;font-size:16px;color:var(--ink);background:#FFF9F2;border:1px solid var(--gold-deep);border-radius:3px}
+ .cta .optin input[type=email]:focus{outline:3px solid var(--gold);outline-offset:1px}
+ .cta .optin button{flex:0 0 auto;padding:13px 24px;font-family:var(--sans);font-size:.86rem;font-weight:700;color:var(--ink);background:var(--gold-lite);border:1px solid var(--gold-deep);border-radius:3px;cursor:pointer}
+ .cta .optin button:hover{background:#FFF9F2}
+ .cta .optin button[disabled]{opacity:.6;cursor:default}
+ .cta .optin .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+ .cta .optin .msg{font-family:var(--sans);font-size:.8rem;margin:10px 0 0;min-height:1em;color:var(--gold-lite)}
+ .cta .optin .msg.bad{color:#e8a08c}
+ .cta .optin .note{font-family:var(--sans);font-size:.72rem;color:#a58c60;margin:12px auto 0;line-height:1.55;max-width:44ch}
+ @media (max-width:520px){ .cta .optin button{flex:1 1 100%} }
+ .cta .or{display:block;font-family:var(--sans);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#a58c60;margin:0 0 18px}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to Check Your Trade on MetaTrader 5, and What the Profit Column Hides", "description": "How to check your trade on MetaTrader 5 takes two minutes. Reading it honestly is harder: commission and swap sit outside the Profit column, and 20 trades prove almost nothing.", "image": "https://blackgoldmarket.us/assets/hero/how-to-check-your-trade-on-metatrader-5.png", "author": {"@type": "Person", "name": "Raphael", "url": "https://blackgoldmarket.us/about.html"}, "publisher": {"@type": "Organization", "name": "Black Gold Market", "logo": {"@type": "ImageObject", "url": "https://blackgoldmarket.us/avatar.jpg"}}, "datePublished": "2026-08-04T07:00:00+07:00", "dateModified": "2026-08-04T07:00:00+07:00", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://blackgoldmarket.us/journal/how-to-check-your-trade-on-metatrader-5.html"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://blackgoldmarket.us/"}, {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://blackgoldmarket.us/journal/"}, {"@type": "ListItem", "position": 3, "name": "How to Check Your Trade on MetaTrader 5, and What the Profit Column Hides", "item": "https://blackgoldmarket.us/journal/how-to-check-your-trade-on-metatrader-5.html"}]}</script>
@@ -383,6 +399,17 @@
  <p class="kicker">Start here, it's free</p>
  <h2>Your platform already knows what you did.</h2>
  <p>Follow along on Telegram for daily gold analysis and the macro context behind it, session liquidity, real rates, the dollar, central-bank demand, and the forces that move gold, so you understand the backdrop instead of guessing. Free to follow, with an optional Kit. No hype, no promises, and nobody will ever ask you for a fee to release your own money.</p>
+  <form class="optin" id="ctaOptin" novalidate>
+ <h3>Free: the Sustainable Trader's Blueprint</h3>
+ <div class="row">
+ <input id="ctaEmail" name="email_address" type="email" autocomplete="email" required placeholder="you@example.com" aria-label="Email address">
+ <button type="submit" id="ctaBtn">Send it to me</button>
+ </div>
+ <div class="hp" aria-hidden="true"><label for="ctaWebsite">Website</label><input id="ctaWebsite" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+ <p class="msg" id="ctaMsg" role="status" aria-live="polite"></p>
+ <p class="note">No cost and no obligation. Educational only, not financial advice, and nothing here promises a return. Unsubscribe any time in one click.</p>
+ </form>
+ <span class="or">Or just come and watch</span>
  <a class="tg-btn" href="https://t.me/+h-5A-mdBmhA5ZWQ1">Join Black Gold Market on Telegram</a>
  <span class="sub">No guaranteed profit. No pressure to copy anything blindly.</span>
  </div>
@@ -424,5 +451,53 @@
 </footer>
 
 <script defer src="/assets/track.js"></script>
+<!-- bgm-cta-optin -->
+<script>
+/* Ô xin email cuối bài, gửi thẳng sang EmailOctopus.
+   BGM không có endpoint riêng như REX và GE, nhưng form EmailOctopus của kênh đã có
+   sẵn trên trang quà và điểm gửi của nó cho phép mọi tên miền, nên gửi thẳng được. */
+(function(){
+  var f = document.getElementById('ctaOptin');
+  if (!f) return;
+  var btn = document.getElementById('ctaBtn');
+  var msg = document.getElementById('ctaMsg');
+  var API = 'https://eocampaign1.com/form/d9a809de-7d07-11f1-b64c-1342c48560d2';
+  f.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var email = (document.getElementById('ctaEmail').value || '').trim();
+    msg.className = 'msg';
+    if (!/^[^@\s]+@[^@\s.]+\.[^@\s]{2,}$/.test(email)) {
+      msg.className = 'msg bad';
+      msg.textContent = 'Please check that email address.';
+      return;
+    }
+    /* bẫy spam: bot điền vào ô ẩn thì im lặng bỏ qua, không báo cho nó biết */
+    if ((document.getElementById('ctaWebsite').value || '').trim() !== '') {
+      msg.textContent = 'Thank you, check your inbox.';
+      return;
+    }
+    btn.disabled = true;
+    var label = btn.textContent;
+    btn.textContent = 'Sending...';
+    var body = new URLSearchParams();
+    body.append('email_address', email);
+    fetch(API, {method: 'POST', headers: {'Content-Type': 'application/x-www-form-urlencoded'}, body: body})
+      .then(function(r){
+        if (r.ok) {
+          if (window.gtag) gtag('event', 'lead_form_submit', {form: 'bgm_article_cta'});
+          f.innerHTML = '<p class="msg" style="font-size:1rem">Check your inbox, it is on the way.</p>';
+        } else {
+          btn.disabled = false; btn.textContent = label;
+          msg.className = 'msg bad';
+          msg.textContent = 'Something went wrong. Please try again in a moment.';
+        }
+      }).catch(function(){
+        btn.disabled = false; btn.textContent = label;
+        msg.className = 'msg bad';
+        msg.textContent = 'Network error. Please try again.';
+      });
+  });
+})();
+</script>
 </body>
 </html>
