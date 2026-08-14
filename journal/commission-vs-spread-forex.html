@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NL24SJYSZ8"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NL24SJYSZ8');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Commission vs Spread Forex: What Each Cost Model Actually Takes From a Gold Trade, Black Gold Market</title>
+<meta name="description" content="Commission vs spread forex settled with arithmetic: the crossover rule, what each model costs per gold round turn, and why trade count matters more than either.">
+<meta property="og:title" content="Commission vs Spread Forex: What Each Cost Model Actually Takes From a Gold Trade">
+<meta property="og:description" content="Commission vs spread forex settled with arithmetic: the crossover rule, what each model costs per gold round turn, and why trade count matters more than either.">
+<meta property="og:image" content="https://blackgoldmarket.us/assets/hero/commission-vs-spread-forex.png">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://blackgoldmarket.us/journal/commission-vs-spread-forex.html">
+<meta property="og:url" content="https://blackgoldmarket.us/journal/commission-vs-spread-forex.html">
+<link rel="icon" type="image/png" href="/favicon.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+ :root{
+ --paper:#F6E4CF; /* trang giấy, kem ấm */
+ --sand:#EDDBC0; /* nền panel, cát vàng nhạt */
+ --sand-2:#D9C4AA;
+ --ink:#321C04; /* nâu espresso, nền tối logo */
+ --ink-2:#46290A;
+ --muted:#6F5433; /* taupe ấm */
+ --gold:#c79331; /* đồng/vàng ánh kim, màu chủ đề logo */
+ --gold-lite:#e0b25a;
+ --gold-deep:#8f6a24;
+ --loss:#a4562a; /* semantic: stop loss / lệnh thua, terracotta */
+ --win:#5c7d4f; /* semantic: lệnh thắng, olive */
+ --hairline:rgba(143,106,36,.22);
+ --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+ --mono:"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+ }
+ html{scroll-behavior:smooth}
+ body{background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.7;margin:0}
+ a{color:var(--gold-deep);text-decoration:none}
+ a:hover{text-decoration:underline}
+ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
+ .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+
+ /* ── top bar ──────── */
+ .topbar{position:sticky;top:0;z-index:20;background:rgba(25,17,8,.97);backdrop-filter:blur(8px)}
+ .topbar .wrap{display:flex;align-items:center;gap:28px;height:64px}
+ .wordmark{font-family:var(--sans);font-weight:800;font-size:1.02rem;letter-spacing:.2em;color:#f4ead4}
+ .wordmark b{color:var(--gold-lite)}
+ .wordmark:hover{text-decoration:none}
+ nav.menu{display:flex;gap:22px;margin-left:auto;font-family:var(--sans);font-size:.82rem;letter-spacing:.08em}
+ nav.menu a{color:#c7ac7c;text-transform:uppercase}
+ nav.menu a[aria-current]{color:#f4ead4}
+ .tg-btn{font-family:var(--sans);font-size:.8rem;font-weight:700;letter-spacing:.06em;color:#321C04;background:#FFF9F2;padding:9px 16px;border-radius:3px;white-space:nowrap}
+ .tg-btn:hover{text-decoration:none;background:#EDDBC0}
+
+ /* ── ticker ────────────────────── */
+ .ticker{border-bottom:1px solid var(--hairline);background:var(--sand);font-family:var(--mono);font-size:.72rem;color:var(--muted);overflow-x:auto;white-space:nowrap}
+ .ticker .wrap{display:flex;gap:34px;padding:8px 24px}
+ .ticker span b{color:var(--ink);font-weight:500}
+
+ /* ── hero ───────────── */
+ .hero{padding:76px 0 64px;border-bottom:1px solid var(--hairline);
+ background:
+ radial-gradient(900px 480px at 85% 0%, rgba(199,147,49,.16), transparent 62%),
+ radial-gradient(700px 380px at -5% 100%, rgba(199,147,49,.08), transparent 60%),
+ var(--paper);}
+ .hero .wrap{display:grid;grid-template-columns:1fr 300px;gap:56px;align-items:center}
+ .eyebrow{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 22px}
+ .hero h1{font-size:clamp(2rem,5vw,3.15rem);line-height:1.12;font-weight:600;margin:0;max-width:20ch;text-wrap:balance}
+ .hero h1 .q{color:var(--gold-deep)}
+ .hero p.standfirst{font-size:1.12rem;color:var(--muted);max-width:54ch;margin:26px 0 0}
+ .byline{display:flex;align-items:center;gap:12px;margin-top:32px;font-family:var(--sans);font-size:.82rem;color:var(--muted)}
+ .byline b{color:var(--ink);font-weight:600}
+ .portrait{justify-self:end;text-align:center}
+ .portrait img{width:260px;height:260px;object-fit:cover;border-radius:50%;border:4px solid #fff;
+ box-shadow:0 0 0 1px var(--hairline),0 18px 44px rgba(143,106,36,.28);display:block;margin:0 auto}
+ .portrait .cap{font-family:var(--sans);font-size:.78rem;color:var(--muted);margin-top:14px}
+ .portrait .cap b{color:var(--ink)}
+ @media (max-width:820px){
+ .hero .wrap{grid-template-columns:1fr;gap:40px}
+ .portrait{justify-self:start;text-align:left}
+ .portrait img{margin:0}
+ }
+ .fade{opacity:0;transform:translateY(14px);animation:rise .7s ease forwards}
+ .fade.d1{animation-delay:.12s}.fade.d2{animation-delay:.24s}.fade.d3{animation-delay:.36s}
+ @keyframes rise{to{opacity:1;transform:none}}
+ @media (prefers-reduced-motion:reduce){.fade{animation:none;opacity:1;transform:none}}
+
+ /* ── three pillars band ────────────────── */
+ .rules{border-bottom:1px solid var(--hairline);background:var(--sand)}
+ .rules .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hairline);padding:0}
+ .rule{background:var(--sand);padding:28px 26px}
+ .rule .no{font-family:var(--mono);font-size:.72rem;color:var(--gold-deep);letter-spacing:.14em}
+ .rule h3{font-family:var(--sans);font-size:1rem;font-weight:700;margin:10px 0 8px;letter-spacing:.01em}
+ .rule p{font-size:.92rem;color:var(--muted);margin:0;line-height:1.6}
+ @media (max-width:760px){.rules .wrap{grid-template-columns:1fr}}
+
+ /* ── article ─────────────────────────── */
+ .article{padding:72px 0 40px}
+ .article .body{max-width:65ch;margin:0 auto}
+ .article h2{font-size:1.5rem;font-weight:600;margin:60px 0 18px;padding-bottom:10px;border-bottom:1px solid var(--hairline);text-wrap:balance}
+ .article h2:first-child{margin-top:0}
+ .article p{margin:0 0 1.15em}
+ .article p.big{font-size:1.16rem}
+ .article strong{color:var(--ink);font-weight:700}
+ .key{color:var(--gold-deep);font-style:normal;font-weight:700}
+ .pull{border-left:3px solid var(--gold);padding:6px 0 6px 24px;margin:34px 0;font-size:1.32rem;line-height:1.45;color:var(--ink);font-weight:500;text-wrap:balance;font-family:var(--serif)}
+
+ /* faq */
+ .faq{margin:34px 0}
+ .faq .qa{border-top:1px solid var(--hairline);padding:20px 0}
+ .faq .qa:last-child{border-bottom:1px solid var(--hairline)}
+ .faq h4{font-family:var(--sans);font-size:1.02rem;font-weight:700;margin:0 0 8px;color:var(--ink)}
+ .faq p{margin:0;color:var(--muted)}
+
+ /* author box */
+ .authorbox{display:grid;grid-template-columns:88px 1fr;gap:20px;align-items:start;
+ background:var(--sand);border:1px solid var(--hairline);border-radius:6px;padding:26px;margin:44px 0 10px}
+ .authorbox img{width:88px;height:88px;border-radius:50%;object-fit:cover;border:2px solid #fff;box-shadow:0 0 0 1px var(--hairline)}
+ .authorbox .who{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 8px}
+ .authorbox h4{font-size:1.1rem;margin:0 0 8px}
+ .authorbox p{font-size:.92rem;color:var(--muted);margin:0}
+ @media (max-width:560px){.authorbox{grid-template-columns:1fr}.authorbox img{width:72px;height:72px}}
+
+ .disclaimer{font-family:var(--sans);font-size:.82rem;font-style:italic;color:var(--muted);line-height:1.65;
+ border-top:1px solid var(--hairline);padding-top:22px;margin-top:40px}
+
+ /* ── cta ───────── */
+ .cta{border-top:1px solid var(--hairline);background:
+ radial-gradient(700px 320px at 50% 130%, rgba(199,147,49,.34), transparent 65%), var(--ink);color:#f4ead4}
+ .cta .wrap{padding:72px 24px;text-align:center}
+ .cta .kicker{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-lite);margin:0 0 16px}
+ .cta h2{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:600;margin:0 auto 14px;max-width:26ch;text-wrap:balance}
+ .cta p{color:#cbb488;max-width:48ch;margin:0 auto 30px}
+ .cta .tg-btn{font-size:.9rem;padding:14px 26px;background:#FFF9F2;color:#321C04}
+ .cta .tg-btn:hover{background:#EDDBC0}
+ .cta .sub{display:block;font-family:var(--sans);font-size:.76rem;color:#a58c60;margin-top:16px}
+
+ /* ── more ──────────────────────── */
+ .more{padding:70px 0;background:var(--paper)}
+ .more .label{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 26px}
+ .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+ .card{background:#fff;border:1px solid var(--sand-2);border-radius:4px;padding:24px;display:flex;flex-direction:column;gap:10px;transition:border-color .2s,box-shadow .2s;color:var(--ink)}
+ .card:hover{border-color:var(--gold);box-shadow:0 8px 24px rgba(143,106,36,.12);text-decoration:none}
+ .card .tag{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+ .card h3{font-size:1.1rem;font-weight:600;margin:0;line-height:1.35;text-wrap:balance}
+ .card p{font-size:.9rem;color:var(--muted);margin:0;line-height:1.6;font-family:var(--sans)}
+ .card .read{margin-top:auto;font-family:var(--sans);font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-deep)}
+ @media (max-width:760px){.grid3{grid-template-columns:1fr}}
+
+ /* ── footer ──────────────────────────── */
+ footer{background:var(--ink);color:#cbb488}
+ footer .wrap{padding:44px 24px;display:grid;gap:18px}
+ footer .brand{font-family:var(--sans);font-weight:800;letter-spacing:.2em;font-size:.9rem;color:#f4ead4}
+ footer .brand b{color:var(--gold-lite)}
+ footer p{font-family:var(--sans);font-size:.76rem;line-height:1.7;max-width:88ch;margin:0}
+ footer p strong{color:#f4ead4}
+ footer .fine{color:#8f7654}
+
+ /* Bảng nhỏ xin email trước khi sang Telegram, 07/08/2026 theo yêu cầu chị Trinh. */
+ .tgate{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(20,10,9,.72)}
+ .tgate[open]{display:flex}
+ .tgate__card{position:relative;width:100%;max-width:430px;background:#FFF9F2;color:var(--ink);border:1px solid var(--sand-2);border-radius:8px;padding:30px 28px 26px;box-shadow:0 24px 60px rgba(0,0,0,.45);text-align:left}
+ .tgate__x{position:absolute;top:9px;right:11px;width:32px;height:32px;font:400 24px/1 var(--sans);color:var(--muted);background:none;border:0;cursor:pointer;border-radius:4px}
+ .tgate__x:hover{background:var(--sand)}
+ .tgate__k{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 8px}
+ .tgate__h{font-family:var(--serif);font-size:1.28rem;line-height:1.3;font-weight:600;margin:0 0 8px}
+ .tgate__s{font-family:var(--sans);font-size:.86rem;line-height:1.5;color:var(--muted);margin:0 0 18px}
+ .tgate input[type=email]{width:100%;box-sizing:border-box;padding:13px 14px;font:inherit;font-size:16px;color:var(--ink);background:#fff;border:1px solid var(--sand-2);border-radius:4px;margin:0 0 12px}
+ .tgate input[type=email]:focus{outline:3px solid var(--gold);outline-offset:1px}
+ .tgate button[type=submit]{width:100%;padding:14px 18px;font-family:var(--sans);font-size:.95rem;font-weight:700;letter-spacing:.04em;color:#FFF9F2;background:var(--ink);border:0;border-radius:4px;cursor:pointer}
+ .tgate button[type=submit]:hover{background:#1F1003}
+ .tgate button[type=submit][disabled]{opacity:.6;cursor:default}
+ .tgate__hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+ .tgate__msg{font-family:var(--sans);font-size:.82rem;margin:10px 0 0;min-height:1em;color:var(--gold-deep)}
+ .tgate__msg.bad{color:var(--loss)}
+ .tgate__note{font-family:var(--sans);font-size:.72rem;line-height:1.55;color:var(--muted);margin:14px 0 0}
+ .tgate__skip{display:block;width:100%;margin:12px 0 0;padding:4px;font-family:var(--sans);font-size:.78rem;color:var(--muted);background:none;border:0;text-decoration:underline;cursor:pointer}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Commission vs Spread Forex: What Each Cost Model Actually Takes From a Gold Trade", "description": "Commission vs spread forex settled with arithmetic: the crossover rule, what each model costs per gold round turn, and why trade count matters more than either.", "image": "https://blackgoldmarket.us/assets/hero/commission-vs-spread-forex.png", "author": {"@type": "Person", "name": "Raphael", "url": "https://blackgoldmarket.us/about.html"}, "publisher": {"@type": "Organization", "name": "Black Gold Market", "logo": {"@type": "ImageObject", "url": "https://blackgoldmarket.us/avatar.jpg"}}, "datePublished": "2026-08-15T06:00:00+07:00", "dateModified": "2026-08-15T06:00:00+07:00", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://blackgoldmarket.us/journal/commission-vs-spread-forex.html"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://blackgoldmarket.us/"}, {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://blackgoldmarket.us/journal/"}, {"@type": "ListItem", "position": 3, "name": "Commission vs Spread Forex: What Each Cost Model Actually Takes From a Gold Trade", "item": "https://blackgoldmarket.us/journal/commission-vs-spread-forex.html"}]}</script>
+</head>
+<body>
+
+<header class="topbar">
+ <div class="wrap">
+ <a class="wordmark" href="../">BLACK<b>&#183;</b>GOLD MARKET</a>
+ <nav class="menu" aria-label="Main">
+ <a href="../">Home</a>
+ <a href="./" aria-current="page">Journal</a>
+ <a href="https://t.me/+h-5A-mdBmhA5ZWQ1">Telegram</a>
+ </nav>
+ <a class="tg-btn" href="https://t.me/+h-5A-mdBmhA5ZWQ1">Join on Telegram</a>
+ </div>
+</header>
+
+<div class="ticker" aria-hidden="true">
+ <div class="wrap">
+ <span>MARKET <b>XAU/USD, GOLD</b></span>
+ <span>FOCUS <b>PROTECT &middot; MASTER &middot; GROW</b></span>
+ <span>METHOD <b>EVIDENCE, NOT ENTHUSIASM</b></span>
+ <span>JOURNAL <b>THE RECORD BEFORE THE VERDICT</b></span>
+ </div>
+</div>
+
+<section class="hero">
+ <div class="wrap">
+ <div>
+ <p class="eyebrow fade">Measured, not assumed</p>
+ <h1 class="fade d1">Commission vs <span class="q">Spread</span> Forex: What Each Cost Model Actually Takes From a Gold Trade</h1>
+ <p class="standfirst fade d2">A commission of 3.50 per lot per side is 0.07 per ounce, so that is the threshold. But at 250 round turns a year the model choice is worth 0.69R, while trading less on the worse account saves more.</p>
+ <div class="byline fade d3">
+ <div>By <b>Raphael</b> &nbsp;&middot;&nbsp; XAU/USD &nbsp;&middot;&nbsp; 10 min read</div>
+ </div>
+ </div>
+ <figure class="portrait fade d2" style="margin:0">
+ <img src="../avatar.jpg" alt="Black Gold Market, Raphael, XAU/USD trader">
+ <figcaption class="cap"><b>Black Gold Market</b><br>Protect. Master. Grow.</figcaption>
+ </figure>
+ </div>
+</section>
+
+<section class="rules" aria-label="The three pillars">
+ <div class="wrap">
+ <div class="rule">
+ <div class="no">PILLAR 01</div>
+ <h3>Protect</h3>
+ <p>A round turn on the illustrative spread account costs 0.0075R, against 0.0047R on the commission account. Small per trade, and it is charged every single time.</p>
+ </div>
+ <div class="rule">
+ <div class="no">PILLAR 02</div>
+ <h3>Master</h3>
+ <p>Double the commission per side, divide by 100 ounces, and you have the threshold. At 3.50 per side the commission account wins whenever its raw spread is 0.07 per ounce tighter.</p>
+ </div>
+ <div class="rule">
+ <div class="no">PILLAR 03</div>
+ <h3>Grow</h3>
+ <p>100 round turns on the expensive model costs 0.75R a year. 250 round turns on the cheap one costs 1.19R. Frequency beats pricing, and only one of them is yours to set.</p>
+ </div>
+ </div>
+</section>
+
+<article class="article">
+ <div class="wrap"><div class="body">
+<img src="/assets/hero/commission-vs-spread-forex.png" alt="Commission vs spread forex, Black Gold Market cover image on what each cost model takes from a gold trade" style="width:100%;height:auto;border-radius:6px;margin:0 0 30px">
+
+<p>The commission vs spread forex question arrives early in most traders' lives and then never quite gets answered. One account type shows a wider spread and charges nothing else. Another shows a tight spread and bills you a commission per lot. Both are presented as the better deal, by people with an interest in the answer, and the arithmetic that would settle it is never shown. So the decision gets made on feel, and feel usually picks the one with no visible fee, because a cost you can see hurts more than a cost baked into a number.</p>
+
+<p>I want to settle it properly, because the answer turned out to be more interesting than I expected. Not because one model wins by a lot, but because when I put real figures against both of them, the gap between the two turned out to be much smaller than the gap between two versions of the same trader on the same account.</p>
+
+<h2>What the Two Models Actually Are</h2>
+
+<p>Strip the marketing away and there are only two ways a broker can be paid for filling you.</p>
+
+<p>The first is the spread. You are quoted a price to buy that is slightly above the price to sell, and the difference is the broker's revenue. Nothing appears on your statement as a fee. The cost is collected silently, at the moment of entry, in the form of a position that starts underwater.</p>
+
+<p>The second is a raw spread plus a commission. The quoted gap is narrower, closer to what the underlying market is really showing, and the broker charges a stated amount per lot per side instead. Now the cost is visible, itemised, and easy to resent, even when it is smaller.</p>
+
+<p>That is the entire difference. Both are payment for the same service. Neither is inherently honest or dishonest. The only question worth asking is which one takes less from you, and that is arithmetic.</p>
+
+<h2>The Commission vs Spread Forex Crossover, in One Line</h2>
+
+<p>A standard gold lot is 100 ounces. So a commission of a stated amount per lot per side converts into a per ounce figure by doubling it, for the two sides of the round turn, and dividing by 100.</p>
+
+<p>At a commission of 3.50 per lot per side, that is 7.00 per round turn, which is 0.07 per ounce. Which gives you the whole comparison in one sentence: <strong>the commission account is cheaper whenever its raw spread is more than 0.07 per ounce tighter than the all in spread you would otherwise pay.</strong></p>
+
+<p>Change the commission and the threshold moves with it, in a way you can do in your head. At 2.00 per side the threshold is 0.04 per ounce. At 5.00 per side it is 0.10. At 7.00 per side it is 0.14. That is the whole rule, and it is the only part of this debate that has a clean answer.</p>
+
+<p>Everything after this point in the article is my attempt to work out whether the answer matters.</p>
+
+<h2>What It Costs on an Actual Gold Trade</h2>
+
+<p>To turn the rule into money I have to assume some quotes, and I want to be plain about that: the spread and commission figures below are illustrative assumptions chosen to be plausible, not quotes from any broker, and not an endorsement of any pricing. The market figures are measured and sourced. The pricing figures are stated inputs. Substitute your own and the method still works.</p>
+
+<p>I will use a working denominator of 4,000 per ounce, a round number for the arithmetic rather than any forecast or quoted price, and a lot of 100 ounces.</p>
+
+<p>Four cases, all expressed as a round turn on one lot:</p>
+
+<ul>
+<li>All in spread of 0.30 per ounce: 30.00 per lot, which is 0.0075% of the notional value.</li>
+<li>All in spread of 0.20 per ounce: 20.00 per lot, 0.0050% of notional.</li>
+<li>Raw spread 0.12 plus 3.50 per side: 19.00 per lot, 0.0047% of notional.</li>
+<li>Raw spread 0.18 plus 3.50 per side: 25.00 per lot, 0.0063% of notional.</li>
+</ul>
+
+<p>Notice what happened there. The tight commission account and the tight spread account came out at 19.00 and 20.00. A one dollar difference on a hundred ounce position. The winner changed depending on the raw spread, not on the model.</p>
+
+<h2>Measuring the Cost Against Something Real</h2>
+
+<p>Percentages of notional are hard to feel, so let me anchor them to how far gold actually moves.</p>
+
+<p>Across the ten calendar years from 2016 to 2025 the <a href="https://www.lbma.org.uk/prices-and-data/lbma-precious-metal-prices" rel="noopener nofollow" target="_blank">published LBMA gold benchmark</a> produced 2,506 sessions and 2,505 day on day comparisons. The median absolute daily move was 0.4803%. The middle half of sessions ran between 0.2006% and 0.9247%.</p>
+
+<p>Against that median session, the 0.30 spread costs 1.56% of the day's move. The commission account at 19.00 costs 0.99%. Both are small. The difference between them, on one trade, is around half a percent of one ordinary day's range.</p>
+
+<p>The other way to anchor it is in R, the unit of your own risk. If you risk a fixed 1% of the account per trade and your stop sits 1.0% away from entry in price terms, then the round turn cost works out at 0.0075R on the spread account and 0.0047R on the commission account. In plain terms, three quarters of one percent of a single risk unit, against just under half.</p>
+
+<p>If that sounds like nothing, it is because on one trade it very nearly is. Which brings me to the part that actually matters.</p>
+
+<h2>The Number That Dwarfs Both of Them</h2>
+
+<p>Costs are charged per round turn, so the annual bill is the per trade cost multiplied by how many round turns you do. That multiplication is where the real money is, and it is not close.</p>
+
+<p>Holding the 1.0% stop assumption, and comparing the 0.30 all in spread against the 0.12 plus 3.50 commission account:</p>
+
+<ul>
+<li>50 round turns a year: 0.38R on the spread account, 0.24R on the commission account.</li>
+<li>250 round turns: 1.88R against 1.19R.</li>
+<li>1,000 round turns: 7.50R against 4.75R.</li>
+</ul>
+
+<figure style="margin:0 0 26px"><img src="/assets/hero/commission-vs-spread-forex-chart.png" alt="Commission vs spread forex chart comparing annual cost in R for a commission account and an all-in spread account across 50 to 1,000 round turns a year" style="width:100%;height:auto;border-radius:6px"><figcaption style="font-size:.85rem;color:#6f5433;margin-top:8px">Commission vs spread forex, annual cost in risk units. The gap between the two models is small next to the gap between the top row and the bottom row.</figcaption></figure>
+
+<p>Read those columns down rather than across. Choosing the better cost model at 250 round turns a year saves you 0.69R. Cutting your activity from 250 round turns to 100, while staying on the worse model, saves 1.13R.</p>
+
+<p>The comparison that ends the argument is this one. A trader doing 100 round turns a year on the expensive spread account pays 0.75R. A trader doing 250 round turns a year on the cheap commission account pays 1.19R. The one who chose the worse broker and traded less finished the year with more of their capital intact.</p>
+
+<p>This is why I find the commission vs spread forex debate slightly misdirected. It is a real question with a real answer, and the answer is worth having. It is also worth roughly a quarter of what the frequency question is worth, and it gets perhaps twenty times the attention, because choosing a broker feels like a decision and trading less feels like a loss.</p>
+
+<h2>What This Comparison Does Not Include</h2>
+
+<p>Three things, and all of them can be larger than the effect measured above.</p>
+
+<p>The first is financing. Holding a position overnight incurs a swap charge that accrues per day and has nothing to do with which cost model you chose. On a trade held for weeks it will dwarf the entry cost entirely.</p>
+
+<p>The second is slippage. The spread you were quoted and the price you were filled at are different things, especially around scheduled news, and a broker with an attractive headline spread that widens sharply under stress can be more expensive in practice than one with a duller quote that holds. No published table will tell you this. Only your own fill records will.</p>
+
+<p>The third is that commission structures often have a minimum charge per ticket. If you trade in small fractions of a lot, that minimum can invert the entire calculation, because the commission stops scaling with your size while the spread cost continues to. Anyone trading micro sizes should redo the arithmetic above with their broker's actual minimum in place before drawing a conclusion.</p>
+
+<p>None of this changes the crossover rule. It just means the rule settles one component of your costs, not all of them.</p>
+
+<h2>Why the Visible Fee Feels Worse</h2>
+
+<p>There is a behavioural asymmetry here that is worth naming, because it drives more account choices than the arithmetic does.</p>
+
+<p>A commission appears on your statement as a line item with your name next to it. A spread cost appears as a position that opened slightly against you, which most traders read as market noise rather than as a fee. Identical money, two very different feelings, and the invisible one is consistently preferred.</p>
+
+<p>The reason I care is not that people pick the wrong account. Sometimes they pick the right one for the wrong reason and no harm is done. The reason I care is that the same instinct, preferring costs you cannot see, is the one that lets financing charges accumulate unnoticed and lets a widening spread during news pass as bad luck. The cost model question is a small stake. The habit behind it is not.</p>
+
+<p><em>To be clear about the limits: the frequency figures above assume that a trader doing 1,000 round turns and one doing 100 have the same edge per trade. In practice higher frequency usually means lower quality opportunities as well as higher costs, so if anything I have understated the gap. But that is an argument I have not measured here, and I am not going to present it as though I had. The measured claim is narrow: costs scale linearly with trade count, and that scaling is larger than the model difference.</em></p>
+
+<div style="background:#faf3e2;border:1px solid rgba(199,147,49,.35);border-left:4px solid #c79331;border-radius:8px;padding:22px 24px;margin:34px 0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif"><div style="font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#9a6f1e;margin-bottom:8px">Free sustainable trader's blueprint</div><p style="margin:0 0 14px;color:#2a2418;font-size:1rem;line-height:1.55">Get the free Black Gold Market blueprint, a short document for writing down what a year of your own trading actually costs before you go looking for a cheaper broker. One email, no spam, unsubscribe anytime.</p><a href="/blueprint/" style="display:inline-block;background:#c79331;color:#1c1710;text-decoration:none;font-weight:700;font-size:.9rem;padding:11px 22px;border-radius:4px">Get the free blueprint &rarr;</a></div>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Commission vs spread forex, which is actually cheaper?</h3>
+<p>Whichever has the lower total round turn cost, which you can settle with one calculation. Double the commission per side, divide by 100 ounces, and that is the per ounce threshold. At 3.50 per side the threshold is 0.07, so the commission account wins whenever its raw spread is more than 0.07 per ounce tighter than the all in spread. There is no answer that holds across all brokers, only a rule that resolves any specific pair.</p>
+
+<h3>How much does the choice actually save me?</h3>
+<p>On the illustrative figures above, and assuming a 1.0% stop distance, about 0.0028R per round turn, which is 0.69R across 250 round turns in a year. Real but modest. The same arithmetic says reducing from 250 round turns to 100 saves 1.13R on the worse model, which is larger.</p>
+
+<h3>Is a zero commission account a marketing trick?</h3>
+<p>Not necessarily. The broker still has to be paid, so the cost moves into the spread rather than disappearing, and sometimes that arrangement genuinely is cheaper for the client. It becomes a problem only when it stops you from measuring what you paid, because a cost you never total is a cost you never manage.</p>
+
+<h3>Does this change for very small position sizes?</h3>
+<p>Potentially a great deal, because many commission schedules carry a minimum charge per ticket. Below a certain size the commission stops shrinking with your position while the spread cost keeps shrinking, so the crossover moves against the commission account. Check your own broker's minimum before applying the rule.</p>
+
+<h3>Where do the market figures come from?</h3>
+<p>The volatility figures are computed from the published LBMA daily gold benchmark across 2016 to 2025, which is 2,506 sessions and 2,505 day on day comparisons, and the source is linked above so you can rebuild them. The spread and commission levels are stated assumptions used to make the arithmetic concrete, not quotes from any broker.</p>
+
+<h3>Should I switch brokers over this?</h3>
+<p>That is not a decision this article can make, and the figure it produces, well under one R a year for most traders, is smaller than the risks involved in moving to a poorly regulated firm to save it. Regulation, execution quality under stress and whether withdrawals are honoured all matter more than a fraction of a risk unit. The <a href="https://www.esma.europa.eu/press-news/esma-news/esma-agrees-prohibit-binary-options-and-restrict-cfds-protect-retail-investors" rel="noopener nofollow" target="_blank">European regulator's own review of retail CFD accounts</a> found between 74% and 89% of them lost money, which puts the size of the cost model question in perspective against everything else that goes wrong.</p>
+
+<h2>Where This Leaves You</h2>
+
+<p>The commission vs spread forex question deserves about five minutes of your attention, and here is how to spend them. Find your broker's commission per lot per side. Double it, divide by 100, and you have your threshold in dollars per ounce. Compare that against the difference between the two account types' spreads. Pick the cheaper one, write the number down, and stop thinking about it.</p>
+
+<p>Then spend the rest of the afternoon on the question that is worth several times as much. Count your round turns from last year. Multiply by the per trade cost you just calculated. That total, expressed in R, is what your activity level cost you, and unlike the broker's pricing it is entirely within your control.</p>
+
+<p>The framework this sits inside is <a href="/journal/how-to-protect-your-capital-when-gold-gets-volatile.html">how to protect your capital when gold gets volatile</a>. The habit that inflates the round turn count faster than anything else is described in <a href="/journal/overtrading-the-habit-that-drains-your-account.html">overtrading, the habit that drains your account</a>, and the sizing arithmetic that turns these percentages into your own numbers is in <a href="/journal/position-sizing-so-one-trade-cannot-hurt-you.html">position sizing so one trade cannot hurt you</a>.</p>
+
+<p><strong>About the author.</strong> <a href="/about.html">Raphael</a> writes Black Gold Market. He works on the part of this business that happens before the trade, the level, the context, and the risk, and on the conviction that a method you can follow through a quiet quarter is worth more than a better one you cannot.</p>
+
+<p><em>Disclaimer: This article is general educational content about how trading costs are structured and how they accumulate. It is not financial advice, not a recommendation of any broker, account type or pricing model, and not a suggestion to open any particular position. Trading gold, CFDs and leveraged products carries a high risk of losing money rapidly. No entry, stop or target discussed should be treated as a signal. The volatility figures are computed from the published LBMA daily gold benchmark over 2016 to 2025 and describe how a public benchmark moved in the past, not how any account performed. The spread levels, commission levels, the 4,000 per ounce denominator, the 100 ounce lot and the 1.0% stop distance are stated assumptions used to make the arithmetic concrete; they are not quotes from any broker, not prices, not forecasts, and not recommended settings. Substituting your own broker's real figures will change every result. No gold price is quoted anywhere in this article and no real trading results are represented.</em></p>
+</div></div>
+</article>
+
+<section class="cta">
+ <div class="wrap">
+ <p class="kicker">Start here, it's free</p>
+ <h2>Settle the broker question in five minutes, then spend the afternoon on the number that costs you more.</h2>
+ <p>Follow along on Telegram for daily gold analysis with the level, the context and the risk stated before the trade, losing days included. Free to follow, with an optional Kit. No hype, no promises, and nobody will ever ask you for a fee to release your own money.</p>
+ <a class="tg-btn" href="https://t.me/+h-5A-mdBmhA5ZWQ1">Join Black Gold Market on Telegram</a>
+ <span class="sub">No guaranteed profit. No pressure to copy anything blindly.</span>
+ </div>
+</section>
+
+<section class="more">
+ <div class="wrap">
+ <p class="label">More from the journal</p>
+
+
+   <div class="grid3">
+<a class="card" href="/journal/how-to-protect-your-capital-when-gold-gets-volatile.html">
+<span class="tag">Protect</span>
+<h3>How to Protect Your Capital When Gold Gets Volatile</h3>
+<span class="read">Read the article &rarr;</span>
+</a>
+<a class="card" href="/journal/how-to-reduce-drawdown-in-trading.html">
+<span class="tag">Protect</span>
+<h3>How to Reduce Drawdown in Trading</h3>
+<span class="read">Read the article &rarr;</span>
+</a>
+<a class="card" href="/journal/position-sizing-so-one-trade-cannot-hurt-you.html">
+<span class="tag">Protect</span>
+<h3>Position Sizing So One Trade Cannot Hurt You</h3>
+<span class="read">Read the article &rarr;</span>
+</a>
+</div>
+ </div>
+</section>
+
+<footer>
+ <div class="wrap">
+ <div class="brand">BLACK<b>&#183;</b>GOLD MARKET</div>
+ <p><strong>Protect. Master. Grow.</strong> Daily XAU/USD analysis and trade ideas with the reasoning behind them, free to follow, with an optional Kit. Built on discipline and defined risk, not promises of profit.</p>
+ <p class="fine">Risk warning: Trading gold, CFDs and leveraged products carries a substantial risk of loss and is not suitable for everyone. Most retail traders lose money. Nothing on this site is financial advice or a solicitation to trade. Past performance does not guarantee future results. Only trade with capital you can afford to lose.</p>
+ <p class="fine">&copy; 2026 Black Gold Market. All rights reserved.</p>
+ </div>
+</footer>
+
+<script defer src="/assets/track.js"></script>
+<div class="tgate" id="tgate" role="dialog" aria-modal="true" aria-labelledby="tgateH">
+ <div class="tgate__card">
+ <button class="tgate__x" id="tgateX" aria-label="Close">&times;</button>
+ <p class="tgate__k">One step first</p>
+ <h2 class="tgate__h" id="tgateH">Where should we send the Sustainable Trader's Blueprint?</h2>
+ <p class="tgate__s">Leave your email and we will send the free Blueprint, then take you straight to the Telegram channel.</p>
+ <form id="tgateF" novalidate>
+ <input id="tgateEmail" type="email" autocomplete="email" required placeholder="you@example.com" aria-label="Email address">
+ <div class="tgate__hp" aria-hidden="true"><input id="tgateHp" type="text" tabindex="-1" autocomplete="off"></div>
+ <button type="submit" id="tgateBtn">Continue to Telegram</button>
+ <p class="tgate__msg" id="tgateMsg" role="status" aria-live="polite"></p>
+ </form>
+ <button class="tgate__skip" id="tgateSkip">No thanks, just take me to the channel</button>
+ <p class="tgate__note">No cost and no obligation. Educational only, not financial advice, and nothing here promises a return. Unsubscribe any time in one click.</p>
+ </div>
+</div>
+<!-- bgm-tg-gate -->
+<script>
+/* Bấm link Telegram thì hiện bảng xin email, điền xong mới chuyển sang.
+   Hỏi đúng một lần cho mỗi người, lần sau đi thẳng. */
+(function(){
+  var API = 'https://eomail6.com/form/ea7b13c8-7aeb-11f1-86bd-61f8fe22c204';
+  var KEY = 'bgmTgGate';
+  var g = document.getElementById('tgate');
+  if (!g) return;
+  var f = document.getElementById('tgateF'),
+      inp = document.getElementById('tgateEmail'),
+      btn = document.getElementById('tgateBtn'),
+      msg = document.getElementById('tgateMsg'),
+      hp  = document.getElementById('tgateHp'),
+      dest = null;
+
+  function seen(){ try { return localStorage.getItem(KEY) === '1'; } catch(e){ return false; } }
+  function remember(){ try { localStorage.setItem(KEY,'1'); } catch(e){} }
+  function open(url){ dest = url; g.setAttribute('open',''); setTimeout(function(){ inp.focus(); }, 40); }
+  function close(){ g.removeAttribute('open'); dest = null; }
+  function go(){ var u = dest || 'https://t.me/'; close(); window.location.href = u; }
+
+  document.addEventListener('click', function(ev){
+    var a = ev.target.closest ? ev.target.closest('a') : null;
+    if (!a) return;
+    var h = a.getAttribute('href') || '';
+    if (h.indexOf('t.me/') === -1) return;
+    if (seen()) return;                 /* da cho email roi thi di thang */
+    ev.preventDefault();
+    open(h);
+  }, true);
+
+  document.getElementById('tgateX').addEventListener('click', close);
+  document.getElementById('tgateSkip').addEventListener('click', go);
+  g.addEventListener('click', function(ev){ if (ev.target === g) close(); });
+  document.addEventListener('keydown', function(ev){ if (ev.key === 'Escape' && g.hasAttribute('open')) close(); });
+
+  f.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var email = (inp.value || '').trim();
+    msg.className = 'tgate__msg';
+    if (!/^[^@\s]+@[^@\s.]+\.[^@\s]{2,}$/.test(email)) {
+      msg.className = 'tgate__msg bad';
+      msg.textContent = 'Please check that email address.';
+      return;
+    }
+    if ((hp.value || '').trim() !== '') { remember(); go(); return; }
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    fetch(API, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+      body: new URLSearchParams({email_address: email})
+    }).then(function(){
+      if (window.gtag) gtag('event', 'lead_form_submit', {form: 'bgm_telegram_gate'});
+      remember(); go();
+    }).catch(function(){
+      /* loi ben minh thi khong giu khach lai */
+      remember(); go();
+    });
+  });
+})();
+</script>
+</body>
+</html>
