@@ -406,7 +406,7 @@
 /* Bấm link Telegram thì hiện bảng xin email, điền xong mới chuyển sang.
    Hỏi đúng một lần cho mỗi người, lần sau đi thẳng. */
 (function(){
-  var API = 'https://eomail6.com/form/ea7b13c8-7aeb-11f1-86bd-61f8fe22c204';
+  var API = 'https://harcos-dashboard.vercel.app/api/bgm-subscribe';
   var KEY = 'bgmTgGate';
   var g = document.getElementById('tgate');
   if (!g) return;
@@ -448,18 +448,28 @@
       return;
     }
     if ((hp.value || '').trim() !== '') { remember(); go(); return; }
+    var nhan = btn.textContent;
     btn.disabled = true;
     btn.textContent = 'Sending...';
+    function loi(ly){
+      if (window.gtag) gtag('event', 'lead_form_error', {form: 'bgm_telegram_gate', reason: ly});
+      btn.disabled = false; btn.textContent = nhan;
+      msg.className = 'tgate__msg bad';
+      msg.textContent = 'We could not save that just now. Please try again, or use the link below.';
+    }
     fetch(API, {
       method: 'POST',
-      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-      body: new URLSearchParams({email_address: email})
-    }).then(function(){
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({email: email, firstName: '', website: (hp.value || '')})
+    }).then(function(r){
+      /* fetch khong bao loi khi may chu tu choi, phai tu doc ket qua */
+      return r.json().catch(function(){ return {}; }).then(function(j){ return r.ok && j && j.ok === true; });
+    }).then(function(ok){
+      if (!ok) { loi('upstream'); return; }
       if (window.gtag) gtag('event', 'lead_form_submit', {form: 'bgm_telegram_gate'});
       remember(); go();
     }).catch(function(){
-      /* loi ben minh thi khong giu khach lai */
-      remember(); go();
+      loi('network');
     });
   });
 })();

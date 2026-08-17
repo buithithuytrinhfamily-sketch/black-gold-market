@@ -28,10 +28,11 @@
     }
   }, true);
 
-  /* form đăng ký email (nếu nhúng trên trang quà) */
-  document.addEventListener('submit', function () {
-    send('lead_form_submit', { page: page });
-  }, true);
+  /* KHÔNG đo form ở đây nữa (17/08/2026).
+     Máy này bắn 'lead_form_submit' ngay lúc khách BẤM NÚT, tức là trước khi biết
+     email có được lưu hay không. Cửa Telegram lại đang gửi vào một form đã chết,
+     nên bảng đo hiện ra hàng chục "lead" trong khi danh sách email không thêm ai.
+     Giờ chỉ chính đoạn mã của form tự bắn, và chỉ bắn khi máy chủ trả về ok. */
 
   /* đọc hết bài: biết bài nào giữ chân được người đọc */
   var fired = false;
