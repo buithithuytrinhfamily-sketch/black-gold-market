@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NL24SJYSZ8"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NL24SJYSZ8');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What Is SPAN in Futures Trading, and Who Really Sets Your Margin, Black Gold Market</title>
+<meta name="description" content="What is span in futures trading, explained from the CFTC glossary: the portfolio risk model behind futures margin, why your broker can demand more than the exchange, and why a 50 percent margin rise forces a one third cut in position.">
+<meta property="og:title" content="What Is SPAN in Futures Trading, and Who Really Sets Your Margin">
+<meta property="og:description" content="What is span in futures trading, explained from the CFTC glossary: the portfolio risk model behind futures margin, why your broker can demand more than the exchange, and why a 50 percent margin rise forces a one third cut in position.">
+<meta property="og:image" content="https://blackgoldmarket.us/assets/hero/what-is-span-in-futures-trading.png">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://blackgoldmarket.us/journal/what-is-span-in-futures-trading.html">
+<meta property="og:url" content="https://blackgoldmarket.us/journal/what-is-span-in-futures-trading.html">
+<link rel="icon" type="image/png" href="/favicon.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+ :root{
+ --paper:#F6E4CF; /* trang giấy, kem ấm */
+ --sand:#EDDBC0; /* nền panel, cát vàng nhạt */
+ --sand-2:#D9C4AA;
+ --ink:#321C04; /* nâu espresso, nền tối logo */
+ --ink-2:#46290A;
+ --muted:#6F5433; /* taupe ấm */
+ --gold:#c79331; /* đồng/vàng ánh kim, màu chủ đề logo */
+ --gold-lite:#e0b25a;
+ --gold-deep:#8f6a24;
+ --loss:#a4562a; /* semantic: stop loss / lệnh thua, terracotta */
+ --win:#5c7d4f; /* semantic: lệnh thắng, olive */
+ --hairline:rgba(143,106,36,.22);
+ --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+ --mono:"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+ }
+ html{scroll-behavior:smooth}
+ body{background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.7;margin:0}
+ a{color:var(--gold-deep);text-decoration:none}
+ a:hover{text-decoration:underline}
+ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
+ .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+
+ /* ── top bar ──────── */
+ .topbar{position:sticky;top:0;z-index:20;background:rgba(25,17,8,.97);backdrop-filter:blur(8px)}
+ .topbar .wrap{display:flex;align-items:center;gap:28px;height:64px}
+ .wordmark{font-family:var(--sans);font-weight:800;font-size:1.02rem;letter-spacing:.2em;color:#f4ead4}
+ .wordmark b{color:var(--gold-lite)}
+ .wordmark:hover{text-decoration:none}
+ nav.menu{display:flex;gap:22px;margin-left:auto;font-family:var(--sans);font-size:.82rem;letter-spacing:.08em}
+ nav.menu a{color:#c7ac7c;text-transform:uppercase}
+ nav.menu a[aria-current]{color:#f4ead4}
+ .tg-btn{font-family:var(--sans);font-size:.8rem;font-weight:700;letter-spacing:.06em;color:#321C04;background:#FFF9F2;padding:9px 16px;border-radius:3px;white-space:nowrap}
+ .tg-btn:hover{text-decoration:none;background:#EDDBC0}
+
+ /* ── ticker ────────────────────── */
+ .ticker{border-bottom:1px solid var(--hairline);background:var(--sand);font-family:var(--mono);font-size:.72rem;color:var(--muted);overflow-x:auto;white-space:nowrap}
+ .ticker .wrap{display:flex;gap:34px;padding:8px 24px}
+ .ticker span b{color:var(--ink);font-weight:500}
+
+ /* ── hero ───────────── */
+ .hero{padding:76px 0 64px;border-bottom:1px solid var(--hairline);
+ background:
+ radial-gradient(900px 480px at 85% 0%, rgba(199,147,49,.16), transparent 62%),
+ radial-gradient(700px 380px at -5% 100%, rgba(199,147,49,.08), transparent 60%),
+ var(--paper);}
+ .hero .wrap{display:grid;grid-template-columns:1fr 300px;gap:56px;align-items:center}
+ .eyebrow{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 22px}
+ .hero h1{font-size:clamp(2rem,5vw,3.15rem);line-height:1.12;font-weight:600;margin:0;max-width:20ch;text-wrap:balance}
+ .hero h1 .q{color:var(--gold-deep)}
+ .hero p.standfirst{font-size:1.12rem;color:var(--muted);max-width:54ch;margin:26px 0 0}
+ .byline{display:flex;align-items:center;gap:12px;margin-top:32px;font-family:var(--sans);font-size:.82rem;color:var(--muted)}
+ .byline b{color:var(--ink);font-weight:600}
+ .portrait{justify-self:end;text-align:center}
+ .portrait img{width:260px;height:260px;object-fit:cover;border-radius:50%;border:4px solid #fff;
+ box-shadow:0 0 0 1px var(--hairline),0 18px 44px rgba(143,106,36,.28);display:block;margin:0 auto}
+ .portrait .cap{font-family:var(--sans);font-size:.78rem;color:var(--muted);margin-top:14px}
+ .portrait .cap b{color:var(--ink)}
+ @media (max-width:820px){
+ .hero .wrap{grid-template-columns:1fr;gap:40px}
+ .portrait{justify-self:start;text-align:left}
+ .portrait img{margin:0}
+ }
+ .fade{opacity:0;transform:translateY(14px);animation:rise .7s ease forwards}
+ .fade.d1{animation-delay:.12s}.fade.d2{animation-delay:.24s}.fade.d3{animation-delay:.36s}
+ @keyframes rise{to{opacity:1;transform:none}}
+ @media (prefers-reduced-motion:reduce){.fade{animation:none;opacity:1;transform:none}}
+
+ /* ── three pillars band ────────────────── */
+ .rules{border-bottom:1px solid var(--hairline);background:var(--sand)}
+ .rules .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hairline);padding:0}
+ .rule{background:var(--sand);padding:28px 26px}
+ .rule .no{font-family:var(--mono);font-size:.72rem;color:var(--gold-deep);letter-spacing:.14em}
+ .rule h3{font-family:var(--sans);font-size:1rem;font-weight:700;margin:10px 0 8px;letter-spacing:.01em}
+ .rule p{font-size:.92rem;color:var(--muted);margin:0;line-height:1.6}
+ @media (max-width:760px){.rules .wrap{grid-template-columns:1fr}}
+
+ /* ── article ─────────────────────────── */
+ .article{padding:72px 0 40px}
+ .article .body{max-width:65ch;margin:0 auto}
+ .article h2{font-size:1.5rem;font-weight:600;margin:60px 0 18px;padding-bottom:10px;border-bottom:1px solid var(--hairline);text-wrap:balance}
+ .article h2:first-child{margin-top:0}
+ .article p{margin:0 0 1.15em}
+ .article p.big{font-size:1.16rem}
+ .article strong{color:var(--ink);font-weight:700}
+ .key{color:var(--gold-deep);font-style:normal;font-weight:700}
+ .pull{border-left:3px solid var(--gold);padding:6px 0 6px 24px;margin:34px 0;font-size:1.32rem;line-height:1.45;color:var(--ink);font-weight:500;text-wrap:balance;font-family:var(--serif)}
+
+ /* faq */
+ .faq{margin:34px 0}
+ .faq .qa{border-top:1px solid var(--hairline);padding:20px 0}
+ .faq .qa:last-child{border-bottom:1px solid var(--hairline)}
+ .faq h4{font-family:var(--sans);font-size:1.02rem;font-weight:700;margin:0 0 8px;color:var(--ink)}
+ .faq p{margin:0;color:var(--muted)}
+
+ /* author box */
+ .authorbox{display:grid;grid-template-columns:88px 1fr;gap:20px;align-items:start;
+ background:var(--sand);border:1px solid var(--hairline);border-radius:6px;padding:26px;margin:44px 0 10px}
+ .authorbox img{width:88px;height:88px;border-radius:50%;object-fit:cover;border:2px solid #fff;box-shadow:0 0 0 1px var(--hairline)}
+ .authorbox .who{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 8px}
+ .authorbox h4{font-size:1.1rem;margin:0 0 8px}
+ .authorbox p{font-size:.92rem;color:var(--muted);margin:0}
+ @media (max-width:560px){.authorbox{grid-template-columns:1fr}.authorbox img{width:72px;height:72px}}
+
+ .disclaimer{font-family:var(--sans);font-size:.82rem;font-style:italic;color:var(--muted);line-height:1.65;
+ border-top:1px solid var(--hairline);padding-top:22px;margin-top:40px}
+
+ /* ── cta ───────── */
+ .cta{border-top:1px solid var(--hairline);background:
+ radial-gradient(700px 320px at 50% 130%, rgba(199,147,49,.34), transparent 65%), var(--ink);color:#f4ead4}
+ .cta .wrap{padding:72px 24px;text-align:center}
+ .cta .kicker{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-lite);margin:0 0 16px}
+ .cta h2{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:600;margin:0 auto 14px;max-width:26ch;text-wrap:balance}
+ .cta p{color:#cbb488;max-width:48ch;margin:0 auto 30px}
+ .cta .tg-btn{font-size:.9rem;padding:14px 26px;background:#FFF9F2;color:#321C04}
+ .cta .tg-btn:hover{background:#EDDBC0}
+ .cta .sub{display:block;font-family:var(--sans);font-size:.76rem;color:#a58c60;margin-top:16px}
+
+ /* ── more ──────────────────────── */
+ .more{padding:70px 0;background:var(--paper)}
+ .more .label{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 26px}
+ .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+ .card{background:#fff;border:1px solid var(--sand-2);border-radius:4px;padding:24px;display:flex;flex-direction:column;gap:10px;transition:border-color .2s,box-shadow .2s;color:var(--ink)}
+ .card:hover{border-color:var(--gold);box-shadow:0 8px 24px rgba(143,106,36,.12);text-decoration:none}
+ .card .tag{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+ .card h3{font-size:1.1rem;font-weight:600;margin:0;line-height:1.35;text-wrap:balance}
+ .card p{font-size:.9rem;color:var(--muted);margin:0;line-height:1.6;font-family:var(--sans)}
+ .card .read{margin-top:auto;font-family:var(--sans);font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-deep)}
+ @media (max-width:760px){.grid3{grid-template-columns:1fr}}
+
+ /* ── footer ──────────────────────────── */
+ footer{background:var(--ink);color:#cbb488}
+ footer .wrap{padding:44px 24px;display:grid;gap:18px}
+ footer .brand{font-family:var(--sans);font-weight:800;letter-spacing:.2em;font-size:.9rem;color:#f4ead4}
+ footer .brand b{color:var(--gold-lite)}
+ footer p{font-family:var(--sans);font-size:.76rem;line-height:1.7;max-width:88ch;margin:0}
+ footer p strong{color:#f4ead4}
+ footer .fine{color:#8f7654}
+
+ /* Bảng nhỏ xin email trước khi sang Telegram, 07/08/2026 theo yêu cầu chị Trinh. */
+ .tgate{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(20,10,9,.72)}
+ .tgate[open]{display:flex}
+ .tgate__card{position:relative;width:100%;max-width:430px;background:#FFF9F2;color:var(--ink);border:1px solid var(--sand-2);border-radius:8px;padding:30px 28px 26px;box-shadow:0 24px 60px rgba(0,0,0,.45);text-align:left}
+ .tgate__x{position:absolute;top:9px;right:11px;width:32px;height:32px;font:400 24px/1 var(--sans);color:var(--muted);background:none;border:0;cursor:pointer;border-radius:4px}
+ .tgate__x:hover{background:var(--sand)}
+ .tgate__k{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 8px}
+ .tgate__h{font-family:var(--serif);font-size:1.28rem;line-height:1.3;font-weight:600;margin:0 0 8px}
+ .tgate__s{font-family:var(--sans);font-size:.86rem;line-height:1.5;color:var(--muted);margin:0 0 18px}
+ .tgate input[type=email]{width:100%;box-sizing:border-box;padding:13px 14px;font:inherit;font-size:16px;color:var(--ink);background:#fff;border:1px solid var(--sand-2);border-radius:4px;margin:0 0 12px}
+ .tgate input[type=email]:focus{outline:3px solid var(--gold);outline-offset:1px}
+ .tgate button[type=submit]{width:100%;padding:14px 18px;font-family:var(--sans);font-size:.95rem;font-weight:700;letter-spacing:.04em;color:#FFF9F2;background:var(--ink);border:0;border-radius:4px;cursor:pointer}
+ .tgate button[type=submit]:hover{background:#1F1003}
+ .tgate button[type=submit][disabled]{opacity:.6;cursor:default}
+ .tgate__hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+ .tgate__msg{font-family:var(--sans);font-size:.82rem;margin:10px 0 0;min-height:1em;color:var(--gold-deep)}
+ .tgate__msg.bad{color:var(--loss)}
+ .tgate__note{font-family:var(--sans);font-size:.72rem;line-height:1.55;color:var(--muted);margin:14px 0 0}
+ .tgate__skip{display:block;width:100%;margin:12px 0 0;padding:4px;font-family:var(--sans);font-size:.78rem;color:var(--muted);background:none;border:0;text-decoration:underline;cursor:pointer}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "What Is SPAN in Futures Trading, and Who Really Sets Your Margin", "description": "What is span in futures trading, explained from the CFTC glossary: the portfolio risk model behind futures margin, why your broker can demand more than the exchange, and why a 50 percent margin rise forces a one third cut in position.", "image": "https://blackgoldmarket.us/assets/hero/what-is-span-in-futures-trading.png", "author": {"@type": "Person", "name": "Raphael", "url": "https://blackgoldmarket.us/about.html"}, "publisher": {"@type": "Organization", "name": "Black Gold Market", "logo": {"@type": "ImageObject", "url": "https://blackgoldmarket.us/avatar.jpg"}}, "datePublished": "2026-08-24T06:00:00+07:00", "dateModified": "2026-08-24T06:00:00+07:00", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://blackgoldmarket.us/journal/what-is-span-in-futures-trading.html"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://blackgoldmarket.us/"}, {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://blackgoldmarket.us/journal/"}, {"@type": "ListItem", "position": 3, "name": "What Is SPAN in Futures Trading, and Who Really Sets Your Margin", "item": "https://blackgoldmarket.us/journal/what-is-span-in-futures-trading.html"}]}</script>
+</head>
+<body>
+
+<header class="topbar">
+ <div class="wrap">
+ <a class="wordmark" href="../">BLACK<b>&#183;</b>GOLD MARKET</a>
+ <nav class="menu" aria-label="Main">
+ <a href="../">Home</a>
+ <a href="./" aria-current="page">Journal</a>
+ <a href="https://t.me/+h-5A-mdBmhA5ZWQ1">Telegram</a>
+ </nav>
+ <a class="tg-btn" href="https://t.me/+h-5A-mdBmhA5ZWQ1">Join on Telegram</a>
+ </div>
+</header>
+
+<div class="ticker" aria-hidden="true">
+ <div class="wrap">
+ <span>MARKET <b>XAU/USD, GOLD</b></span>
+ <span>FOCUS <b>PROTECT &middot; MASTER &middot; GROW</b></span>
+ <span>METHOD <b>EVIDENCE, NOT ENTHUSIASM</b></span>
+ <span>JOURNAL <b>THE RECORD BEFORE THE VERDICT</b></span>
+ </div>
+</div>
+
+<section class="hero">
+ <div class="wrap">
+ <div>
+ <p class="eyebrow fade">The model, not the mood</p>
+ <h1 class="fade d1">What Is <span class="q">SPAN in Futures Trading</span></h1>
+ <p class="standfirst fade d2">Margin is the one number on your screen that somebody else can change while you are holding the position. It is set by a portfolio risk model, and a 50 percent rise in it forces a one third cut in what you can carry.</p>
+ <div class="byline fade d3">
+ <div>By <b>Raphael</b> &nbsp;&middot;&nbsp; XAU/USD &nbsp;&middot;&nbsp; 10 min read</div>
+ </div>
+ </div>
+ <figure class="portrait fade d2" style="margin:0">
+ <img src="../avatar.jpg" alt="Black Gold Market, Raphael, XAU/USD trader">
+ <figcaption class="cap"><b>Black Gold Market</b><br>Protect. Master. Grow.</figcaption>
+ </figure>
+ </div>
+</section>
+
+<section class="rules" aria-label="The three pillars">
+ <div class="wrap">
+<div class="rule">
+ <div class="no">PILLAR 01</div>
+ <h3>Protect</h3>
+ <p>Margin can be raised by the exchange or by your broker, without warning, while you hold the position. An account that is only viable at today's requirement is fragile in a way no chart shows.</p>
+ </div>
+<div class="rule">
+ <div class="no">PILLAR 02</div>
+ <h3>Master</h3>
+ <p>SPAN is the Standard Portfolio Analysis of Risk. It prices the worst plausible loss of the whole book at once, not of each trade separately. That is the professional way to read your own exposure.</p>
+ </div>
+<div class="rule">
+ <div class="no">PILLAR 03</div>
+ <h3>Grow</h3>
+ <p>If margin rises 50 percent and your capital is fixed, you must cut a third of the position. Reserve capital is not caution, it is what keeps the timing of your exit in your own hands.</p>
+ </div>
+ </div>
+</section>
+
+<article class="article">
+ <div class="wrap"><div class="body">
+<img src="/assets/hero/what-is-span-in-futures-trading.png" alt="What is span in futures trading, Black Gold Market cover image on the portfolio risk model behind futures margin" style="width:100%;height:auto;border-radius:6px;margin:0 0 30px">
+
+<p>Most people trading gold have met margin only as an irritation: the number that decides how much they can hold, and occasionally the number that closes a position they wanted to keep. Very few have asked where it comes from. So this is a mechanics article, and the question it answers is a narrow one with a wide reach. What is span in futures trading, who calculates it, and why does a change in it ripple out into a market you are trading even if you never touch a futures contract in your life?</p>
+
+<p>This is a Protect article. Not because margin is dangerous, but because margin is the one variable in this business that can be changed by someone else, without warning, while you are holding a position. Everything else on your screen responds to the market. This responds to a risk model. It is worth knowing whose model it is.</p>
+
+<h2>What Is SPAN in Futures Trading, Stated Plainly</h2>
+
+<p>SPAN is the system that decides how much collateral a futures position requires. The United States regulator defines it directly. In the <a href="https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/CFTCGlossary/index.htm" rel="noopener nofollow" target="_blank">CFTC glossary</a>, SPAN stands for Standard Portfolio Analysis of Risk, and is described as, in the regulator's own words, developed by the Chicago Mercantile Exchange and the industry standard for calculating performance bond requirements, meaning margins, on the basis of overall portfolio risk. The same source notes that SPAN calculates risk across enterprise levels on derivative and non-derivative instruments at numerous exchanges and clearing organisations.</p>
+
+<p>Two phrases in that definition are doing the heavy lifting. Performance bond is the honest name for margin: it is not a deposit toward a purchase, it is a good faith guarantee that you can absorb the loss you might cause. The CFTC is explicit that margin is not partial payment on a purchase. And overall portfolio risk means the calculation does not look at your trades one at a time. It looks at everything you hold, together, and asks a single question: across a range of adverse scenarios, what is the worst plausible loss for this portfolio as a whole?</p>
+
+<p>That is a genuinely different way of thinking from the one most retail traders carry around. We tend to think of risk trade by trade. A portfolio risk model thinks in totals.</p>
+
+<h2>Who Actually Sets the Number</h2>
+
+<p>Here is the part that surprises people, and it is worth getting exactly right, because the chain of authority matters when the number moves.</p>
+
+<p>The exchange specifies levels of initial margin and maintenance margin for each futures contract. That is the floor. But the CFTC glossary adds a detail that every trader should have read at least once: futures commission merchants may require their customers to post margin at higher levels than those specified by the exchange. In plain terms, the exchange sets a minimum and your broker is free to ask for more, and often does.</p>
+
+<p>So there are two hands on the dial. The exchange moves its minimum when its risk model says the market has become more dangerous. Your broker moves its own requirement when its risk appetite says you have. Neither of them is required to consult you first, and neither of them is doing anything improper when they act. They are managing the risk that you fail to pay.</p>
+
+<p>The mechanism that connects this to your account daily is mark-to-market. The CFTC describes it as part of the daily cash flow system used by US futures exchanges to maintain a minimum level of margin equity, calculating the gain or loss on each position from the change in price at the end of each session. Losses are collected, gains are paid, every day. When the equity falls below the maintenance level, you get a margin call, which the regulator defines as a request from a brokerage firm to bring margin deposits back up to initial levels.</p>
+
+<p>None of this is exotic. It is simply a system designed on the assumption that the participant might not be good for the money, which is a healthier assumption than most traders make about themselves.</p>
+
+<figure><img src="/assets/hero/what-is-span-in-futures-trading-chart.png" alt="Chart showing what is span in futures trading in practice, how much of a position must be cut when required margin rises" style="width:100%;height:auto;border-radius:6px"><figcaption>What is span in futures trading, seen from the account: when the requirement rises and capital is fixed, the position shrinks by the reciprocal.</figcaption></figure>
+
+<h2>The Arithmetic, and Why a Margin Rise Forces a Decision</h2>
+
+<p>Now the part that actually matters for your account, and it is arithmetic you can do on the back of an envelope. No prices are needed. Only ratios.</p>
+
+<p>Suppose your usable capital for margin is fixed, and the margin required per contract goes up. The number of contracts that same capital supports falls by the reciprocal. Work it through:</p>
+
+<p>If the required margin rises by 10 percent, the same capital now supports 1 divided by 1.10, which is 90.9 percent of the position you held. You must cut 9.1 percent just to stand still. If margin rises by 25 percent, you can carry 80 percent, so you cut 20 percent. If it rises by 50 percent, you can carry 66.7 percent, so you cut a third of your position.</p>
+
+<p>Read that last one again. A margin increase of half forces a reduction of a third, and it forces it on everybody holding that contract at the same moment, on the same day, in the same direction. That is the transmission mechanism. Margin changes do not merely constrain positions, they can compel selling, and compelled selling is not price discovery. It is people meeting a requirement.</p>
+
+<p>Set against that, the point of holding capital in reserve stops sounding conservative and starts sounding structural. If your account is sized so that a change in the rules forces you to liquidate at whatever price is available, you have handed the timing of your exit to somebody else's risk committee. <a href="/journal/position-sizing-so-one-trade-cannot-hurt-you.html">Position sizing so that one trade cannot hurt you</a> is the same idea approached from the trade level.</p>
+
+<h2>Why the Model Looks at the Portfolio, Not the Trade</h2>
+
+<p>The word portfolio in Standard Portfolio Analysis of Risk is not decoration, and understanding why is genuinely useful.</p>
+
+<p>Imagine two positions that offset each other, so that when one loses the other tends to gain. Charged separately, each would carry its own full margin, and the total would be the sum of the two. But that total would be describing an outcome that cannot happen, because the two legs cannot both suffer their worst case in the same scenario. A portfolio model recognises the offset and charges a single, smaller amount for the combination.</p>
+
+<p>The logic is worth internalising even if you never trade a spread. A risk model that evaluates positions independently will systematically overstate the risk of a hedged book and understate the risk of a concentrated one. Which is exactly the mistake a trader makes when they hold four correlated positions and count them as four separate small risks rather than one large one. The exchange's model would not make that error. Yours should not either.</p>
+
+<h2>What This Means If You Trade Spot Gold and Not Futures</h2>
+
+<p>Most people reading this trade spot gold or a CFD on it, not a COMEX contract, so let me be careful about what does and does not transfer.</p>
+
+<p>You do not post SPAN margin. Your requirement is set by your broker within limits set by your regulator, and it is a different regime with a different logic. In the European Union, for instance, the retail leverage caps introduced by <a href="https://www.esma.europa.eu/press-news/esma-news/esma-agrees-prohibit-binary-options-and-restrict-cfds-protect-retail-investors" rel="noopener nofollow" target="_blank">the European Securities and Markets Authority in March 2018</a> set 20 to 1 for gold and major indices, 30 to 1 for major currency pairs, and 2 to 1 for cryptocurrencies, alongside a margin close-out rule and negative balance protection on a per account basis. That is a regulator capping leverage for consumer protection reasons. It is not a risk model repricing danger day by day.</p>
+
+<p>The same announcement carries the figure that ought to be printed on every trading platform's login screen. National regulators found that 74 to 89 percent of retail accounts typically lose money on their investments, with average losses per client ranging from 1,600 to 29,000 euros. That figure covers retail CFD accounts across the European Union at that time, not gold specifically, and not today. It is still the most sobering number in this business.</p>
+
+<p>What does transfer is the market effect. The futures market and the spot market are linked by arbitrage, and we went through that link in detail in <a href="/journal/comex-vs-spot-gold-price.html">COMEX and the spot gold price</a>. When margin requirements rise on the futures side, some participants must reduce, and that reduction shows up as flow in a market you are trading. You will not see a memo. You will see a move that looks like it came from nowhere, and it will be tempting to explain it with a story about sentiment when the real explanation was somebody meeting a collateral requirement.</p>
+
+<h2>The Protect Lesson</h2>
+
+<p>I would take three things from all of this, and they are all defensive.</p>
+
+<p>The first is that the rules of the game can change while you are playing it, and the change is not aimed at you but lands on you anyway. Any account that is only viable under current requirements is fragile in a way that is invisible on a chart.</p>
+
+<p>The second is that the professionals measure risk across the whole book. It costs nothing to adopt that habit. Before you add a position, ask what your total exposure becomes if everything you hold moves against you at once, because that is the question the exchange's model asks about you.</p>
+
+<p>The third is the one I keep coming back to. Margin is a measure of how much room you have between a bad day and a forced decision. Every increase in position size spends some of that room. A margin call is not a warning that arrives in time to be useful, it is the sound of the room running out. <a href="/journal/what-is-a-margin-call-and-how-to-avoid-one.html">What a margin call is and how to avoid one</a> covers the retail version of that in full.</p>
+
+<div style="background:#faf3e2;border:1px solid rgba(199,147,49,.35);border-left:4px solid #c79331;border-radius:8px;padding:22px 24px;margin:34px 0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif"><div style="font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#9a6f1e;margin-bottom:8px">Free sustainable trader's blueprint</div><p style="margin:0 0 14px;color:#2a2418;font-size:1rem;line-height:1.55">Get the free Black Gold Market blueprint, a short document on protecting capital before the trade rather than after it, including how much room to leave between a normal bad day and a forced decision. One email, no spam, unsubscribe anytime.</p><a href="/blueprint/" style="display:inline-block;background:#c79331;color:#1c1710;text-decoration:none;font-weight:700;font-size:.9rem;padding:11px 22px;border-radius:4px">Get the free blueprint &rarr;</a></div>
+
+<h2>Frequently Asked Questions</h2>
+
+<p><strong>What is span in futures trading, in one sentence?</strong><br>It is the Standard Portfolio Analysis of Risk, the industry standard system for calculating margin requirements on the basis of a portfolio's overall risk rather than trade by trade, originally developed by the Chicago Mercantile Exchange.</p>
+
+<p><strong>Does SPAN apply to my spot gold or CFD account?</strong><br>Not directly. Your requirement is set by your broker within the limits your regulator allows, which is a separate regime. SPAN still matters to you indirectly, because margin changes in the futures market can compel position reductions that show up as flow in the market you trade.</p>
+
+<p><strong>Can my broker ask for more margin than the exchange requires?</strong><br>Yes, and the CFTC glossary says so plainly: futures commission merchants may require customers to post margin at higher levels than those the exchange specifies. The exchange sets a floor, not a ceiling.</p>
+
+<p><strong>Why did my margin requirement go up when nothing happened to my position?</strong><br>Because the requirement is a function of measured risk, not of your behaviour. If the model's estimate of plausible adverse movement rises, the collateral demanded rises with it, for everyone holding that contract, at the same time.</p>
+
+<p><strong>What is the difference between initial and maintenance margin?</strong><br>Initial margin is what you must post to open the position. Maintenance margin is the lower level your equity must stay above to keep it. Fall below maintenance and you receive a call to bring the account back up to the initial level, not merely back to maintenance.</p>
+
+<h2>Where Black Gold Market Fits</h2>
+
+<p>Black Gold Market is free to follow. Daily XAU/USD analysis with the level, the context and the risk stated before the trade, losing days included, plus an optional Kit for people who want the method written down in full. Nothing here promises a profit and nothing here ever will.</p>
+
+<p>Protect comes first. <a href="/journal/how-to-protect-your-capital-when-gold-gets-volatile.html">How to protect your capital when gold gets volatile</a> is the pillar this article sits under, because a margin regime only threatens accounts that were carrying too much to begin with. <a href="/journal/comex-vs-spot-gold-price.html">COMEX and the spot gold price</a> explains the link between the futures market and the price you trade, and <a href="/journal/what-is-a-margin-call-and-how-to-avoid-one.html">what a margin call is and how to avoid one</a> is the retail version of the mechanism described here.</p>
+
+<p><strong>About the author.</strong> <a href="/about.html">Raphael</a> writes Black Gold Market. He works on the part of this business that happens before the trade, the level, the context, and the risk, and on the conviction that a method you can follow through a quiet quarter is worth more than a better one you cannot.</p>
+
+<p><em>Disclaimer: This article is general educational content about how futures margin is calculated. It is not financial advice and not a recommendation to trade any instrument. No trading results are represented anywhere in this article, and no gold price level is quoted. The definitions of SPAN, margin, initial and maintenance margin, margin call and mark-to-market are taken from the <a href="https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/CFTCGlossary/index.htm" rel="noopener nofollow" target="_blank">CFTC glossary</a>. The percentages showing how far a position must be cut when margin rises are my own arithmetic on a stated assumption, namely that the capital available for margin is fixed and the position is reduced only enough to meet the new requirement; they are ratios, not a forecast, and they describe no particular contract. The figure that 74 to 89 percent of retail accounts typically lose money, the stated average losses per client, and the 20 to 1 retail leverage cap on gold come from the <a href="https://www.esma.europa.eu/press-news/esma-news/esma-agrees-prohibit-binary-options-and-restrict-cfds-protect-retail-investors" rel="noopener nofollow" target="_blank">European Securities and Markets Authority announcement of 27 March 2018</a> and describe retail CFD accounts across the European Union at that time, not gold trading specifically and not the present day. Trading gold, CFDs and leveraged products carries a high risk of losing money rapidly, and no entry, stop or target discussed should be treated as a signal. Readers should consider their own circumstances and speak to a licensed professional in their jurisdiction.</em></p>
+</div></div>
+</article>
+
+<section class="cta">
+ <div class="wrap">
+ <p class="kicker">Start here, it's free</p>
+ <h2>Leave enough room that a change in the rules is an inconvenience, not a forced sale.</h2>
+ <p>Follow along on Telegram for daily gold analysis with the level, the context and the risk stated before the trade, losing days included. Free to follow, with an optional Kit. No hype, no promises.</p>
+ <a class="tg-btn" href="https://t.me/+h-5A-mdBmhA5ZWQ1">Join Black Gold Market on Telegram</a>
+ <span class="sub">No guaranteed profit. No pressure to copy anything blindly.</span>
+ </div>
+</section>
+
+<section class="more">
+ <div class="wrap">
+ <p class="label">More from the journal</p>
+
+
+   <div class="grid3">
+<a class="card" href="/journal/comex-vs-spot-gold-price.html">
+<span class="tag">Master</span>
+<h3>COMEX vs Spot Gold Price</h3>
+<span class="read">Read the article &rarr;</span>
+</a>
+<a class="card" href="/journal/what-is-a-margin-call-and-how-to-avoid-one.html">
+<span class="tag">Protect</span>
+<h3>What Is a Margin Call and How to Avoid One</h3>
+<span class="read">Read the article &rarr;</span>
+</a>
+<a class="card" href="/journal/how-to-protect-your-capital-when-gold-gets-volatile.html">
+<span class="tag">Grow</span>
+<h3>How to Protect Your Capital When Gold Gets Volatile</h3>
+<span class="read">Read the article &rarr;</span>
+</a>
+</div>
+ </div>
+</section>
+
+<footer>
+ <div class="wrap">
+ <div class="brand">BLACK<b>&#183;</b>GOLD MARKET</div>
+ <p><strong>Protect. Master. Grow.</strong> Daily XAU/USD analysis and trade ideas with the reasoning behind them, free to follow, with an optional Kit. Built on discipline and defined risk, not promises of profit.</p>
+ <p class="fine">Risk warning: Trading gold, CFDs and leveraged products carries a substantial risk of loss and is not suitable for everyone. Most retail traders lose money. Nothing on this site is financial advice or a solicitation to trade. Past performance does not guarantee future results. Only trade with capital you can afford to lose.</p>
+ <p class="fine">&copy; 2026 Black Gold Market. All rights reserved.</p>
+ </div>
+</footer>
+
+<script defer src="/assets/track.js"></script>
+<div class="tgate" id="tgate" role="dialog" aria-modal="true" aria-labelledby="tgateH">
+ <div class="tgate__card">
+ <button class="tgate__x" id="tgateX" aria-label="Close">&times;</button>
+ <p class="tgate__k">One step first</p>
+ <h2 class="tgate__h" id="tgateH">Where should we send the Sustainable Trader's Blueprint?</h2>
+ <p class="tgate__s">Leave your email and we will send the free Blueprint, then take you straight to the Telegram channel.</p>
+ <form id="tgateF" novalidate>
+ <input id="tgateEmail" type="email" autocomplete="email" required placeholder="you@example.com" aria-label="Email address">
+ <div class="tgate__hp" aria-hidden="true"><input id="tgateHp" type="text" tabindex="-1" autocomplete="off"></div>
+ <button type="submit" id="tgateBtn">Continue to Telegram</button>
+ <p class="tgate__msg" id="tgateMsg" role="status" aria-live="polite"></p>
+ </form>
+ <button class="tgate__skip" id="tgateSkip">No thanks, just take me to the channel</button>
+ <p class="tgate__note">No cost and no obligation. Educational only, not financial advice, and nothing here promises a return. Unsubscribe any time in one click.</p>
+ </div>
+</div>
+<!-- bgm-tg-gate -->
+<script>
+/* Bấm link Telegram thì hiện bảng xin email, điền xong mới chuyển sang.
+   Hỏi đúng một lần cho mỗi người, lần sau đi thẳng. */
+(function(){
+  var API = 'https://harcos-dashboard.vercel.app/api/bgm-subscribe';
+  var KEY = 'bgmTgGate';
+  var g = document.getElementById('tgate');
+  if (!g) return;
+  var f = document.getElementById('tgateF'),
+      inp = document.getElementById('tgateEmail'),
+      btn = document.getElementById('tgateBtn'),
+      msg = document.getElementById('tgateMsg'),
+      hp  = document.getElementById('tgateHp'),
+      dest = null;
+
+  function seen(){ try { return localStorage.getItem(KEY) === '1'; } catch(e){ return false; } }
+  function remember(){ try { localStorage.setItem(KEY,'1'); } catch(e){} }
+  function open(url){ dest = url; g.setAttribute('open',''); setTimeout(function(){ inp.focus(); }, 40); }
+  function close(){ g.removeAttribute('open'); dest = null; }
+  function go(){ var u = dest || 'https://t.me/'; close(); window.location.href = u; }
+
+  document.addEventListener('click', function(ev){
+    var a = ev.target.closest ? ev.target.closest('a') : null;
+    if (!a) return;
+    var h = a.getAttribute('href') || '';
+    if (h.indexOf('t.me/') === -1) return;
+    if (seen()) return;                 /* da cho email roi thi di thang */
+    ev.preventDefault();
+    open(h);
+  }, true);
+
+  document.getElementById('tgateX').addEventListener('click', close);
+  document.getElementById('tgateSkip').addEventListener('click', go);
+  g.addEventListener('click', function(ev){ if (ev.target === g) close(); });
+  document.addEventListener('keydown', function(ev){ if (ev.key === 'Escape' && g.hasAttribute('open')) close(); });
+
+  f.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var email = (inp.value || '').trim();
+    msg.className = 'tgate__msg';
+    if (!/^[^@\s]+@[^@\s.]+\.[^@\s]{2,}$/.test(email)) {
+      msg.className = 'tgate__msg bad';
+      msg.textContent = 'Please check that email address.';
+      return;
+    }
+    if ((hp.value || '').trim() !== '') { remember(); go(); return; }
+    var nhan = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    function loi(ly){
+      if (window.gtag) gtag('event', 'lead_form_error', {form: 'bgm_telegram_gate', reason: ly});
+      btn.disabled = false; btn.textContent = nhan;
+      msg.className = 'tgate__msg bad';
+      msg.textContent = 'We could not save that just now. Please try again, or use the link below.';
+    }
+    fetch(API, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({email: email, firstName: '', website: (hp.value || '')})
+    }).then(function(r){
+      /* fetch khong bao loi khi may chu tu choi, phai tu doc ket qua */
+      return r.json().catch(function(){ return {}; }).then(function(j){ return r.ok && j && j.ok === true; });
+    }).then(function(ok){
+      if (!ok) { loi('upstream'); return; }
+      if (window.gtag) gtag('event', 'lead_form_submit', {form: 'bgm_telegram_gate'});
+      remember(); go();
+    }).catch(function(){
+      loi('network');
+    });
+  });
+})();
+</script>
+</body>
+</html>
