@@ -134,9 +134,16 @@
 <script>
 (function(){
  var box=document.querySelector('.lp'); if(!box) return;
+ function ban(ten,tt){ if(typeof gtag==='function'){gtag('event',ten,tt);} }
  box.addEventListener('click',function(e){
   var a=e.target.closest('a[data-lp]'); if(!a) return;
-  if(typeof gtag==='function'){gtag('event','link_in_bio_click',{link_name:a.getAttribute('data-lp')});}
+  var h=a.getAttribute('href')||'', ten=a.getAttribute('data-lp'), tt={link_name:ten,link_url:h};
+  ban('link_in_bio_click',tt);
+  if(h.indexOf('t.me/')!==-1||ten.indexOf('telegram')!==-1){ ban('telegram_click',tt); }
+  else if(/(blog|journal|articles)/.test(h)){ ban('blog_click',tt); }
+  else if(/(survival|blueprint|business-plan|reading-gold|kit|book|long-game)/.test(h)){ ban('cta_gift_click',tt); }
+  else if(/(vip|member|premium)/.test(h)){ ban('vip_click',tt); }
+  else if(ten.indexOf('social_')===0){ ban('social_click',tt); }
  });
 })();
 </script>
