@@ -1,0 +1,272 @@
+[
+  {
+    "id": "reading-a-currency-pair",
+    "title": "Reading a currency pair",
+    "course": "forex",
+    "url": "/learn/forex/reading-a-currency-pair/"
+  },
+  {
+    "id": "pips-points-and-lots",
+    "title": "Pips, points and lots",
+    "course": "forex",
+    "url": "/learn/forex/pips-points-and-lots/"
+  },
+  {
+    "id": "how-orders-reach-the-market",
+    "title": "How orders reach the market",
+    "course": "forex",
+    "url": "/learn/forex/how-orders-reach-the-market/"
+  },
+  {
+    "id": "leverage-and-margin",
+    "title": "Leverage and margin",
+    "course": "forex",
+    "url": "/learn/forex/leverage-and-margin/"
+  },
+  {
+    "id": "spread-commission-and-financing",
+    "title": "Spread, commission and financing",
+    "course": "forex",
+    "url": "/learn/forex/spread-commission-and-financing/"
+  },
+  {
+    "id": "sessions-and-liquidity",
+    "title": "Sessions and liquidity",
+    "course": "forex",
+    "url": "/learn/forex/sessions-and-liquidity/"
+  },
+  {
+    "id": "candles-and-context",
+    "title": "Candles and context",
+    "course": "forex",
+    "url": "/learn/forex/candles-and-context/"
+  },
+  {
+    "id": "support-resistance-and-structure",
+    "title": "Support, resistance and structure",
+    "course": "forex",
+    "url": "/learn/forex/support-resistance-and-structure/"
+  },
+  {
+    "id": "moving-averages-and-trend",
+    "title": "Moving averages and trend",
+    "course": "forex",
+    "url": "/learn/forex/moving-averages-and-trend/"
+  },
+  {
+    "id": "rsi-macd-and-volatility",
+    "title": "RSI, MACD and volatility",
+    "course": "forex",
+    "url": "/learn/forex/rsi-macd-and-volatility/"
+  },
+  {
+    "id": "fibonacci-and-pivot-levels",
+    "title": "Fibonacci and pivot levels",
+    "course": "forex",
+    "url": "/learn/forex/fibonacci-and-pivot-levels/"
+  },
+  {
+    "id": "patterns-and-divergence",
+    "title": "Patterns and divergence",
+    "course": "forex",
+    "url": "/learn/forex/patterns-and-divergence/"
+  },
+  {
+    "id": "breakouts-and-false-breaks",
+    "title": "Breakouts and false breaks",
+    "course": "forex",
+    "url": "/learn/forex/breakouts-and-false-breaks/"
+  },
+  {
+    "id": "multiple-timeframes",
+    "title": "Multiple timeframes",
+    "course": "forex",
+    "url": "/learn/forex/multiple-timeframes/"
+  },
+  {
+    "id": "heikin-ashi-waves-and-harmonics",
+    "title": "Heikin Ashi, waves and harmonics",
+    "course": "forex",
+    "url": "/learn/forex/heikin-ashi-waves-and-harmonics/"
+  },
+  {
+    "id": "interest-rates-and-expectations",
+    "title": "Interest rates and expectations",
+    "course": "forex",
+    "url": "/learn/forex/interest-rates-and-expectations/"
+  },
+  {
+    "id": "inflation-jobs-and-growth",
+    "title": "Inflation, jobs and growth",
+    "course": "forex",
+    "url": "/learn/forex/inflation-jobs-and-growth/"
+  },
+  {
+    "id": "trading-around-scheduled-news",
+    "title": "Trading around scheduled news",
+    "course": "forex",
+    "url": "/learn/forex/trading-around-scheduled-news/"
+  },
+  {
+    "id": "gold-the-dollar-and-real-yields",
+    "title": "Gold, the dollar and real yields",
+    "course": "forex",
+    "url": "/learn/forex/gold-the-dollar-and-real-yields/"
+  },
+  {
+    "id": "correlation-and-combined-exposure",
+    "title": "Correlation and combined exposure",
+    "course": "forex",
+    "url": "/learn/forex/correlation-and-combined-exposure/"
+  },
+  {
+    "id": "carry-country-risk-and-sentiment",
+    "title": "Carry, country risk and sentiment",
+    "course": "forex",
+    "url": "/learn/forex/carry-country-risk-and-sentiment/"
+  },
+  {
+    "id": "a-trading-plan-you-can-follow",
+    "title": "A trading plan you can follow",
+    "course": "forex",
+    "url": "/learn/forex/a-trading-plan-you-can-follow/"
+  },
+  {
+    "id": "backtesting-without-fooling-yourself",
+    "title": "Backtesting without fooling yourself",
+    "course": "forex",
+    "url": "/learn/forex/backtesting-without-fooling-yourself/"
+  },
+  {
+    "id": "a-journal-that-improves-decisions",
+    "title": "A journal that improves decisions",
+    "course": "forex",
+    "url": "/learn/forex/a-journal-that-improves-decisions/"
+  },
+  {
+    "id": "position-sizing-from-a-loss-budget",
+    "title": "Position sizing from a loss budget",
+    "course": "forex",
+    "url": "/learn/forex/position-sizing-from-a-loss-budget/"
+  },
+  {
+    "id": "drawdown-and-recovery",
+    "title": "Drawdown and recovery",
+    "course": "forex",
+    "url": "/learn/forex/drawdown-and-recovery/"
+  },
+  {
+    "id": "expectancy-and-scaling",
+    "title": "Expectancy and scaling",
+    "course": "forex",
+    "url": "/learn/forex/expectancy-and-scaling/"
+  },
+  {
+    "id": "loss-aversion-and-revenge-trading",
+    "title": "Loss aversion and revenge trading",
+    "course": "forex",
+    "url": "/learn/forex/loss-aversion-and-revenge-trading/"
+  },
+  {
+    "id": "patience-and-uncertainty",
+    "title": "Patience and uncertainty",
+    "course": "forex",
+    "url": "/learn/forex/patience-and-uncertainty/"
+  },
+  {
+    "id": "review-the-process-not-one-outcome",
+    "title": "Review the process, not one outcome",
+    "course": "forex",
+    "url": "/learn/forex/review-the-process-not-one-outcome/"
+  },
+  {
+    "id": "checking-a-broker",
+    "title": "Checking a broker",
+    "course": "forex",
+    "url": "/learn/forex/checking-a-broker/"
+  },
+  {
+    "id": "prop-evaluations-and-simulated-results",
+    "title": "Prop evaluations and simulated results",
+    "course": "forex",
+    "url": "/learn/forex/prop-evaluations-and-simulated-results/"
+  },
+  {
+    "id": "from-study-to-a-demo-routine",
+    "title": "From study to a demo routine",
+    "course": "forex",
+    "url": "/learn/forex/from-study-to-a-demo-routine/"
+  },
+  {
+    "id": "what-a-blockchain-records",
+    "title": "What a blockchain records",
+    "course": "crypto",
+    "url": "/learn/crypto/what-a-blockchain-records/"
+  },
+  {
+    "id": "bitcoin-tokens-and-networks",
+    "title": "Bitcoin, tokens and networks",
+    "course": "crypto",
+    "url": "/learn/crypto/bitcoin-tokens-and-networks/"
+  },
+  {
+    "id": "wallets-keys-and-custody",
+    "title": "Wallets, keys and custody",
+    "course": "crypto",
+    "url": "/learn/crypto/wallets-keys-and-custody/"
+  },
+  {
+    "id": "fees-and-confirmations",
+    "title": "Fees and confirmations",
+    "course": "crypto",
+    "url": "/learn/crypto/fees-and-confirmations/"
+  },
+  {
+    "id": "stablecoins-and-depegging",
+    "title": "Stablecoins and depegging",
+    "course": "crypto",
+    "url": "/learn/crypto/stablecoins-and-depegging/"
+  },
+  {
+    "id": "spot-and-perpetual-contracts",
+    "title": "Spot and perpetual contracts",
+    "course": "crypto",
+    "url": "/learn/crypto/spot-and-perpetual-contracts/"
+  },
+  {
+    "id": "smart-contracts-and-defi",
+    "title": "Smart contracts and DeFi",
+    "course": "crypto",
+    "url": "/learn/crypto/smart-contracts-and-defi/"
+  },
+  {
+    "id": "staking-and-yield",
+    "title": "Staking and yield",
+    "course": "crypto",
+    "url": "/learn/crypto/staking-and-yield/"
+  },
+  {
+    "id": "liquidity-and-token-supply",
+    "title": "Liquidity and token supply",
+    "course": "crypto",
+    "url": "/learn/crypto/liquidity-and-token-supply/"
+  },
+  {
+    "id": "scams-and-transaction-hygiene",
+    "title": "Scams and transaction hygiene",
+    "course": "crypto",
+    "url": "/learn/crypto/scams-and-transaction-hygiene/"
+  },
+  {
+    "id": "diversification-across-crypto-assets",
+    "title": "Diversification across crypto assets",
+    "course": "crypto",
+    "url": "/learn/crypto/diversification-across-crypto-assets/"
+  },
+  {
+    "id": "a-crypto-research-checklist",
+    "title": "A crypto research checklist",
+    "course": "crypto",
+    "url": "/learn/crypto/a-crypto-research-checklist/"
+  }
+]

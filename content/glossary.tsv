@@ -1,0 +1,80 @@
+Ask|forex|The price available to buy an asset from the quoted market, subject to size and execution conditions.
+Bid|forex|The price available to sell an asset into the quoted market, subject to size and execution conditions.
+Base currency|forex|The first currency in a pair; EUR is the base in EUR/USD.
+Quote currency|forex|The second currency in a pair, used to express the price of one unit of the base currency.
+Pip|forex|A conventional price increment, commonly 0.0001 for many FX pairs and 0.01 for many JPY pairs; check the symbol specification.
+Point|forex|A platform's quoted increment, which may be smaller than a conventional pip.
+Lot|forex|A standardized contract quantity whose size depends on the instrument and broker.
+Spread|forex|The difference between an executable bid and ask quote.
+Slippage|forex|The difference between an expected execution price and the price actually obtained.
+Commission|forex|A transaction charge that may apply on opening, closing or both sides of a trade.
+Swap / rollover|forex|A financing adjustment associated with carrying a position across a broker's rollover time.
+Margin|forex|Collateral required to support an open position; it is not the same as maximum potential loss.
+Leverage|forex|Exposure relative to account equity, which magnifies gains and losses in equity terms.
+Equity|forex|Account value including unrealized gains and losses under the platform's accounting rules.
+Free margin|forex|Equity remaining after required margin, subject to the broker's calculation rules.
+Margin call|forex|A warning or action triggered when account margin conditions fall below defined requirements.
+Stop-out|forex|A broker's forced closure of positions under its margin rules.
+Market order|forex|An instruction seeking execution at available prices, without guaranteeing the quoted price.
+Limit order|forex|An instruction to trade at a specified price or better, with no guarantee of a fill.
+Stop order|forex|An order activated when a trigger condition is reached; execution can differ from the trigger price.
+Stop-limit order|forex|An order that activates a limit instruction after a trigger, with a risk of remaining unfilled.
+Long|forex|A position that generally benefits from a rise in the asset or base currency relative to its quote.
+Short|forex|A position that generally benefits from a fall in the asset or base currency relative to its quote.
+Liquidity|markets|The ability to execute transactions in size without materially changing available prices.
+Volatility|markets|The extent of price variation over a specified interval; it does not specify direction.
+Support|markets|An area where buying previously interrupted a decline; future reactions are uncertain.
+Resistance|markets|An area where selling previously interrupted a rise; it is not a guaranteed ceiling.
+Breakout|markets|A move beyond a defined price boundary under an explicit observation rule.
+False breakout|markets|A break followed by a return inside the previous boundary under a specified rule.
+Trend|markets|A directional pattern in price over a chosen timeframe.
+Range|markets|A period in which price oscillates between approximate boundaries without a sustained trend.
+OHLC|markets|Open, high, low and close prices for a defined interval.
+Moving average|markets|A rolling average of observations that smooths a series and lags new price changes.
+RSI|markets|A momentum indicator based on the balance of recent upward and downward price changes.
+MACD|markets|An indicator based on differences between exponential moving averages and a signal average.
+ATR|markets|Average true range, a measure of recent range size that incorporates gaps rather than predicting direction.
+Pivot point|markets|A reference level computed from prior-period prices under a specified formula.
+Fibonacci retracement|markets|Levels drawn at selected fractions of a chosen swing; their usefulness depends on context and testing.
+Divergence|markets|A mismatch between extremes in price and an indicator over selected observations.
+Correlation|markets|A statistic describing co-movement in an aligned sample; it is not causation or a fixed future relationship.
+Drawdown|risk|The decline from a previous equity peak to a later value, often expressed as a percentage of that peak.
+Risk-reward ratio|risk|A comparison of planned loss distance with planned gain distance; always state which quantity is first.
+R multiple|risk|A trade result divided by its initial planned monetary risk.
+Expectancy|risk|The average outcome implied by win probability, average wins, average losses and costs in a sample or model.
+Position sizing|risk|Choosing quantity from a risk budget, invalidation distance and contract specification.
+Risk of ruin|risk|The chance of reaching a defined unacceptable loss threshold under a specified model and assumptions.
+Backtest|risk|A simulation applying stated rules to historical data, subject to biases and execution assumptions.
+Forward test|risk|A test using new observations after the rules are defined, often initially on a demo account.
+Overfitting|risk|Selecting rules that match noise in the development sample and may fail on unseen data.
+Look-ahead bias|risk|Using information in a historical decision that would not have been known at that time.
+XAU/USD|gold|A quotation of gold against the US dollar, commonly expressed per troy ounce; contract terms vary.
+Troy ounce|gold|A precious-metal mass unit of approximately 31.1035 grams, different from an everyday avoirdupois ounce.
+Spot gold|gold|Gold priced for near-term settlement; retail products using spot quotes can have different contractual structures.
+Gold futures|gold|Exchange-traded contracts with defined quantity, expiration and settlement terms.
+Real yield|gold|A yield adjusted for inflation or inflation expectations under a stated measurement method.
+Safe haven|gold|An asset sought during some periods of stress; the label does not guarantee protection in every crisis.
+CPI|markets|A consumer price index tracking changes in a defined basket; methodology and coverage depend on the publisher.
+FOMC|markets|The Federal Open Market Committee, responsible for US monetary policy decisions within its mandate.
+NFP|markets|US nonfarm payroll employment, a measure published in the monthly Employment Situation report.
+Carry trade|markets|A position seeking a financing or yield difference while accepting exchange-rate and other risks.
+Blockchain|crypto|A linked transaction record maintained under a network's consensus and validation rules.
+Private key|crypto|Secret signing information that can authorize control over assets; sharing it can surrender that control.
+Seed phrase|crypto|Recovery words used by some wallets to reconstruct keys; never disclose them to unsolicited support or websites.
+Wallet|crypto|Software or hardware used to manage credentials and interact with digital assets.
+Custody|crypto|The arrangement determining who controls keys or holds assets and who bears the related responsibilities.
+Token|crypto|A digital unit defined by a network or contract; its rights, purpose and risks depend on its design.
+Stablecoin|crypto|A crypto asset intended to track a reference value, with mechanism, liquidity and redemption risks.
+Depeg|crypto|A departure of an asset's traded price from the reference value it is intended to track.
+Gas|crypto|A measure or fee concept for network computation on some blockchains; it is not a universal fixed charge.
+Confirmation|crypto|Evidence that a transaction has been included and further accepted under a network's rules.
+Smart contract|crypto|Code executed under a blockchain's rules, potentially exposed to bugs, permissions and dependency risks.
+DeFi|crypto|Financial applications using blockchain-based contracts, often with multiple technical and economic dependencies.
+Staking|crypto|Committing assets under a protocol's rules, potentially involving rewards, restrictions and penalties.
+Perpetual futures|crypto|Derivative contracts without a fixed expiry, commonly using funding and margin mechanisms.
+Funding rate|crypto|A periodic transfer mechanism between derivative positions under the venue's rules; direction and amount can change.
+Liquidation|crypto|Forced closure or transfer of a position when collateral requirements are breached.
+Market capitalization|crypto|Price multiplied by a specified supply measure; it does not equal available exit liquidity.
+Fully diluted valuation|crypto|Price multiplied by a stated maximum or total supply measure, which may differ from circulating supply.
+Bridge|crypto|A mechanism connecting assets or messages across networks, adding its own security assumptions.
+Token allowance|crypto|Permission for a contract to spend a specified quantity of a token on behalf of an address.
