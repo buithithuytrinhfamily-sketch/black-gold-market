@@ -69,7 +69,7 @@ try{
  }
  bind('auth-form',async e=>{const f=e.currentTarget;const email=f.elements.email.value.trim(),password=f.elements.password.value,action=e.submitter.value;
   if(action==='reset'){if(!f.elements.email.checkValidity())throw Error('Enter a valid email address.');checked(await db.auth.resetPasswordForEmail(email,{redirectTo:location.origin+'/account/'}));say('If an account exists, check its email for a password-reset link.');return;}
-  if(action==='signup'){checked(await db.auth.signUp({email,password,options:{emailRedirectTo:location.origin+'/account/'}}));say('Check your email to confirm your account, then sign in.');}else{checked(await db.auth.signInWithPassword({email,password}));await refresh();}f.elements.password.value='';
+  if(action==='signup'){const result=checked(await db.auth.signUp({email,password,options:{emailRedirectTo:location.origin+'/account/'}}));if(result.session){await refresh();say('Account created. You are signed in.');}else say('Check your email to confirm your account, then sign in.');}else{checked(await db.auth.signInWithPassword({email,password}));await refresh();}f.elements.password.value='';
  });
  $('signout').onclick=async()=>{try{checked(await db.auth.signOut());await refresh();}catch(e){say(e.message);}};
  bind('password-form',async e=>{checked(await db.auth.updateUser({password:e.currentTarget.elements.password.value}));e.currentTarget.reset();say('Password updated.');});
