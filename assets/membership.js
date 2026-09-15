@@ -29,13 +29,14 @@ try{
   const session=checked(await db.auth.getSession());user=session.session?.user;
   show('auth-box',!user);show('session-box',!!user);
   ['account-box','checkout-box','admin-box'].forEach(id=>show(id,false));
-  const settings=checked(await db.from('bgm_settings').select('enrollment_open').single());
-  say(settings.enrollment_open?'Membership service is available.':'Paid enrollment is not open yet. Member accounts are being tested; public email registration will open after email delivery is configured.');
+  const settings=checked(await db.from('bgm_settings').select('enrollment_open,trials_open').single());
+  say(settings.trials_open?'Try Analysis free for 7 days. No payment required.':settings.enrollment_open?'Membership service is available.':'Paid enrollment is not open yet. Member accounts are being tested; public email registration will open after email delivery is configured.');
   if(user){
    $('member-email').textContent=user.email;
-   const memberships=checked(await db.from('bgm_memberships').select('expires_at').eq('user_id',user.id));
+   const memberships=checked(await db.from('bgm_memberships').select('expires_at,trial_started_at').eq('user_id',user.id));
+   show('start-trial',settings.trials_open&&!memberships.length);
    const expiry=memberships[0]?.expires_at;const active=expiry&&Date.parse(expiry)>Date.now();
-   if($('access-status'))$('access-status').textContent=active?'Active until '+new Date(expiry).toLocaleString():expiry?'Membership expired on '+new Date(expiry).toLocaleString():'No active membership. Submitted payments require manual verification.';
+   if($('access-status'))$('access-status').textContent=active?(memberships[0]?.trial_started_at?'Access (including trial) until ':'Active until ')+new Date(expiry).toLocaleString():expiry?'Membership expired on '+new Date(expiry).toLocaleString():'No active membership. Submitted payments require manual verification.';
    if(active)expiryTimer=setTimeout(()=>{if($('premium-reader')){$('premium-reader').replaceChildren();show('premium-reader',false);}say('Please refresh to check your membership status.');},Math.min(Date.parse(expiry)-Date.now(),2147483647));
    show('account-box',true);show('checkout-box',true);
    if($('order-form'))$('order-form').hidden=!settings.enrollment_open;
@@ -72,6 +73,7 @@ try{
   if(action==='signup'){const result=checked(await db.auth.signUp({email,password,options:{emailRedirectTo:location.origin+'/account/'}}));if(result.session){await refresh();say('Account created. You are signed in.');}else say('Check your email to confirm your account, then sign in.');}else{checked(await db.auth.signInWithPassword({email,password}));await refresh();}f.elements.password.value='';
  });
  $('signout').onclick=async()=>{try{checked(await db.auth.signOut());await refresh();}catch(e){say(e.message);}};
+ if($('start-trial'))$('start-trial').onclick=async()=>{const b=$('start-trial');b.disabled=true;try{checked(await db.rpc('bgm_start_trial'));await refresh();say('Your 7-day trial is ready. Open the Premium library to read.');}catch(e){say(e.message);}finally{b.disabled=false;}};
  bind('password-form',async e=>{checked(await db.auth.updateUser({password:e.currentTarget.elements.password.value}));e.currentTarget.reset();say('Password updated.');});
  bind('order-form',async e=>{order=checked(await db.rpc('bgm_create_order',{p_plan:e.currentTarget.elements.plan.value}));history.replaceState(null,'','?order='+order.id);await loadOrder(order.id);say('Payment request created. Keep the order ID for your records.');});
  bind('tx-form',async e=>{if(!order)throw Error('Create a payment request first');checked(await db.rpc('bgm_submit_tx',{p_order:order.id,p_txid:e.currentTarget.elements.txid.value.trim()}));show('payment-instructions',false);say('Transaction submitted. The team must verify it before access is activated. View status in My account.');});

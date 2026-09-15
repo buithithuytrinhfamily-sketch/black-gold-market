@@ -50,3 +50,6 @@ PLAYWRIGHT_PATH=/path/to/playwright node tests/membership-browser.cjs
 Database test dependency: `@electric-sql/pglite`, installed outside this public site. Browser tests expect a local server on port 8765 and use mocked Supabase responses. Actual hosted configuration, SMTP delivery and real network payments remain to be checked after connection.
 
 Vendor client: `@supabase/supabase-js@2.102.0`, downloaded from its jsDelivr UMD distribution. Public reference: https://supabase.com/docs/guides/auth/passwords and https://supabase.com/docs/guides/database/postgres/row-level-security.
+
+## Seven-day trial
+Migration 202609150002_trial.sql is installed. `trials_open` remains false until original articles and email delivery are ready. Confirmed accounts explicitly activate once; server time sets expiry to exactly seven days later. Repeated requests never extend access. Existing memberships are not overwritten. No payment or automatic renewal. Enable independently of paid enrollment when ready.
