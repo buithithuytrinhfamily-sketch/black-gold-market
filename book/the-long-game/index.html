@@ -25,9 +25,9 @@
  button:hover{background:#6d452a;color:#fdf1c8}
  #pg{color:#f0dfc2;font-size:12px;min-width:70px;text-align:center}
  .page img{width:100%;height:100%;display:block;box-shadow:0 0 22px rgba(0,0,0,.6)}
-</style></head>
+</style><link rel="stylesheet" href="/assets/brand.css"></head>
 <body>
- <header><b>THE LONG GAME</b><span>Protect &middot; Master &middot; Grow, flip with arrows or drag a corner</span></header>
+ <header><a class="bgm-brand" href="/" translate="no" aria-label="Black Gold Market — Home"><img class="bgm-logo" src="/assets/brand/black-gold-market.jpg" width="60" height="60" alt=""><span class="bgm-brand-copy"><span class="bgm-name">BLACK GOLD MARKET</span><span class="bgm-tagline">Protect. Master. Grow.</span></span></a><br><b>THE LONG GAME</b><span>Protect &middot; Master &middot; Grow, flip with arrows or drag a corner</span></header>
  <div id="stage"><div id="book"></div></div>
  <div class="controls">
  <button id="prev">&lsaquo; Prev</button><span id="pg"></span><button id="next">Next &rsaquo;</button>
@@ -38,8 +38,8 @@
  for (var i = 1; i <= 75; i++) pages.push('pages/' + String(i).padStart(3, '0') + '.jpg');
  var el = document.getElementById('book');
  function calc(){
- var maxH = Math.min(window.innerHeight-140, 1306);
- var h = Math.max(360, Math.min(maxH, 653));
+ var maxH = Math.min(window.innerHeight-document.querySelector("header").offsetHeight-90, 1306);
+ var h = Math.max(180, Math.min(maxH, 653, (window.innerWidth-36)*1.4143));
  var w = Math.round(h/1.4143);
  return {w:w, h:h};
  }

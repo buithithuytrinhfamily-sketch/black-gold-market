@@ -185,3 +185,6 @@ for u in routes:
 write('sitemap.xml',sitemap)
 write('content/portal-routes.json',json.dumps(routes,indent=2))
 print(f'Built {len(routes)} routes, {len(lessons)} original lessons, {len(terms)} glossary terms and {sum(len(q["questions"]) for q in quizzes.values())} quiz questions.')
+# Apply after generation, including legacy pages and newly published journal files.
+from branding import apply_branding
+print('Branding updated:',apply_branding())

@@ -1,0 +1,11 @@
+/* Canonical Black Gold Market lockup. Preserve the original gold/brown artwork. */
+.bgm-brand{display:inline-flex!important;align-items:center;gap:12px;max-width:100%;color:inherit;text-decoration:none!important;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.2;text-align:left;letter-spacing:normal;font-style:normal;vertical-align:middle}
+.bgm-brand .bgm-logo{display:block!important;width:60px!important;height:60px!important;max-width:none!important;flex:0 0 60px;object-fit:contain!important;border:0!important;border-radius:6px!important;padding:0!important;margin:0!important;box-shadow:none!important;filter:none!important}
+.bgm-brand .bgm-brand-copy{display:block;margin:0;color:inherit}.bgm-brand .bgm-name{display:block;margin:0;color:inherit;font-size:16px;font-weight:750;line-height:1.25;letter-spacing:.04em}.bgm-brand .bgm-tagline{display:block;margin:5px 0 0;color:inherit;font-size:10px;font-weight:500;line-height:1.35;letter-spacing:.09em;opacity:.8}
+.lp-logo{object-fit:contain!important;border-radius:6px!important;border:0!important}
+.masthead .bgm-brand{flex-shrink:0}.masthead{flex-wrap:wrap}.mast-actions{flex-wrap:wrap}
+@media(max-width:480px){.bgm-brand .bgm-logo{width:48px!important;height:48px!important;flex-basis:48px}.bgm-brand .bgm-name{font-size:14px}.bgm-brand .bgm-tagline{font-size:9px}.bgm-brand{gap:10px}}
+.topbar .wrap{height:auto!important;min-height:72px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+.topbar .bgm-brand{flex-shrink:0}
+@media(max-width:700px){.topbar .wrap{gap:12px!important}.topbar nav.menu{margin-left:0;flex-wrap:wrap;gap:16px}.topbar .tg-btn{margin-left:0}.ticker{overflow:hidden;max-width:100vw}}
+.topbar .bgm-brand{color:#f4ead4}
