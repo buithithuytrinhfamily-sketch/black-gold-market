@@ -1,6 +1,6 @@
 # Analysis membership setup
 
-Status: implementation is checked in; production is deliberately unconfigured and enrollment closed. There is no paid article body in this repository. Local PostgreSQL policy tests and mocked browser contracts are not a live Supabase acceptance test.
+Status: production project xgfkqwnfiguknpetxgcv is connected; schema installed and anonymous access checks passed. Enrollment remains closed. Production SMTP, owner account, content publication and authenticated acceptance checks are still pending. There is no paid article body in this repository. Local PostgreSQL policy tests and mocked browser contracts are not a live Supabase acceptance test.
 
 ## Connect the owner's project
 

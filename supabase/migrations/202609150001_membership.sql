@@ -3,6 +3,7 @@ begin;
 create schema if not exists bgm_private;
 revoke all on schema bgm_private from public, anon, authenticated;
 create table bgm_private.admins(user_id uuid primary key references auth.users(id));
+alter table bgm_private.admins enable row level security;
 create table public.bgm_settings(id boolean primary key default true check(id), enrollment_open boolean not null default false);
 insert into public.bgm_settings values(true,false);
 create table public.bgm_memberships(user_id uuid primary key references auth.users(id), expires_at timestamptz not null);

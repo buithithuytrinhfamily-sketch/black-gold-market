@@ -30,7 +30,7 @@ try{
   show('auth-box',!user);show('session-box',!!user);
   ['account-box','checkout-box','admin-box'].forEach(id=>show(id,false));
   const settings=checked(await db.from('bgm_settings').select('enrollment_open').single());
-  say(settings.enrollment_open?'Membership service is available.':'New enrollment is closed. Existing members can still sign in and read.');
+  say(settings.enrollment_open?'Membership service is available.':'Paid enrollment is not open yet. Member accounts are being tested; public email registration will open after email delivery is configured.');
   if(user){
    $('member-email').textContent=user.email;
    const memberships=checked(await db.from('bgm_memberships').select('expires_at').eq('user_id',user.id));
