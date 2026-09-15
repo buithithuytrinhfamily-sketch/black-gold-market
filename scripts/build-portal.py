@@ -154,6 +154,14 @@ for name in ['index.html','journal/index.html','learn/index.html','tools/gold-po
  if '/assets/academy.js' not in s:s=s.replace('</body>','<script defer src="/assets/tool-math.js"></script><script defer src="/assets/academy.js"></script></body>')
  if 'class="site-footer"' in s:s=re.sub(r'<footer class="site-footer">.*?</footer>',footer,s,count=1,flags=re.S)
  else:s=re.sub(r'<footer.*?</footer>',footer,s,count=1,flags=re.S)
+ if name=='index.html':
+  banner=(ROOT/'scripts/templates/homepage-carousel.html').read_text()
+  if '<section class="hero-carousel"' in s:
+   s=re.sub(r'<section class="hero-carousel".*?</section>',lambda m:banner,s,count=1,flags=re.S)
+  else:
+   s=re.sub(r'<div class="shell intro">.*?</section>',lambda m:banner,s,count=1,flags=re.S)
+  if '/assets/carousel.css' not in s:s=s.replace('</head>','<link rel="stylesheet" href="/assets/carousel.css"></head>')
+  if '/assets/carousel.js' not in s:s=s.replace('</body>','<script defer src="/assets/carousel.js"></script></body>')
  if name=='index.html' and '<!-- resource-expansion -->' not in s:
   s=s.replace('<section class="learning-band">','<!-- resource-expansion --><section class="shell resource-home"><p class="eyebrow">YOUR TRADING WORKSPACE</p><h2>More ways to learn and prepare.</h2>'+cards([('/markets/','MARKETS','See the bigger picture','Gold charts, FX and crypto market displays.'),('/economic-calendar/','CALENDAR','Know what is scheduled','Explore upcoming economic releases.'),('/learn/forex/','ACADEMY','Build the foundations','33 Forex lessons, plus a 12-lesson Crypto course.'),('/glossary/','GLOSSARY','Make sense of the language','Search definitions across gold, FX and crypto.'),('/quizzes/','QUIZZES','Check your understanding','Four quizzes with explanations.'),('/tools/','TOOLS','Put numbers to the plan','Position sizing, pivots, recovery, journal and more.')])+'</section><section class="learning-band">')
   s=s.replace('href="/tools/">Open trading tools','href="/tools/">Open trading tools')
