@@ -193,3 +193,5 @@ print(f'Built {len(routes)} routes, {len(lessons)} original lessons, {len(terms)
 # Apply after generation, including legacy pages and newly published journal files.
 from branding import apply_branding
 print('Branding updated:',apply_branding())
+from about_band import apply_about
+print('About band updated:',apply_about())
