@@ -1,0 +1,69 @@
+<p>You open a demo account, buy a small position in gold, and watch the price tick up. Then you scroll a trading group and see someone say EUR/USD "moved 40 pips" today, and you have no idea if that is the move you just made, a bigger one, or something else entirely.</p>
+
+<p>The confusion is not about the number 40. It is about three words used loosely in every forex conversation, "pip," "point" and "lot." Get them right once and most of the fog around trade size clears with them.</p>
+
+<h2>The idea in plain words</h2>
+
+<p>A pip is a small, standardized unit of price movement, used to describe how far a currency pair has traveled. It is not a percentage and not money on its own, it is a fixed distance on the price scale, agreed by convention. For most pairs that do not include the Japanese yen, one pip equals a move of 0.0001, so EUR/USD moving from 1.1000 to 1.1010 has moved 10 pips. Yen pairs are quoted with fewer decimal places, so their pip is 0.01 instead, and USD/JPY moving from 150.00 to 150.20 has also moved 20 pips, even though the raw numbers look a hundred times bigger. Pip size is a property of the pair, not a universal constant.</p>
+
+<p>Many brokers quote one extra decimal place beyond the pip, called a point or a pipette. On a five digit non-yen pair, EUR/USD might show as 1.10005, where that last digit is one tenth of a pip, so a move of 5 points is only half a pip. A three digit yen pair works the same way at 0.001, one tenth of that pair's pip.</p>
+
+<p>Gold does not use pips at all, even though traders sometimes borrow the word from habit. Gold is quoted directly in dollars and cents per ounce, so a move from 2400.00 to 2400.50 is a fifty cent move, described in dollars, not pips. Calling that "50 pips" carries a currency habit onto a market that does not define one. To describe a gold move precisely, state the dollar amount per ounce, and check what your platform calls its smallest increment, since that is set by the broker, not a shared standard.</p>
+
+<p>A lot is a unit of quantity, a fixed number of currency units you are buying or selling, the way a case is a fixed number of bottles. A standard lot in forex is 100,000 units of the base currency, a mini lot is 10,000, one tenth of standard, and a micro lot is 1,000, one tenth of a mini lot. None of these numbers describe risk by themselves. Risk depends on how far price can move against you and what fraction of your account that represents.</p>
+
+<figure><img src="/images/lessons/pips-points-and-lots-1.png" alt="Forex lot size ladder showing standard, mini and micro lot units"><figcaption>Standard, mini and micro lot size compared, and how each one changes the value of one pip.</figcaption></figure>
+
+<p>A forex lot is standardized by convention, but gold is not. A gold "lot" is a contract measured in ounces, and how many ounces make up one lot is set by each broker, not a shared standard, and mini or micro gold contracts vary the same way. Always check your own broker's contract specification for the exact figure on the symbol you plan to trade.</p>
+
+<h2>A worked example</h2>
+
+<section class="worked">
+<p>Every figure below is a hypothetical illustration to show the arithmetic, not a real quote.</p>
+
+<p>Pip value equals pip size multiplied by trade size, in units of the base currency, landing straight in dollars when the quote currency is USD. For EUR/USD, a standard lot gives 0.0001 times 100,000, or $10.00 per pip, a mini lot gives 0.0001 times 10,000, or $1.00 per pip, and a micro lot gives 0.0001 times 1,000, or $0.10 per pip.</p>
+
+<p>USD/JPY needs an extra step. A standard lot is 100,000 units at a pip size of 0.01, so 0.01 times 100,000 equals 1,000 yen per pip. A US dollar account cannot hold yen directly, so that 1,000 yen converts at the current rate, and at a hypothetical rate of 150.00, dividing 1,000 by 150 gives about $6.67 per pip, a value that shifts with the rate even at an unchanged lot size.</p>
+
+<p>Now gold. Assume, purely as illustration, that a broker sets one standard lot at 100 ounces, a figure you must confirm on your own account. If the smallest increment shown is one cent per ounce, 0.01 times 100 ounces is $1.00 for that tick, and a one dollar per ounce move is worth 1.00 times 100, or $100.00 per lot. On a 1 ounce micro contract the same move is worth $1.00 total. None of this used the word pip, gold moves in dollars per ounce on its own contract size.</p>
+</section>
+
+<h2>Standard, mini and micro lot compared</h2>
+
+<table>
+<thead>
+<tr><th>Lot type</th><th>Units of base currency</th><th>Pip size</th><th>Value of one pip, typical non-JPY pair</th></tr>
+</thead>
+<tbody>
+<tr><td>Standard lot</td><td>100,000</td><td>0.0001</td><td>$10.00</td></tr>
+<tr><td>Mini lot</td><td>10,000</td><td>0.0001</td><td>$1.00</td></tr>
+<tr><td>Micro lot</td><td>1,000</td><td>0.0001</td><td>$0.10</td></tr>
+</tbody>
+</table>
+
+<h2>Where people go wrong</h2>
+
+<p><strong>Borrowing FX pip math for gold.</strong> Assuming gold moves in increments of 0.0001, the way a non-yen pair does, misreads the size of a move by orders of magnitude and misjudges what a stop or target is worth in dollars.</p>
+
+<p><strong>Mixing up points with full pips.</strong> Treating a 50 point move as fifty times the size it is, rather than 5 pips, overestimates how far the market moved and can push stops or targets far from where they belong.</p>
+
+<p><strong>Treating lot size as a risk budget.</strong> Choosing "1 standard lot" because it sounds normal, without checking pip value, stop distance and account size together, can put a far larger share of the account at risk than planned. The actual risk calculation is covered in <a href="/learn/forex/position-sizing-from-a-loss-budget/">position sizing from a loss budget</a>.</p>
+
+<h2>Your turn</h2>
+
+<ol>
+<li>Open your platform's specification for EUR/USD, or another non-yen pair. Note its pip size and smallest increment.</li>
+<li>Open the specification for a yen pair, such as USD/JPY, and note how its pip size differs.</li>
+<li>Open the specification for gold. Record its contract size in ounces per lot and smallest increment.</li>
+<li>By hand, calculate the pip value for a micro lot from step one, then check it against the platform's own display, if it has one.</li>
+</ol>
+
+<h2>Check yourself</h2>
+
+<details><summary>Why does USD/JPY use a pip size of 0.01 while EUR/USD uses 0.0001?</summary><p>Yen pairs are quoted with fewer decimal places, so their pip sits two places higher on the price scale, though the underlying idea is the same.</p></details>
+
+<details><summary>Why doesn't gold have a pip in the same sense as a currency pair?</summary><p>Gold is quoted directly in dollars and cents per ounce, not as an exchange rate between two currencies, so its increment and contract size are simply set by the broker.</p></details>
+
+<details><summary>Why is a lot size not, by itself, a measure of risk?</summary><p>Risk depends on how far price can move against the position and what fraction of the account that represents, so the same lot size can be small risk on one account and large on another.</p></details>
+
+<p>Once you can read a pair and size a position in pips and lots, the next question is what happens between clicking buy and the trade landing on your account, covered in <a href="/learn/forex/how-orders-reach-the-market/">how orders reach the market</a>.</p>

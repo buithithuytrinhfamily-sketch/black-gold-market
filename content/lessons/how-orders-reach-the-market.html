@@ -1,0 +1,52 @@
+<p>You watch the chart print your exact number. You had placed a buy limit at that level an hour earlier and walked away feeling settled about it, order in, price found, done. When you come back the position is not open. The wick touched your price and kept going, but nothing filled.</p>
+
+<p>Somewhere else, a trader with a stop loss below a long position has the opposite experience. Overnight news breaks, price does not walk down to the stop, it leaps past it. The statement the next morning shows the exit meaningfully worse than the price drawn on the chart. Neither trader misread the chart. Both misunderstood how an order actually reaches the market.</p>
+
+<h2>The idea in plain words</h2>
+
+<p>An order is an instruction to a broker, and the four common types differ in what they promise. A <strong>market order</strong> says fill me now at whatever price is available. You control timing, not the exact price. A <strong>limit order</strong> flips that. You name a price boundary, at or better, and the order only fills there or improves on it. You control price, not whether or when it fills. Price can trade right up to your line and away again, and you are still flat.</p>
+
+<p>A <strong>stop order</strong> is dormant until a trigger price is reached, then it turns into a market order. It is the standard tool for a stop loss and for entering a breakout. The trigger price wakes the order up. The execution price is what you actually get filled at, once the order is awake and searching for the best available price. In a calm market those numbers are close, often identical. In a fast market they can be far apart, and that gap has a name, slippage. A <strong>stop-limit order</strong> combines a trigger with a limit, firing a limit order instead of a market order once triggered. You get price control back, at the cost of a real chance it never fills if the market keeps moving away.</p>
+
+<p>Duration is separate from order type. A day order expires automatically at the close of that session if unfilled. A GTC order, good till cancelled, keeps working across sessions until it fills or you cancel it, though most platforms still expire it after a set number of days on their own. GTC does not change what the order does, only how long it waits around to do it.</p>
+
+<h2>A worked example</h2>
+<section class="worked">
+<p>Hypothetical numbers, round on purpose, to show the arithmetic rather than any real quote.</p>
+<p>A trader holds a long gold position and places a stop loss as a sell stop at 4,070 per ounce, one standard lot, 100 ounces. A scheduled economic release comes in far from expectations. The last trade before the release prints at 4,075, the next at 4,058. No trade happens in between, price simply gaps from one level to the other because nobody was willing to trade at any price in that zone.</p>
+<p>The trigger price, 4,070, is crossed by that gap, so the order wakes up and becomes a market order. It fills at 4,058, the first price actually on offer. Slippage is the trigger price minus the execution price, 4,070 minus 4,058, which equals 12 per ounce. On a 100 ounce lot that is an extra 1,200 of loss beyond what the trader planned for, before any spread or commission on the fill is added in. The stop did exactly what it was designed to do, it just did it at the only price the market offered once it woke up.</p>
+</section>
+
+<figure><img src="/images/lessons/how-orders-reach-the-market-1.png" alt="Diagram of a stop order trigger price and execution price during a price gap"><figcaption>The trigger price wakes a stop order. The execution price is where it actually fills, and a gap can separate the two.</figcaption></figure>
+
+<p>The same gap shows up with limit orders, in a gentler form. A buy limit only fills against the ask, the price sellers are willing to sell at, not the bid or the last printed trade. A chart candle's low can print at your limit price because that low was somebody's bid, while the ask never traded down that far. The order sits there, touched on the chart, unfilled in your account. "The chart hit my price" and "my order filled" are two different sentences.</p>
+
+<h2>Order types compared</h2>
+<table>
+<thead><tr><th>Order type</th><th>What you control</th><th>What you do not control</th><th>Typical use</th></tr></thead>
+<tbody>
+<tr><td>Market</td><td>Timing, gets filled almost immediately</td><td>The exact fill price</td><td>Entering or exiting when speed matters more than price</td></tr>
+<tr><td>Limit</td><td>The price, fills at your level or better</td><td>Whether it fills at all, or when</td><td>Entering at a planned level, taking profit at a target</td></tr>
+<tr><td>Stop</td><td>The trigger price that arms it</td><td>The execution price once it fires</td><td>A stop loss, or entering a breakout</td></tr>
+<tr><td>Stop-limit</td><td>Both the trigger price and the fill price</td><td>Whether it fills once triggered</td><td>Entering a breakout without accepting an open ended fill</td></tr>
+</tbody>
+</table>
+
+<h2>Where people go wrong</h2>
+<p><strong>Treating a stop loss as a guaranteed exit price.</strong> It is an instruction, not a contract. Once triggered it becomes a market order and takes whatever price is next available, which around a gap can change how much of the account was actually at risk.</p>
+<p><strong>Assuming a touch means a fill.</strong> A limit order needs the executable side of the quote, the ask for a buy, the bid for a sell, to reach its price. A quick spike trading only on the other side can print a low or high your order never actually caught.</p>
+<p><strong>Leaving pending orders open over the weekend without a plan.</strong> Gold trading pauses while the world does not. When trading resumes, the first price can open away from Friday's close, so a stop or limit between the two fills at the opening price instead of the price you set, or gets skipped entirely.</p>
+
+<h2>Your turn</h2>
+<ol>
+<li>On a demo account, place a limit order a small distance from the current price and a stop order the same distance on the other side.</li>
+<li>When each fills or expires, record the execution price your platform reports and compare it to what you expected.</li>
+<li>Set one order as a day order and an identical one as GTC. Check both next session and note which one is still working.</li>
+</ol>
+
+<h2>Check yourself</h2>
+<details><summary>What is the difference between a trigger price and an execution price?</summary><p>The trigger price activates a stop or stop-limit order. The execution price is what it fills at once active. Around a gap the two can differ, and that difference is slippage.</p></details>
+<details><summary>Why can a limit order be touched on the chart and still not fill?</summary><p>It needs the executable side of the quote, the ask for a buy, the bid for a sell, to reach its price. A chart low or high can come from the other side, so the level appears touched without your order trading.</p></details>
+<details><summary>Why is a stop loss described as an instruction rather than a guaranteed price?</summary><p>It becomes a market order once triggered, and fills at the best price currently available. In a fast move that price can be worse than the trigger, so it limits a loss without fixing its exact size.</p></details>
+
+<p>Order type sets how you enter or exit. What that position risks once open is covered in <a href="/learn/forex/leverage-and-margin/">leverage and margin</a>, the next lesson.</p>

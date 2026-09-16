@@ -53,7 +53,12 @@ for course,label in [('forex','Forex'),('crypto','Crypto')]:
  intro+=f'<p><a class="button" href="/quizzes/{course}/">Try the {label.lower()} quiz</a> <a class="button secondary" href="/glossary/?topic={course}">Open glossary</a></p>'
  page('/learn/'+course+'/',label+' academy','Build a practical foundation with short lessons, worked examples and exercises. All examples are hypothetical.',intro)
  for i,l in enumerate(selected):
-  body='<div class="lesson-layout"><article class="lesson-body"><p class="eyebrow">'+esc(l['module'])+'</p><h2>The idea</h2><p>'+esc(l['body'])+'</p><section class="worked"><h2>A worked example</h2><p>'+esc(l['example'])+'</p></section><h2>Try it yourself</h2><p>'+esc(l['exercise'])+'</p><h2>A mistake to avoid</h2><p>'+esc(l['mistake'])+'</p><div class="completion"><button class="button" data-complete="'+l['id']+'" aria-pressed="false">Mark lesson complete</button><p class="meta" data-save-status>Saved on this browser only.</p></div><nav class="lesson-pagination" aria-label="Lesson navigation">'
+  longform=ROOT/('content/lessons/'+l['id']+'.html')
+  if longform.exists():
+   core='<p class="eyebrow">'+esc(l['module'])+'</p>'+longform.read_text().strip()
+  else:
+   core='<p class="eyebrow">'+esc(l['module'])+'</p><h2>The idea</h2><p>'+esc(l['body'])+'</p><section class="worked"><h2>A worked example</h2><p>'+esc(l['example'])+'</p></section><h2>Try it yourself</h2><p>'+esc(l['exercise'])+'</p><h2>A mistake to avoid</h2><p>'+esc(l['mistake'])+'</p>'
+  body='<div class="lesson-layout"><article class="lesson-body">'+core+'<div class="completion"><button class="button" data-complete="'+l['id']+'" aria-pressed="false">Mark lesson complete</button><p class="meta" data-save-status>Saved on this browser only.</p></div><nav class="lesson-pagination" aria-label="Lesson navigation">'
   body+=(f'<a href="{selected[i-1]["url"]}">← Previous lesson</a>' if i else '<span></span>')+(f'<a href="{selected[i+1]["url"]}">Next lesson →</a>' if i<len(selected)-1 else f'<a href="/quizzes/{course}/">Take the quiz →</a>')+'</nav></article><aside class="lesson-aside"><h2>Keep learning</h2><a href="/learn/'+course+'/">Course outline</a><a href="/glossary/">Look up a term</a><a href="/tools/">Try a calculator</a><a href="/my-learning/">Your progress</a><p class="meta">Original Black Gold Market educational notes. Examples exclude costs unless stated.</p></aside></div>'
   page(l['url'],l['title'],f'{label} academy · {l["module"]}',body)
 # Enrich existing gold path without replacing its original selected lessons.
