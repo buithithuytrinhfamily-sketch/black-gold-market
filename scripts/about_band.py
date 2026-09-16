@@ -11,8 +11,8 @@ NAME='BLACK GOLD MARKET'
 LOGO='/assets/brand/black-gold-market.jpg'
 LEAD='Black Gold Market helps new traders read gold and the wider market one clear step at a time, without the dry textbook voice that sends you to sleep.'
 COPY=('We explain currencies, metals and crypto in everyday words, with worked examples and small drills '
-      'you can repeat on your own chart until they stick. We are also a community of traders who choose '
-      'patience over noise, and who protect the account before they think about growing it.')
+      'you can repeat on your own chart until they stick. We are also a community of traders who support '
+      'each other through each trading day.')
 SOCIALS=[('telegram','https://t.me/black_goldmarket','Black Gold Market on Telegram'),
          ('youtube','https://www.youtube.com/@black.gold.market-v6z','Black Gold Market on YouTube'),
          ('instagram','https://www.instagram.com/black.gold.market','Black Gold Market on Instagram'),
