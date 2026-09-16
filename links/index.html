@@ -14,6 +14,12 @@
 <meta property="og:image" content="https://blackgoldmarket.us/avatar.jpg">
 <meta property="og:type" content="website">
 <link rel="icon" type="image/png" href="/favicon.png">
+<link rel="prefetch" href="/blueprint/">
+<link rel="prefetch" href="/book/the-long-game/">
+<link rel="prefetch" href="/journal/">
+<link rel="prefetch" href="/vip/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -147,6 +153,11 @@
   else if(ten.indexOf('social_')===0){ ban('social_click',tt); }
  });
 })();
+</script>
+<script>
+if("serviceWorker" in navigator){
+ addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){});});
+}
 </script>
 </body>
 </html>
