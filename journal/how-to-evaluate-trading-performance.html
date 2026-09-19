@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NL24SJYSZ8"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NL24SJYSZ8');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Evaluate Trading Performance Before You Trust the Numbers, Black Gold Market</title>
+<meta name="description" content="How to evaluate trading performance starts by asking whether you have enough evidence to say anything at all. A trader with no edge finishes thirty trades in profit 42.8 per cent of the time, and it takes 385 trades to pin a win rate down to plus or minus five percentage points.">
+<meta property="og:title" content="How to Evaluate Trading Performance">
+<meta property="og:description" content="How to evaluate trading performance starts by asking whether you have enough evidence to say anything at all. A trader with no edge finishes thirty trades in profit 42.8 per cent of the time, and it takes 385 trades to pin a win rate down to plus or minus five percentage points.">
+<meta property="og:image" content="https://blackgoldmarket.us/assets/hero/how-to-evaluate-trading-performance.png">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://blackgoldmarket.us/journal/how-to-evaluate-trading-performance.html">
+<meta property="og:url" content="https://blackgoldmarket.us/journal/how-to-evaluate-trading-performance.html">
+<link rel="icon" type="image/png" href="/favicon.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+ :root{
+ --paper:#F6E4CF; /* trang giấy, kem ấm */
+ --sand:#EDDBC0; /* nền panel, cát vàng nhạt */
+ --sand-2:#D9C4AA;
+ --ink:#321C04; /* nâu espresso, nền tối logo */
+ --ink-2:#46290A;
+ --muted:#6F5433; /* taupe ấm */
+ --gold:#c79331; /* đồng/vàng ánh kim, màu chủ đề logo */
+ --gold-lite:#e0b25a;
+ --gold-deep:#8f6a24;
+ --loss:#a4562a; /* semantic: stop loss / lệnh thua, terracotta */
+ --win:#5c7d4f; /* semantic: lệnh thắng, olive */
+ --hairline:rgba(143,106,36,.22);
+ --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+ --mono:"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+ }
+ html{scroll-behavior:smooth}
+ body{background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.7;margin:0}
+ a{color:var(--gold-deep);text-decoration:none}
+ a:hover{text-decoration:underline}
+ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
+ .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+
+ /* ── top bar ──────── */
+ .topbar{position:sticky;top:0;z-index:20;background:rgba(25,17,8,.97);backdrop-filter:blur(8px)}
+ .topbar .wrap{display:flex;align-items:center;gap:28px;height:64px}
+ .wordmark{font-family:var(--sans);font-weight:800;font-size:1.02rem;letter-spacing:.2em;color:#f4ead4}
+ .wordmark b{color:var(--gold-lite)}
+ .wordmark:hover{text-decoration:none}
+ nav.menu{display:flex;gap:22px;margin-left:auto;font-family:var(--sans);font-size:.82rem;letter-spacing:.08em}
+ nav.menu a{color:#c7ac7c;text-transform:uppercase}
+ nav.menu a[aria-current]{color:#f4ead4}
+ .tg-btn{font-family:var(--sans);font-size:.8rem;font-weight:700;letter-spacing:.06em;color:#321C04;background:#FFF9F2;padding:9px 16px;border-radius:3px;white-space:nowrap}
+ .tg-btn:hover{text-decoration:none;background:#EDDBC0}
+
+ /* ── ticker ────────────────────── */
+ .ticker{border-bottom:1px solid var(--hairline);background:var(--sand);font-family:var(--mono);font-size:.72rem;color:var(--muted);overflow-x:auto;white-space:nowrap}
+ .ticker .wrap{display:flex;gap:34px;padding:8px 24px}
+ .ticker span b{color:var(--ink);font-weight:500}
+
+ /* ── hero ───────────── */
+ .hero{padding:76px 0 64px;border-bottom:1px solid var(--hairline);
+ background:
+ radial-gradient(900px 480px at 85% 0%, rgba(199,147,49,.16), transparent 62%),
+ radial-gradient(700px 380px at -5% 100%, rgba(199,147,49,.08), transparent 60%),
+ var(--paper);}
+ .hero .wrap{display:grid;grid-template-columns:1fr 300px;gap:56px;align-items:center}
+ .eyebrow{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 22px}
+ .hero h1{font-size:clamp(2rem,5vw,3.15rem);line-height:1.12;font-weight:600;margin:0;max-width:20ch;text-wrap:balance}
+ .hero h1 .q{color:var(--gold-deep)}
+ .hero p.standfirst{font-size:1.12rem;color:var(--muted);max-width:54ch;margin:26px 0 0}
+ .byline{display:flex;align-items:center;gap:12px;margin-top:32px;font-family:var(--sans);font-size:.82rem;color:var(--muted)}
+ .byline b{color:var(--ink);font-weight:600}
+ .portrait{justify-self:end;text-align:center}
+ .portrait img{width:260px;height:260px;object-fit:cover;border-radius:50%;border:4px solid #fff;
+ box-shadow:0 0 0 1px var(--hairline),0 18px 44px rgba(143,106,36,.28);display:block;margin:0 auto}
+ .portrait .cap{font-family:var(--sans);font-size:.78rem;color:var(--muted);margin-top:14px}
+ .portrait .cap b{color:var(--ink)}
+ @media (max-width:820px){
+ .hero .wrap{grid-template-columns:1fr;gap:40px}
+ .portrait{justify-self:start;text-align:left}
+ .portrait img{margin:0}
+ }
+ .fade{opacity:0;transform:translateY(14px);animation:rise .7s ease forwards}
+ .fade.d1{animation-delay:.12s}.fade.d2{animation-delay:.24s}.fade.d3{animation-delay:.36s}
+ @keyframes rise{to{opacity:1;transform:none}}
+ @media (prefers-reduced-motion:reduce){.fade{animation:none;opacity:1;transform:none}}
+
+ /* ── three pillars band ────────────────── */
+ .rules{border-bottom:1px solid var(--hairline);background:var(--sand)}
+ .rules .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hairline);padding:0}
+ .rule{background:var(--sand);padding:28px 26px}
+ .rule .no{font-family:var(--mono);font-size:.72rem;color:var(--gold-deep);letter-spacing:.14em}
+ .rule h3{font-family:var(--sans);font-size:1rem;font-weight:700;margin:10px 0 8px;letter-spacing:.01em}
+ .rule p{font-size:.92rem;color:var(--muted);margin:0;line-height:1.6}
+ @media (max-width:760px){.rules .wrap{grid-template-columns:1fr}}
+
+ /* ── article ─────────────────────────── */
+ .article{padding:72px 0 40px}
+ .article .body{max-width:65ch;margin:0 auto}
+ .article h2{font-size:1.5rem;font-weight:600;margin:60px 0 18px;padding-bottom:10px;border-bottom:1px solid var(--hairline);text-wrap:balance}
+ .article h2:first-child{margin-top:0}
+ .article p{margin:0 0 1.15em}
+ .article p.big{font-size:1.16rem}
+ .article strong{color:var(--ink);font-weight:700}
+ .key{color:var(--gold-deep);font-style:normal;font-weight:700}
+ .pull{border-left:3px solid var(--gold);padding:6px 0 6px 24px;margin:34px 0;font-size:1.32rem;line-height:1.45;color:var(--ink);font-weight:500;text-wrap:balance;font-family:var(--serif)}
+
+ /* faq */
+ .faq{margin:34px 0}
+ .faq .qa{border-top:1px solid var(--hairline);padding:20px 0}
+ .faq .qa:last-child{border-bottom:1px solid var(--hairline)}
+ .faq h4{font-family:var(--sans);font-size:1.02rem;font-weight:700;margin:0 0 8px;color:var(--ink)}
+ .faq p{margin:0;color:var(--muted)}
+
+ /* author box */
+ .authorbox{display:grid;grid-template-columns:88px 1fr;gap:20px;align-items:start;
+ background:var(--sand);border:1px solid var(--hairline);border-radius:6px;padding:26px;margin:44px 0 10px}
+ .authorbox img{width:88px;height:88px;border-radius:50%;object-fit:cover;border:2px solid #fff;box-shadow:0 0 0 1px var(--hairline)}
+ .authorbox .who{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 8px}
+ .authorbox h4{font-size:1.1rem;margin:0 0 8px}
+ .authorbox p{font-size:.92rem;color:var(--muted);margin:0}
+ @media (max-width:560px){.authorbox{grid-template-columns:1fr}.authorbox img{width:72px;height:72px}}
+
+ .disclaimer{font-family:var(--sans);font-size:.82rem;font-style:italic;color:var(--muted);line-height:1.65;
+ border-top:1px solid var(--hairline);padding-top:22px;margin-top:40px}
+
+ /* ── cta ───────── */
+ .cta{border-top:1px solid var(--hairline);background:
+ radial-gradient(700px 320px at 50% 130%, rgba(199,147,49,.34), transparent 65%), var(--ink);color:#f4ead4}
+ .cta .wrap{padding:72px 24px;text-align:center}
+ .cta .kicker{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-lite);margin:0 0 16px}
+ .cta h2{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:600;margin:0 auto 14px;max-width:26ch;text-wrap:balance}
+ .cta p{color:#cbb488;max-width:48ch;margin:0 auto 30px}
+ .cta .tg-btn{font-size:.9rem;padding:14px 26px;background:#FFF9F2;color:#321C04}
+ .cta .tg-btn:hover{background:#EDDBC0}
+ .cta .sub{display:block;font-family:var(--sans);font-size:.76rem;color:#a58c60;margin-top:16px}
+
+ /* ── more ──────────────────────── */
+ .more{padding:70px 0;background:var(--paper)}
+ .more .label{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 26px}
+ .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+ .card{background:#fff;border:1px solid var(--sand-2);border-radius:4px;padding:24px;display:flex;flex-direction:column;gap:10px;transition:border-color .2s,box-shadow .2s;color:var(--ink)}
+ .card:hover{border-color:var(--gold);box-shadow:0 8px 24px rgba(143,106,36,.12);text-decoration:none}
+ .card .tag{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+ .card h3{font-size:1.1rem;font-weight:600;margin:0;line-height:1.35;text-wrap:balance}
+ .card p{font-size:.9rem;color:var(--muted);margin:0;line-height:1.6;font-family:var(--sans)}
+ .card .read{margin-top:auto;font-family:var(--sans);font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-deep)}
+ @media (max-width:760px){.grid3{grid-template-columns:1fr}}
+
+ /* ── footer ──────────────────────────── */
+ footer{background:var(--ink);color:#cbb488}
+ footer .wrap{padding:44px 24px;display:grid;gap:18px}
+ footer .brand{font-family:var(--sans);font-weight:800;letter-spacing:.2em;font-size:.9rem;color:#f4ead4}
+ footer .brand b{color:var(--gold-lite)}
+ footer p{font-family:var(--sans);font-size:.76rem;line-height:1.7;max-width:88ch;margin:0}
+ footer p strong{color:#f4ead4}
+ footer .fine{color:#8f7654}
+
+ /* Bảng nhỏ xin email trước khi sang Telegram, 07/08/2026 theo yêu cầu chị Trinh. */
+ .tgate{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(20,10,9,.72)}
+ .tgate[open]{display:flex}
+ .tgate__card{position:relative;width:100%;max-width:430px;background:#FFF9F2;color:var(--ink);border:1px solid var(--sand-2);border-radius:8px;padding:30px 28px 26px;box-shadow:0 24px 60px rgba(0,0,0,.45);text-align:left}
+ .tgate__x{position:absolute;top:9px;right:11px;width:32px;height:32px;font:400 24px/1 var(--sans);color:var(--muted);background:none;border:0;cursor:pointer;border-radius:4px}
+ .tgate__x:hover{background:var(--sand)}
+ .tgate__k{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 8px}
+ .tgate__h{font-family:var(--serif);font-size:1.28rem;line-height:1.3;font-weight:600;margin:0 0 8px}
+ .tgate__s{font-family:var(--sans);font-size:.86rem;line-height:1.5;color:var(--muted);margin:0 0 18px}
+ .tgate input[type=email]{width:100%;box-sizing:border-box;padding:13px 14px;font:inherit;font-size:16px;color:var(--ink);background:#fff;border:1px solid var(--sand-2);border-radius:4px;margin:0 0 12px}
+ .tgate input[type=email]:focus{outline:3px solid var(--gold);outline-offset:1px}
+ .tgate button[type=submit]{width:100%;padding:14px 18px;font-family:var(--sans);font-size:.95rem;font-weight:700;letter-spacing:.04em;color:#FFF9F2;background:var(--ink);border:0;border-radius:4px;cursor:pointer}
+ .tgate button[type=submit]:hover{background:#1F1003}
+ .tgate button[type=submit][disabled]{opacity:.6;cursor:default}
+ .tgate__hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+ .tgate__msg{font-family:var(--sans);font-size:.82rem;margin:10px 0 0;min-height:1em;color:var(--gold-deep)}
+ .tgate__msg.bad{color:var(--loss)}
+ .tgate__note{font-family:var(--sans);font-size:.72rem;line-height:1.55;color:var(--muted);margin:14px 0 0}
+ .tgate__skip{display:block;width:100%;margin:12px 0 0;padding:4px;font-family:var(--sans);font-size:.78rem;color:var(--muted);background:none;border:0;text-decoration:underline;cursor:pointer}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to Evaluate Trading Performance", "description": "How to evaluate trading performance starts by asking whether you have enough evidence to say anything at all. A trader with no edge finishes thirty trades in profit 42.8 per cent of the time, and it takes 385 trades to pin a win rate down to plus or minus five percentage points.", "image": "https://blackgoldmarket.us/assets/hero/how-to-evaluate-trading-performance.png", "author": {"@type": "Person", "name": "Raphael", "url": "https://blackgoldmarket.us/about.html"}, "publisher": {"@type": "Organization", "name": "Black Gold Market", "logo": {"@type": "ImageObject", "url": "https://blackgoldmarket.us/assets/brand/black-gold-market.jpg"}}, "datePublished": "2026-09-20", "dateModified": "2026-09-20", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://blackgoldmarket.us/journal/how-to-evaluate-trading-performance.html"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://blackgoldmarket.us/"}, {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://blackgoldmarket.us/journal/"}, {"@type": "ListItem", "position": 3, "name": "How to Evaluate Trading Performance", "item": "https://blackgoldmarket.us/journal/how-to-evaluate-trading-performance.html"}]}</script>
+<link rel="stylesheet" href="/assets/brand.css"><link rel="stylesheet" href="/assets/about.css"></head>
+<body>
+
+<header class="topbar">
+ <div class="wrap">
+ <a class="bgm-brand" href="/" translate="no" aria-label="Black Gold Market, Home"><img class="bgm-logo" src="/assets/brand/black-gold-market.jpg" width="60" height="60" alt=""><span class="bgm-brand-copy"><span class="bgm-name">BLACK GOLD MARKET</span><span class="bgm-tagline">Protect. Master. Grow.</span></span></a>
+ <nav class="menu" aria-label="Main">
+ <a href="../">Home</a>
+ <a href="./" aria-current="page">Journal</a>
+ <a href="https://t.me/+h-5A-mdBmhA5ZWQ1">Telegram</a>
+ </nav>
+ <a class="tg-btn" href="https://t.me/+h-5A-mdBmhA5ZWQ1">Join on Telegram</a>
+ </div>
+</header>
+
+<div class="ticker" aria-hidden="true">
+ <div class="wrap">
+ <span>MARKET <b>XAU/USD, GOLD</b></span>
+ <span>FOCUS <b>PROTECT &middot; MASTER &middot; GROW</b></span>
+ <span>METHOD <b>EVIDENCE, NOT ENTHUSIASM</b></span>
+ <span>JOURNAL <b>THE RECORD BEFORE THE VERDICT</b></span>
+ </div>
+</div>
+
+<section class="hero">
+ <div class="wrap">
+ <div>
+ <p class="eyebrow fade">Measure the process monthly, the edge on trade count</p>
+ <h1 class="fade d1">How to Evaluate Trading <span class="q">Performance</span></h1>
+ <p class="standfirst fade d2">A review has two jobs. Deciding whether you have enough evidence to judge, and then judging. Almost everybody does the second one first, and the arithmetic of that mistake is not small.</p>
+ <div class="byline fade d3">
+ <div>By <b>Raphael</b> &nbsp;&middot;&nbsp; XAU/USD &nbsp;&middot;&nbsp; 10 min read</div>
+ </div>
+ </div>
+ <figure class="portrait fade d2" style="margin:0">
+ <img src="../avatar.jpg" alt="Black Gold Market, Raphael, XAU/USD trader">
+ <figcaption class="cap"><b>Black Gold Market</b><br>Protect. Master. Grow.</figcaption>
+ </figure>
+ </div>
+</section>
+
+<section class="rules" aria-label="The three pillars">
+<div class="wrap">
+<div class="rule">
+<div class="no">PILLAR 01</div>
+<h3>Protect</h3>
+<p>Six consecutive losses appear in about 80 per cent of two hundred trade sequences even at a fifty per cent win rate. A normal losing run is coming whether or not your method works.</p>
+</div>
+<div class="rule">
+<div class="no">PILLAR 02</div>
+<h3>Master</h3>
+<p>After twenty trades the honest error bar on a win rate is plus or minus 21.9 percentage points. After 385 trades it is plus or minus five. The sample size is the whole argument.</p>
+</div>
+<div class="rule">
+<div class="no">PILLAR 03</div>
+<h3>Grow</h3>
+<p>Rule compliance, risk consistency and cost per round turn are stable in small samples. Review those monthly, and let the edge prove itself on trade count instead of on the calendar.</p>
+</div>
+</div>
+</section>
+
+<article class="article">
+ <div class="wrap"><div class="body">
+
+<p>Most traders review their results the way a nervous person reads a thermometer, often, and with far more confidence than the instrument deserves. The question of how to evaluate trading performance is usually answered by opening the account history, looking at the last thirty trades, and deciding on the spot whether the method works. That verdict feels like measurement. It is closer to a coin landing heads a few times in a row.</p>
+
+<p>I want to make the case that a performance review has two separate jobs, and that almost everybody does the second one before the first. Job one is deciding whether you have enough evidence to say anything at all. Job two is saying it. Skip job one and every number you produce afterwards is decoration.</p>
+
+<h2>How to Evaluate Trading Performance Without Fooling Yourself First</h2>
+
+<p>Start with the uncomfortable arithmetic. Suppose you risk the same amount on every trade, call it one unit of risk, and suppose a win returns that unit and a loss costs it. Suppose further that you have no edge whatsoever, that your true win rate is exactly fifty per cent. How often would a person like that finish a run of thirty trades in front?</p>
+
+<p>The answer is 42.8 per cent of the time. Over ten trades it is 37.7 per cent. Over a hundred it is still 46.0 per cent. Those numbers come from the binomial distribution, and you can reproduce them in a few lines of code. A trader with literally nothing, no edge, no skill, no reason to be in the market, shows a profit after thirty trades in something close to half of all possible lives.</p>
+
+<p>That is the reason a thirty trade sample cannot settle an argument. It is not that thirty is a small number in some vague sense. It is that a zero edge process produces a winning thirty trade record often enough that seeing one tells you very little.</p>
+
+<h2>The Error Bar Nobody Draws</h2>
+
+<p>The same problem shows up in the statistic traders quote most often, the win rate. If your true win rate is fifty per cent, the win rate you actually observe across a sample wobbles around that figure, and the wobble is large.</p>
+
+<figure><img src="/assets/hero/how-to-evaluate-trading-performance-chart.png" alt="Chart used to show how to evaluate trading performance, the width of the 95 per cent confidence interval around an observed win rate as the number of trades grows" style="width:100%;height:auto"><figcaption>How to evaluate trading performance honestly starts here, with how wide the error bar around your win rate still is after each sample size.</figcaption></figure>
+
+<p>After twenty trades the ninety five per cent confidence interval around an observed win rate is plus or minus 21.9 percentage points. In plain words, a trader whose true win rate is fifty per cent could easily observe anything from 28 per cent to 72 per cent and none of it would be surprising. After fifty trades the band is still plus or minus 13.9 points. After two hundred it is plus or minus 6.9 points.</p>
+
+<p>To get the band down to plus or minus five percentage points you need 385 trades. That figure is not a matter of opinion. It falls straight out of the standard normal approximation, 1.96 multiplied by the square root of p times one minus p over n, with p set to the hardest case of 0.50. The assumptions are that trades are independent, that each risks the same unit, and that costs are ignored. Real costs and real slippage make the picture worse, never better.</p>
+
+<p>So when somebody tells you their strategy has a 65 per cent win rate over forty trades, the honest reading is that their true win rate is somewhere between about 49 and 81 per cent. That range contains "no edge at all" and it contains "genuinely excellent". Forty trades cannot separate them.</p>
+
+<h2>Losing Runs Are Not Evidence of Anything</h2>
+
+<p>The same statistics work in the other direction, and this is the half that costs people their accounts. Take the same zero edge coin flipper, give them two hundred trades, and ask how likely they are to hit a losing streak somewhere in there.</p>
+
+<p>A run of five consecutive losses appears in 96.6 per cent of such sequences. Six in a row appears in 80.1 per cent. Seven in a row in 54.4 per cent. Eight in a row in 32.0 per cent. These are exact figures from a small dynamic programming calculation over the same fifty fifty assumption, not a simulation with a random seed.</p>
+
+<p>Read that again, because it reframes an experience almost every trader has had. Six losing trades in a row is not a signal that something has broken. In a two hundred trade year it is the single most likely thing to happen to you. A trader who tears up a working method after a run of six has responded to noise. A trader who doubles their size to win it back has responded to noise with leverage.</p>
+
+<p>This is the part of the job I think of as Protect before Master. You do not need to know whether your method is good in order to know that a normal losing run is coming. You only need to survive the arrival.</p>
+
+<h2>What the Professionals Do About This Exact Problem</h2>
+
+<p>It is worth knowing that this is not a retail problem that clever people have solved. It is the central problem in performance evaluation everywhere, and it is genuinely hard.</p>
+
+<p>Eugene Fama and Kenneth French took it up directly in <em>Luck versus Skill in the Cross-Section of Mutual Fund Returns</em>, published in <em>The Journal of Finance</em> in 2010, volume 65, pages 1915 to 1947, DOI 10.1111/j.1540-6261.2010.01598.x. They were looking at professional US equity fund managers with far longer records than any retail trader has, and they used bootstrap simulations to ask how much of the observed spread in results could be produced by luck alone.</p>
+
+<p>Their conclusion, in their own words, is that the aggregate portfolio of actively managed funds is close to the market portfolio and that "the high costs of active management show up intact as lower returns to investors", with bootstrap simulations suggesting "few funds produce benchmark-adjusted expected returns sufficient to cover their costs". Evidence of genuine skill, they found, turns up only in the extreme tails, and only once costs are added back.</p>
+
+<p>Two things follow for us. First, if a decade of monthly returns from a professional fund is a marginal sample, forty trades from a retail account is not a sample at all. Second, costs are not a detail you tidy up later. They were the main event in that study, and they are the main event in ours.</p>
+
+<h2>The Metrics That Survive a Small Sample</h2>
+
+<p>None of this means a review is pointless until trade 385. It means you should review the things that are stable in small samples, and hold the things that are not.</p>
+
+<p>Stable in small samples, because they measure your behaviour rather than the market's verdict:</p>
+
+<ul>
+<li><strong>Rule compliance.</strong> Out of your last thirty trades, how many followed your own written rules? This is a count, not an estimate. Thirty observations tell you thirty things.</li>
+<li><strong>Risk consistency.</strong> Did every trade actually risk the unit you said it would? Variance in your own position sizing is the fastest way to make a good method produce bad results, and it shows up immediately.</li>
+<li><strong>Cost per round turn.</strong> Spread, commission and slippage are close to deterministic. Twenty trades is plenty to know what you are paying.</li>
+<li><strong>Process errors.</strong> Trades taken outside your session, entries you moved, stops you widened. Each one is a fact, not a sample.</li>
+</ul>
+
+<p>Unstable in small samples, and therefore to be recorded but not judged:</p>
+
+<ul>
+<li>Win rate, for all the reasons above.</li>
+<li>Expectancy, which is built from win rate and average sizes and inherits every bit of their uncertainty. If you want the mechanics of that number, we wrote it up separately in <a href="/journal/what-is-expectancy-in-trading.html">what is expectancy in trading</a>.</li>
+<li>Maximum drawdown, which is close to the most sample dependent statistic in the whole business.</li>
+<li>Any comparison between two strategies, which needs enough evidence for both.</li>
+</ul>
+
+<p>The practical form of this is a review that has two columns and refuses to mix them. One column is what you did, reviewed monthly. The other is what the market paid, reviewed on a trade count rather than a calendar, and read with the error bar attached.</p>
+
+<h2>The Context Every Retail Review Sits Inside</h2>
+
+<p>There is one external number worth keeping beside all of this. When the European Securities and Markets Authority introduced its restrictions on contracts for difference for retail clients, it published the evidence base behind the decision, including national regulator findings that between 74 and 89 per cent of retail accounts lose money on these products, with average losses per client running from around 1,600 to 29,000 euro. You can read the <a href="https://www.esma.europa.eu/press-news/esma-news/esma-agrees-prohibit-binary-options-and-restrict-cfds-protect-retail-investors" rel="noopener nofollow" target="_blank">ESMA announcement</a> in full.</p>
+
+<p>That is not a forecast about you. It is a base rate, and base rates matter most when your own sample is small. If you have forty trades of evidence and the population you are drawing from loses money three times out of four, the honest posture is that your forty trades have not yet moved you away from the base rate. They will need to be a lot more numerous before they do.</p>
+
+<div style="background:#faf3e2;border:1px solid rgba(199,147,49,.35);border-left:4px solid #c79331;border-radius:8px;padding:22px 24px;margin:34px 0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif"><div style="font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#9a6f1e;margin-bottom:8px">Free sustainable trader's blueprint</div><p style="margin:0 0 14px;color:#2a2418;font-size:1rem;line-height:1.55">Get the free Black Gold Market blueprint, a short document on protecting capital before you try to grow it, including the review structure described in this article. One email, no spam, unsubscribe anytime.</p><a href="/blueprint/" style="display:inline-block;background:#c79331;color:#1c1710;text-decoration:none;font-weight:700;font-size:.9rem;padding:11px 22px;border-radius:4px">Get the free blueprint &rarr;</a></div>
+
+<h2>Frequently Asked Questions</h2>
+
+<p><strong>How many trades before I can judge my strategy?</strong><br>For a win rate estimate accurate to within five percentage points, 385 trades under the assumptions above. That is a demanding standard and most people will not reach it quickly, which is exactly the point. Long before then you can judge your rule compliance, your risk consistency and your costs, and those are the things you can actually change.</p>
+
+<p><strong>My last thirty trades were profitable. Does that mean nothing?</strong><br>It means something, just far less than it feels like. A trader with no edge at all finishes thirty trades in profit 42.8 per cent of the time. A profitable run is weak evidence in favour, not proof. Keep trading the method, keep the record, and let the sample grow.</p>
+
+<p><strong>I have had six losses in a row. Should I stop?</strong><br>Six consecutive losses appear in about 80 per cent of two hundred trade sequences even with a fifty per cent win rate, so the streak on its own is not information. Stop if you have broken your own rules, if your risk per trade has drifted, or if the drawdown has reached a limit you set in advance. Do not stop merely because the last six were red.</p>
+
+<p><strong>Is a higher win rate better?</strong><br>Not on its own, and chasing it is a common way to damage a method. A high win rate paired with small wins and large losses can lose money steadily. Measure results in risk units, which is what <a href="/journal/what-is-r-multiple-in-trading.html">what is R multiple in trading</a> is about, so wins and losses are comparable.</p>
+
+<p><strong>Where did the numbers in this article come from?</strong><br>The confidence intervals are the standard normal approximation with the true win rate set to 0.50. The probabilities of finishing in profit are exact binomial tail sums. The losing streak probabilities come from an exact dynamic programming calculation over the same assumption. All of them assume independent trades, equal risk per trade and no costs, and all three assumptions are stated so you can disagree with them. The ESMA figures and the Fama and French paper are linked and cited directly.</p>
+
+<h2>Where Black Gold Market Fits</h2>
+
+<p>Black Gold Market is free to follow. Daily XAU/USD analysis with the level, the context and the risk stated before the outcome is known, losing days included. There is a free blueprint for anyone who wants the capital protection material in one place, and an optional Kit for people who want the whole method. Nothing here promises a profit, and nothing here is a signal service. If you want the groundwork first, start with <a href="/journal/how-to-protect-your-capital-when-gold-gets-volatile.html">how to protect your capital when gold gets volatile</a>, or with <a href="/journal/how-to-reduce-drawdown-in-trading.html">how to reduce drawdown in trading</a>.</p>
+
+<p>Evaluate the process monthly, evaluate the edge on trade count, and keep the error bar attached to every number you quote back to yourself.</p>
+
+<p><strong>About the author.</strong> <a href="/about.html">Raphael</a> writes Black Gold Market. He spends more time on measurement than on entries, mostly because he has watched good methods get abandoned on the strength of thirty trades and bad ones get trusted on the strength of thirty more. Nothing in this article is a recommendation to trade, and no entry, stop or target discussed should be treated as a signal.</p>
+
+</div></div>
+
+</article>
+
+<section class="cta">
+<div class="wrap">
+<p class="kicker">Start here, it's free</p>
+<h2>Keep the error bar attached to every number you quote back to yourself.</h2>
+<p>Follow along on Telegram for daily gold analysis with the level, the context and the risk stated before the outcome is known.</p>
+ <a class="tg-btn" href="https://t.me/+h-5A-mdBmhA5ZWQ1">Join Black Gold Market on Telegram</a>
+ <span class="sub">No guaranteed profit. No pressure to copy anything blindly.</span>
+ </div>
+</section>
+
+<section class="more">
+ <div class="wrap">
+ <p class="label">More from the journal</p>
+   <div class="grid3">
+<a class="card" href="/journal/what-is-expectancy-in-trading.html">
+<span class="tag">Master</span>
+<h3>What Is Expectancy in Trading</h3>
+<span class="read">Read the article &rarr;</span>
+</a>
+<a class="card" href="/journal/what-is-r-multiple-in-trading.html">
+<span class="tag">Master</span>
+<h3>What Is R Multiple in Trading</h3>
+<span class="read">Read the article &rarr;</span>
+</a>
+<a class="card" href="/journal/how-to-reduce-drawdown-in-trading.html">
+<span class="tag">Protect</span>
+<h3>How to Reduce Drawdown in Trading</h3>
+<span class="read">Read the article &rarr;</span>
+</a>
+</div>
+</section>
+
+<footer>
+ <div class="wrap">
+ <section class="bgm-about" aria-label="About Black Gold Market"><div class="bgm-about-inner"><div class="bgm-about-head"><a class="bgm-about-brand" href="/" translate="no"><img class="bgm-about-logo" src="/assets/brand/black-gold-market.jpg" width="46" height="46" alt="" loading="lazy"><span class="bgm-about-name">BLACK GOLD MARKET</span></a><div class="bgm-about-social"><a class="bgm-about-social-link" href="https://t.me/black_goldmarket" aria-label="Black Gold Market on Telegram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M9.04 15.47 8.7 20.2c.48 0 .69-.21.94-.46l2.25-2.15 4.67 3.42c.86.47 1.47.22 1.7-.79l3.08-14.44c.3-1.26-.46-1.76-1.29-1.45L1.9 9.86c-1.23.48-1.21 1.17-.21 1.48l4.6 1.43 10.68-6.73c.5-.33.96-.15.58.18z"/></svg></a><a class="bgm-about-social-link" href="https://www.youtube.com/@black.gold.market-v6z" aria-label="Black Gold Market on YouTube" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M23.5 6.9a3 3 0 0 0-2.12-2.13C19.5 4.25 12 4.25 12 4.25s-7.5 0-9.38.52A3 3 0 0 0 .5 6.9C0 8.79 0 12 0 12s0 3.21.5 5.1a3 3 0 0 0 2.12 2.13c1.88.52 9.38.52 9.38.52s7.5 0 9.38-.52a3 3 0 0 0 2.12-2.13C24 15.21 24 12 24 12s0-3.21-.5-5.1ZM9.6 15.57V8.43L15.82 12 9.6 15.57Z"/></svg></a><a class="bgm-about-social-link" href="https://www.instagram.com/black.gold.market" aria-label="Black Gold Market on Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07c-1.28.06-2.15.26-2.91.56a5.88 5.88 0 0 0-2.13 1.38A5.88 5.88 0 0 0 .63 4.14c-.3.76-.5 1.63-.56 2.91C.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.28.26 2.15.56 2.91a5.88 5.88 0 0 0 1.38 2.13 5.88 5.88 0 0 0 2.13 1.38c.76.3 1.63.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.28-.06 2.15-.26 2.91-.56a6.13 6.13 0 0 0 3.51-3.51c.3-.76.5-1.63.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.28-.26-2.15-.56-2.91a5.88 5.88 0 0 0-1.38-2.13A5.88 5.88 0 0 0 19.86.63c-.76-.3-1.63-.5-2.91-.56C15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84ZM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4Zm7.85-10.4a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44Z"/></svg></a><a class="bgm-about-social-link" href="https://www.facebook.com/profile.php?id=61592050793737" aria-label="Black Gold Market on Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.12 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.96h-1.51c-1.49 0-1.95.93-1.95 1.89v2.26h3.32l-.53 3.49h-2.79V24C19.61 23.1 24 18.1 24 12.07Z"/></svg></a></div></div><p class="bgm-about-lead">Black Gold Market helps new traders read gold and the wider market one clear step at a time, without the dry textbook voice that sends you to sleep.</p><p class="bgm-about-copy">We explain currencies, metals and crypto in everyday words, with worked examples and small drills you can repeat on your own chart until they stick. We are also a community of traders who support each other through each trading day.</p></div></section><p class="fine">Risk warning: Trading gold, CFDs and leveraged products carries a substantial risk of loss and is not suitable for everyone. Most retail traders lose money. Nothing on this site is financial advice or a solicitation to trade. Past performance does not guarantee future results. Only trade with capital you can afford to lose.</p>
+ <p class="fine">&copy; 2026 Black Gold Market. All rights reserved.</p>
+ </div>
+</footer>
+
+<script defer src="/assets/track.js"></script>
+<div class="tgate" id="tgate" role="dialog" aria-modal="true" aria-labelledby="tgateH">
+ <div class="tgate__card">
+ <button class="tgate__x" id="tgateX" aria-label="Close">&times;</button>
+ <p class="tgate__k">One step first</p>
+ <h2 class="tgate__h" id="tgateH">Where should we send the Sustainable Trader's Blueprint?</h2>
+ <p class="tgate__s">Leave your email and we will send the free Blueprint, then take you straight to the Telegram channel.</p>
+ <form id="tgateF" novalidate>
+ <input id="tgateEmail" type="email" autocomplete="email" required placeholder="you@example.com" aria-label="Email address">
+ <div class="tgate__hp" aria-hidden="true"><input id="tgateHp" type="text" tabindex="-1" autocomplete="off"></div>
+ <button type="submit" id="tgateBtn">Continue to Telegram</button>
+ <p class="tgate__msg" id="tgateMsg" role="status" aria-live="polite"></p>
+ </form>
+ <button class="tgate__skip" id="tgateSkip">No thanks, just take me to the channel</button>
+ <p class="tgate__note">No cost and no obligation. Educational only, not financial advice, and nothing here promises a return. Unsubscribe any time in one click.</p>
+ </div>
+</div>
+<!-- bgm-tg-gate -->
+<script>
+/* Bấm link Telegram thì hiện bảng xin email, điền xong mới chuyển sang.
+   Hỏi đúng một lần cho mỗi người, lần sau đi thẳng. */
+(function(){
+  var API = 'https://harcos-dashboard.vercel.app/api/bgm-subscribe';
+  var KEY = 'bgmTgGate';
+  var g = document.getElementById('tgate');
+  if (!g) return;
+  var f = document.getElementById('tgateF'),
+      inp = document.getElementById('tgateEmail'),
+      btn = document.getElementById('tgateBtn'),
+      msg = document.getElementById('tgateMsg'),
+      hp  = document.getElementById('tgateHp'),
+      dest = null;
+
+  function seen(){ try { return localStorage.getItem(KEY) === '1'; } catch(e){ return false; } }
+  function remember(){ try { localStorage.setItem(KEY,'1'); } catch(e){} }
+  function open(url){ dest = url; g.setAttribute('open',''); setTimeout(function(){ inp.focus(); }, 40); }
+  function close(){ g.removeAttribute('open'); dest = null; }
+  function go(){ var u = dest || 'https://t.me/'; close(); window.location.href = u; }
+
+  document.addEventListener('click', function(ev){
+    var a = ev.target.closest ? ev.target.closest('a') : null;
+    if (!a) return;
+    var h = a.getAttribute('href') || '';
+    if (h.indexOf('t.me/') === -1) return;
+    if (seen()) return;                 /* da cho email roi thi di thang */
+    ev.preventDefault();
+    open(h);
+  }, true);
+
+  document.getElementById('tgateX').addEventListener('click', close);
+  document.getElementById('tgateSkip').addEventListener('click', go);
+  g.addEventListener('click', function(ev){ if (ev.target === g) close(); });
+  document.addEventListener('keydown', function(ev){ if (ev.key === 'Escape' && g.hasAttribute('open')) close(); });
+
+  f.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var email = (inp.value || '').trim();
+    msg.className = 'tgate__msg';
+    if (!/^[^@\s]+@[^@\s.]+\.[^@\s]{2,}$/.test(email)) {
+      msg.className = 'tgate__msg bad';
+      msg.textContent = 'Please check that email address.';
+      return;
+    }
+    if ((hp.value || '').trim() !== '') { remember(); go(); return; }
+    var nhan = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    function loi(ly){
+      if (window.gtag) gtag('event', 'lead_form_error', {form: 'bgm_telegram_gate', reason: ly});
+      btn.disabled = false; btn.textContent = nhan;
+      msg.className = 'tgate__msg bad';
+      msg.textContent = 'We could not save that just now. Please try again, or use the link below.';
+    }
+    fetch(API, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({email: email, firstName: '', website: (hp.value || '')})
+    }).then(function(r){
+      /* fetch khong bao loi khi may chu tu choi, phai tu doc ket qua */
+      return r.json().catch(function(){ return {}; }).then(function(j){ return r.ok && j && j.ok === true; });
+    }).then(function(ok){
+      if (!ok) { loi('upstream'); return; }
+      if (window.gtag) gtag('event', 'lead_form_submit', {form: 'bgm_telegram_gate'});
+      remember(); go();
+    }).catch(function(){
+      loi('network');
+    });
+  });
+})();
+</script>
+</body>
+</html>
