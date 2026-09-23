@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NL24SJYSZ8"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NL24SJYSZ8');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Calculate Profit in Trading View, and the Part It Leaves Out, Black Gold Market</title>
+<meta name="description" content="How to calculate profit in trading view for gold: the move in dollars an ounce times 100 times your lot size. That figure is before costs, and on a two dollar move a fixed 37 dollar round trip takes 18.5 per cent of it.">
+<meta property="og:title" content="How to Calculate Profit in Trading View, and the Part It Leaves Out">
+<meta property="og:description" content="How to calculate profit in trading view for gold: the move in dollars an ounce times 100 times your lot size. That figure is before costs, and on a two dollar move a fixed 37 dollar round trip takes 18.5 per cent of it.">
+<meta property="og:image" content="https://blackgoldmarket.us/assets/hero/how-to-calculate-profit-in-trading-view.png">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://blackgoldmarket.us/journal/how-to-calculate-profit-in-trading-view.html">
+<meta property="og:url" content="https://blackgoldmarket.us/journal/how-to-calculate-profit-in-trading-view.html">
+<link rel="icon" type="image/png" href="/favicon.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+ :root{
+ --paper:#F6E4CF; /* trang giấy, kem ấm */
+ --sand:#EDDBC0; /* nền panel, cát vàng nhạt */
+ --sand-2:#D9C4AA;
+ --ink:#321C04; /* nâu espresso, nền tối logo */
+ --ink-2:#46290A;
+ --muted:#6F5433; /* taupe ấm */
+ --gold:#c79331; /* đồng/vàng ánh kim, màu chủ đề logo */
+ --gold-lite:#e0b25a;
+ --gold-deep:#8f6a24;
+ --loss:#a4562a; /* semantic: stop loss / lệnh thua, terracotta */
+ --win:#5c7d4f; /* semantic: lệnh thắng, olive */
+ --hairline:rgba(143,106,36,.22);
+ --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+ --mono:"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+ }
+ html{scroll-behavior:smooth}
+ body{background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.7;margin:0}
+ a{color:var(--gold-deep);text-decoration:none}
+ a:hover{text-decoration:underline}
+ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
+ .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+
+ /* ── top bar ──────── */
+ .topbar{position:sticky;top:0;z-index:20;background:rgba(25,17,8,.97);backdrop-filter:blur(8px)}
+ .topbar .wrap{display:flex;align-items:center;gap:28px;height:64px}
+ .wordmark{font-family:var(--sans);font-weight:800;font-size:1.02rem;letter-spacing:.2em;color:#f4ead4}
+ .wordmark b{color:var(--gold-lite)}
+ .wordmark:hover{text-decoration:none}
+ nav.menu{display:flex;gap:22px;margin-left:auto;font-family:var(--sans);font-size:.82rem;letter-spacing:.08em}
+ nav.menu a{color:#c7ac7c;text-transform:uppercase}
+ nav.menu a[aria-current]{color:#f4ead4}
+ .tg-btn{font-family:var(--sans);font-size:.8rem;font-weight:700;letter-spacing:.06em;color:#321C04;background:#FFF9F2;padding:9px 16px;border-radius:3px;white-space:nowrap}
+ .tg-btn:hover{text-decoration:none;background:#EDDBC0}
+
+ /* ── ticker ────────────────────── */
+ .ticker{border-bottom:1px solid var(--hairline);background:var(--sand);font-family:var(--mono);font-size:.72rem;color:var(--muted);overflow-x:auto;white-space:nowrap}
+ .ticker .wrap{display:flex;gap:34px;padding:8px 24px}
+ .ticker span b{color:var(--ink);font-weight:500}
+
+ /* ── hero ───────────── */
+ .hero{padding:76px 0 64px;border-bottom:1px solid var(--hairline);
+ background:
+ radial-gradient(900px 480px at 85% 0%, rgba(199,147,49,.16), transparent 62%),
+ radial-gradient(700px 380px at -5% 100%, rgba(199,147,49,.08), transparent 60%),
+ var(--paper);}
+ .hero .wrap{display:grid;grid-template-columns:1fr 300px;gap:56px;align-items:center}
+ .eyebrow{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 22px}
+ .hero h1{font-size:clamp(2rem,5vw,3.15rem);line-height:1.12;font-weight:600;margin:0;max-width:20ch;text-wrap:balance}
+ .hero h1 .q{color:var(--gold-deep)}
+ .hero p.standfirst{font-size:1.12rem;color:var(--muted);max-width:54ch;margin:26px 0 0}
+ .byline{display:flex;align-items:center;gap:12px;margin-top:32px;font-family:var(--sans);font-size:.82rem;color:var(--muted)}
+ .byline b{color:var(--ink);font-weight:600}
+ .portrait{justify-self:end;text-align:center}
+ .portrait img{width:260px;height:260px;object-fit:cover;border-radius:50%;border:4px solid #fff;
+ box-shadow:0 0 0 1px var(--hairline),0 18px 44px rgba(143,106,36,.28);display:block;margin:0 auto}
+ .portrait .cap{font-family:var(--sans);font-size:.78rem;color:var(--muted);margin-top:14px}
+ .portrait .cap b{color:var(--ink)}
+ @media (max-width:820px){
+ .hero .wrap{grid-template-columns:1fr;gap:40px}
+ .portrait{justify-self:start;text-align:left}
+ .portrait img{margin:0}
+ }
+ .fade{opacity:0;transform:translateY(14px);animation:rise .7s ease forwards}
+ .fade.d1{animation-delay:.12s}.fade.d2{animation-delay:.24s}.fade.d3{animation-delay:.36s}
+ @keyframes rise{to{opacity:1;transform:none}}
+ @media (prefers-reduced-motion:reduce){.fade{animation:none;opacity:1;transform:none}}
+
+ /* ── three pillars band ────────────────── */
+ .rules{border-bottom:1px solid var(--hairline);background:var(--sand)}
+ .rules .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hairline);padding:0}
+ .rule{background:var(--sand);padding:28px 26px}
+ .rule .no{font-family:var(--mono);font-size:.72rem;color:var(--gold-deep);letter-spacing:.14em}
+ .rule h3{font-family:var(--sans);font-size:1rem;font-weight:700;margin:10px 0 8px;letter-spacing:.01em}
+ .rule p{font-size:.92rem;color:var(--muted);margin:0;line-height:1.6}
+ @media (max-width:760px){.rules .wrap{grid-template-columns:1fr}}
+
+ /* ── article ─────────────────────────── */
+ .article{padding:72px 0 40px}
+ .article .body{max-width:65ch;margin:0 auto}
+ .article h2{font-size:1.5rem;font-weight:600;margin:60px 0 18px;padding-bottom:10px;border-bottom:1px solid var(--hairline);text-wrap:balance}
+ .article h2:first-child{margin-top:0}
+ .article p{margin:0 0 1.15em}
+ .article p.big{font-size:1.16rem}
+ .article strong{color:var(--ink);font-weight:700}
+ .key{color:var(--gold-deep);font-style:normal;font-weight:700}
+ .pull{border-left:3px solid var(--gold);padding:6px 0 6px 24px;margin:34px 0;font-size:1.32rem;line-height:1.45;color:var(--ink);font-weight:500;text-wrap:balance;font-family:var(--serif)}
+
+ /* faq */
+ .faq{margin:34px 0}
+ .faq .qa{border-top:1px solid var(--hairline);padding:20px 0}
+ .faq .qa:last-child{border-bottom:1px solid var(--hairline)}
+ .faq h4{font-family:var(--sans);font-size:1.02rem;font-weight:700;margin:0 0 8px;color:var(--ink)}
+ .faq p{margin:0;color:var(--muted)}
+
+ /* author box */
+ .authorbox{display:grid;grid-template-columns:88px 1fr;gap:20px;align-items:start;
+ background:var(--sand);border:1px solid var(--hairline);border-radius:6px;padding:26px;margin:44px 0 10px}
+ .authorbox img{width:88px;height:88px;border-radius:50%;object-fit:cover;border:2px solid #fff;box-shadow:0 0 0 1px var(--hairline)}
+ .authorbox .who{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 8px}
+ .authorbox h4{font-size:1.1rem;margin:0 0 8px}
+ .authorbox p{font-size:.92rem;color:var(--muted);margin:0}
+ @media (max-width:560px){.authorbox{grid-template-columns:1fr}.authorbox img{width:72px;height:72px}}
+
+ .disclaimer{font-family:var(--sans);font-size:.82rem;font-style:italic;color:var(--muted);line-height:1.65;
+ border-top:1px solid var(--hairline);padding-top:22px;margin-top:40px}
+
+ /* ── cta ───────── */
+ .cta{border-top:1px solid var(--hairline);background:
+ radial-gradient(700px 320px at 50% 130%, rgba(199,147,49,.34), transparent 65%), var(--ink);color:#f4ead4}
+ .cta .wrap{padding:72px 24px;text-align:center}
+ .cta .kicker{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-lite);margin:0 0 16px}
+ .cta h2{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:600;margin:0 auto 14px;max-width:26ch;text-wrap:balance}
+ .cta p{color:#cbb488;max-width:48ch;margin:0 auto 30px}
+ .cta .tg-btn{font-size:.9rem;padding:14px 26px;background:#FFF9F2;color:#321C04}
+ .cta .tg-btn:hover{background:#EDDBC0}
+ .cta .sub{display:block;font-family:var(--sans);font-size:.76rem;color:#a58c60;margin-top:16px}
+
+ /* ── more ──────────────────────── */
+ .more{padding:70px 0;background:var(--paper)}
+ .more .label{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 26px}
+ .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+ .card{background:#fff;border:1px solid var(--sand-2);border-radius:4px;padding:24px;display:flex;flex-direction:column;gap:10px;transition:border-color .2s,box-shadow .2s;color:var(--ink)}
+ .card:hover{border-color:var(--gold);box-shadow:0 8px 24px rgba(143,106,36,.12);text-decoration:none}
+ .card .tag{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+ .card h3{font-size:1.1rem;font-weight:600;margin:0;line-height:1.35;text-wrap:balance}
+ .card p{font-size:.9rem;color:var(--muted);margin:0;line-height:1.6;font-family:var(--sans)}
+ .card .read{margin-top:auto;font-family:var(--sans);font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-deep)}
+ @media (max-width:760px){.grid3{grid-template-columns:1fr}}
+
+ /* ── footer ──────────────────────────── */
+ footer{background:var(--ink);color:#cbb488}
+ footer .wrap{padding:44px 24px;display:grid;gap:18px}
+ footer .brand{font-family:var(--sans);font-weight:800;letter-spacing:.2em;font-size:.9rem;color:#f4ead4}
+ footer .brand b{color:var(--gold-lite)}
+ footer p{font-family:var(--sans);font-size:.76rem;line-height:1.7;max-width:88ch;margin:0}
+ footer p strong{color:#f4ead4}
+ footer .fine{color:#8f7654}
+
+ /* Bảng nhỏ xin email trước khi sang Telegram, 07/08/2026 theo yêu cầu chị Trinh. */
+ .tgate{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(20,10,9,.72)}
+ .tgate[open]{display:flex}
+ .tgate__card{position:relative;width:100%;max-width:430px;background:#FFF9F2;color:var(--ink);border:1px solid var(--sand-2);border-radius:8px;padding:30px 28px 26px;box-shadow:0 24px 60px rgba(0,0,0,.45);text-align:left}
+ .tgate__x{position:absolute;top:9px;right:11px;width:32px;height:32px;font:400 24px/1 var(--sans);color:var(--muted);background:none;border:0;cursor:pointer;border-radius:4px}
+ .tgate__x:hover{background:var(--sand)}
+ .tgate__k{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 8px}
+ .tgate__h{font-family:var(--serif);font-size:1.28rem;line-height:1.3;font-weight:600;margin:0 0 8px}
+ .tgate__s{font-family:var(--sans);font-size:.86rem;line-height:1.5;color:var(--muted);margin:0 0 18px}
+ .tgate input[type=email]{width:100%;box-sizing:border-box;padding:13px 14px;font:inherit;font-size:16px;color:var(--ink);background:#fff;border:1px solid var(--sand-2);border-radius:4px;margin:0 0 12px}
+ .tgate input[type=email]:focus{outline:3px solid var(--gold);outline-offset:1px}
+ .tgate button[type=submit]{width:100%;padding:14px 18px;font-family:var(--sans);font-size:.95rem;font-weight:700;letter-spacing:.04em;color:#FFF9F2;background:var(--ink);border:0;border-radius:4px;cursor:pointer}
+ .tgate button[type=submit]:hover{background:#1F1003}
+ .tgate button[type=submit][disabled]{opacity:.6;cursor:default}
+ .tgate__hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+ .tgate__msg{font-family:var(--sans);font-size:.82rem;margin:10px 0 0;min-height:1em;color:var(--gold-deep)}
+ .tgate__msg.bad{color:var(--loss)}
+ .tgate__note{font-family:var(--sans);font-size:.72rem;line-height:1.55;color:var(--muted);margin:14px 0 0}
+ .tgate__skip{display:block;width:100%;margin:12px 0 0;padding:4px;font-family:var(--sans);font-size:.78rem;color:var(--muted);background:none;border:0;text-decoration:underline;cursor:pointer}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to Calculate Profit in Trading View, and the Part It Leaves Out", "description": "How to calculate profit in trading view for gold: the move in dollars an ounce times 100 times your lot size. That figure is before costs, and on a two dollar move a fixed 37 dollar round trip takes 18.5 per cent of it.", "image": "https://blackgoldmarket.us/assets/hero/how-to-calculate-profit-in-trading-view.png", "author": {"@type": "Person", "name": "Raphael", "url": "https://blackgoldmarket.us/about.html"}, "publisher": {"@type": "Organization", "name": "Black Gold Market", "logo": {"@type": "ImageObject", "url": "https://blackgoldmarket.us/assets/brand/black-gold-market.jpg"}}, "datePublished": "2026-09-24", "dateModified": "2026-09-24", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://blackgoldmarket.us/journal/how-to-calculate-profit-in-trading-view.html"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://blackgoldmarket.us/"}, {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://blackgoldmarket.us/journal/"}, {"@type": "ListItem", "position": 3, "name": "How to Calculate Profit in Trading View, and the Part It Leaves Out", "item": "https://blackgoldmarket.us/journal/how-to-calculate-profit-in-trading-view.html"}]}</script>
+<link rel="stylesheet" href="/assets/brand.css"><link rel="stylesheet" href="/assets/about.css"></head>
+<body>
+
+<header class="topbar">
+ <div class="wrap">
+ <a class="bgm-brand" href="/" translate="no" aria-label="Black Gold Market, Home"><img class="bgm-logo" src="/assets/brand/black-gold-market.jpg" width="60" height="60" alt=""><span class="bgm-brand-copy"><span class="bgm-name">BLACK GOLD MARKET</span><span class="bgm-tagline">Protect. Master. Grow.</span></span></a>
+ <nav class="menu" aria-label="Main">
+ <a href="../">Home</a>
+ <a href="./" aria-current="page">Journal</a>
+ <a href="https://t.me/+h-5A-mdBmhA5ZWQ1">Telegram</a>
+ </nav>
+ <a class="tg-btn" href="https://t.me/+h-5A-mdBmhA5ZWQ1">Join on Telegram</a>
+ </div>
+</header>
+
+<div class="ticker" aria-hidden="true">
+ <div class="wrap">
+ <span>MARKET <b>XAU/USD, GOLD</b></span>
+ <span>FOCUS <b>PROTECT &middot; MASTER &middot; GROW</b></span>
+ <span>METHOD <b>TENDENCY, NOT GUARANTEE</b></span>
+ <span>JOURNAL <b>THE FIGURE BEFORE COSTS</b></span>
+ </div>
+</div>
+
+<section class="hero">
+ <div class="wrap">
+ <div>
+ <p class="eyebrow fade">The platform answers a different question from the one you asked</p>
+ <h1 class="fade d1">How to Calculate Profit in <span class="q">Trading View</span></h1>
+ <p class="standfirst fade d2">The move in dollars an ounce, times 100, times your lot size. Then subtract the 37 dollars the platform never sees.</p>
+ <div class="byline fade d3">
+ <div>By <b>Raphael</b> &nbsp;&middot;&nbsp; XAU/USD &nbsp;&middot;&nbsp; 10 min read</div>
+ </div>
+ </div>
+ <figure class="portrait fade d2" style="margin:0">
+ <img src="../avatar.jpg" alt="Black Gold Market, Raphael, XAU/USD trader">
+ <figcaption class="cap"><b>Black Gold Market</b><br>Protect. Master. Grow.</figcaption>
+ </figure>
+ </div>
+</section>
+
+<section class="rules" aria-label="The three pillars">
+<div class="wrap">
+<div class="rule">
+<div class="no">PILLAR 01</div>
+<h3>Protect</h3>
+<p>The cost of a round trip is a fixed amount, not a percentage. On the assumptions here it is 37 dollars a lot, so 0.37 dollars an ounce just to get level.</p>
+</div>
+<div class="rule">
+<div class="no">PILLAR 02</div>
+<h3>Master</h3>
+<p>One standard lot of XAU/USD is 100 troy ounces, so a one dollar an ounce move is 100 dollars. That is the entire calculation the platform performs.</p>
+</div>
+<div class="rule">
+<div class="no">PILLAR 03</div>
+<h3>Grow</h3>
+<p>A two dollar an ounce move hands back 18.5 per cent of the platform figure. A fifty dollar move hands back 0.74 per cent. Same trader, same costs.</p>
+</div>
+</div>
+</section>
+
+<article class="article">
+ <div class="wrap"><div class="body">
+<p>Almost everyone who works out how to calculate profit in trading view does it once, gets a number, and then spends the next month quietly puzzled that the number in their account never matches. The platform said the trade was worth nine hundred and something. The account says less. Not dramatically less, just less, every single time, and nobody explains why.</p>
+
+<p>There is nothing wrong with the platform. It is answering a different question from the one you think you asked. Let me show you the arithmetic properly, and then the three reasons the two figures separate, because once you can predict the gap you can plan around it, and planning around it is most of what protecting capital actually means.</p>
+
+<h2>How to Calculate Profit in Trading View, the Actual Arithmetic</h2>
+
+<p>Gold is quoted per troy ounce. That is not a detail, it is the whole basis of the calculation, and the World Gold Council states it plainly in the notes to its <a href="https://www.gold.org/goldhub/data/gold-prices" rel="noopener nofollow" target="_blank">gold price data on Goldhub</a>: prices are quoted in currency unit per troy ounce unless otherwise stated.</p>
+
+<p>So every profit figure in gold is built from two things and only two things: how far the price moved in dollars per ounce, and how many ounces you were holding.</p>
+
+<p>One standard lot of XAU/USD is conventionally 100 troy ounces. That gives you the number worth memorising:</p>
+
+<ul>
+<li>A move of <strong>1.00 dollar per ounce</strong> is worth <strong>100 dollars</strong> on one standard lot.</li>
+<li>A move of 1.00 dollar per ounce is worth 10 dollars on 0.10 lots.</li>
+<li>A move of 1.00 dollar per ounce is worth 1 dollar on 0.01 lots.</li>
+</ul>
+
+<p>That is it. Profit equals the move in dollars per ounce, times 100, times your lot size. The position tool on the platform, the one you drag from entry to target, is doing exactly this and nothing more. Drag it across a ten dollar move on one lot and it will report a thousand dollars, because ten times one hundred times one is a thousand.</p>
+
+<p>Which is a correct answer to the question "how much is this move worth". It is not an answer to the question "how much will I keep", and the difference between those two questions is the rest of this article.</p>
+
+<figure><img src="/assets/hero/how-to-calculate-profit-in-trading-view-chart.png" alt="Chart showing how to calculate profit in trading view against what an account actually keeps, comparing the platform figure with the net figure after spread and commission across moves of two, five, ten, twenty and fifty dollars an ounce" style="width:100%;height:auto"><figcaption>How to calculate profit in trading view is the easy half. The share you keep collapses on small moves, because the costs are a fixed amount and the profit is not.</figcaption></figure>
+
+<h2>Reason One: the Platform Figure Is a Before Costs Figure</h2>
+
+<p>The position tool does not know what your broker charges you. It cannot. So it reports the gross move and leaves the subtraction to you.</p>
+
+<p>Let me put real arithmetic on it. I am going to state my assumptions out loud, because you should substitute your own, and because a number without its assumptions is just a claim.</p>
+
+<ul>
+<li>Spread of <strong>0.30 dollars per ounce</strong>, which costs 30 dollars on a one lot round trip.</li>
+<li>Commission of <strong>7.00 dollars per lot</strong>, covering both entry and exit.</li>
+<li>Overnight financing of <strong>12.00 dollars per lot per night</strong> on the side that pays it.</li>
+</ul>
+
+<p>Total fixed cost on a one lot trade closed the same day: <strong>37.00 dollars</strong>. Which means the price has to move <strong>0.37 dollars per ounce</strong> in your favour before you are level. Not before you profit. Before you are level.</p>
+
+<p>Now watch what that fixed 37 dollars does across different sized moves on one lot:</p>
+
+<ul>
+<li>A <strong>2 dollar</strong> move: the platform says 200.00, you keep <strong>163.00</strong>, which is <strong>81.5 per cent</strong>.</li>
+<li>A <strong>5 dollar</strong> move: the platform says 500.00, you keep <strong>463.00</strong>, which is <strong>92.6 per cent</strong>.</li>
+<li>A <strong>10 dollar</strong> move: the platform says 1,000.00, you keep <strong>963.00</strong>, which is <strong>96.3 per cent</strong>.</li>
+<li>A <strong>20 dollar</strong> move: the platform says 2,000.00, you keep <strong>1,963.00</strong>, which is <strong>98.2 per cent</strong>.</li>
+<li>A <strong>50 dollar</strong> move: the platform says 5,000.00, you keep <strong>4,963.00</strong>, which is <strong>99.3 per cent</strong>.</li>
+</ul>
+
+<p>Read the right hand column downwards. The cost is the same 37 dollars every time, but the share it eats runs from under one per cent to nearly a fifth. This is the single most useful thing on this page, and it is not really about TradingView at all.</p>
+
+<p>It means the cost of trading is not a percentage. It is a toll, charged per trip, and the shorter the trip the more of it you hand over. Two people with identical analysis and identical accuracy will end the year in different places purely because one of them took forty trips and the other took four hundred.</p>
+
+<h2>Reason Two: Holding It Overnight Changes the Answer Again</h2>
+
+<p>Financing is charged per night, so it behaves like the spread but keeps accruing. Same ten dollar move, same one lot, held for different lengths:</p>
+
+<ul>
+<li>Closed same day: keep <strong>963.00</strong>, which is 96.3 per cent.</li>
+<li>Held <strong>1 night</strong>: keep <strong>951.00</strong>, which is 95.1 per cent.</li>
+<li>Held <strong>3 nights</strong>: keep <strong>927.00</strong>, which is 92.7 per cent.</li>
+<li>Held <strong>5 nights</strong>: keep <strong>903.00</strong>, which is 90.3 per cent.</li>
+<li>Held <strong>10 nights</strong>: keep <strong>843.00</strong>, which is 84.3 per cent.</li>
+</ul>
+
+<p>Ten nights on one lot is 120 dollars, which is 1.20 dollars per ounce of the move gone before anything else is counted. If you are a swing trader that number belongs in your plan from the beginning, not as a surprise at the end. The mechanics of why it is charged, and why it can run either way depending on which side you are on, are in <a href="/journal/what-is-swap-charges-in-forex.html">what swap charges are in forex</a>.</p>
+
+<h2>Reason Three: You Measured on a Price That Was Never Yours</h2>
+
+<p>This is the subtle one, and it is the reason two people can drag the same position tool across the same chart and both be slightly wrong.</p>
+
+<p>There is no single authoritative gold price. There is a family of them. The London Bullion Market Association publishes the benchmark the industry settles against, and the <a href="https://www.lbma.org.uk/prices-and-data/lbma-gold-price" rel="noopener nofollow" target="_blank">LBMA Gold Price</a> is administered independently by ICE Benchmark Administration on an electronic, tradeable and auditable auction platform aligned to the IOSCO Principles for Financial Benchmarks. Alongside that sit spot quotes, futures prices, regional benchmarks, and your own broker's feed.</p>
+
+<p>The chart you dragged the tool across is one of those. The fill you received came from another. They track each other closely, which is exactly why the discrepancy is so easy to dismiss, and they separate most when liquidity is thin, which is when your stop is most likely to be tested.</p>
+
+<p>So the honest version of the calculation is this: the platform gives you the value of a move on a reference series, and your account gives you the value of a move on your broker's series, minus costs. Treat the first as a plan and the second as the result.</p>
+
+<h2>The Calculation That Matters More Than Profit</h2>
+
+<p>Here is where I would rather you spent your attention, because the same arithmetic runs the other way and almost nobody does it.</p>
+
+<p>If a move of 1.00 dollar per ounce is worth 100 dollars on one lot when you are right, it is worth 100 dollars on one lot when you are wrong. The position tool will happily show you a green rectangle to your target. Drag the red one to your invalidation point and multiply by the same 100 and you have the number that actually decides whether the account survives.</p>
+
+<p>That number has a legal floor in some jurisdictions, which tells you how seriously regulators take it. When the European Securities and Markets Authority restricted contracts for difference for retail clients, the package it agreed included <a href="https://www.esma.europa.eu/press-news/esma-news/esma-agrees-prohibit-binary-options-and-restrict-cfds-protect-retail-investors" rel="noopener nofollow" target="_blank">a leverage cap of 20 to 1 on gold</a>, a margin close out rule set at 50 per cent of minimum required margin, and negative balance protection on a per account basis. A regulator looked at retail gold trading and concluded the loss side needed hard limits written into law. Your position size should reflect the same conclusion, which is the whole argument in <a href="/journal/position-sizing-so-one-trade-cannot-hurt-you.html">position sizing so one trade cannot hurt you</a>.</p>
+
+<p>Calculate the loss first. Then calculate the profit. In that order, every time.</p>
+
+<div style="background:#faf3e2;border:1px solid rgba(199,147,49,.35);border-left:4px solid #c79331;border-radius:8px;padding:22px 24px;margin:34px 0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif"><div style="font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#9a6f1e;margin-bottom:8px">Free sustainable trader's blueprint</div><p style="margin:0 0 14px;color:#2a2418;font-size:1rem;line-height:1.55">Get the free Black Gold Market blueprint, a short document on protecting capital before you try to grow it, including a page for working out what a position costs you before it earns anything. One email, no spam, unsubscribe anytime.</p><a href="/blueprint/" style="display:inline-block;background:#c79331;color:#1c1710;text-decoration:none;font-weight:700;font-size:.9rem;padding:11px 22px;border-radius:4px">Get the free blueprint &rarr;</a></div>
+
+<h2>A Two Minute Routine That Keeps the Two Numbers Together</h2>
+
+<p>None of this requires a spreadsheet. It requires four numbers written down once and reused.</p>
+
+<p>First, find your own cost per lot. Open a small position, close it immediately, and read the account. Whatever it cost you is your real round trip cost, including the spread you actually got rather than the one advertised. Write it down.</p>
+
+<p>Second, divide that cost by 100 to get your break even in dollars per ounce. On my stated assumptions that was 0.37. Yours will differ. That number is the minimum move that gets you to nothing, and any idea whose entire target is close to it was never a trade.</p>
+
+<p>Third, when you use the position tool, subtract your cost from whatever it reports before you decide the trade is worth taking. Do it before, not after, because the point is to reject the marginal ones.</p>
+
+<p>Fourth, record the platform figure and the account figure side by side for a month. The gap should be stable and predictable. If it is not, something is different from what you assumed, and finding out which one is a better use of an evening than any indicator. That habit is the practical end of <a href="/journal/how-to-evaluate-trading-performance.html">evaluating trading performance</a> honestly.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<p><strong>How to calculate profit in trading view for gold in one line?</strong><br>Move in dollars per ounce, multiplied by 100, multiplied by your lot size. One standard lot of XAU/USD is conventionally 100 troy ounces, so a one dollar move is 100 dollars per lot. The platform's position tool does exactly this, and reports the figure before any costs.</p>
+
+<p><strong>Why is my TradingView profit higher than my account balance shows?</strong><br>Because the platform reports a gross figure. Subtract the spread, the commission and any overnight financing. On the assumptions in this article, a one lot round trip costs 37 dollars fixed, so a ten dollar move that displays as 1,000.00 lands as 963.00 in the account.</p>
+
+<p><strong>Does the gap between the two numbers get worse on small trades?</strong><br>Much worse, and this is the part people miss. The cost is a fixed amount, not a percentage. On a two dollar move you keep 81.5 per cent of the platform figure. On a fifty dollar move you keep 99.3 per cent. Same trader, same costs, entirely different outcome, decided by how far you were trying to go.</p>
+
+<p><strong>Can I make TradingView show my real profit automatically?</strong><br>Not reliably, because the platform does not know your broker's spread or commission schedule, and those vary by account type and by hour. The workable version is to measure your own round trip cost once, then subtract it manually. Two seconds per trade, and it stops you taking ideas that were never worth the toll.</p>
+
+<p><strong>Where did the figures in this article come from?</strong><br>All of them are arithmetic on stated assumptions: 100 troy ounces per standard lot, 0.30 dollars per ounce spread, 7.00 dollars per lot commission and 12.00 dollars per lot per night financing. The quoting convention is from the World Gold Council's Goldhub notes, linked above. No gold price level appears anywhere in this article, and none of it is a forecast.</p>
+
+<h2>Where Black Gold Market Fits</h2>
+
+<p>Black Gold Market is free to follow. Daily XAU/USD analysis with the level, the context and the risk stated before the outcome is known, losing days included. There is a free blueprint for anyone who wants the capital protection material gathered in one place, and an optional Kit for people who want the full method. Nothing here promises a profit, and nothing here is a signal service. If you are putting the numbers together properly, read <a href="/journal/what-is-lot-in-forex.html">what a lot is in forex</a> for the sizing unit, <a href="/journal/commission-vs-spread-forex.html">commission vs spread</a> for where the toll is hidden, and <a href="/journal/how-to-protect-your-capital-when-gold-gets-volatile.html">how to protect your capital when gold gets volatile</a> for the part that outlasts all of it.</p>
+
+<p>Knowing how to calculate profit in trading view takes a minute. Knowing what the platform left out, and making the subtraction before you click rather than after, is the part that keeps the account intact long enough for the good months to matter.</p>
+
+<p><strong>About the author.</strong> <a href="/about.html">Raphael</a> writes Black Gold Market. He works out the cost of a position before the target, on the grounds that the cost is certain and the target is not. Nothing in this article is a recommendation to trade, and no entry, stop or target discussed should be treated as a signal.</p>
+</div></div>
+
+</article>
+
+<section class="cta">
+<div class="wrap">
+<p class="kicker">Start here, it's free</p>
+<h2>Subtract the cost before you decide the trade is worth taking.</h2>
+<p>Follow along on Telegram for daily gold analysis with the level, the context and the risk stated before the outcome is known.</p>
+ <a class="tg-btn" href="https://t.me/+h-5A-mdBmhA5ZWQ1">Join Black Gold Market on Telegram</a>
+ <span class="sub">No guaranteed profit. No pressure to copy anything blindly.</span>
+ </div>
+</section>
+
+<section class="more">
+ <div class="wrap">
+ <p class="label">More from the journal</p>
+   <div class="grid3">
+<a class="card" href="/journal/what-is-lot-in-forex.html">
+<span class="tag">Master</span>
+<h3>What Is a Lot in Forex</h3>
+<span class="read">Read the article &rarr;</span>
+</a>
+<a class="card" href="/journal/commission-vs-spread-forex.html">
+<span class="tag">Protect</span>
+<h3>Commission vs Spread in Forex</h3>
+<span class="read">Read the article &rarr;</span>
+</a>
+<a class="card" href="/journal/how-to-protect-your-capital-when-gold-gets-volatile.html">
+<span class="tag">Protect</span>
+<h3>How to Protect Your Capital When Gold Gets Volatile</h3>
+<span class="read">Read the article &rarr;</span>
+</a>
+</div>
+</section>
+
+<footer>
+ <div class="wrap">
+ <section class="bgm-about" aria-label="About Black Gold Market"><div class="bgm-about-inner"><div class="bgm-about-head"><a class="bgm-about-brand" href="/" translate="no"><img class="bgm-about-logo" src="/assets/brand/black-gold-market.jpg" width="46" height="46" alt="" loading="lazy"><span class="bgm-about-name">BLACK GOLD MARKET</span></a><div class="bgm-about-social"><a class="bgm-about-social-link" href="https://t.me/black_goldmarket" aria-label="Black Gold Market on Telegram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M9.04 15.47 8.7 20.2c.48 0 .69-.21.94-.46l2.25-2.15 4.67 3.42c.86.47 1.47.22 1.7-.79l3.08-14.44c.3-1.26-.46-1.76-1.29-1.45L1.9 9.86c-1.23.48-1.21 1.17-.21 1.48l4.6 1.43 10.68-6.73c.5-.33.96-.15.58.18z"/></svg></a><a class="bgm-about-social-link" href="https://www.youtube.com/@black.gold.market-v6z" aria-label="Black Gold Market on YouTube" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M23.5 6.9a3 3 0 0 0-2.12-2.13C19.5 4.25 12 4.25 12 4.25s-7.5 0-9.38.52A3 3 0 0 0 .5 6.9C0 8.79 0 12 0 12s0 3.21.5 5.1a3 3 0 0 0 2.12 2.13c1.88.52 9.38.52 9.38.52s7.5 0 9.38-.52a3 3 0 0 0 2.12-2.13C24 15.21 24 12 24 12s0-3.21-.5-5.1ZM9.6 15.57V8.43L15.82 12 9.6 15.57Z"/></svg></a><a class="bgm-about-social-link" href="https://www.instagram.com/black.gold.market" aria-label="Black Gold Market on Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07c-1.28.06-2.15.26-2.91.56a5.88 5.88 0 0 0-2.13 1.38A5.88 5.88 0 0 0 .63 4.14c-.3.76-.5 1.63-.56 2.91C.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.28.26 2.15.56 2.91a5.88 5.88 0 0 0 1.38 2.13 5.88 5.88 0 0 0 2.13 1.38c.76.3 1.63.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.28-.06 2.15-.26 2.91-.56a6.13 6.13 0 0 0 3.51-3.51c.3-.76.5-1.63.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.28-.26-2.15-.56-2.91a5.88 5.88 0 0 0-1.38-2.13A5.88 5.88 0 0 0 19.86.63c-.76-.3-1.63-.5-2.91-.56C15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84ZM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4Zm7.85-10.4a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44Z"/></svg></a><a class="bgm-about-social-link" href="https://www.facebook.com/profile.php?id=61592050793737" aria-label="Black Gold Market on Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.12 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.96h-1.51c-1.49 0-1.95.93-1.95 1.89v2.26h3.32l-.53 3.49h-2.79V24C19.61 23.1 24 18.1 24 12.07Z"/></svg></a></div></div><p class="bgm-about-lead">Black Gold Market helps new traders read gold and the wider market one clear step at a time, without the dry textbook voice that sends you to sleep.</p><p class="bgm-about-copy">We explain currencies, metals and crypto in everyday words, with worked examples and small drills you can repeat on your own chart until they stick. We are also a community of traders who support each other through each trading day.</p></div></section><p class="fine">Risk warning: Trading gold, CFDs and leveraged products carries a substantial risk of loss and is not suitable for everyone. Most retail traders lose money. Nothing on this site is financial advice or a solicitation to trade. Past performance does not guarantee future results. Only trade with capital you can afford to lose.</p>
+ <p class="fine">&copy; 2026 Black Gold Market. All rights reserved.</p>
+ </div>
+</footer>
+
+<script defer src="/assets/track.js"></script>
+<div class="tgate" id="tgate" role="dialog" aria-modal="true" aria-labelledby="tgateH">
+ <div class="tgate__card">
+ <button class="tgate__x" id="tgateX" aria-label="Close">&times;</button>
+ <p class="tgate__k">One step first</p>
+ <h2 class="tgate__h" id="tgateH">Where should we send the Sustainable Trader's Blueprint?</h2>
+ <p class="tgate__s">Leave your email and we will send the free Blueprint, then take you straight to the Telegram channel.</p>
+ <form id="tgateF" novalidate>
+ <input id="tgateEmail" type="email" autocomplete="email" required placeholder="you@example.com" aria-label="Email address">
+ <div class="tgate__hp" aria-hidden="true"><input id="tgateHp" type="text" tabindex="-1" autocomplete="off"></div>
+ <button type="submit" id="tgateBtn">Continue to Telegram</button>
+ <p class="tgate__msg" id="tgateMsg" role="status" aria-live="polite"></p>
+ </form>
+ <button class="tgate__skip" id="tgateSkip">No thanks, just take me to the channel</button>
+ <p class="tgate__note">No cost and no obligation. Educational only, not financial advice, and nothing here promises a return. Unsubscribe any time in one click.</p>
+ </div>
+</div>
+<!-- bgm-tg-gate -->
+<script>
+/* Bấm link Telegram thì hiện bảng xin email, điền xong mới chuyển sang.
+   Hỏi đúng một lần cho mỗi người, lần sau đi thẳng. */
+(function(){
+  var API = 'https://harcos-dashboard.vercel.app/api/bgm-subscribe';
+  var KEY = 'bgmTgGate';
+  var g = document.getElementById('tgate');
+  if (!g) return;
+  var f = document.getElementById('tgateF'),
+      inp = document.getElementById('tgateEmail'),
+      btn = document.getElementById('tgateBtn'),
+      msg = document.getElementById('tgateMsg'),
+      hp  = document.getElementById('tgateHp'),
+      dest = null;
+
+  function seen(){ try { return localStorage.getItem(KEY) === '1'; } catch(e){ return false; } }
+  function remember(){ try { localStorage.setItem(KEY,'1'); } catch(e){} }
+  function open(url){ dest = url; g.setAttribute('open',''); setTimeout(function(){ inp.focus(); }, 40); }
+  function close(){ g.removeAttribute('open'); dest = null; }
+  function go(){ var u = dest || 'https://t.me/'; close(); window.location.href = u; }
+
+  document.addEventListener('click', function(ev){
+    var a = ev.target.closest ? ev.target.closest('a') : null;
+    if (!a) return;
+    var h = a.getAttribute('href') || '';
+    if (h.indexOf('t.me/') === -1) return;
+    if (seen()) return;                 /* da cho email roi thi di thang */
+    ev.preventDefault();
+    open(h);
+  }, true);
+
+  document.getElementById('tgateX').addEventListener('click', close);
+  document.getElementById('tgateSkip').addEventListener('click', go);
+  g.addEventListener('click', function(ev){ if (ev.target === g) close(); });
+  document.addEventListener('keydown', function(ev){ if (ev.key === 'Escape' && g.hasAttribute('open')) close(); });
+
+  f.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var email = (inp.value || '').trim();
+    msg.className = 'tgate__msg';
+    if (!/^[^@\s]+@[^@\s.]+\.[^@\s]{2,}$/.test(email)) {
+      msg.className = 'tgate__msg bad';
+      msg.textContent = 'Please check that email address.';
+      return;
+    }
+    if ((hp.value || '').trim() !== '') { remember(); go(); return; }
+    var nhan = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    function loi(ly){
+      if (window.gtag) gtag('event', 'lead_form_error', {form: 'bgm_telegram_gate', reason: ly});
+      btn.disabled = false; btn.textContent = nhan;
+      msg.className = 'tgate__msg bad';
+      msg.textContent = 'We could not save that just now. Please try again, or use the link below.';
+    }
+    fetch(API, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({email: email, firstName: '', website: (hp.value || '')})
+    }).then(function(r){
+      /* fetch khong bao loi khi may chu tu choi, phai tu doc ket qua */
+      return r.json().catch(function(){ return {}; }).then(function(j){ return r.ok && j && j.ok === true; });
+    }).then(function(ok){
+      if (!ok) { loi('upstream'); return; }
+      if (window.gtag) gtag('event', 'lead_form_submit', {form: 'bgm_telegram_gate'});
+      remember(); go();
+    }).catch(function(){
+      loi('network');
+    });
+  });
+})();
+</script>
+</body>
+</html>
