@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NL24SJYSZ8"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NL24SJYSZ8');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Read the Gold COT Report Without Turning It Into a Signal, Black Gold Market</title>
+<meta name="description" content="How to read the gold COT report: across 1,935 weekly CFTC reports the commercials were net short 80.4 per cent of the time, and positioning moved with price, not ahead of it.">
+<meta property="og:title" content="How to Read the Gold COT Report Without Turning It Into a Signal">
+<meta property="og:description" content="How to read the gold COT report: across 1,935 weekly CFTC reports the commercials were net short 80.4 per cent of the time, and positioning moved with price, not ahead of it.">
+<meta property="og:image" content="https://blackgoldmarket.us/assets/hero/how-to-read-the-gold-cot-report.png">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://blackgoldmarket.us/journal/how-to-read-the-gold-cot-report.html">
+<meta property="og:url" content="https://blackgoldmarket.us/journal/how-to-read-the-gold-cot-report.html">
+<link rel="icon" type="image/png" href="/favicon.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+ :root{
+ --paper:#F6E4CF; /* trang giấy, kem ấm */
+ --sand:#EDDBC0; /* nền panel, cát vàng nhạt */
+ --sand-2:#D9C4AA;
+ --ink:#321C04; /* nâu espresso, nền tối logo */
+ --ink-2:#46290A;
+ --muted:#6F5433; /* taupe ấm */
+ --gold:#c79331; /* đồng/vàng ánh kim, màu chủ đề logo */
+ --gold-lite:#e0b25a;
+ --gold-deep:#8f6a24;
+ --loss:#a4562a; /* semantic: stop loss / lệnh thua, terracotta */
+ --win:#5c7d4f; /* semantic: lệnh thắng, olive */
+ --hairline:rgba(143,106,36,.22);
+ --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+ --mono:"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+ }
+ html{scroll-behavior:smooth}
+ body{background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.7;margin:0}
+ a{color:var(--gold-deep);text-decoration:none}
+ a:hover{text-decoration:underline}
+ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
+ .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+
+ /* ── top bar ──────── */
+ .topbar{position:sticky;top:0;z-index:20;background:rgba(25,17,8,.97);backdrop-filter:blur(8px)}
+ .topbar .wrap{display:flex;align-items:center;gap:28px;height:64px}
+ .wordmark{font-family:var(--sans);font-weight:800;font-size:1.02rem;letter-spacing:.2em;color:#f4ead4}
+ .wordmark b{color:var(--gold-lite)}
+ .wordmark:hover{text-decoration:none}
+ nav.menu{display:flex;gap:22px;margin-left:auto;font-family:var(--sans);font-size:.82rem;letter-spacing:.08em}
+ nav.menu a{color:#c7ac7c;text-transform:uppercase}
+ nav.menu a[aria-current]{color:#f4ead4}
+ .tg-btn{font-family:var(--sans);font-size:.8rem;font-weight:700;letter-spacing:.06em;color:#321C04;background:#FFF9F2;padding:9px 16px;border-radius:3px;white-space:nowrap}
+ .tg-btn:hover{text-decoration:none;background:#EDDBC0}
+
+ /* ── ticker ────────────────────── */
+ .ticker{border-bottom:1px solid var(--hairline);background:var(--sand);font-family:var(--mono);font-size:.72rem;color:var(--muted);overflow-x:auto;white-space:nowrap}
+ .ticker .wrap{display:flex;gap:34px;padding:8px 24px}
+ .ticker span b{color:var(--ink);font-weight:500}
+
+ /* ── hero ───────────── */
+ .hero{padding:76px 0 64px;border-bottom:1px solid var(--hairline);
+ background:
+ radial-gradient(900px 480px at 85% 0%, rgba(199,147,49,.16), transparent 62%),
+ radial-gradient(700px 380px at -5% 100%, rgba(199,147,49,.08), transparent 60%),
+ var(--paper);}
+ .hero .wrap{display:grid;grid-template-columns:1fr 300px;gap:56px;align-items:center}
+ .eyebrow{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 22px}
+ .hero h1{font-size:clamp(2rem,5vw,3.15rem);line-height:1.12;font-weight:600;margin:0;max-width:20ch;text-wrap:balance}
+ .hero h1 .q{color:var(--gold-deep)}
+ .hero p.standfirst{font-size:1.12rem;color:var(--muted);max-width:54ch;margin:26px 0 0}
+ .byline{display:flex;align-items:center;gap:12px;margin-top:32px;font-family:var(--sans);font-size:.82rem;color:var(--muted)}
+ .byline b{color:var(--ink);font-weight:600}
+ .portrait{justify-self:end;text-align:center}
+ .portrait img{width:260px;height:260px;object-fit:cover;border-radius:50%;border:4px solid #fff;
+ box-shadow:0 0 0 1px var(--hairline),0 18px 44px rgba(143,106,36,.28);display:block;margin:0 auto}
+ .portrait .cap{font-family:var(--sans);font-size:.78rem;color:var(--muted);margin-top:14px}
+ .portrait .cap b{color:var(--ink)}
+ @media (max-width:820px){
+ .hero .wrap{grid-template-columns:1fr;gap:40px}
+ .portrait{justify-self:start;text-align:left}
+ .portrait img{margin:0}
+ }
+ .fade{opacity:0;transform:translateY(14px);animation:rise .7s ease forwards}
+ .fade.d1{animation-delay:.12s}.fade.d2{animation-delay:.24s}.fade.d3{animation-delay:.36s}
+ @keyframes rise{to{opacity:1;transform:none}}
+ @media (prefers-reduced-motion:reduce){.fade{animation:none;opacity:1;transform:none}}
+
+ /* ── three pillars band ────────────────── */
+ .rules{border-bottom:1px solid var(--hairline);background:var(--sand)}
+ .rules .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hairline);padding:0}
+ .rule{background:var(--sand);padding:28px 26px}
+ .rule .no{font-family:var(--mono);font-size:.72rem;color:var(--gold-deep);letter-spacing:.14em}
+ .rule h3{font-family:var(--sans);font-size:1rem;font-weight:700;margin:10px 0 8px;letter-spacing:.01em}
+ .rule p{font-size:.92rem;color:var(--muted);margin:0;line-height:1.6}
+ @media (max-width:760px){.rules .wrap{grid-template-columns:1fr}}
+
+ /* ── article ─────────────────────────── */
+ .article{padding:72px 0 40px}
+ .article .body{max-width:65ch;margin:0 auto}
+ .article h2{font-size:1.5rem;font-weight:600;margin:60px 0 18px;padding-bottom:10px;border-bottom:1px solid var(--hairline);text-wrap:balance}
+ .article h2:first-child{margin-top:0}
+ .article p{margin:0 0 1.15em}
+ .article p.big{font-size:1.16rem}
+ .article strong{color:var(--ink);font-weight:700}
+ .key{color:var(--gold-deep);font-style:normal;font-weight:700}
+ .pull{border-left:3px solid var(--gold);padding:6px 0 6px 24px;margin:34px 0;font-size:1.32rem;line-height:1.45;color:var(--ink);font-weight:500;text-wrap:balance;font-family:var(--serif)}
+
+ /* faq */
+ .faq{margin:34px 0}
+ .faq .qa{border-top:1px solid var(--hairline);padding:20px 0}
+ .faq .qa:last-child{border-bottom:1px solid var(--hairline)}
+ .faq h4{font-family:var(--sans);font-size:1.02rem;font-weight:700;margin:0 0 8px;color:var(--ink)}
+ .faq p{margin:0;color:var(--muted)}
+
+ /* author box */
+ .authorbox{display:grid;grid-template-columns:88px 1fr;gap:20px;align-items:start;
+ background:var(--sand);border:1px solid var(--hairline);border-radius:6px;padding:26px;margin:44px 0 10px}
+ .authorbox img{width:88px;height:88px;border-radius:50%;object-fit:cover;border:2px solid #fff;box-shadow:0 0 0 1px var(--hairline)}
+ .authorbox .who{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 8px}
+ .authorbox h4{font-size:1.1rem;margin:0 0 8px}
+ .authorbox p{font-size:.92rem;color:var(--muted);margin:0}
+ @media (max-width:560px){.authorbox{grid-template-columns:1fr}.authorbox img{width:72px;height:72px}}
+
+ .disclaimer{font-family:var(--sans);font-size:.82rem;font-style:italic;color:var(--muted);line-height:1.65;
+ border-top:1px solid var(--hairline);padding-top:22px;margin-top:40px}
+
+ /* ── cta ───────── */
+ .cta{border-top:1px solid var(--hairline);background:
+ radial-gradient(700px 320px at 50% 130%, rgba(199,147,49,.34), transparent 65%), var(--ink);color:#f4ead4}
+ .cta .wrap{padding:72px 24px;text-align:center}
+ .cta .kicker{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-lite);margin:0 0 16px}
+ .cta h2{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:600;margin:0 auto 14px;max-width:26ch;text-wrap:balance}
+ .cta p{color:#cbb488;max-width:48ch;margin:0 auto 30px}
+ .cta .tg-btn{font-size:.9rem;padding:14px 26px;background:#FFF9F2;color:#321C04}
+ .cta .tg-btn:hover{background:#EDDBC0}
+ .cta .sub{display:block;font-family:var(--sans);font-size:.76rem;color:#a58c60;margin-top:16px}
+
+ /* ── more ──────────────────────── */
+ .more{padding:70px 0;background:var(--paper)}
+ .more .label{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 26px}
+ .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+ .card{background:#fff;border:1px solid var(--sand-2);border-radius:4px;padding:24px;display:flex;flex-direction:column;gap:10px;transition:border-color .2s,box-shadow .2s;color:var(--ink)}
+ .card:hover{border-color:var(--gold);box-shadow:0 8px 24px rgba(143,106,36,.12);text-decoration:none}
+ .card .tag{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+ .card h3{font-size:1.1rem;font-weight:600;margin:0;line-height:1.35;text-wrap:balance}
+ .card p{font-size:.9rem;color:var(--muted);margin:0;line-height:1.6;font-family:var(--sans)}
+ .card .read{margin-top:auto;font-family:var(--sans);font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-deep)}
+ @media (max-width:760px){.grid3{grid-template-columns:1fr}}
+
+ /* ── footer ──────────────────────────── */
+ footer{background:var(--ink);color:#cbb488}
+ footer .wrap{padding:44px 24px;display:grid;gap:18px}
+ footer .brand{font-family:var(--sans);font-weight:800;letter-spacing:.2em;font-size:.9rem;color:#f4ead4}
+ footer .brand b{color:var(--gold-lite)}
+ footer p{font-family:var(--sans);font-size:.76rem;line-height:1.7;max-width:88ch;margin:0}
+ footer p strong{color:#f4ead4}
+ footer .fine{color:#8f7654}
+
+ /* Bảng nhỏ xin email trước khi sang Telegram, 07/08/2026 theo yêu cầu chị Trinh. */
+ .tgate{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(20,10,9,.72)}
+ .tgate[open]{display:flex}
+ .tgate__card{position:relative;width:100%;max-width:430px;background:#FFF9F2;color:var(--ink);border:1px solid var(--sand-2);border-radius:8px;padding:30px 28px 26px;box-shadow:0 24px 60px rgba(0,0,0,.45);text-align:left}
+ .tgate__x{position:absolute;top:9px;right:11px;width:32px;height:32px;font:400 24px/1 var(--sans);color:var(--muted);background:none;border:0;cursor:pointer;border-radius:4px}
+ .tgate__x:hover{background:var(--sand)}
+ .tgate__k{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 8px}
+ .tgate__h{font-family:var(--serif);font-size:1.28rem;line-height:1.3;font-weight:600;margin:0 0 8px}
+ .tgate__s{font-family:var(--sans);font-size:.86rem;line-height:1.5;color:var(--muted);margin:0 0 18px}
+ .tgate input[type=email]{width:100%;box-sizing:border-box;padding:13px 14px;font:inherit;font-size:16px;color:var(--ink);background:#fff;border:1px solid var(--sand-2);border-radius:4px;margin:0 0 12px}
+ .tgate input[type=email]:focus{outline:3px solid var(--gold);outline-offset:1px}
+ .tgate button[type=submit]{width:100%;padding:14px 18px;font-family:var(--sans);font-size:.95rem;font-weight:700;letter-spacing:.04em;color:#FFF9F2;background:var(--ink);border:0;border-radius:4px;cursor:pointer}
+ .tgate button[type=submit]:hover{background:#1F1003}
+ .tgate button[type=submit][disabled]{opacity:.6;cursor:default}
+ .tgate__hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+ .tgate__msg{font-family:var(--sans);font-size:.82rem;margin:10px 0 0;min-height:1em;color:var(--gold-deep)}
+ .tgate__msg.bad{color:var(--loss)}
+ .tgate__note{font-family:var(--sans);font-size:.72rem;line-height:1.55;color:var(--muted);margin:14px 0 0}
+ .tgate__skip{display:block;width:100%;margin:12px 0 0;padding:4px;font-family:var(--sans);font-size:.78rem;color:var(--muted);background:none;border:0;text-decoration:underline;cursor:pointer}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to Read the Gold COT Report Without Turning It Into a Signal", "description": "How to read the gold COT report: across 1,935 weekly CFTC reports the commercials were net short 80.4 per cent of the time, and positioning moved with price, not ahead of it.", "image": "https://blackgoldmarket.us/assets/hero/how-to-read-the-gold-cot-report.png", "author": {"@type": "Person", "name": "Raphael", "url": "https://blackgoldmarket.us/about.html"}, "publisher": {"@type": "Organization", "name": "Black Gold Market", "logo": {"@type": "ImageObject", "url": "https://blackgoldmarket.us/assets/brand/black-gold-market.jpg"}}, "datePublished": "2026-09-30", "dateModified": "2026-09-30", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://blackgoldmarket.us/journal/how-to-read-the-gold-cot-report.html"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://blackgoldmarket.us/"}, {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://blackgoldmarket.us/journal/"}, {"@type": "ListItem", "position": 3, "name": "How to Read the Gold COT Report Without Turning It Into a Signal", "item": "https://blackgoldmarket.us/journal/how-to-read-the-gold-cot-report.html"}]}</script>
+<link rel="stylesheet" href="/assets/brand.css"><link rel="stylesheet" href="/assets/about.css"></head>
+<body>
+
+<header class="topbar">
+ <div class="wrap">
+ <a class="bgm-brand" href="/" translate="no" aria-label="Black Gold Market, Home"><img class="bgm-logo" src="/assets/brand/black-gold-market.jpg" width="60" height="60" alt=""><span class="bgm-brand-copy"><span class="bgm-name">BLACK GOLD MARKET</span><span class="bgm-tagline">Protect. Master. Grow.</span></span></a>
+ <nav class="menu" aria-label="Main">
+ <a href="../">Home</a>
+ <a href="./" aria-current="page">Journal</a>
+ <a href="https://t.me/+h-5A-mdBmhA5ZWQ1">Telegram</a>
+ </nav>
+ <a class="tg-btn" href="https://t.me/+h-5A-mdBmhA5ZWQ1">Join on Telegram</a>
+ </div>
+</header>
+
+<div class="ticker" aria-hidden="true">
+ <div class="wrap">
+ <span>MARKET <b>XAU/USD, GOLD</b></span>
+ <span>FOCUS <b>PROTECT &middot; MASTER &middot; GROW</b></span>
+ <span>METHOD <b>MEASURED, NOT ASSUMED</b></span>
+ <span>JOURNAL <b>POSITIONING IS NOT A FORECAST</b></span>
+ </div>
+</div>
+
+<section class="hero">
+ <div class="wrap">
+ <div>
+ <p class="eyebrow fade">What the positioning data says, and what it cannot say</p>
+ <h1 class="fade d1">How to Read the <span class="q">Gold COT Report</span></h1>
+ <p class="standfirst fade d2">Across 1,935 weekly CFTC reports the commercials were net short 80.4 per cent of the time. That is not a bearish opinion, it is an accounting identity, and it is the first of three things the report is routinely asked to say and cannot.</p>
+ <div class="byline fade d3">
+ <div>By <b>Raphael</b> &nbsp;&middot;&nbsp; XAU/USD &nbsp;&middot;&nbsp; 10 min read</div>
+ </div>
+ </div>
+ </div>
+ <figure class="portrait fade d2" style="margin:0">
+ <img src="../avatar.jpg" alt="Black Gold Market, Raphael, XAU/USD trader">
+ <figcaption class="cap"><b>Black Gold Market</b><br>Protect. Master. Grow.</figcaption>
+ </figure>
+ </div>
+</section>
+
+<section class="rules" aria-label="The three pillars">
+<div class="wrap">
+<div class="rule">
+<div class="no">PILLAR 01</div>
+<h3>Protect</h3>
+<p>The commercial and noncommercial nets move as near mirror images, correlation minus 0.9939. Reading one as an opinion about the other is reading an accounting identity.</p>
+</div>
+<div class="rule">
+<div class="no">PILLAR 02</div>
+<h3>Master</h3>
+<p>Position changes tracked the same week's price move at plus 0.54, and next week's at plus 0.02. The money follows the move far more than it leads it.</p>
+</div>
+<div class="rule">
+<div class="no">PILLAR 03</div>
+<h3>Grow</h3>
+<p>The snapshot is taken on Tuesday and published on Friday. In 46.0 per cent of weeks gold moved at least 1 per cent in between, before anyone could read it.</p>
+</div>
+</div>
+</section>
+
+<article class="article">
+ <div class="wrap"><div class="body">
+<p>Every few weeks somebody drops a screenshot of the gold COT report into the chat with a line like "commercials are massively short, the top is in". I understand the appeal. It feels like seeing the cards of the players who are supposed to know. I have spent a while with the actual data now, all of it, and the honest summary is that the report is genuinely useful for one thing and is routinely asked to do three other things it cannot do.</p>
+
+<p>Everything below is my own arithmetic on the published record, with the assumptions stated. The position data is the CFTC's, the price data is the London afternoon gold auction, and there are no gold price levels anywhere in this article.</p>
+
+<h2>What the gold COT report actually is</h2>
+
+<p>The Commitments of Traders report is published by the <a href="https://www.cftc.gov/MarketReports/CommitmentsofTraders/index.htm" rel="noopener nofollow" target="_blank">Commodity Futures Trading Commission</a>. In the CFTC's own words it "is generally published each Friday at 3:30 pm Eastern Time (US), using the data from the immediately preceding Tuesday of that week". It counts open positions in a futures market and sorts them into groups.</p>
+
+<p>Two of those groups do the heavy lifting in most commentary. Commercials are broadly the hedgers, the refiners, miners and dealers with metal or obligations sitting outside the futures market. Noncommercials are broadly the large speculators, the funds. The classification is not a judgement anyone at the CFTC makes about strategy. As the agency puts it, it "is based on the predominant business purpose self-reported by traders on the CFTC Form 40".</p>
+
+<p>The agency is also unusually direct about the limits of its own publication. It states plainly that it "does not analyze the data nor make recommendations on it", and, more pointedly for our purposes, that "CFTC staff does not know specific reasons for traders' positions". That last sentence deserves more attention than it gets, because almost every popular use of the report depends on inferring exactly those reasons.</p>
+
+<p>My sample is every weekly report for COMEX gold from the fifteenth of January 1986 to the twenty second of September 2026. That is 1,935 reports. Net position means long minus short, with spreading excluded from the noncommercial net, which is the CFTC's own convention for this report.</p>
+
+<h2>The first thing the gold COT report cannot tell you: that commercials are bearish</h2>
+
+<p>This is the most common reading and it is close to meaningless. Across those 1,935 reports the commercials were net short in 1,555 of them, which is 80.4 per cent of the time. They were net long in 380 weeks, so it is not literally always, but "commercials are net short" describes the ordinary state of this market rather than a view about where price is going.</p>
+
+<p>The reason is structural. Somebody who digs metal out of the ground or holds it in a vault sells futures against it. That is what hedging is. Meanwhile the noncommercials were net long in 78.3 per cent of reports. The correlation between the two nets is minus 0.9939, which is about as close to a perfect mirror as anything in financial data gets.</p>
+
+<p>That number is the whole point. The two groups are not two panels of experts voting independently. Every futures contract has a long and a short, so one group's net is very nearly the other group's net with the sign flipped. Announcing that commercials are short while funds are long is, most weeks, announcing that the market exists.</p>
+
+<h2>The second thing: that the funds are early</h2>
+
+<p>The more sophisticated version of the argument drops the commercials and watches the noncommercial net instead, on the theory that large speculators move first and the rest of us can follow.</p>
+
+<p>So I measured it directly. Across 1,934 week-on-week changes, the correlation between the change in the noncommercial net position and the change in the gold price <em>in the same week</em> is plus 0.5372. That is a strong relationship, and it is exactly what you would expect if funds buy into rising prices and sell into falling ones.</p>
+
+<p>Then the test that matters. The correlation between this week's change in the noncommercial net and <em>next</em> week's price change is plus 0.0238. That is not a small edge. On a sample of nearly two thousand weeks, that is noise.</p>
+
+<p>Read those two numbers together and the picture is unambiguous. Speculative positioning in gold moves with the market, not ahead of it. The report is largely a record of what already happened, which is a perfectly respectable thing for a report to be, and a terrible basis for a forecast.</p>
+
+<figure><img src="/assets/hero/how-to-read-the-gold-cot-report-chart.png" alt="How to read the gold COT report, chart comparing how often the gold price was lower after the most crowded ten per cent of CFTC reports against after any report, at four, thirteen and twenty six weeks" style="width:100%;height:auto"><figcaption>Reading the gold COT report against the record: after the most crowded net long readings, gold was lower <em>less</em> often than average, which is the reverse of the usual claim.</figcaption></figure>
+
+<h2>The third thing: that a crowded long marks the top</h2>
+
+<p>This is the belief I most expected to confirm, and the data refused.</p>
+
+<p>Measured as a share of open interest, the noncommercial net long ran from minus 17.9 per cent at the tenth percentile to plus 45.1 per cent at the ninetieth, with a median of 26.4 per cent. I took the most crowded decile, the weeks when funds were most heavily net long, and measured what gold did afterwards, starting from the Friday publication rather than the Tuesday snapshot, because Friday is the first moment a reader could act on it.</p>
+
+<p>Four weeks later, gold was lower in 33.2 per cent of those crowded cases, against 47.6 per cent after an average report. Thirteen weeks later, 23.2 per cent against 43.4 per cent. Twenty six weeks later, 20.0 per cent against 39.2 per cent. In every window the most crowded readings were followed by <em>fewer</em> declines than normal, not more.</p>
+
+<p>I want to be careful about how far that goes, because it would be easy to flip the folklore over and sell the opposite. Two caveats matter. Gold rose over this sample, which lifts every forward number, and the overlapping forward windows mean the effective sample is far smaller than 175 or 190 independent observations. What the comparison does support is narrow and sufficient: crowded speculative positioning did not mark tops in gold in any reliable way over forty years. If your use of the report rests on that idea, it rests on nothing.</p>
+
+<h2>The three day blind spot nobody mentions</h2>
+
+<p>There is a practical problem on top of the interpretive ones. The positions are counted at Tuesday's close and published on Friday afternoon. The freshest report anyone can ever read is three days old on arrival.</p>
+
+<p>That gap is not cosmetic. Across the 1,935 weeks, the median absolute move in the gold price between the Tuesday snapshot and the Friday publication was 0.89 per cent, the mean was 1.22 per cent, and the largest was 11.48 per cent. In 46.0 per cent of weeks gold moved at least 1 per cent before the report describing the prior positions became public.</p>
+
+<p>So in nearly half of all weeks, the positions you are reading were assembled in a market that has already meaningfully moved on. If the report were a signal, it would be a signal delivered after the event it was supposedly signalling.</p>
+
+<h2>What it is honestly good for</h2>
+
+<p>I am not telling you to ignore it. I read it. I just read it as a census rather than a forecast.</p>
+
+<p>It tells you who holds what, which is genuinely useful context. When the noncommercial net is at an extreme you learn something real about the composition of the market: a lot of positions are leaning the same way and those holders are more sensitive to a move against them. That is a statement about the <em>character</em> of a market, and it belongs next to what you already know about how <a href="/journal/how-gold-etf-flows-affect-the-price-of-gold.html">gold ETF flows affect the price of gold</a> and what <a href="/journal/what-is-comex-gold.html">COMEX gold</a> actually is.</p>
+
+<p>What it does not tell you is direction, timing, or what any of those holders intend to do next. The CFTC says as much itself. Everything that goes wrong with this report goes wrong at the moment somebody turns a description of the past into a prediction of the future, and then sizes a position on it.</p>
+
+<p>If a piece of information cannot survive that question, it should not be allowed to change your risk. That is the same standard I would apply to anything else on the chart, and most things fail it.</p>
+
+<div style="background:#faf3e2;border:1px solid rgba(199,147,49,.35);border-left:4px solid #c79331;border-radius:8px;padding:22px 24px;margin:34px 0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif"><div style="font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#9a6f1e;margin-bottom:8px">Free sustainable trader's blueprint</div><p style="margin:0 0 14px;color:#2a2418;font-size:1rem;line-height:1.55">Get the free Black Gold Market blueprint, a short document on protecting capital before you try to grow it, including how to decide what a piece of market information is actually worth before you let it change your size. One email, no spam, unsubscribe anytime.</p><a href="/blueprint/" style="display:inline-block;background:#c79331;color:#1c1710;text-decoration:none;font-weight:700;font-size:.9rem;padding:11px 22px;border-radius:4px">Get the free blueprint &rarr;</a></div>
+
+<h2>Frequently asked questions</h2>
+
+<p><strong>Does the gold COT report predict price?</strong><br />Not on this evidence. The change in speculative net position correlates with the same week's price change at plus 0.5372 and with the next week's at plus 0.0238, across 1,934 weekly observations. A correlation of 0.02 is indistinguishable from nothing. The report describes what has already been done, and that is a genuinely different thing from a forecast.</p>
+
+<p><strong>If commercials are almost always short, is that signal ever meaningful?</strong><br />Only in a much narrower way than it is usually used. They were net short in 80.4 per cent of 1,935 reports because hedging against physical metal is their business, and their net is nearly the mirror of the speculative net at minus 0.9939 correlation. What can carry some information is an unusual reading relative to that market's own history, rather than the direction of the net itself. Even then it is context about composition, not a forecast.</p>
+
+<p><strong>Why measure from Friday rather than from the Tuesday the data describes?</strong><br />Because Tuesday is not available to a reader. The report is published Friday at 3:30 pm Eastern using Tuesday's positions, so measuring forward returns from Tuesday credits you with three days of price movement you could not have acted on. In 46.0 per cent of weeks gold moved at least 1 per cent in that window, so the choice is not a technicality, it changes the answer.</p>
+
+<p><strong>Does a record net long mean a crash is coming?</strong><br />The record says the opposite of the folklore, though not strongly enough to invert it into a rule. After the most crowded decile of readings, gold was lower four weeks later 33.2 per cent of the time against 47.6 per cent after an average report, and the pattern held at thirteen and twenty six weeks. Gold rose across the sample and the windows overlap, so I would not trade the reverse claim either. The safe conclusion is that crowding did not mark tops.</p>
+
+<p><strong>Which version of the report should I read?</strong><br />This analysis uses the legacy futures-only report, which is the longest continuous series and goes back to 1986 for gold. The disaggregated and financial-trader versions split the categories more finely and are more informative about who is who, but they start much later, so there is a trade-off between detail and history. For the questions in this article, history mattered more.</p>
+
+<p><strong>So should I stop looking at it?</strong><br />No. Read it as a census of who is holding what, which is what it is and what the CFTC says it is. The thing to stop doing is converting it into a view, because that conversion is where the money is lost. Nothing in the data supports letting this report change your position size.</p>
+
+<h2>Where Black Gold Market fits</h2>
+
+<p>Black Gold Market is a free journal about gold, written for people who want to protect capital before they try to grow it. Everything here stays free: the journal, the daily analysis on Telegram, and the Sustainable Trader's Blueprint. There is no profit promise anywhere on this site and there never will be, because nobody can make one honestly. If the writing is useful, the Telegram channel is where the same thinking gets applied to what gold is doing that day, with the level, the context and the risk stated before the outcome is known.</p>
+
+<p>If this article was useful, the two that sit closest to it are <a href="/journal/how-gold-etf-flows-affect-the-price-of-gold.html">how gold ETF flows affect the price of gold</a> and <a href="/journal/what-is-comex-gold.html">what is COMEX gold</a>. The article this site is really built around is <a href="/journal/how-to-protect-your-capital-when-gold-gets-volatile.html">how to protect your capital when gold gets volatile</a>, and it is the right next read.</p>
+
+<p><strong>About the author.</strong> <a href="/about.html">Raphael</a> writes Black Gold Market. He spent a couple of years reading positioning data as though it were a forecast before he sat down and measured whether it had ever behaved like one. Nothing in this article is a recommendation to trade, and no entry, stop or target discussed should be treated as a signal.</p>
+
+<p><em>Sources and method. Position data is the CFTC Commitments of Traders report, legacy futures-only, for COMEX gold, every weekly report from 15 January 1986 to 22 September 2026, 1,935 reports in total, published by the <a href="https://www.cftc.gov/MarketReports/CommitmentsofTraders/index.htm" rel="noopener nofollow" target="_blank">CFTC</a>; the category definitions are described in the CFTC's <a href="https://www.cftc.gov/MarketReports/CommitmentsofTraders/ExplanatoryNotes/index.htm" rel="noopener nofollow" target="_blank">explanatory notes</a>. Price data is the LBMA Gold Price PM published by the <a href="https://www.lbma.org.uk/prices-and-data/lbma-gold-price" rel="noopener nofollow" target="_blank">London Bullion Market Association</a>, matched to each report's Tuesday and Friday. Every statistic here is my own arithmetic on those two series. Forward windows overlap, so the effective sample is smaller than the report count suggests, and gold rose over the period, which lifts all forward figures. Past behaviour is not a forecast. Trading carries risk of loss.</em></p>
+</div></div>
+
+</article>
+
+<section class="cta">
+<div class="wrap">
+<p class="kicker">Start here, it's free</p>
+<h2>Read the positioning data as a census, not a forecast.</h2>
+<p>Follow along on Telegram for daily gold analysis with the level, the context and the risk stated before the outcome is known.</p>
+ <a class="tg-btn" href="https://t.me/+h-5A-mdBmhA5ZWQ1">Join Black Gold Market on Telegram</a>
+ <span class="sub">No guaranteed profit. No pressure to copy anything blindly.</span>
+ </div>
+</section>
+
+<section class="more">
+ <div class="wrap">
+ <p class="label">More from the journal</p>
+   <div class="grid3">
+<a class="card" href="/journal/position-sizing-so-one-trade-cannot-hurt-you.html">
+<span class="tag">Protect</span>
+<h3>Position Sizing So One Trade Cannot Hurt You</h3>
+<span class="read">Read the article &rarr;</span>
+</a>
+<a class="card" href="/journal/what-is-drawdown-and-how-to-recover.html">
+<span class="tag">Protect</span>
+<h3>What Is Drawdown and How to Recover</h3>
+<span class="read">Read the article &rarr;</span>
+</a>
+<a class="card" href="/journal/how-to-protect-your-capital-when-gold-gets-volatile.html">
+<span class="tag">Protect</span>
+<h3>How to Protect Your Capital When Gold Gets Volatile</h3>
+<span class="read">Read the article &rarr;</span>
+</a>
+</div>
+</section>
+
+<footer>
+ <div class="wrap">
+ <section class="bgm-about" aria-label="About Black Gold Market"><div class="bgm-about-inner"><div class="bgm-about-head"><a class="bgm-about-brand" href="/" translate="no"><img class="bgm-about-logo" src="/assets/brand/black-gold-market.jpg" width="46" height="46" alt="" loading="lazy"><span class="bgm-about-name">BLACK GOLD MARKET</span></a><div class="bgm-about-social"><a class="bgm-about-social-link" href="https://t.me/black_goldmarket" aria-label="Black Gold Market on Telegram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M9.04 15.47 8.7 20.2c.48 0 .69-.21.94-.46l2.25-2.15 4.67 3.42c.86.47 1.47.22 1.7-.79l3.08-14.44c.3-1.26-.46-1.76-1.29-1.45L1.9 9.86c-1.23.48-1.21 1.17-.21 1.48l4.6 1.43 10.68-6.73c.5-.33.96-.15.58.18z"/></svg></a><a class="bgm-about-social-link" href="https://www.youtube.com/@black.gold.market-v6z" aria-label="Black Gold Market on YouTube" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M23.5 6.9a3 3 0 0 0-2.12-2.13C19.5 4.25 12 4.25 12 4.25s-7.5 0-9.38.52A3 3 0 0 0 .5 6.9C0 8.79 0 12 0 12s0 3.21.5 5.1a3 3 0 0 0 2.12 2.13c1.88.52 9.38.52 9.38.52s7.5 0 9.38-.52a3 3 0 0 0 2.12-2.13C24 15.21 24 12 24 12s0-3.21-.5-5.1ZM9.6 15.57V8.43L15.82 12 9.6 15.57Z"/></svg></a><a class="bgm-about-social-link" href="https://www.instagram.com/black.gold.market" aria-label="Black Gold Market on Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07c-1.28.06-2.15.26-2.91.56a5.88 5.88 0 0 0-2.13 1.38A5.88 5.88 0 0 0 .63 4.14c-.3.76-.5 1.63-.56 2.91C.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.28.26 2.15.56 2.91a5.88 5.88 0 0 0 1.38 2.13 5.88 5.88 0 0 0 2.13 1.38c.76.3 1.63.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.28-.06 2.15-.26 2.91-.56a6.13 6.13 0 0 0 3.51-3.51c.3-.76.5-1.63.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.28-.26-2.15-.56-2.91a5.88 5.88 0 0 0-1.38-2.13A5.88 5.88 0 0 0 19.86.63c-.76-.3-1.63-.5-2.91-.56C15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84ZM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4Zm7.85-10.4a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44Z"/></svg></a><a class="bgm-about-social-link" href="https://www.facebook.com/profile.php?id=61592050793737" aria-label="Black Gold Market on Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.12 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.96h-1.51c-1.49 0-1.95.93-1.95 1.89v2.26h3.32l-.53 3.49h-2.79V24C19.61 23.1 24 18.1 24 12.07Z"/></svg></a></div></div><p class="bgm-about-lead">Black Gold Market helps new traders read gold and the wider market one clear step at a time, without the dry textbook voice that sends you to sleep.</p><p class="bgm-about-copy">We explain currencies, metals and crypto in everyday words, with worked examples and small drills you can repeat on your own chart until they stick. We are also a community of traders who support each other through each trading day.</p></div></section><p class="fine">Risk warning: Trading gold, CFDs and leveraged products carries a substantial risk of loss and is not suitable for everyone. Most retail traders lose money. Nothing on this site is financial advice or a solicitation to trade. Past performance does not guarantee future results. Only trade with capital you can afford to lose.</p>
+ <p class="fine">&copy; 2026 Black Gold Market. All rights reserved.</p>
+ </div>
+</footer>
+
+<script defer src="/assets/track.js"></script>
+<div class="tgate" id="tgate" role="dialog" aria-modal="true" aria-labelledby="tgateH">
+ <div class="tgate__card">
+ <button class="tgate__x" id="tgateX" aria-label="Close">&times;</button>
+ <p class="tgate__k">One step first</p>
+ <h2 class="tgate__h" id="tgateH">Where should we send the Sustainable Trader's Blueprint?</h2>
+ <p class="tgate__s">Leave your email and we will send the free Blueprint, then take you straight to the Telegram channel.</p>
+ <form id="tgateF" novalidate>
+ <input id="tgateEmail" type="email" autocomplete="email" required placeholder="you@example.com" aria-label="Email address">
+ <div class="tgate__hp" aria-hidden="true"><input id="tgateHp" type="text" tabindex="-1" autocomplete="off"></div>
+ <button type="submit" id="tgateBtn">Continue to Telegram</button>
+ <p class="tgate__msg" id="tgateMsg" role="status" aria-live="polite"></p>
+ </form>
+ <button class="tgate__skip" id="tgateSkip">No thanks, just take me to the channel</button>
+ <p class="tgate__note">No cost and no obligation. Educational only, not financial advice, and nothing here promises a return. Unsubscribe any time in one click.</p>
+ </div>
+</div>
+<!-- bgm-tg-gate -->
+<script>
+/* Bấm link Telegram thì hiện bảng xin email, điền xong mới chuyển sang.
+   Hỏi đúng một lần cho mỗi người, lần sau đi thẳng. */
+(function(){
+  var API = 'https://harcos-dashboard.vercel.app/api/bgm-subscribe';
+  var KEY = 'bgmTgGate';
+  var g = document.getElementById('tgate');
+  if (!g) return;
+  var f = document.getElementById('tgateF'),
+      inp = document.getElementById('tgateEmail'),
+      btn = document.getElementById('tgateBtn'),
+      msg = document.getElementById('tgateMsg'),
+      hp  = document.getElementById('tgateHp'),
+      dest = null;
+
+  function seen(){ try { return localStorage.getItem(KEY) === '1'; } catch(e){ return false; } }
+  function remember(){ try { localStorage.setItem(KEY,'1'); } catch(e){} }
+  function open(url){ dest = url; g.setAttribute('open',''); setTimeout(function(){ inp.focus(); }, 40); }
+  function close(){ g.removeAttribute('open'); dest = null; }
+  function go(){ var u = dest || 'https://t.me/'; close(); window.location.href = u; }
+
+  document.addEventListener('click', function(ev){
+    var a = ev.target.closest ? ev.target.closest('a') : null;
+    if (!a) return;
+    var h = a.getAttribute('href') || '';
+    if (h.indexOf('t.me/') === -1) return;
+    if (seen()) return;                 /* da cho email roi thi di thang */
+    ev.preventDefault();
+    open(h);
+  }, true);
+
+  document.getElementById('tgateX').addEventListener('click', close);
+  document.getElementById('tgateSkip').addEventListener('click', go);
+  g.addEventListener('click', function(ev){ if (ev.target === g) close(); });
+  document.addEventListener('keydown', function(ev){ if (ev.key === 'Escape' && g.hasAttribute('open')) close(); });
+
+  f.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var email = (inp.value || '').trim();
+    msg.className = 'tgate__msg';
+    if (!/^[^@\s]+@[^@\s.]+\.[^@\s]{2,}$/.test(email)) {
+      msg.className = 'tgate__msg bad';
+      msg.textContent = 'Please check that email address.';
+      return;
+    }
+    if ((hp.value || '').trim() !== '') { remember(); go(); return; }
+    var nhan = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    function loi(ly){
+      if (window.gtag) gtag('event', 'lead_form_error', {form: 'bgm_telegram_gate', reason: ly});
+      btn.disabled = false; btn.textContent = nhan;
+      msg.className = 'tgate__msg bad';
+      msg.textContent = 'We could not save that just now. Please try again, or use the link below.';
+    }
+    fetch(API, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({email: email, firstName: '', website: (hp.value || '')})
+    }).then(function(r){
+      /* fetch khong bao loi khi may chu tu choi, phai tu doc ket qua */
+      return r.json().catch(function(){ return {}; }).then(function(j){ return r.ok && j && j.ok === true; });
+    }).then(function(ok){
+      if (!ok) { loi('upstream'); return; }
+      if (window.gtag) gtag('event', 'lead_form_submit', {form: 'bgm_telegram_gate'});
+      remember(); go();
+    }).catch(function(){
+      loi('network');
+    });
+  });
+})();
+</script>
+</body>
+</html>
